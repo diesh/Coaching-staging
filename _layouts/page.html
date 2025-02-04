@@ -8,7 +8,7 @@
 
 {% include head.html %}
 
-<body>
+<body style="--brand-color: {{ page.brand_color }};">
     <script type="text/javascript">document.body.classList.add("is-loading");</script>
 
     {% include header.html %} {{ content }} {% include footer.html %}

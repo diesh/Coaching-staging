@@ -64,3 +64,29 @@ img {
 			}
 		}
 	}
+	
+	/* this is the color wash on the pages for each image. The .md for the pages contains nav-color that is the color used here. And head.html creates the hover for the boxes on the page */
+	.brandimage_masthead {
+	  position: relative;
+	  max-height: 400px;
+	  overflow: hidden;
+	}
+
+	.brandimage_masthead img {
+	  width: 100%;
+	  height: auto;
+	  object-fit: cover;
+	}
+
+	.brandimage_masthead::before {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: var(--nav-color); /* Ensure brand color is used */
+	 opacity: 0.3; /* Increased opacity for more color */
+	  pointer-events: none; /* Allow interaction with the image */
+	  z-index: 1; /* Ensures overlay appears above the image */
+	}

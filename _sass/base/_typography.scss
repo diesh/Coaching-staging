@@ -38,12 +38,10 @@
 
 		&:hover {
 			border-bottom-color: transparent;
-			color: _palette(highlight) !important;
+			color: _palette(highlight);
 		}
 
-		&:active {
-			color: desaturate(darken(_palette(highlight), 15), 5) !important;
-		}
+	
 	}
 
 	strong, b {
@@ -66,7 +64,7 @@
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
-		line-height: 1.65;
+		line-height: 1;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
 		a {
@@ -174,4 +172,36 @@
 
 	.align-right {
 		text-align: right;
+	}
+	
+	.name {
+	  color: initial; /* Default color for the sentence */
+	}
+
+	.gagan {
+	  position: relative; /* Ensure we can position the pronunciation box relative to the word */
+	  display: inline-block;
+	  color: _palette(accent6); /* Accent color for Gagan */
+	}
+
+	.pronunciation {
+	  visibility: hidden; /* Hidden by default */
+	  color: _palette(accent6); /* Accent color for pronunciation */
+	  background-color: #676F91; /* White background for pronunciation */
+	  position: absolute;
+	  top: 0px; /* Lowered the position to bring it closer to the word */
+	  left: 0;
+	  min-width: 100%; /* Ensure box spans the full width of "Gagan" */
+	  text-align: center;
+	  white-space: nowrap; /* Prevent wrapping of the pronunciation */
+	  z-index: 1; /* Make sure it appears above the text */
+	  padding: 0 0 10px 0;
+	}
+	.gagan:hover .pronunciation {
+	  visibility: visible; /* Show pronunciation when hovered */
+	}
+	
+	
+	.highlight-g {
+	    color: _palette(accent6); // Use the predefined SCSS variable
 	}

@@ -12,8 +12,9 @@
 	}
 
 	#header {
+	
 		@include vendor('display', 'flex');
-		background-color: _palette(bg-alt);
+		background-color: _palette(brand-color);  // Use brand color
 		box-shadow: 0 0 0.25em 0 rgba(0,0,0,0.15);
 		cursor: default;
 		font-weight: _font(weight-bold);
@@ -51,7 +52,17 @@
 
 			&:hover {
 				strong {
-					background-color: _palette(highlight);
+					background-color: #7d72b3;
+					
+					
+					/*  
+					   accent1: #FF6F61;  Fuchsia  
+					   accent2: #FF7F50;  Coral  
+					   accent3: #8D82C4;  Lavender Blue  
+					   accent4: #EC8D81;  Soft Coral  
+					   accent5: #FFDDC1;  Warm Cream  
+					*/
+					
 				}
 			}
 

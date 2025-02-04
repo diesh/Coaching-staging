@@ -1,42 +1,39 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+#footer {
+  .copyright {
+    font-size: 0.8em;
+    list-style: none;
+    padding-left: 0;
+    color: _palette(accent6);
 
-/* Footer */
+    li {
+      color: _palette(fg-bold);
+      line-height: 2;
+      padding-left: 0;  // Remove padding for all items
+      margin-left: 0;   // Remove margin for all items
+    
 
-	#footer {
-		.copyright {
-			font-size: 0.8em;
-			list-style: none;
-			padding-left: 0;
+      // Remove the border and margin for the first item
+      &:first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+      }
 
-			li {
-				border-left: solid 1px _palette(border);
-				color: _palette(fg-light);
-				display: inline-block;
-				line-height: 1;
-				margin-left: 1em;
-				padding-left: 1em;
+      // Make all items block level to stack vertically
+      display: block;
+    }
+  }
 
-				&:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
-			}
-		}
-
-		@include breakpoint(xsmall) {
-			.copyright {
-				li {
-					display: block;
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-					line-height: inherit;
-				}
-			}
-		}
-	}
+  @include breakpoint(xsmall) {
+    .copyright {
+      li {
+        // Here you could further tweak for small screens if necessary
+        display: block;
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+        line-height: inherit;
+      }
+    }
+  }
+}

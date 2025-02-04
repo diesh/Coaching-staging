@@ -8,6 +8,32 @@
 		<a href="#menu">Menu</a>
 	</nav>
 </header>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all the headings with class 'link'
+    const headings = document.querySelectorAll('header.major h3 a.link');
+
+    // Iterate over each heading
+    headings.forEach(function(heading) {
+      // Match "Program" followed by a number and the colon
+      const regex = /(Program \d+:)/;
+      const text = heading.innerHTML;
+
+      // Check if the regex matches
+      if (regex.test(text)) {
+        // Replace the matched part with a span that has dark grey color, uppercase, and adjusted font size
+        heading.innerHTML = text.replace(regex, function(match) {
+          return `<span style="color: #666; text-transform: uppercase; font-size: 50%">${match}</span>`;
+        });
+      }
+    });
+  });
+  
+ 
+</script>
+
+
+
 
 <!-- Menu -->
 <nav id="menu">

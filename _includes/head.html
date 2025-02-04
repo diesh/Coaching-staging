@@ -1,9 +1,42 @@
 <head>
-	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+	<title>{% if page.title %}{{ site.title }} | {% endif %}{{ page.title }}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!--[if lte IE 8]><script src="{{ "assets/js/ie/html5shiv.js" | relative_url }}"></script><![endif]-->
 	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="{{ "assets/css/ie9.css" | relative_url }}" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="{{ "assets/css/ie8.css" | relative_url }}" /><![endif]-->
+	
+    <style>
+       :root {
+         --nav-color: {{ page.nav-color | default: site.brand-color }};
+       }
+	   
+	   .box {
+	     position: relative;
+	     overflow: hidden; /* Ensure the overlay stays inside the box */
+	   }
+
+	   .box::before {
+	     content: '';
+	     position: absolute;
+	     top: 0;
+	     left: 0;
+	     right: 0;
+	     bottom: 0;
+	     background-color: transparent; /* Default background is transparent */
+	     z-index: -1; /* Ensure the overlay stays behind the content */
+	   }
+
+	   .box:hover::before {
+	     background-color: {{ page.nav-color | default: site.brand-color }}; /* Apply nav-color on hover */
+	     opacity: 0.2; /* Make the hover color 40% opacity */
+	   }
+
+	   .box:hover {
+	     color: inherit; /* Keep the text color the same on hover */
+	   }
+	   
+	 
+     </style>
 </head>

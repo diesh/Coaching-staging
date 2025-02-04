@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "9cc4271887d99f85",
+    "type": "split",
+    "children": [
+      {
+        "id": "41b2728b609ed4f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b238d1a4b853ae88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "landing.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "landing"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "946f47e781fabb24",
+    "type": "split",
+    "children": [
+      {
+        "id": "9d7910a9b944f6c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6630208616a357eb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2cc63b8695316c43",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6bdf3fcb636f0e48",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "76976c4e6a565f89",
+    "type": "split",
+    "children": [
+      {
+        "id": "df4dc3c529263b1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0976d3de73af4eae",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "landing.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for landing"
+            }
+          },
+          {
+            "id": "1710d6aa5420ec72",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "landing.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from landing"
+            }
+          },
+          {
+            "id": "d64275d5ce288e10",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "112bf1b503e17712",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "landing.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of landing"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b238d1a4b853ae88",
+  "lastOpenFiles": [
+    "assets/images/pic11.jpg.sb-d77112cf-MO1uJ1",
+    "_site/2025/01/12/year.html",
+    "_site/2025/01/12",
+    "_site/2025/01",
+    "_site/2025",
+    "_site/2024/08/03/glog.html",
+    "_site/2024/08/03",
+    "_site/2024/08",
+    "_site/2024",
+    "_site/2016/08/24/tempus.html",
+    "_site/2016/08/23/magna.html",
+    "_site/assets/images/team.jpg",
+    "_site/assets/images/pic11.jpg",
+    "_site/assets/images/pic10.jpg",
+    "_site/assets/images/pic09.jpg",
+    "_site/assets/images/pic08.jpg",
+    "_site/assets/images/pic07.jpg",
+    "_site/assets/images/pic06.jpg",
+    "_site/assets/images/pic05.jpg",
+    "_site/assets/fonts/fontawesome-webfont.svg",
+    "_site/assets/images/pic02.jpg",
+    "CoachingForLeaders.md",
+    "landing.md",
+    "OngoingCoaching.md",
+    "index.md",
+    "NextUp.md",
+    "Team Workshops.md",
+    "_posts/2016-01-01-glogulous.md",
+    "generic.md",
+    "all_posts.md",
+    "_posts/2016-8-23-magna.md",
+    "_posts/2016-8-22-ipsum.md",
+    "_posts/2024-08-03-glog.md",
+    "_posts/2016-8-24-tempus.md",
+    "_posts/2025-01-12-year.md",
+    "404.md",
+    "LICENSE.md",
+    "_posts/2025-01-12.md",
+    "_posts/2025-08-03-tempus.md.md",
+    "_posts/2016-01-01-ipsum.md.md",
+    "_posts/2016-8-22-ipsum.md.md",
+    "_posts/2016-8-24-tempus.md.md",
+    "_posts/2025-02-28-my-post-title.md.md",
+    "_posts/2025-01-31-my-post-title.md.md",
+    "_posts/2025-04-25-my-post-title.md.md",
+    "_posts/2016-8-23-magna.md.md"
+  ]
+}

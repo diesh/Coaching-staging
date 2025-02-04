@@ -52,6 +52,16 @@
 				&:last-child {
 					padding-right: 0;
 				}
+
+				// Apply the palette color to icons
+				a {
+					color: _palette(bg-alt); // Use the fuchsia color from the palette
+					transition: color 0.3s ease; // Smooth transition for hover effect
+
+					&:hover {
+						color: #000; // Turn black on hover
+					}
+				}
 			}
 
 			@include breakpoint(small) {
@@ -133,16 +143,40 @@
 		}
 	}
 
-	dl {
-		margin: 0 0 _size(element-margin) 0;
+/* Initial styles */
+dt, dd {
+    transition: background-color 1s ease; /* Slower fade-in transition */
+    background-color: transparent; /* Initial state: transparent */
+}
 
-		dt {
-			display: block;
-			font-weight: _font(weight-bold);
-			margin: 0 0 (_size(element-margin) * 0.5) 0;
-		}
+/* Hover effect for dt and dd */
+.dt-dd-pair:hover dt,
+.dt-dd-pair:hover dd {
+    background-color: rgba(0, 0, 0, 0.07); /* Lightened grey background on hover */
+}
 
-		dd {
-			margin-left: _size(element-margin);
-		}
-	}
+/* Styles for dt */
+dt {
+    display: block;
+    font-weight: _font(weight-bold);
+    margin: 0 0 1px 0;
+    font-size: 1.1rem;
+    padding: 0.2em 0;
+}
+
+/* Styles for dd */
+dd {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0.2em 0;
+    padding-left: 20px; /* Slight indent on the left */
+}
+
+/* Optional: Apply hover effect on the entire pair (dt + dd) */
+.dt-dd-pair:hover dt,
+.dt-dd-pair:hover dd {
+    background-color: rgba(0, 0, 0, 0.07); /* Light grey */
+}
+
+

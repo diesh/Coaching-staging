@@ -1,47 +1,56 @@
 // Misc.
-	$misc: (
-		z-index-base:		10000
-	);
+$misc: (
+  z-index-base: 10000
+);
 
 // Duration.
-	$duration: (
-		menu:				0.35s,
-		transition:			0.2s,
-		banner:				2.5s
-	);
+$duration: (
+  menu: 0.35s,
+  transition: 0.2s,
+  banner: 2.5s
+);
 
 // Size.
-	$size: (
-		border-radius:		4px,
-		element-height:		2.75em,
-		element-margin:		2em,
-		inner:				65em
-	);
+$size: (
+  border-radius: 4px,
+  element-height: 2.75em,
+  element-margin: 2em,
+  inner: 65em
+);
 
 // Font.
-	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
-		weight:				300,
-		weight-bold:		600,
-		letter-spacing:		0.025em,
-		letter-spacing-alt:	0.25em
-	);
+$font: (
+  family: ('Inter', sans-serif),
+  family-fixed: ('Courier New', monospace),
+  weight: 400,
+  weight-bold: 600,
+  letter-spacing: 0.025em,
+  letter-spacing-alt: 0.25em
+);
 
 // Palette.
-	$palette: (
-		bg:					#242943,
-		bg-alt:				#2a2f4a,
-		fg:					#ffffff,
-		fg-bold:			#ffffff,
-		fg-light:			rgba(244,244,255,0.2),
-		border:				rgba(212,212,255,0.1),
-		border-bg:			rgba(212,212,255,0.035),
-		highlight:			#9bf1ff,
-		accent1:			#6fc3df,
-		accent2:			#8d82c4,
-		accent3:			#ec8d81,
-		accent4:			#e7b788,
-		accent5:			#8ea9e8,
-		accent6:			#87c5a4
-	);
+$palette: (
+  brand-color:#CCDBF8, // brand color
+  nav-color:#666, //nav color is defined in some pages in the md but this is fallback
+  bg: #ffffff,
+  bg-alt: #f587d6, // dusty pink used in landing page for blog
+  fg: #060606,
+  fg-bold: #060606,
+  fg-light: rgba(244, 244, 255, 0.2),
+  border: rgba(211, 211, 211, 1), // Light Grey with full opacity
+  border-bg: rgba(212, 212, 255, 0.035),
+  highlight: #807F80,
+  accent1: #FF6F61, // Fuchsia
+  accent2: #FF7F50, // Coral
+    accent3: #8d82c4, // Lavender Blue 
+    accent4: #ec8d81, // Soft Coral 
+    accent5: #FFDDC1, // Warm Cream
+	accent6: #c8dbfa, // Cool White
+	
+	subtle_accent1: #facbc3, // Lighter Fuchsia
+	subtle_accent2: #fad1c5, // Lighter Coral
+	subtle_accent3: #e4ddf0, // Lighter Lavender Blue
+	subtle_accent4: #f7d4cd, // Lighter Soft Coral
+	subtle_accent5: #F9E1D6, // Lighter Warm Cream
+	subtle_accent6: #D1E1FA // Lighter Cool White
+);
