@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body>
+<body class="post-page">
 
     {% include header.html %}
 
@@ -12,24 +12,127 @@
 
 <!-- One -->
 <section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>{{ page.title }}</h1>
-			 <p class="post-date">{{ page.date | date: "%B %d, %Y" }}</p>
-		</header>
-		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
+    <div class="inner">
+        <header class="major">
+			<nav class="breadcrumb">
+			    <a href="{{ site.baseurl }}/landing.html">Good Question</a> &raquo; 
+			</nav>
+			
+            <h1>{{ page.title }}</h1>
+			<!-- post date -->
+           <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+        </header>
+		
+	<!--masthead image-->	
+	  {% if page.image %}
+	    <figure class="image main">
+	      <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
+	      {% if page.masthead_caption and page.masthead_url %}
+	        <figcaption class="masthead-caption">
+	          <a href="{{ page.masthead_url }}" target="_blank" rel="noopener noreferrer">
+	            Photo credit: {{ page.masthead_caption }}
+	          </a>
+	        </figcaption>
+	      {% endif %}
+	    </figure>
+	  {% endif %}
+	  
+	  
+ <!--post content from md-->
+        {{ content }}
 
-        <!-- Format the date here -->
-       
 
-		{{ content }}
-	</div>
+   
+	
+	<hr>
+
+
+	{% if page.comments %}
+	<div id="disqus_thread" style="text-align: left; max-width: 800px; margin: 0 auto;"></div>
+	<script>
+	    (function() { 
+	        var d = document, s = d.createElement('script');
+	        s.src = 'https://gagan-diesh-executive-coaching.disqus.com/embed.js';
+	        s.setAttribute('data-timestamp', +new Date());
+	        (d.head || d.body).appendChild(s);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+	<style>
+	    /* Align the comment section */
+	    #disqus_thread {
+	        text-align: left;
+	        max-width: 900px;
+	        margin: 0 auto;
+	    }
+
+	    /* Align reaction smileys */
+	    .reaction-icons {
+	        text-align: left !important;
+	    }
+
+	    /* Align comment text */
+	    .post-message {
+	        text-align: left !important;
+	    }
+
+	    /* Ensure avatar and usernames are left-aligned */
+	    .comment {
+	        display: flex;
+	        align-items: flex-start;
+	    }
+	</style>
+
+
+
+	{% endif %}
+	 </div>
 </section>
+
+  
+
+<!-- Two: Other Posts -->
+<section id="two">
+    <div class="inner">
+        <header class="major">
+		   <h2 class="bloglogo">
+		     <span class="highlight-g">?</span>&nbsp;
+		     <span class="restofbloglogo">Good Question!</span>
+		   </h2>
+		   
+            <p class="subheading">Spicy musings about UX, design, tech, and the world we live in</p>
+        </header>
+
+        <!-- Loop through only the last 4 posts -->
+        {% for post in site.posts limit:4 %}
+		
+  <article class="post">
+      <span class="icon-small alt fa fa-question-circle"></span>
+      <div class="post-content">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt }}</p>
+      </div>
+  </article>
+  
+
+  <hr> <!-- Divider between posts -->
+  
+        {% endfor %}
+
+        <!-- More button linking to a landing page for older posts -->
+	  <a href="{{ "/landing.html" | relative_url }}" class="button next">More good questions</a>
+      
+    </div>
+</section>
+
+   
 
 </div>
 
     {% include footer.html %}
 
 </body>
+
 
 </html>

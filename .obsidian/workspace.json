@@ -13,12 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "landing.md",
+                "file": "AboutGagan.md",
                 "mode": "source",
-                "source": true
+                "source": true,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "landing"
+              "title": "AboutGagan"
             }
           }
         ]
@@ -40,7 +41,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -93,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "landing.md",
+                "file": "_posts/2025-02-05-First Month.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for landing"
+              "title": "Backlinks for 2025-02-05-First Month"
             }
           },
           {
@@ -112,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "landing.md",
+                "file": "_posts/2025-02-05-First Month.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from landing"
+              "title": "Outgoing links from 2025-02-05-First Month"
             }
           },
           {
@@ -139,10 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "landing.md"
+                "file": "_posts/2025-02-05-First Month.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of landing"
+              "title": "Outline of 2025-02-05-First Month"
             }
           }
         ]
@@ -164,51 +166,50 @@
   },
   "active": "b238d1a4b853ae88",
   "lastOpenFiles": [
-    "assets/images/pic11.jpg.sb-d77112cf-MO1uJ1",
-    "_site/2025/01/12/year.html",
-    "_site/2025/01/12",
-    "_site/2025/01",
-    "_site/2025",
-    "_site/2024/08/03/glog.html",
-    "_site/2024/08/03",
-    "_site/2024/08",
-    "_site/2024",
-    "_site/2016/08/24/tempus.html",
-    "_site/2016/08/23/magna.html",
+    "_site/assets/css/main.css.map",
+    "TeamWorkshops.md",
+    "_posts/2025-02-01-Finding a Job.md",
+    "_posts/2025-02-09-Exec training.md",
+    "AboutGagan.md",
+    "OngoingCoaching.md",
+    "_site/TeamWorkshops.html",
+    "NextUp.md",
+    "_site/AboutGagan.html",
+    "_posts/2025-02-03-FirstMonthAtNewJob.md",
+    "assets/images/guilherme-stecanella-EefsBN5B5GE-unsplash.jpg.sb-34389156-HAYZtJ",
+    "_site/assets/css/main.css",
+    "_site/assets/css/main.scss",
+    "landing.md",
+    "CoachingForLeaders.md",
+    "_site/assets/images/Gagan_Diesh_.jpg",
+    "assets/images/Gagan_Diesh_.jpg",
+    "assets/images/Gagan_Diesh_.jpeg.sb-34389156-3zfpTX",
+    "_site/assets/images/Gagan_Diesh_.jpeg",
+    "assets/images/Gagan_Diesh_.jpeg",
+    "_site/About Gagan.html",
+    "_site/CoachingForLeaders 1.html",
+    "_site/2016/01/01/Exec-training.html",
     "_site/assets/images/team.jpg",
+    "_site/assets/images/sigmund-rWE7bTqgMJE-unsplash.jpg",
     "_site/assets/images/pic11.jpg",
     "_site/assets/images/pic10.jpg",
     "_site/assets/images/pic09.jpg",
     "_site/assets/images/pic08.jpg",
-    "_site/assets/images/pic07.jpg",
-    "_site/assets/images/pic06.jpg",
-    "_site/assets/images/pic05.jpg",
-    "_site/assets/fonts/fontawesome-webfont.svg",
-    "_site/assets/images/pic02.jpg",
-    "CoachingForLeaders.md",
-    "landing.md",
-    "OngoingCoaching.md",
-    "index.md",
-    "NextUp.md",
-    "Team Workshops.md",
-    "_posts/2016-01-01-glogulous.md",
-    "generic.md",
-    "all_posts.md",
-    "_posts/2016-8-23-magna.md",
-    "_posts/2016-8-22-ipsum.md",
+    "_site/Coachy/Welcome.md",
+    "_posts/2025-02-02-Finding a Job.md",
+    "_posts/2025-01-12-year.md",
     "_posts/2024-08-03-glog.md",
     "_posts/2016-8-24-tempus.md",
-    "_posts/2025-01-12-year.md",
+    "_posts/2016-8-23-magna.md",
+    "all_posts.md",
+    "_posts/2025-02-05-First Month.md",
+    "index.md",
+    "generic.md",
     "404.md",
     "LICENSE.md",
     "_posts/2025-01-12.md",
     "_posts/2025-08-03-tempus.md.md",
     "_posts/2016-01-01-ipsum.md.md",
-    "_posts/2016-8-22-ipsum.md.md",
-    "_posts/2016-8-24-tempus.md.md",
-    "_posts/2025-02-28-my-post-title.md.md",
-    "_posts/2025-01-31-my-post-title.md.md",
-    "_posts/2025-04-25-my-post-title.md.md",
-    "_posts/2016-8-23-magna.md.md"
+    "_posts/2016-8-22-ipsum.md.md"
   ]
 }

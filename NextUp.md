@@ -4,15 +4,19 @@ title: What's Next for Your Career
 description: Over eight weeks, you’ll gain clarity on your career path, develop a standout personal brand, and master the skills to land your dream role. From resume rewriting to interview prep, this program is designed to help you take control of your career and create a future that excites you.
 image: assets/images/nextup.jpg
 nav-menu: true
-nav-color: "#FF6F61"   
+nav-color: "#1B9C85"   
 ---
 
 <!-- Main -->
-<!--   	accent1: #FF6F61, // Fuchsia
- 	accent2: #FF7F50, // Coral
-    accent3: #8d82c4, // Lavender Blue 
-    accent4: #ec8d81, // Soft Coral 
-    accent5: #FFDDC1 // Warm Cream -->
+<!-- 
+  accent1: #1B9C85; // Teal
+  accent2: #FF7F50; // Coral 
+  accent3: #8d82c4; // Lavender Blue 
+  accent4: #ec8d81; // Soft Coral 
+  accent5: #FFDDC1; // Warm Cream
+  accent6: #c8dbfa; // Cool White 
+-->
+
 <div id="main" class="alt">
 <div class="brandimage_masthead"> <img src="assets/images/nextup.jpg" alt="Image with overlay"> </div>
 

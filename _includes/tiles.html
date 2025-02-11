@@ -6,7 +6,7 @@
 
 <section id="one" class="tiles">
   {% for tile in tiles limit:site.tiles-count %}
-    {% if tile.hide_from_tiles != true %}
+    {% if tile.hide_from_tiles != true and tile.url != "/your-hidden-page/" %}
       <article>
         <span class="image">
           <img src="{{ tile.image }}" alt="{{ tile.title }}" />

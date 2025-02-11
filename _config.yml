@@ -4,7 +4,7 @@ subtitle: Executive Coaching
 email: gagan@designstamp.com
 description: I help design + product professionals and teams unlock their full potential.
 
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+baseurl: "/Coaching"
 url: # the base hostname & protocol for your site
 author:
 street_address: 1234 Somewhere Road
@@ -17,6 +17,8 @@ phone: (716) 555-5555
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
 tiles-count: 6
+
+
 
 # social settings (key must match name of font awesome icon)
 # see https://fontawesome.com/icons?d=gallery&p=2&s=brands

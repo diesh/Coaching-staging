@@ -34,12 +34,12 @@
 .masthead_button:hover {
   background-color: transparent; /* Hover background color */
   color: #FFF; /* Change text color on hover */
-  border-color: #FFF; /* Change border color on hover */
+  border-color: #FFF !important;  /* Change border color on hover */
 }
 
 .masthead_button:active {
-  background-color: _palette(brand-color); /* Active background color */
-  color: _palette(accent3); /* Active text color */
+  background-color: rgba(255, 255, 255, 0.4) !important; /* Active background color is 80 opacity*/
+  color: _palette(accent3) !important; /* Active text color */
   border-color: _palette(accent3); /* Change border color */
 }
 
@@ -76,7 +76,6 @@ button,
   font-weight: 600;
   letter-spacing: 3.73333px;
   padding: 0 2.5em;
-  height: 3.5em;
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
@@ -86,20 +85,36 @@ button,
   box-shadow: none; /* Remove border effect */
 }
 
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+  display: inline-block; /* Ensure buttons only take up necessary width */
+  padding: 10px 20px; /* 10px top/bottom, 20px left/right */
+  width: auto; /* Remove any forced full-width behavior */
+  min-width: max-content; /* Ensure button is at least as wide as its content */
+  text-align: center; /* Center the text */
+  border: 1px solid #000; 
+  cursor: pointer; /* Ensure button pointer */
+}
+
+button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
-button:hover,
 .button:hover {
-  background-color: _palette(highlight);
-  color: #fff !important;
+  background-color: _palette(brand-color);
+  color: #FFF !important;
+   border-color: #060606 !important; 
 }
 
+button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
-button.button:active {
-  background-color: rgba(255, 255, 255, 0.1) !important; /* Set 40% white background on hover */
-  color: #fff !important; /* Set text color to white */
-  border: 1px solid #000 !important; /* Set border color */
+.button:active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: _palette(accent3) !important;
+  border: 1px solid _palette(accent3) !important;
 }

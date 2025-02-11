@@ -1,11 +1,14 @@
 ---
-title: <span class="highlight-g">(G)</span>ood Question
+title:  <span class="icon-small alt fa fa-question-circle"></span> Good question!
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tghghmpus adipiscing nulla.'
+description: 'Spicy musings about UX, design, tech, and the world we live in.'
 image: assets/images/pic11.jpg
 nav-menu: true
 hide_from_tiles: true
-nav-color: "#000" # cream
+nav-color: "#8d82c4" 
+is_special: true  # <== Adds extra space in the menu in header html file
+weight: 50
+
 ---
 
 <!-- Main -->
@@ -20,9 +23,9 @@ nav-color: "#000" # cream
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h2>Sed amet aliquam</h2>
+			<h2>landing page</h2>
 		</header>
-		<p>This is blog landing page.</p>
+		<p>This is blog landing page and this is the landing md.</p>
 	</div>
 </section>
 

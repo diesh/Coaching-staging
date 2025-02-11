@@ -6,52 +6,72 @@
 
 /* Type */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 17pt;
+		font-size: 1rem;
 		font-weight: _font(weight);
 		letter-spacing: _font(letter-spacing);
 		line-height: 1.65;
 
 		@include breakpoint(xlarge) {
-			font-size: 14pt;
+			font-size: 1.167rem;
 		}
 
 		@include breakpoint(large) {
-			font-size: 12pt;
+			font-size: 1rem;
 		}
 
 		@include breakpoint(xxsmall) {
-			font-size: 11pt;
+			font-size: 0.917rem;
 		}
 	}
 
+	// Default anchor styles for all links
 	a {
-		@include vendor('transition', (
-			'color #{_duration(transition)} ease-in-out',
-			'border-bottom-color #{_duration(transition)} ease-in-out'
-		));
-		border-bottom: dotted 1px;
-		color: inherit;
-		text-decoration: none;
+	  @include vendor('transition', (
+	    'color #{_duration(transition)} ease-in-out',
+	    'border-bottom-color #{_duration(transition)} ease-in-out'
+	  ));
+  
+	  border-bottom: dotted 1px; // Default border under text links
+	  color: inherit;
+	  text-decoration: none; // Ensures text doesn't have underlines by default
 
-		&:hover {
-			border-bottom-color: transparent;
-			color: _palette(highlight);
-		}
-
-	
+	  /* Apply hover effects to text links (no underline on hover) */
+	  &:not(a img):hover {
+	    border-bottom-color: transparent; // Remove underline on hover
+	    color: _palette(highlight); // Change color to highlight
+	  }
 	}
 
+	// Remove underline from image links (only)
+	a img {
+	  display: inline-block;  // Make sure the image doesn't affect the layout of the link
+	  pointer-events: none;   // Prevent hover effects on the image itself
+	}
+
+	// Specifically target links with images, remove underline and border
+	a.image-with-download {
+	  text-decoration: none !important; // Prevent underline for image links
+	  border-bottom: none; // Remove any border on image links
+	  display: inline-block;  // Make sure it behaves like an inline element
+	}
+	
 	strong, b {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 	}
 
-	em, i {
+	i, em {
 		font-style: italic;
 	}
+	
+	
+
+	
 
 	p {
 		margin: 0 0 _size(element-margin) 0;
@@ -63,9 +83,9 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
-		line-height: 1;
-		margin: 0 0 (_size(element-margin) * 0.5) 0;
+
+		line-height: 1.5;
+		margin: 0 0 (_size(element-margin) * 0.8) 0;
 
 		a {
 			color: inherit;
@@ -74,61 +94,76 @@
 	}
 
 	h1 {
-		font-size: 2.5em;
+		font-size: 2rem;
 	}
 
 	h2 {
-		font-size: 1.75em;
+		font-size: 1.5rem;
 	}
 
 	h3 {
-		font-size: 1.35em;
+		font-size: 1.25rem;
 	}
 
 	h4 {
-		font-size: 1.1em;
+		font-size: 1.0rem;
 	}
 
 	h5 {
-		font-size: 0.9em;
+		font-size: 0.9rem;
 	}
 
 	h6 {
-		font-size: 0.7em;
+		font-size: 0.7rem;
 	}
 
 	@include breakpoint(small) {
 		h1 {
-			font-size: 2em;
+			font-size: 2rem;
 		}
 
 		h2 {
-			font-size: 1.5em;
+			font-size: 1.5rem;
 		}
 
 		h3 {
-			font-size: 1.25em;
+			font-size: 1.25rem;
 		}
 	}
 
 	sub {
-		font-size: 0.8em;
+		font-size: 0.8rem;
 		position: relative;
 		top: 0.5em;
 	}
 
 	sup {
-		font-size: 0.8em;
+		font-size: 0.8rem;
 		position: relative;
 		top: -0.5em;
 	}
 
 	blockquote {
-		border-left: solid 4px _palette(border);
-		font-style: italic;
-		margin: 0 0 _size(element-margin) 0;
-		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	    font-size: 1.25rem;
+	    margin: 0 0 _size(element-margin) 0;
+	    padding: (_size(element-margin) / 4) _size(element-margin) (_size(element-margin) / 4) _size(element-margin);
+	    color: _palette(fg-bold);
+	    margin-left: auto;
+	    margin-right: auto;
+	    position: relative;
 	}
+
+	blockquote::before {
+	    content: "“";
+	    font-size: 6rem; /* Large for impact */
+	    color: _palette(border);
+	    font-family: 'Merriweather', serif;
+	    position: absolute;
+	    left: -2rem; /* Keeps some space between quote and text */
+	    top: -2.25rem; /* Raised higher to align better with short quotes */
+	}
+
+	
 
 	code {
 		background: _palette(border-bg);
@@ -159,6 +194,13 @@
 
 		&.major {
 			margin: (_size(element-margin) * 1.5) 0;
+			content: "";
+			    background-color: var(--nav-color);
+			    display: block;
+			    height: 1px;
+			    width: 100%;
+			    border: none; /* Remove default border */
+			
 		}
 	}
 
@@ -177,6 +219,17 @@
 	.name {
 	  color: initial; /* Default color for the sentence */
 	}
+	
+	#banner p {
+	    color: #111;
+	    letter-spacing: 0.25em !important;
+	}
+
+	#banner p a {
+	    letter-spacing: normal;
+	    
+	}
+	
 
 	.gagan {
 	  position: relative; /* Ensure we can position the pronunciation box relative to the word */
@@ -201,7 +254,82 @@
 	  visibility: visible; /* Show pronunciation when hovered */
 	}
 	
-	
-	.highlight-g {
-	    color: _palette(accent6); // Use the predefined SCSS variable
+	.bloglogo {
+	  display: inline-flex;
+	  align-items: center;
+	  font-weight: bold;
+	  white-space: nowrap; /* Prevents wrapping */
+	  line-height: 1; /* Ensures consistent vertical alignment */
+	  letter-spacing: -0.03em; /* Tightens spacing between all letters */
 	}
+
+	.highlight-g {
+	  font-weight: 900;
+	  background: #ff7a18; 
+	  color: #fff;
+	  border-radius: 50%; /* Keeps it a circle */
+	  width: 1.2em; /* Scales with font size */
+	  height: 1.2em;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  flex-shrink: 0; /* Prevents shrinking */
+	  line-height: 1; /* Prevents extra spacing inside */
+	  letter-spacing: normal; /* Ensures the 'G' itself isn’t squeezed */
+	}
+
+	.restofbloglogo {
+	  font-weight: 600;
+	  margin-left: -0.02em; /* Keeps spacing between "G" and text as tight as all other letters */
+	  letter-spacing: -0.03em; /* Matches overall text tightness */
+	}
+	
+	
+	.breadcrumb {
+	    font-size: 14px;
+	    margin-bottom: 10px;
+	}
+
+	.breadcrumb a {
+	    text-decoration: none;
+	   
+	}
+
+	.speechbubble {
+	    display: inline-block;
+	    padding: 10px 15px;
+	    border: 1px solid _palette(brand-color); // Uses _palette(fg-bold) directly
+	    border-radius: 8px;
+	    position: relative;
+	    font-style: normal;
+	    color: _palette(fg-bold); 
+	    background: transparent; 
+		margin:20px;
+		 max-width: 700px; // Limits the speech bubble width
+	
+
+	    &::before {
+	        content: "";
+	        position: absolute;
+	        bottom: -10px;
+	        left: 15px;
+	        width: 0;
+	        height: 0;
+	        border-top: 10px solid _palette(brand-color); // color of the arrow 
+	        border-left: 10px solid transparent;
+	        border-right: 10px solid transparent;
+	    }
+
+	    &.no-border {
+	        border-left: none !important;
+	    }
+		
+	}
+	// used in blog posts to give credit to photo authors
+	.masthead-caption {
+	    font-size: 0.5em;
+	    color: #666;
+	    margin-top: 5px;
+	}
+
+	

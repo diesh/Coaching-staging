@@ -44,7 +44,7 @@
   }
 
   h1 {
-    font-size: 3.25em;
+    font-size: 4em;
   }
 
   > .inner {
@@ -86,7 +86,7 @@
 	  }
 
 	  p {
-	    font-size: 1em;
+	    font-size: 1.5em;
 	    font-weight: _font(weight-bold);
 	    letter-spacing: _font(letter-spacing-alt);
 	  }
@@ -164,9 +164,7 @@
     min-height: 0;
     top: -2.75em;
 
-    h1 {
-      font-size: 2em;
-    }
+
 
     > .inner {
       .content {
@@ -204,3 +202,19 @@
     }
   }
 }
+
+.photo-frame {
+    float: right; /* Ensures the image aligns fully to the right */
+    margin: 0 0 20px 20px; /* Space between the image and surrounding text */
+    max-width: 50%; /* Adjust this to control image width */
+}
+
+.photo-frame img {
+    border: 8px solid white; /* White border */
+    box-shadow: 0 0 0 1px #ccc; /* Thin grey border */
+    width: 100%; /* Forces image to respect .photo-frame width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Prevents extra spacing issues */
+}
+
+

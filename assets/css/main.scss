@@ -80,3 +80,131 @@
 	@import 'layout/footer';
 	@import 'layout/wrapper';
 	@import 'layout/menu';
+	
+	
+/* Scoped styles for post pages */
+	.post-page {
+	    /* Style for post content */
+	    #one .inner,
+	    #two .inner {
+			width: 70%; /* 70% width by default */
+			max-width: 1200px; /* Maximum width for large screens
+	        margin: 0 auto; /* Center it horizontally */
+	        padding: 2em;
+	    }
+	}
+
+    /* Callout styles */
+    .callout {
+
+        padding: 15px 20px;
+        margin: 1em 20px 20px;
+        border-radius: 5px;
+        max-width: 300px;
+        position: relative;
+		border: 4px dashed _palette(brand-color);
+    }
+	
+	.callout h3 {  
+	    text-decoration-line: underline;  
+	    text-decoration-thickness: 0.5em;  
+		text-decoration-color: _palette(brand-color);
+	}
+	
+
+    /* Callout positioning */
+    .callout-left {
+        float: left;
+        width: 45%;
+        margin-right: 20px;
+    }
+
+    .callout-right {
+        float: right;
+        width: 45%;
+        margin-left: 20px;
+    }
+
+    /* Callout icon */
+    .callout .fa {
+        font-size: 40px;
+        color: _palette(highlight);
+        position: absolute;
+        top: -25px;
+        left: -20px;
+    }
+
+    /* Callout list styles */
+    .callout ul {
+        list-style: none;
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    .callout ul li {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .callout ul li::before {
+        content: '\2022';
+        font-size: 12px;
+        color: #ff6600;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 5px;
+    }
+
+	
+	
+	.post {
+	    display: flex;
+	    align-items: center; /* Keeps icon aligned */
+	    gap: 10px; /* Space between icon and text */
+	    padding: 12px 0; /* Balanced spacing inside each post */
+	}
+
+	.icon-small {
+	    font-size: 1.2em;
+	    color: _palette(accent2);
+	    flex-shrink: 0; /* Prevents icon from resizing */
+	}
+	
+	.post-content h3 {
+	    margin: 0; /* Remove extra space */
+	    padding: 0; /* Ensure no padding is added */
+	    line-height: 1.2; /* Adjust spacing for better readability */
+	}
+	.post-content p {
+	    margin-top: 2px; /* Reduce space between title and excerpt */
+	    margin-bottom: 5px; /* Reduce space below excerpt */
+	}
+
+	/* blog comments */
+	#disqus_thread {
+	    text-align: left !important;
+	    width: 100% !important;
+	    max-width: 800px; /* Adjust as needed */
+	    margin: 20px !important;
+	}
+
+	#disqus_thread iframe {
+	    margin: 0 !important;
+	    text-align: left !important;
+	    display: block !important;
+	}
+
+	#disqus_thread .reactions { 
+	    display: flex !important;
+	    justify-content: flex-start !important;
+	    text-align: left !important;
+	}
+
+	#disqus_thread .reaction { 
+	    margin-right: 8px !important;
+	}
+
+	

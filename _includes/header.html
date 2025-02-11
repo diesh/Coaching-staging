@@ -37,20 +37,19 @@
 
 <!-- Menu -->
 <nav id="menu">
-	<ul class="links">
-        {% for page in site.pages %}
-		    {% if page.layout == "home" %}
-		        <li><a href="{{ "" | absolute_url }}/">{{ page.title }}</a></li>
-	    	{% endif %}
-		{% endfor %}
-		{% for page in site.html_pages %}
-		    {% if page.layout != "home" and page.nav-menu == true %}
-		        <li><a href="{{ page.url | absolute_url }}">{{ page.title }}</a></li>
-		    {% endif %}
-		{% endfor %}
-	</ul>
-	<ul class="actions vertical">
-		<li><a href="#" class="button special fit">Get Started</a></li>
-		<li><a href="#" class="button fit">Log In</a></li>
-	</ul>
+	<p>Coaching Programs:</p>
+    <ul class="links">
+        {% assign sorted_pages = site.html_pages | where: "nav-menu", true | sort: "weight" %}
+
+        {% for page in sorted_pages %}
+            <li {% if page.title contains "About Gagan" %}class="spaced-item"{% endif %}>
+                <a href="{{ page.url | absolute_url }}">
+                    {{ page.title }}
+                </a>
+            </li>
+        {% endfor %}
+
+        <!-- Manually add Contact Me at the end -->
+        <li><a href="#contact" class="next scrolly">Message Me</a></li>
+    </ul>
 </nav>
