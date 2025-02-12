@@ -1,7 +1,7 @@
 
 /* Homepage masthead button styling */
 .masthead_button {
-  border: 1px solid _palette(brand-color);
+  border: 1px solid #CCDBF8; /* border color */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -10,69 +10,70 @@
   font-size: 14.9333px;
   font-weight: 600;
   letter-spacing: 3.73333px;
-  padding: 0 2.5em; /* Adjust padding for horizontal space */
+  padding: 0 2.5em;  /* Keep this padding, but be mindful of overflow */
   height: 3.5em;
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
   white-space: nowrap;
-  box-sizing: border-box;
+  box-sizing: border-box; /* This ensures padding is included in width calculations */
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
-  
-  color: _palette(brand-color); /* Default text color */
+  color: #CCDBF8; /* Text color */
   background-color: transparent; /* Transparent background */
-  box-shadow: none; /* No shadow */
+  box-shadow: none;
 
-  width: auto; /* Let the width adjust based on content */
-  max-width: 100%;  /* Prevent the button from exceeding its parent's width */
+  /* Removed min-width: max-content to prevent stretching */
+  width: auto;        /* Keep width auto for flexibility */
+  max-width: 100%;    /* Ensure it doesn't overflow container */
 }
 
 .masthead_button .arrow svg {
-  width: 16px; /* Set width for the arrow */
-  height: 16px; /* Set height for the arrow */
-  margin-left: 8px; /* Add space between text and arrow */
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
 }
 
 .masthead_button:hover {
-  background-color: transparent; /* Hover background color */
-  color: #FFF; /* Change text color on hover */
-  border-color: #FFF !important;  /* Change border color on hover */
+  background-color: transparent;
+  color: #FFF;
+  border-color: #FFF !important;
 }
 
 .masthead_button:active {
-  background-color: rgba(255, 255, 255, 0.4) !important; /* Active background color */
-  color: _palette(accent3) !important; /* Active text color */
-  border-color: _palette(accent3); /* Active border color */
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  color: #FF6347 !important; /* Adjust for better contrast */
+  border-color: #FF6347;
 }
 
 .masthead_button .arrow svg path {
-  stroke: _palette(brand-color); /* Default arrow color */
-  fill: none; /* Ensure the arrow has no fill */
+  stroke: #CCDBF8;
+  fill: none;
 }
 
 .masthead_button:hover .arrow svg path {
-  stroke: #FFF; /* Change arrow color on hover */
+  stroke: #FFF;
 }
 
 .masthead_button:active .arrow svg path {
-  stroke: _palette(accent3); /* Keep the same arrow color on active */
+  stroke: #FF6347;
 }
 
-/* Media query for smaller screens (mobile devices) */
+/* Adjust button for mobile screens */
 @media (max-width: 768px) {
   .masthead_button {
-    padding: 0 1.5em; /* Reduce padding on smaller screens */
-    font-size: 12px; /* Adjust font size for better mobile readability */
-    margin-left: auto; /* Center the button horizontally */
-    margin-right: auto; /* Center the button horizontally */
+    padding: 0 1.5em; /* Reduce padding on mobile */
+    font-size: 12px;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
   }
 
   .masthead_button .arrow svg {
-    width: 14px; /* Adjust arrow size on mobile */
+    width: 14px;  /* Adjust arrow size */
     height: 14px;
   }
 }
+
 
 
 /* General button styles */
