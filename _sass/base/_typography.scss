@@ -306,18 +306,22 @@ body, input, select, textarea {
 		    margin-right: 0.3em; /* Space between the ? and "Good Question!" */
 		}
 	
-	.restofbloglogo {
-	    font-weight: 600; /* Set font weight to 600 */
-	    font-size: 1.8em; /* Reduced size for desktop */
-	}
+		.restofbloglogo {
+		    font-weight: 600; /* Keep font weight consistent */
+		    font-size: 1.8em; /* Adjusted size for larger screens */
+		    white-space: nowrap; /* Prevent text from wrapping onto a new line */
+		    overflow: hidden; /* Hide any overflow text */
+		    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+		    max-width: 90%; /* Ensure the text doesn’t overflow the container */
+		}
 
-	@media (max-width: 768px) {
-	    .highlight-g {
-	        font-size: 1em; /* Further reduce size for mobile */
-	        width: 1.1em; /* Adjust width for mobile */
-	        height: 1.1em; /* Adjust height for mobile */
-	    }
-	}
+		@media (max-width: 768px) {
+		    .restofbloglogo {
+		        font-size: 1.2em; /* Adjust size for mobile */
+		        max-width: 100%; /* Make sure the text fits well on mobile */
+		    }
+		}
+
     
 	    .restofbloglogo {
 	        font-size: 1em; /* Reduced size to 1em for mobile */
