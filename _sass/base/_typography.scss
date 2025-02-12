@@ -285,7 +285,6 @@ body, input, select, textarea {
 	    font-weight: 600;
 	    line-height: 1;
 	    letter-spacing: -0.03em;
-	    overflow: hidden;
 	    justify-content: flex-start; /* Align elements to the left */
 	    white-space: nowrap; /* Prevent wrapping of ? and "Good Question!" */
 	    width: 100%; /* Ensure the container can scale properly */
@@ -300,47 +299,57 @@ body, input, select, textarea {
 	    justify-content: center;
 	    align-items: center;
 	    flex-shrink: 0;
-	    font-size: 5vw; /* Size relative to viewport width */
-	    width: 5vw;
-	    height: 5vw;
+	    font-size: 2em; /* Default size for desktop */
+	    width: 2em;
+	    height: 2em;
 	    margin-right: 0.2em; /* Space between the question mark and text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 5vw; /* Dynamically scale based on screen size */
+	    font-size: 2em; /* Default size for desktop */
 	    margin-left: 0.2em;
 	    white-space: nowrap;
 	    overflow: visible; /* Allow text to fully show */
 	    text-overflow: unset; /* Remove ellipsis */
 	}
 
-
-
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 	    .highlight-g {
-	        font-size: 8vw; /* Bigger question mark for tablets */
-	        width: 7vw;
-	        height: 7vw;
+	        font-size: 3.5vw; /* Adjust size for tablets */
+	        width: 3.5vw;
+	        height: 3.5vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 7vw; /* Adjust size for tablets */
+	        font-size: 3.5vw; /* Adjust size for tablets */
+	    }
+	}
+
+	@media (max-width: 768px) {
+	    .highlight-g {
+	        font-size: 5vw; /* Bigger question mark for tablets */
+	        width: 5vw;
+	        height: 5vw;
+	    }
+
+	    .restofbloglogo {
+	        font-size: 5vw; /* Adjust size for tablets */
 	    }
 	}
 
 	@media (max-width: 480px) {
 	    .highlight-g {
-	        font-size: 10vw; /* Increase size for mobile */
-	        width: 9vw;
-	        height: 9vw;
+	        font-size: 7vw; /* Increase size for mobile */
+	        width: 7vw;
+	        height: 7vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 9vw; /* Increase font size for mobile */
+	        font-size: 7vw; /* Increase font size for mobile */
 	    }
 	}
-
+	
 
 	
 	/* End of Blog logo style */
