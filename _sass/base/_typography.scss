@@ -281,12 +281,12 @@ body, input, select, textarea {
 	
 	
 	.bloglogo {
-	    display: flex; 
-	    flex-wrap: wrap; /* Allow wrapping */
-	    align-items: baseline; /* Align both parts of the logo properly */
+	    display: flex;
+	    align-items: center; /* Ensures the ? and text are aligned properly */
 	    font-weight: bold;
-	    line-height: 1;
+	    line-height: 1; /* Ensures no extra space between lines */
 	    letter-spacing: -0.03em;
+	    flex-wrap: nowrap; /* Prevents wrapping */
 	}
 
 	.highlight-g {
@@ -294,47 +294,40 @@ body, input, select, textarea {
 	    background: #ff7a18; 
 	    color: #fff;
 	    border-radius: 50%;
-	    width: 1.4em; /* Slightly bigger size for the question mark */
+	    width: 1.4em; /* Adjust size */
 	    height: 1.4em;
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
-	    flex-shrink: 0;
-	    font-size: 1.5em; /* Adjust size on mobile */
+	    flex-shrink: 0; /* Prevents shrinking */
+	    font-size: 1.5em; /* Adjust size of ? */
+	    margin-right: 0.5em; /* Adds space between ? and text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    margin-left: 5px; /* Reduced margin to control spacing */
 	    letter-spacing: -0.03em;
-	    font-size: 1.6em; /* Slightly smaller font size on mobile */
+	    font-size: 1.6em; /* Adjust text size */
 	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
-	        font-size: 1.2em; /* Adjust size of question mark for mobile */
-	        width: 1.1em; /* Resize the question mark circle */
-	        height: 1.1em;
+	        font-size: 1.3em; /* Slightly smaller ? for mobile */
+	        width: 1.2em; /* Adjust size */
+	        height: 1.2em;
 	    }
     
 	    .restofbloglogo {
-	        font-size: 1.4em; /* Smaller text size for mobile */
+	        font-size: 1.4em; /* Smaller font size for mobile */
 	    }
 
 	    .bloglogo {
-	        text-align: center; /* Center the logo on smaller screens */
+	        justify-content: center; /* Center logo on smaller screens */
 	    }
 	}
 	
 	
-	
 	/* End of Blog logo style */
-	
-	
-	
-	
-	
-	
 	
 	
 	.breadcrumb {
