@@ -1,4 +1,4 @@
-<!-- Contact -->
+<!-- Contact Section -->
 <section id="contact">
     <div class="inner">
         <section>
@@ -7,7 +7,7 @@
                 <h3>Message Me</h3>
                 <p>Always happy to provide a free session and discuss your needs!</p>
 
-                <!-- Form to submit message -->
+                <!-- Contact Form -->
                 <form
                     action="https://formspree.io/f/mwpvbdbr"
                     method="POST"
@@ -36,30 +36,33 @@
                     const errorMessage = document.getElementById('error-message');
 
                     form.addEventListener('submit', function (event) {
-                        event.preventDefault();  // Prevent the form from submitting the traditional way
+                        event.preventDefault();  // Prevent the form from submitting traditionally
                         
                         const formData = new FormData(form);
+                        console.log("Form data: ", formData);  // Log form data
 
                         // Send data to Formspree using Fetch API
                         fetch(form.action, {
                             method: form.method,
                             body: formData,
-                            headers: { 'Accept': 'application/json' }  // Ensure we get a JSON response
+                            headers: { 'Accept': 'application/json' }  // Expecting JSON response from Formspree
                         })
                         .then(response => {
-                            console.log('Response Status:', response.status);  // Log the response status
+                            console.log('Response Status:', response.status);  // Log response status
                             if (response.ok) {
-                                // Show thank you message and hide the form
+                                // If the response is successful
                                 thankYouMessage.style.display = 'block';
-                                form.style.display = 'none';  // Hide the form after submission
+                                form.style.display = 'none';  // Hide the form
+                                console.log("Form submission successful.");
                             } else {
-                                // Show error message if there's an issue
+                                // If the response is not OK
                                 errorMessage.style.display = 'block';
                                 errorMessage.textContent = 'Oops, there was an error. Please try again.';
+                                console.log("Form submission failed.");
                             }
                         })
                         .catch(error => {
-                            // Log the error and show an error message if network error occurs
+                            // If there's a network error or other issues
                             console.error('Network Error:', error);
                             errorMessage.style.display = 'block';
                             errorMessage.textContent = 'Network error. Please try again later.';
@@ -71,7 +74,7 @@
         </section>
 
         <section class="split">
-            <!-- Social media and other contact methods -->
+            <!-- LinkedIn and Newsletter Sections (Unchanged) -->
             <section>
                 <div class="contact-method">
                     <span class="icon alt fa-linkedin"></span>
@@ -100,7 +103,7 @@
             <li><a href="https://diesh.substack.com/" target="_blank">Signup for my newsletter</a></li>
             <li><br /></li>
             <li><a href="https://designstamp.com/privacy" target="_blank">Privacy policy</a></li>
-            <li>I use a mix of Canadian + American spelling. I know. 🤷🏽‍♂️</li>
+            <li>I use a mix of Canadian <i>and</i> American spelling. I know. 🤷🏽‍♂️</li>
             <li>Short on $ and out of work? If you need help, <a href="#contact" class="next scrolly">message me</a>. We can figure this out.</li>
         </ul>
 
@@ -110,7 +113,6 @@
         <br /><br />
 
         <script>
-            // Wait until the DOM content is fully loaded before running the script
             document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('current-year').textContent = new Date().getFullYear();
             });
@@ -118,13 +120,10 @@
     </div>
 </footer>
 
-</div>
-
-<!-- Scripts -->
+<!-- Scripts (Unchanged) -->
 <script src="{{ 'assets/js/jquery.min.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/jquery.scrolly.min.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/jquery.scrollex.min.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/skel.min.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/util.js' | absolute_url }}"></script>
-<!--[if lte IE 8]><script src="{{ 'assets/js/ie/respond.min.js' | absolute_url }}"></script><![endif]-->
 <script src="{{ 'assets/js/main.js' | absolute_url }}"></script>
