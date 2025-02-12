@@ -315,17 +315,7 @@ body, input, select, textarea {
 	    text-overflow: unset; /* Remove ellipsis */
 	}
 
-	@media (max-width: 1024px) {
-	    .highlight-g {
-	        font-size: 7vw; /* Larger question mark for larger screens */
-	        width: 6vw;
-	        height: 6vw;
-	    }
 
-	    .restofbloglogo {
-	        font-size: 6vw; /* Adjust size for tablets */
-	    }
-	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
