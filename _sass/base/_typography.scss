@@ -283,11 +283,11 @@ body, input, select, textarea {
 	    display: flex;
 	    align-items: center; /* Align the ? and "Good Question!" vertically */
 	    font-weight: 600;
-	    line-height: 1; /* Ensures proper line-height for the text */
+	    line-height: 1;
 	    letter-spacing: -0.03em;
 	    overflow: hidden;
-	    justify-content: flex-start; /* Aligns the content to the left */
-	    white-space: nowrap; /* Prevent text from wrapping */
+	    justify-content: flex-start;
+	    white-space: nowrap; /* Prevents the text from wrapping */
 	}
 
 	.highlight-g {
@@ -299,57 +299,56 @@ body, input, select, textarea {
 	    justify-content: center;
 	    align-items: center;
 	    flex-shrink: 0;
-	    font-size: 2em; /* Base font size for ? */
-	    width: 2em;
-	    height: 2em;
-	    margin-right: 0.4em; /* Spacing between ? and "Good Question!" */
+	    font-size: 5vw; /* Relative to viewport width */
+	    width: 4vw; /* Adjust size to keep the ? inside the circle */
+	    height: 4vw;
+	    margin-right: 0.5em; /* Space between ? and the text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 2.5rem; /* Adjust font size for larger screens */
-	    margin-left: 0.5em; /* Spacing between ? and "Good Question!" */
-	    white-space: nowrap; /* Ensures the text doesn't wrap */
+	    font-size: 6vw; /* Make text size responsive based on screen width */
+	    margin-left: 0.5em;
+	    white-space: nowrap;
 	    overflow: hidden;
 	}
 
 	@media (max-width: 1024px) {
 	    .highlight-g {
-	        font-size: 2em; /* Adjust for slightly smaller screens */
-	        width: 2em;
-	        height: 2em;
+	        font-size: 7vw; /* Slightly bigger for larger screens */
+	        width: 6vw;
+	        height: 6vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 2rem; /* Adjust for slightly smaller screens */
+	        font-size: 7vw; /* Adjust for larger text on tablet-sized screens */
 	    }
 	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
-	        font-size: 1.5em; /* Reduce size of ? for mobile */
-	        width: 1.5em;
-	        height: 1.5em;
+	        font-size: 8vw; /* Adjust ? size for tablets */
+	        width: 7vw;
+	        height: 7vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 1.5rem; /* Adjust text size for mobile */
-	        margin-left: 0.3em; /* Slightly reduce spacing on mobile */
+	        font-size: 8vw; /* Adjust text size for tablets */
 	    }
 	}
 
 	@media (max-width: 480px) {
 	    .highlight-g {
-	        font-size: 1.2em; /* Further reduce size of ? on smaller devices */
-	        width: 1.2em;
-	        height: 1.2em;
+	        font-size: 10vw; /* Larger size for mobile */
+	        width: 9vw;
+	        height: 9vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 1.2rem; /* Reduce text size even further on smaller devices */
+	        font-size: 10vw; /* Make "Good Question!" larger on mobile */
 	    }
 	}
-	
+
 	
 	
 	/* End of Blog logo style */
