@@ -279,7 +279,7 @@ body, input, select, textarea {
 	  display: inline-flex;
 	  align-items: center;
 	  font-weight: bold;
-	  white-space: nowrap; /* Prevents wrapping */
+	  white-space: nowrap; /* Prevents wrapping by default */
 	  line-height: 1; /* Ensures consistent vertical alignment */
 	  letter-spacing: -0.03em; /* Tightens spacing between all letters */
 	}
@@ -303,6 +303,27 @@ body, input, select, textarea {
 	  font-weight: 600;
 	  margin-left: -0.02em; /* Keeps spacing between "G" and text as tight as all other letters */
 	  letter-spacing: -0.03em; /* Matches overall text tightness */
+	}
+
+	/* Allow wrapping and adjust font size for smaller screens */
+	@media (max-width: 767px) {
+	  .bloglogo {
+	    white-space: normal; /* Allows wrapping on smaller screens */
+	    text-align: center; /* Center the logo text */
+	    flex-direction: column; /* Stack the letters vertically if needed */
+	    font-size: 1.5em; /* Adjust overall font size for smaller screens */
+	  }
+
+	  .highlight-g {
+	    width: auto; /* Let the circle size adjust */
+	    height: auto; /* Let the circle size adjust */
+	    font-size: 2em; /* Adjust the size of the circle */
+	    margin-bottom: 0.5em; /* Add space below the circle */
+	  }
+
+	  .restofbloglogo {
+	    font-size: 1.2em; /* Adjust the font size for the rest of the logo text */
+	  }
 	}
 	
 	

@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AboutGagan.md",
+                "file": "_posts/2025-02-03-FirstMonthAtNewJob.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "AboutGagan"
+              "title": "2025-02-03-FirstMonthAtNewJob"
             }
           }
         ]
@@ -166,16 +166,19 @@
   },
   "active": "b238d1a4b853ae88",
   "lastOpenFiles": [
+    "_posts/2025-02-09-Exec training.md",
+    "_posts/2025-02-03-FirstMonthAtNewJob.md",
+    "_posts/2025-02-01-Finding a Job.md",
+    "_site/2016/01/01/Finding-a-Job.html",
+    "_site/2025/02/12/2025-02-01-Finding-a-Job.html",
+    "_site/2025/02/12",
+    "AboutGagan.md",
     "_site/assets/css/main.css.map",
     "TeamWorkshops.md",
-    "_posts/2025-02-01-Finding a Job.md",
-    "_posts/2025-02-09-Exec training.md",
-    "AboutGagan.md",
     "OngoingCoaching.md",
     "_site/TeamWorkshops.html",
     "NextUp.md",
     "_site/AboutGagan.html",
-    "_posts/2025-02-03-FirstMonthAtNewJob.md",
     "assets/images/guilherme-stecanella-EefsBN5B5GE-unsplash.jpg.sb-34389156-HAYZtJ",
     "_site/assets/css/main.css",
     "_site/assets/css/main.scss",
@@ -186,9 +189,6 @@
     "assets/images/Gagan_Diesh_.jpeg.sb-34389156-3zfpTX",
     "_site/assets/images/Gagan_Diesh_.jpeg",
     "assets/images/Gagan_Diesh_.jpeg",
-    "_site/About Gagan.html",
-    "_site/CoachingForLeaders 1.html",
-    "_site/2016/01/01/Exec-training.html",
     "_site/assets/images/team.jpg",
     "_site/assets/images/sigmund-rWE7bTqgMJE-unsplash.jpg",
     "_site/assets/images/pic11.jpg",

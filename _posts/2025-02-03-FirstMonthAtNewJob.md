@@ -4,6 +4,7 @@ title: "How do I navigate my first month at a new job?!"
 description: "The first few days at a new job can be nerve wracking! How does one stay sane, drink from the fire hose, stay focused, and make sense of the chaos? Plus getting to know people <i>and</i> getting them to know me?"
 image: assets/images/sigmund-rWE7bTqgMJE-unsplash.jpg
 date: 2025-02-05
+comments: true
 ---
 ### The first month sets the tone... so set the tone!
 Starting a new job is exciting—but also overwhelming. You're absorbing a firehose of information, meeting new people, and trying to figure out how everything fits together. One of the best ways to make sense of it all? Create a shared document to track what you're learning. 
