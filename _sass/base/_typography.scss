@@ -281,56 +281,57 @@ body, input, select, textarea {
 	
 	
 	.bloglogo {
-	  display: inline-flex;
-	  align-items: center;
-	  font-weight: bold;
-	  white-space: nowrap; /* Prevents wrapping by default */
-	  line-height: 1; /* Ensures consistent vertical alignment */
-	  letter-spacing: -0.03em; /* Tightens spacing between all letters */
-	}
+		.bloglogo {
+		  display: inline-flex;
+		  align-items: center;
+		  font-weight: bold;
+		  white-space: nowrap; /* Prevents wrapping by default */
+		  line-height: 1; /* Ensures consistent vertical alignment */
+		  letter-spacing: -0.03em; /* Tightens spacing between all letters */
+		}
 
-	.highlight-g {
-	  font-weight: 900;
-	  background: #ff7a18; 
-	  color: #fff;
-	  border-radius: 50%; /* Keeps it a circle */
-	  width: 1.2em; /* Initial size */
-	  height: 1.2em; /* Initial size */
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  flex-shrink: 0; /* Prevents shrinking */
-	  line-height: 1; /* Prevents extra spacing inside */
-	  letter-spacing: normal; /* Ensures the 'G' itself isn’t squeezed */
-	}
+		.highlight-g {
+		  font-weight: 900;
+		  background: #ff7a18; 
+		  color: #fff;
+		  border-radius: 50%; /* Keeps it a circle */
+		  width: 1.2em; /* Initial size */
+		  height: 1.2em; /* Initial size */
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  flex-shrink: 0; /* Prevents shrinking */
+		  line-height: 1; /* Prevents extra spacing inside */
+		  letter-spacing: normal; /* Ensures the 'G' itself isn’t squeezed */
+		}
 
-	.restofbloglogo {
-	  font-weight: 600;
-	  margin-left: -0.02em; /* Keeps spacing between "G" and text as tight as all other letters */
-	  letter-spacing: -0.03em; /* Matches overall text tightness */
-	}
+		.restofbloglogo {
+		  font-weight: 600;
+		  margin-left: -0.02em; /* Keeps spacing between "G" and text as tight as all other letters */
+		  letter-spacing: -0.03em; /* Matches overall text tightness */
+		}
 
-	/* Allow wrapping and adjust font size for smaller screens */
-	@media (max-width: 767px) {
-	  .bloglogo {
-	    white-space: normal; /* Allows wrapping on smaller screens */
-	    text-align: center; /* Center the logo text */
-	    flex-direction: column; /* Stack the letters vertically if needed */
-	    font-size: 1.5em; /* Adjust overall font size for smaller screens */
-	  }
+		/* Allow wrapping and adjust font size for smaller screens */
+		@media (max-width: 767px) {
+		  .bloglogo {
+		    white-space: normal; /* Allows wrapping on smaller screens */
+		    text-align: center; /* Center the logo text */
+		    flex-direction: row; /* Keep them horizontally aligned */
+		    font-size: 1.4em; /* Adjust overall font size for smaller screens */
+		  }
 
-	  .highlight-g {
-	    width: 1.5em; /* Adjust circle size to prevent elongation */
-	    height: 1.5em; /* Adjust circle size to prevent elongation */
-	    font-size: 1.8em; /* Scale down the "G" inside the circle */
-	    margin-bottom: 0.5em; /* Add space below the circle */
-	  }
+		  .highlight-g {
+		    width: 1.5em; /* Adjust circle size to prevent elongation */
+		    height: 1.5em; /* Adjust circle size to prevent elongation */
+		    font-size: 1.6em; /* Adjust the font size of '?' */
+		    margin-right: 0.5em; /* Add some space between ? and "Good Question!" */
+		  }
 
-	  .restofbloglogo {
-	    font-size: 1.1em; /* Make the "Good Question!" text smaller on mobile */
-	    margin-left: 0; /* Remove tight spacing between "G" and the text */
-	  }
-	}
+		  .restofbloglogo {
+		    font-size: 1.2em; /* Reduce "Good Question!" size a bit more on mobile */
+		    margin-left: 0; /* Remove tight spacing between "G" and the text */
+		  }
+		}
 	
 	
 	
