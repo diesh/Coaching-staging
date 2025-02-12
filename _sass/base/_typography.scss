@@ -281,13 +281,13 @@ body, input, select, textarea {
 	
 	.bloglogo {
 	    display: flex;
-	    align-items: center; /* Align the ? and "Good Question!" vertically */
+	    align-items: center;
 	    font-weight: 600;
 	    line-height: 1;
 	    letter-spacing: -0.03em;
-	    overflow: hidden; /* Prevent any overflow */
-	    justify-content: flex-start; /* Keep the ? and text aligned to the left */
-	    white-space: nowrap; /* Prevent the text from wrapping */
+	    overflow: hidden;
+	    justify-content: flex-start; /* Align elements to the left */
+	    white-space: nowrap; /* Prevent wrapping of ? and "Good Question!" */
 	}
 
 	.highlight-g {
@@ -299,41 +299,42 @@ body, input, select, textarea {
 	    justify-content: center;
 	    align-items: center;
 	    flex-shrink: 0;
-	    font-size: 5vw; /* Relative to viewport width */
-	    width: 5vw; /* Adjust size to keep the ? inside the circle */
+	    font-size: 5vw; /* Adjust size relative to viewport width */
+	    width: 5vw;
 	    height: 5vw;
-	    margin-right: 0.3em; /* Reduced space between ? and the text */
+	    margin-right: 0.2em; /* Adjust the space between the question mark and text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 5vw; /* Adjust font size based on screen width */
-	    margin-left: 0.2em; /* Reduce space between ? and text */
-	    white-space: nowrap; /* Prevent wrapping */
-	    overflow: hidden; /* Prevent text from overflowing */
+	    font-size: 5vw; /* Adjust font size based on screen size */
+	    margin-left: 0.1em;
+	    white-space: nowrap;
+	    overflow: hidden; /* Ensure the text doesn’t overflow */
+	    text-overflow: ellipsis; /* Add ellipsis if text is too long to fit */
 	}
 
 	@media (max-width: 1024px) {
 	    .highlight-g {
-	        font-size: 7vw; /* Slightly bigger for larger screens */
+	        font-size: 7vw; /* Increase size for larger screens */
 	        width: 6vw;
 	        height: 6vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 7vw; /* Adjust for larger text on tablet-sized screens */
+	        font-size: 6vw; /* Adjust for larger text on tablets */
 	    }
 	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
-	        font-size: 8vw; /* Adjust ? size for tablets */
+	        font-size: 8vw; /* Increase size for tablets */
 	        width: 7vw;
 	        height: 7vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 8vw; /* Adjust text size for tablets */
+	        font-size: 7vw; /* Adjust text size for tablets */
 	    }
 	}
 
@@ -345,10 +346,10 @@ body, input, select, textarea {
 	    }
 
 	    .restofbloglogo {
-	        font-size: 10vw; /* Make "Good Question!" larger on mobile */
+	        font-size: 9vw; /* Make "Good Question!" larger on mobile */
 	    }
 	}
-	
+
 	
 	/* End of Blog logo style */
 	
