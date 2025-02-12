@@ -285,9 +285,9 @@ body, input, select, textarea {
 	    font-weight: 600;
 	    line-height: 1;
 	    letter-spacing: -0.03em;
-	    overflow: hidden;
-	    justify-content: flex-start;
-	    white-space: nowrap; /* Prevents the text from wrapping */
+	    overflow: hidden; /* Prevent any overflow */
+	    justify-content: flex-start; /* Keep the ? and text aligned to the left */
+	    white-space: nowrap; /* Prevent the text from wrapping */
 	}
 
 	.highlight-g {
@@ -300,17 +300,17 @@ body, input, select, textarea {
 	    align-items: center;
 	    flex-shrink: 0;
 	    font-size: 5vw; /* Relative to viewport width */
-	    width: 4vw; /* Adjust size to keep the ? inside the circle */
-	    height: 4vw;
-	    margin-right: 0.5em; /* Space between ? and the text */
+	    width: 5vw; /* Adjust size to keep the ? inside the circle */
+	    height: 5vw;
+	    margin-right: 0.3em; /* Reduced space between ? and the text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 6vw; /* Make text size responsive based on screen width */
-	    margin-left: 0.5em;
-	    white-space: nowrap;
-	    overflow: hidden;
+	    font-size: 5vw; /* Adjust font size based on screen width */
+	    margin-left: 0.2em; /* Reduce space between ? and text */
+	    white-space: nowrap; /* Prevent wrapping */
+	    overflow: hidden; /* Prevent text from overflowing */
 	}
 
 	@media (max-width: 1024px) {
@@ -348,7 +348,6 @@ body, input, select, textarea {
 	        font-size: 10vw; /* Make "Good Question!" larger on mobile */
 	    }
 	}
-
 	
 	
 	/* End of Blog logo style */
