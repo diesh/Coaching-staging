@@ -281,13 +281,13 @@ body, input, select, textarea {
 	
 	.bloglogo {
 	    display: flex;
-	    align-items: center; /* Ensures ? and text align properly */
-	    font-weight: bold;
-	    line-height: 1;
+	    align-items: center; /* Align the ? and "Good Question!" vertically */
+	    font-weight: 600;
+	    line-height: 1; /* Ensures proper line-height for the text */
 	    letter-spacing: -0.03em;
 	    overflow: hidden;
-	    justify-content: flex-start; /* Left-aligned */
-	    white-space: nowrap; /* Ensure no line breaks */
+	    justify-content: flex-start; /* Aligns the content to the left */
+	    white-space: nowrap; /* Prevent text from wrapping */
 	}
 
 	.highlight-g {
@@ -299,34 +299,56 @@ body, input, select, textarea {
 	    justify-content: center;
 	    align-items: center;
 	    flex-shrink: 0;
-	    font-size: 1.8em; /* Adjustable size for larger screens */
-	    width: 1.8em;
-	    height: 1.8em;
-	    margin-right: 0.3em; /* Reduced space between ? and "Good Question!" */
+	    font-size: 2em; /* Base font size for ? */
+	    width: 2em;
+	    height: 2em;
+	    margin-right: 0.4em; /* Spacing between ? and "Good Question!" */
 	}
 
 	.restofbloglogo {
-	    font-weight: 600; /* Set font weight to 600 */
-	    font-size: 1.8em; /* Adjust size for larger screens */
-	    margin-left: 0.3em; /* Space between ? and text */
-	    white-space: nowrap; /* Prevent wrapping */
-	    overflow: hidden; /* Hide overflow */
+	    font-weight: 600;
+	    font-size: 2.5rem; /* Adjust font size for larger screens */
+	    margin-left: 0.5em; /* Spacing between ? and "Good Question!" */
+	    white-space: nowrap; /* Ensures the text doesn't wrap */
+	    overflow: hidden;
+	}
+
+	@media (max-width: 1024px) {
+	    .highlight-g {
+	        font-size: 2em; /* Adjust for slightly smaller screens */
+	        width: 2em;
+	        height: 2em;
+	    }
+
+	    .restofbloglogo {
+	        font-size: 2rem; /* Adjust for slightly smaller screens */
+	    }
 	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
-	        font-size: 1.4em; /* Smaller size for mobile */
-	        width: 1.4em;
-	        height: 1.4em;
+	        font-size: 1.5em; /* Reduce size of ? for mobile */
+	        width: 1.5em;
+	        height: 1.5em;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 1.2em; /* Smaller size for mobile */
-	        white-space: nowrap;
-	        overflow: hidden;
+	        font-size: 1.5rem; /* Adjust text size for mobile */
+	        margin-left: 0.3em; /* Slightly reduce spacing on mobile */
 	    }
 	}
-	
+
+	@media (max-width: 480px) {
+	    .highlight-g {
+	        font-size: 1.2em; /* Further reduce size of ? on smaller devices */
+	        width: 1.2em;
+	        height: 1.2em;
+	    }
+
+	    .restofbloglogo {
+	        font-size: 1.2rem; /* Reduce text size even further on smaller devices */
+	    }
+	}
 	
 	
 	
