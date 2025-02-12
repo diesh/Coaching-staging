@@ -279,7 +279,6 @@ body, input, select, textarea {
 	
 	/* Blog logo */
 	
-	
 	.bloglogo {
 	    display: flex;
 	    align-items: center; /* Ensures the ? and text are aligned properly */
@@ -287,6 +286,7 @@ body, input, select, textarea {
 	    line-height: 1; /* Ensures no extra space between lines */
 	    letter-spacing: -0.03em;
 	    flex-wrap: nowrap; /* Prevents wrapping */
+	    overflow: hidden; /* Ensures no text overflow */
 	}
 
 	.highlight-g {
@@ -294,37 +294,38 @@ body, input, select, textarea {
 	    background: #ff7a18; 
 	    color: #fff;
 	    border-radius: 50%;
-	    width: 1.4em; /* Adjust size */
-	    height: 1.4em;
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
 	    flex-shrink: 0; /* Prevents shrinking */
-	    font-size: 1.5em; /* Adjust size of ? */
-	    margin-right: 0.5em; /* Adds space between ? and text */
+	    font-size: 2em; /* Larger ? size */
+	    width: 1.8em; /* Adjust size of ? */
+	    height: 1.8em; 
+	    margin-right: 0.4em; /* Space between ? and text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    letter-spacing: -0.03em;
-	    font-size: 1.6em; /* Adjust text size */
+	    font-size: 2.2em; /* Adjust size of Good Question! */
 	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
-	        font-size: 1.3em; /* Slightly smaller ? for mobile */
-	        width: 1.2em; /* Adjust size */
-	        height: 1.2em;
+	        font-size: 1.8em; /* Smaller ? on mobile */
+	        width: 1.6em; /* Adjust size for mobile */
+	        height: 1.6em; 
 	    }
     
 	    .restofbloglogo {
-	        font-size: 1.4em; /* Smaller font size for mobile */
+	        font-size: 1.6em; /* Smaller text on mobile */
 	    }
 
 	    .bloglogo {
 	        justify-content: center; /* Center logo on smaller screens */
+	        text-align: center; /* Ensure text aligns correctly */
 	    }
 	}
+	
 	
 	
 	/* End of Blog logo style */
