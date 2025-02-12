@@ -283,10 +283,10 @@ body, input, select, textarea {
 	    display: flex;
 	    align-items: center; /* Ensures the ? and text are aligned properly */
 	    font-weight: bold;
-	    line-height: 1; /* Ensures no extra space between lines */
+	    line-height: 1;
 	    letter-spacing: -0.03em;
-	    flex-wrap: nowrap; /* Prevents wrapping */
-	    overflow: hidden; /* Ensures no text overflow */
+	    overflow: hidden;
+	    justify-content: center; /* Ensures the text and ? are centered */
 	}
 
 	.highlight-g {
@@ -297,32 +297,35 @@ body, input, select, textarea {
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
-	    flex-shrink: 0; /* Prevents shrinking */
-	    font-size: 2em; /* Larger ? size */
-	    width: 1.8em; /* Adjust size of ? */
+	    flex-shrink: 0;
+	    font-size: 2em; /* Large size for desktop */
+	    width: 1.8em; /* Size of the ? */
 	    height: 1.8em; 
-	    margin-right: 0.4em; /* Space between ? and text */
+	    margin-right: 0.5em; /* Spacing between ? and "Good Question!" */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 2.2em; /* Adjust size of Good Question! */
+	    font-size: 2.2em; /* Default size for desktop */
 	}
 
 	@media (max-width: 768px) {
+	    /* On mobile, adjust sizes */
 	    .highlight-g {
-	        font-size: 1.8em; /* Smaller ? on mobile */
-	        width: 1.6em; /* Adjust size for mobile */
-	        height: 1.6em; 
+	        font-size: 1.5em; /* Smaller ? for mobile */
+	        width: 1.5em;
+	        height: 1.5em;
 	    }
     
 	    .restofbloglogo {
-	        font-size: 1.6em; /* Smaller text on mobile */
+	        font-size: 1.6em; /* Smaller text for mobile */
+	        max-width: 90%; /* Restrict width to ensure it fits within viewport */
+	        text-align: center; /* Center text */
 	    }
 
 	    .bloglogo {
-	        justify-content: center; /* Center logo on smaller screens */
-	        text-align: center; /* Ensure text aligns correctly */
+	        justify-content: center; /* Center both the ? and the text */
+	        padding: 0 1em; /* Add some padding for spacing */
 	    }
 	}
 	
