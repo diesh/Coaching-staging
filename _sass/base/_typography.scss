@@ -275,6 +275,11 @@ body, input, select, textarea {
 	  visibility: visible; /* Show pronunciation when hovered */
 	}
 	
+	
+	
+	/* Blog logo */
+	
+	
 	.bloglogo {
 	  display: inline-flex;
 	  align-items: center;
@@ -289,8 +294,8 @@ body, input, select, textarea {
 	  background: #ff7a18; 
 	  color: #fff;
 	  border-radius: 50%; /* Keeps it a circle */
-	  width: 1.2em; /* Scales with font size */
-	  height: 1.2em;
+	  width: 1.2em; /* Initial size */
+	  height: 1.2em; /* Initial size */
 	  display: flex;
 	  justify-content: center;
 	  align-items: center;
@@ -315,16 +320,27 @@ body, input, select, textarea {
 	  }
 
 	  .highlight-g {
-	    width: auto; /* Let the circle size adjust */
-	    height: auto; /* Let the circle size adjust */
-	    font-size: 2em; /* Adjust the size of the circle */
+	    width: 1.5em; /* Adjust circle size to prevent elongation */
+	    height: 1.5em; /* Adjust circle size to prevent elongation */
+	    font-size: 1.8em; /* Scale down the "G" inside the circle */
 	    margin-bottom: 0.5em; /* Add space below the circle */
 	  }
 
 	  .restofbloglogo {
-	    font-size: 1.2em; /* Adjust the font size for the rest of the logo text */
+	    font-size: 1.1em; /* Make the "Good Question!" text smaller on mobile */
+	    margin-left: 0; /* Remove tight spacing between "G" and the text */
 	  }
 	}
+	
+	
+	
+	/* End of Blog logo style */
+	
+	
+	
+	
+	
+	
 	
 	
 	.breadcrumb {
