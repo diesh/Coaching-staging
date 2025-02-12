@@ -280,73 +280,61 @@ body, input, select, textarea {
 	/* Blog logo */
 	
 	.bloglogo {
-	    display: flex;
+	    display: inline-flex;
 	    align-items: center;
-	    font-weight: 600;
-	    line-height: 1;
-	    letter-spacing: -0.03em;
-	    justify-content: flex-start; /* Align elements to the left */
-	    white-space: nowrap; /* Prevent wrapping of ? and "Good Question!" */
-	    width: 100%; /* Ensure the container can scale properly */
+	    font-weight: bold;
+	    white-space: nowrap; /* Prevents wrapping */
+	    line-height: 1; /* Ensures consistent vertical alignment */
+	    letter-spacing: -0.03em; /* Tightens spacing between all letters */
+	    width: 100%; /* Ensures it doesn't overflow on smaller screens */
+	    box-sizing: border-box; /* Makes sure padding/margin does not affect width calculation */
+	    overflow: hidden; /* Prevents the content from overflowing on smaller screens */
 	}
 
 	.highlight-g {
 	    font-weight: 900;
 	    background: #ff7a18;
 	    color: #fff;
-	    border-radius: 50%;
+	    border-radius: 50%; /* Keeps it a circle */
+	    width: 1.2em; /* Default size for desktop */
+	    height: 1.2em;
 	    display: flex;
 	    justify-content: center;
 	    align-items: center;
-	    flex-shrink: 0;
-	    font-size: 2em; /* Default size for desktop */
-	    width: 2em;
-	    height: 2em;
-	    margin-right: 0.2em; /* Space between the question mark and text */
+	    flex-shrink: 0; /* Prevents shrinking */
+	    line-height: 1; /* Prevents extra spacing inside */
+	    letter-spacing: normal; /* Ensures the 'G' itself isn’t squeezed */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 2em; /* Default size for desktop */
-	    margin-left: 0.2em;
-	    white-space: nowrap;
-	    overflow: visible; /* Allow text to fully show */
-	    text-overflow: unset; /* Remove ellipsis */
-	}
-
-	@media (max-width: 1024px) {
-	    .highlight-g {
-	        font-size: 3.5vw; /* Adjust size for tablets */
-	        width: 3.5vw;
-	        height: 3.5vw;
-	    }
-
-	    .restofbloglogo {
-	        font-size: 3.5vw; /* Adjust size for tablets */
-	    }
+	    margin-left: -0.02em; /* Keeps spacing between "G" and text as tight as all other letters */
+	    letter-spacing: -0.03em; /* Matches overall text tightness */
 	}
 
 	@media (max-width: 768px) {
+	    /* Adjusts the size of the circle and text on mobile devices */
 	    .highlight-g {
-	        font-size: 5vw; /* Bigger question mark for tablets */
-	        width: 5vw;
-	        height: 5vw;
+	        font-size: 6vw; /* Scales down question mark for mobile */
+	        width: 6vw; /* Keep the circle size proportional */
+	        height: 6vw; /* Keep the circle size proportional */
 	    }
 
 	    .restofbloglogo {
-	        font-size: 5vw; /* Adjust size for tablets */
+	        font-size: 6vw; /* Scales down text for mobile */
 	    }
 	}
 
 	@media (max-width: 480px) {
+	    /* Further adjustments for smaller screens (like very small phones) */
 	    .highlight-g {
-	        font-size: 7vw; /* Increase size for mobile */
-	        width: 7vw;
-	        height: 7vw;
+	        font-size: 8vw; /* Bigger size for the circle on smaller phones */
+	        width: 8vw; /* Circle scaling up for very small screens */
+	        height: 8vw; /* Circle scaling up for very small screens */
 	    }
 
 	    .restofbloglogo {
-	        font-size: 7vw; /* Increase font size for mobile */
+	        font-size: 8vw; /* Larger text size for mobile */
 	    }
 	}
 	
