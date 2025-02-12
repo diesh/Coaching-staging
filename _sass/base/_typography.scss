@@ -288,6 +288,7 @@ body, input, select, textarea {
 	    overflow: hidden;
 	    justify-content: flex-start; /* Align elements to the left */
 	    white-space: nowrap; /* Prevent wrapping of ? and "Good Question!" */
+	    width: 100%; /* Ensure the container can scale properly */
 	}
 
 	.highlight-g {
@@ -299,56 +300,57 @@ body, input, select, textarea {
 	    justify-content: center;
 	    align-items: center;
 	    flex-shrink: 0;
-	    font-size: 5vw; /* Adjust size relative to viewport width */
+	    font-size: 5vw; /* Size relative to viewport width */
 	    width: 5vw;
 	    height: 5vw;
-	    margin-right: 0.2em; /* Adjust the space between the question mark and text */
+	    margin-right: 0.2em; /* Space between the question mark and text */
 	}
 
 	.restofbloglogo {
 	    font-weight: 600;
-	    font-size: 5vw; /* Adjust font size based on screen size */
-	    margin-left: 0.1em;
+	    font-size: 5vw; /* Dynamically scale based on screen size */
+	    margin-left: 0.2em;
 	    white-space: nowrap;
-	    overflow: hidden; /* Ensure the text doesn’t overflow */
-	    text-overflow: ellipsis; /* Add ellipsis if text is too long to fit */
+	    overflow: visible; /* Allow text to fully show */
+	    text-overflow: unset; /* Remove ellipsis */
 	}
 
 	@media (max-width: 1024px) {
 	    .highlight-g {
-	        font-size: 7vw; /* Increase size for larger screens */
+	        font-size: 7vw; /* Larger question mark for larger screens */
 	        width: 6vw;
 	        height: 6vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 6vw; /* Adjust for larger text on tablets */
+	        font-size: 6vw; /* Adjust size for tablets */
 	    }
 	}
 
 	@media (max-width: 768px) {
 	    .highlight-g {
-	        font-size: 8vw; /* Increase size for tablets */
+	        font-size: 8vw; /* Bigger question mark for tablets */
 	        width: 7vw;
 	        height: 7vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 7vw; /* Adjust text size for tablets */
+	        font-size: 7vw; /* Adjust size for tablets */
 	    }
 	}
 
 	@media (max-width: 480px) {
 	    .highlight-g {
-	        font-size: 10vw; /* Larger size for mobile */
+	        font-size: 10vw; /* Increase size for mobile */
 	        width: 9vw;
 	        height: 9vw;
 	    }
 
 	    .restofbloglogo {
-	        font-size: 9vw; /* Make "Good Question!" larger on mobile */
+	        font-size: 9vw; /* Increase font size for mobile */
 	    }
 	}
+
 
 	
 	/* End of Blog logo style */
