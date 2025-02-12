@@ -275,6 +275,18 @@ body, input, select, textarea {
 	  visibility: visible; /* Show pronunciation when hovered */
 	}
 	
+	/* Mobile styles: Hide pronunciation by default */
+	@media (max-width: 768px) {
+	    .pronunciation {
+	        visibility: hidden;
+	        opacity: 0;
+	    }
+
+	    .gagan:active .pronunciation {
+	        visibility: visible;
+	        opacity: 1;
+	    }
+	}
 	
 	
 	/* Blog logo */
