@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "How do I navigate my first month at a new job?!"
-description: "The first few days at a new job can be nerve wracking! How does one stay sane, drink from the fire hose, stay focused, and make sense of the chaos? Plus getting to know people <i>and</i> getting them to know me?"
+title: "How do I survive my first month at a new job?"
+description: "The first few days at a new job can be nerve wracking! How does one drink from the fire hose, stay focused, and make sense of the chaos? Plus getting to know people <i>and</i> getting them to know me?"
 image: assets/images/sigmund-rWE7bTqgMJE-unsplash.jpg
 date: 2025-02-05
 comments: true

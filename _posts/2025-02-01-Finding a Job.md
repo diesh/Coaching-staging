@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How do I find a Job (and stay sane)?
+title: How do I find a job (and stay sane)?
 description: It's a zoo out there! What (counterintuitive) suggestions would make the search a bit easier, and lead to better results? What's better than the desperate-all-over-the-place-energy that one is apt to put out there?
 image: assets/images/guilherme-stecanella-EefsBN5B5GE-unsplash.jpg
 masthead_caption: "Guilherme Stecanella on Unsplash"

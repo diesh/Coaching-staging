@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What does a unblocked exec team look like?
+title: How can a leadership team get results?
 description: Want to anticipate the future? Build a future-proof company? How can you use design thinking to tackle complexity, bring innovation into your everyday work and drive meaningful change? 
 image: assets/images/mark-fletcher-brown-nN5L5GXKFz8-unsplash.jpg
 masthead_caption: "Mark Fletcher-Brown on Unsplash"
