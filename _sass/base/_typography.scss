@@ -281,58 +281,52 @@ body, input, select, textarea {
 	
 	.bloglogo {
 	    display: flex;
-	    align-items: center; /* Ensures the ? and text are aligned properly */
+	    align-items: center; /* Ensures ? and text align properly */
 	    font-weight: bold;
 	    line-height: 1;
 	    letter-spacing: -0.03em;
 	    overflow: hidden;
-	    justify-content: center; /* Ensures the text and ? are centered */
+	    justify-content: flex-start; /* Left-aligned */
+	    white-space: nowrap; /* Ensure no line breaks */
 	}
 
+	.highlight-g {
+	    font-weight: 900;
+	    background: #ff7a18;
+	    color: #fff;
+	    border-radius: 50%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-shrink: 0;
+	    font-size: 1.8em; /* Adjustable size for larger screens */
+	    width: 1.8em;
+	    height: 1.8em;
+	    margin-right: 0.3em; /* Reduced space between ? and "Good Question!" */
+	}
 
+	.restofbloglogo {
+	    font-weight: 600; /* Set font weight to 600 */
+	    font-size: 1.8em; /* Adjust size for larger screens */
+	    margin-left: 0.3em; /* Space between ? and text */
+	    white-space: nowrap; /* Prevent wrapping */
+	    overflow: hidden; /* Hide overflow */
+	}
 
-		.highlight-g {
-		    font-weight: 600;
-		    background: #ff7a18;
-		    color: #fff;
-		    border-radius: 50%;
-		    display: flex;
-		    justify-content: center;
-		    align-items: center;
-		    flex-shrink: 0;
-		    font-size: 1.2em; /* Reduced size for both ? and N */
-		    width: 1.3em; /* Adjusted to prevent cutting off */
-		    height: 1.3em; /* Adjusted to prevent cutting off */
-		    margin-right: 0.3em; /* Space between the ? and "Good Question!" */
-		}
-	
-		.restofbloglogo {
-		    font-weight: 600; /* Keep font weight consistent */
-		    font-size: 1.8em; /* Adjusted size for larger screens */
-		    white-space: nowrap; /* Prevent text from wrapping onto a new line */
-		    overflow: hidden; /* Hide any overflow text */
-		    text-overflow: ellipsis; /* Add ellipsis if text overflows */
-		    max-width: 90%; /* Ensure the text doesn’t overflow the container */
-		}
+	@media (max-width: 768px) {
+	    .highlight-g {
+	        font-size: 1.4em; /* Smaller size for mobile */
+	        width: 1.4em;
+	        height: 1.4em;
+	    }
 
-		@media (max-width: 768px) {
-		    .restofbloglogo {
-		        font-size: 1.2em; /* Adjust size for mobile */
-		        max-width: 100%; /* Make sure the text fits well on mobile */
-		    }
-		}
-
-    
 	    .restofbloglogo {
-	        font-size: 1em; /* Reduced size to 1em for mobile */
-	        max-width: 90%; /* Ensures text fits on screen */
-	        text-align: center;
+	        font-size: 1.2em; /* Smaller size for mobile */
+	        white-space: nowrap;
+	        overflow: hidden;
 	    }
-
-	    .bloglogo {
-	        justify-content: center;
-	        padding: 0 1em; /* Add padding for spacing */
-	    }
+	}
+	
 	
 	
 	
