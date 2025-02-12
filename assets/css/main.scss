@@ -83,128 +83,142 @@
 	
 	
 /* Scoped styles for post pages */
-	.post-page {
-	    /* Style for post content */
-	    #one .inner,
-	    #two .inner {
-			width: 70%; /* 70% width by default */
-			max-width: 1200px; /* Maximum width for large screens
-	        margin: 0 auto; /* Center it horizontally */
-	        padding: 2em;
-	    }
-	}
-
-    /* Callout styles */
-    .callout {
-
-        padding: 15px 20px;
-        margin: 1em 20px 20px;
-        border-radius: 5px;
-        max-width: 300px;
-        position: relative;
-		border: 4px dashed _palette(brand-color);
+.post-page {
+    /* Default for large screens (desktop and tablets) */
+    #one .inner,
+    #two .inner {
+        width: 70%; /* 70% width for large screens */
+        max-width: 1200px; /* Maximum width for large screens */
+        margin: 0 auto; /* Center content horizontally */
+        padding: 2em;
     }
-	
-	.callout h3 {  
-	    text-decoration-line: underline;  
-	    text-decoration-thickness: 0.5em;  
-		text-decoration-color: _palette(brand-color);
-	}
-	
 
-    /* Callout positioning */
-    .callout-left {
+    /* Mobile adjustments */
+    @media only screen and (max-width: 768px) {
+        #one .inner,
+        #two .inner {
+            width: 100%; /* Full width for mobile */
+            max-width: none; /* Remove max-width restriction */
+            padding: 1.5em; /* Adjust padding for better mobile spacing */
+        }
+    }
+}
+
+/* Callout styles */
+.callout {
+    padding: 15px 20px;
+    margin: 1em 20px 20px;
+    border-radius: 5px;
+    max-width: none; /* No max-width for mobile */
+    width: 100%; /* Full width for mobile */
+    position: relative;
+    border: 4px dashed _palette(brand-color);
+}
+
+/* Callout icon styling */
+.callout .fa {
+    font-size: 40px;
+    color: _palette(highlight);
+    position: absolute;
+    top: -25px;
+    left: -20px;
+}
+
+/* For large screens: keep the callout aligned side by side */
+@media only screen and (min-width: 769px) {
+    .callout-left,
+    .callout-right {
         float: left;
         width: 45%;
         margin-right: 20px;
     }
+}
 
+/* Callout adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    .callout {
+        padding: 12px 16px;
+        margin: 1em 0;
+    }
+
+    .callout-left,
     .callout-right {
-        float: right;
-        width: 45%;
-        margin-left: 20px;
+        float: none; /* Remove float on mobile */
+        width: 100%; /* Ensure callout takes up full width */
+        margin: 0; /* Remove side margins */
+        clear: both; /* Clear floats */
     }
 
-    /* Callout icon */
     .callout .fa {
-        font-size: 40px;
-        color: _palette(highlight);
-        position: absolute;
-        top: -25px;
-        left: -20px;
+        font-size: 30px; /* Smaller icon size for mobile */
+        top: -20px; /* Adjust icon position */
+        left: -15px;
     }
 
-    /* Callout list styles */
     .callout ul {
-        list-style: none;
-        padding-left: 20px;
-        margin: 0;
+        padding-left: 10px;
+        margin-top: 10px;
     }
 
     .callout ul li {
-        position: relative;
-        font-size: 16px;
-        line-height: 1.5;
+        font-size: 14px; /* Smaller font size */
+        line-height: 1.4;
     }
 
     .callout ul li::before {
-        content: '\2022';
-        font-size: 12px;
-        color: #ff6600;
-        position: absolute;
-        left: -15px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: 5px;
+        font-size: 10px; /* Smaller bullets */
     }
+}
 
-	
-	
-	.post {
-	    display: flex;
-	    align-items: center; /* Keeps icon aligned */
-	    gap: 10px; /* Space between icon and text */
-	    padding: 12px 0; /* Balanced spacing inside each post */
-	}
+/* Adjustments for regular posts */
+.post {
+    display: flex;
+    flex-direction: column; /* Stack post content vertically on mobile */
+    align-items: flex-start; /* Align content to the left */
+    gap: 10px;
+    padding: 12px 0;
+}
 
-	.icon-small {
-	    font-size: 1.2em;
-	    color: _palette(accent2);
-	    flex-shrink: 0; /* Prevents icon from resizing */
-	}
-	
-	.post-content h3 {
-	    margin: 0; /* Remove extra space */
-	    padding: 0; /* Ensure no padding is added */
-	    line-height: 1.2; /* Adjust spacing for better readability */
-	}
-	.post-content p {
-	    margin-top: 2px; /* Reduce space between title and excerpt */
-	    margin-bottom: 5px; /* Reduce space below excerpt */
-	}
+.icon-small {
+    font-size: 1.2em;
+    color: _palette(accent2);
+    flex-shrink: 0;
+}
 
-	/* blog comments */
-	#disqus_thread {
-	    text-align: left !important;
-	    width: 100% !important;
-	    max-width: 800px; /* Adjust as needed */
-	    margin: 20px !important;
-	}
+.post-content h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
 
-	#disqus_thread iframe {
-	    margin: 0 !important;
-	    text-align: left !important;
-	    display: block !important;
-	}
+.post-content p {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
 
-	#disqus_thread .reactions { 
-	    display: flex !important;
-	    justify-content: flex-start !important;
-	    text-align: left !important;
-	}
+/* Responsive adjustments for comments */
+#disqus_thread {
+    text-align: left !important;
+    width: 100% !important;
+    max-width: 100%; /* Allow comments section to take full width */
+    margin: 20px !important;
+}
 
-	#disqus_thread .reaction { 
-	    margin-right: 8px !important;
-	}
+#disqus_thread iframe {
+    margin: 0 !important;
+    text-align: left !important;
+    display: block !important;
+}
+
+#disqus_thread .reactions {
+    display: flex !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+#disqus_thread .reaction {
+    margin-right: 8px !important;
+}
+
 
 	
