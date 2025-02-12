@@ -113,14 +113,17 @@ body, input, select, textarea {
 
 	h1 {
 		font-size: 2rem;
+		 font-weight: _font(weight-bold);
 	}
 
 	h2 {
 		font-size: 1.5rem;
+		 font-weight: _font(weight-bold);
 	}
 
 	h3 {
 		font-size: 1.25rem;
+		 font-weight: _font(weight-bold);
 	}
 
 	h4 {
