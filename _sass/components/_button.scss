@@ -1,4 +1,4 @@
-/* Default button styling */
+/* Homepage masthead button styling */
 .masthead_button {
   border: 1px solid _palette(brand-color);
   cursor: pointer;
@@ -22,6 +22,9 @@
   color: _palette(brand-color); /* Default text color */
   background-color: transparent; /* Transparent background */
   box-shadow: none; /* No shadow */
+
+  max-width: 100%;  /* Ensure the button never exceeds the parent width */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .masthead_button .arrow svg {
@@ -30,7 +33,6 @@
   margin-left: 8px; /* Add space between text and arrow */
 }
 
-
 .masthead_button:hover {
   background-color: transparent; /* Hover background color */
   color: #FFF; /* Change text color on hover */
@@ -38,9 +40,9 @@
 }
 
 .masthead_button:active {
-  background-color: rgba(255, 255, 255, 0.4) !important; /* Active background color is 80 opacity*/
+  background-color: rgba(255, 255, 255, 0.4) !important; /* Active background color */
   color: _palette(accent3) !important; /* Active text color */
-  border-color: _palette(accent3); /* Change border color */
+  border-color: _palette(accent3); /* Active border color */
 }
 
 .masthead_button .arrow svg path {
@@ -54,6 +56,19 @@
 
 .masthead_button:active .arrow svg path {
   stroke: _palette(accent3); /* Keep the same arrow color on active */
+}
+
+/* Media query for smaller screens (mobile devices) */
+@media (max-width: 768px) {
+  .masthead_button {
+    padding: 0 1.5em; /* Reduce padding on smaller screens */
+    font-size: 12px; /* Adjust font size for better mobile readability */
+  }
+
+  .masthead_button .arrow svg {
+    width: 14px; /* Adjust arrow size on mobile */
+    height: 14px;
+  }
 }
 
 
