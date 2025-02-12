@@ -51,7 +51,7 @@
                             if (response.ok) {
                                 // Show thank you message and hide the form
                                 thankYouMessage.style.display = 'block';
-                                form.style.display = 'none';
+                                form.style.display = 'none';  // Hide the form after submission
                             } else {
                                 // Show error message if there's an issue
                                 errorMessage.style.display = 'block';
@@ -97,10 +97,10 @@
     <div class="inner">
         <ul class="copyright">
             <li>&copy;<span id="current-year"></span> <a href="http://designstamp.com/?GaganDieshCoaching" target="_blank">DesignStamp</a> | Coaching by {{ site.title }}</li>
-            <li><a href="https://diesh.substack.com/" target="_blank">Signup for my Newsletter</a></li>
+            <li><a href="https://diesh.substack.com/" target="_blank">Signup for my newsletter</a></li>
             <li><br /></li>
             <li><a href="https://designstamp.com/privacy" target="_blank">Privacy policy</a></li>
-            <li>I use a mix of Canadian and American spelling. I know. 🤷🏽‍♂️</li>
+            <li>I use a mix of Canadian + American spelling. I know. 🤷🏽‍♂️</li>
             <li>Short on $ and out of work? If you need help, <a href="#contact" class="next scrolly">message me</a>. We can figure this out.</li>
         </ul>
 
