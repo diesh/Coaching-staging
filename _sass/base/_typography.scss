@@ -8,17 +8,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+html {
+  font-size: 1.05rem; 
+}
+
 body, input, select, textarea {
     color: _palette(fg);
     font-family: _font(family);
-    font-size: 1rem; /* Default font size for larger screens */
+    font-size: 1.05rem; /* Default font size for larger screens */
     font-weight: _font(weight);
     letter-spacing: _font(letter-spacing);
-    line-height: 1.65;
+    line-height: 2;
 
     /* Breakpoint for larger screens (xlarge) */
     @include breakpoint(xlarge) {
-        font-size: 1.167rem; /* Slightly larger font for larger screens */
+        font-size: 1.08rem; /* Slightly larger font for larger screens */
     }
 
     /* Breakpoint for smaller screens (large) */
@@ -28,17 +32,17 @@ body, input, select, textarea {
 
     /* Breakpoint for medium screens */
     @include breakpoint(medium) {
-        font-size: 1rem; /* Default font size for medium screens */
+        font-size: 1.05rem; /* Default font size for medium screens */
     }
 
     /* Breakpoint for small screens */
     @include breakpoint(small) {
-        font-size: 1rem; /* Same as default for smaller screens */
+        font-size: 1.05rem; /* Same as default for smaller screens */
     }
 
     /* Breakpoint for extra small screens (xxsmall) */
     @include breakpoint(xxsmall) {
-        font-size: 1rem; /* Increased size for mobile to be more readable */
+        font-size: 1.15rem; /* Increased size for mobile to be more readable */
     }
 }
 
