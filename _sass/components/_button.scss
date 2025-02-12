@@ -1,3 +1,4 @@
+
 /* Homepage masthead button styling */
 .masthead_button {
   border: 1px solid _palette(brand-color);
@@ -23,10 +24,8 @@
   background-color: transparent; /* Transparent background */
   box-shadow: none; /* No shadow */
 
-  max-width: 100%;  /* Prevent button from stretching beyond container */
-  overflow: hidden; /* Prevent overflow */
-  margin-left: auto; /* Add auto margin to left for centering */
-  margin-right: auto; /* Add auto margin to right for centering */
+  width: auto; /* Let the width adjust based on content */
+  max-width: 100%;  /* Prevent the button from exceeding its parent's width */
 }
 
 .masthead_button .arrow svg {
