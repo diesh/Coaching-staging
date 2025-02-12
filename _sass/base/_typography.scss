@@ -289,39 +289,22 @@ body, input, select, textarea {
 	    justify-content: center; /* Ensures the text and ? are centered */
 	}
 
-	.highlight-g {
-	    font-weight: 900;
-	    background: #ff7a18; 
-	    color: #fff;
-	    border-radius: 50%;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    .bloglogo {
-	        display: flex;
-	        align-items: center; /* Align the ? and text on the same line */
-	        font-weight: 600; /* Set font weight to 600 for both */
-	        line-height: 1;
-	        letter-spacing: -0.03em;
-	        overflow: hidden;
-	        justify-content: center; /* Center both the ? and text horizontally */
-	    }
 
-	    .highlight-g {
-	        font-weight: 600; /* Set font weight to 600 */
-	        background: #ff7a18;
-	        color: #fff;
-	        border-radius: 50%;
-	        display: flex;
-	        justify-content: center;
-	        align-items: center;
-	        flex-shrink: 0;
-	        font-size: 1.5em; /* Reduced size for desktop */
-	        width: 1.5em;
-	        height: 1.5em;
-	        margin-right: 0.3em; /* Reduced space between ? and "Good Question!" */
-	    }
-	} /* <-- Closing bracket for .highlight-g added here */
+
+		.highlight-g {
+		    font-weight: 600;
+		    background: #ff7a18;
+		    color: #fff;
+		    border-radius: 50%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    flex-shrink: 0;
+		    font-size: 1.2em; /* Reduced size for both ? and N */
+		    width: 1.3em; /* Adjusted to prevent cutting off */
+		    height: 1.3em; /* Adjusted to prevent cutting off */
+		    margin-right: 0.3em; /* Space between the ? and "Good Question!" */
+		}
 	
 	.restofbloglogo {
 	    font-weight: 600; /* Set font weight to 600 */
@@ -329,12 +312,12 @@ body, input, select, textarea {
 	}
 
 	@media (max-width: 768px) {
-	    /* Mobile adjustments */
 	    .highlight-g {
-	        font-size: 1em; /* Reduced size to 1em for mobile */
-	        width: 1em; /* Adjust width for mobile */
-	        height: 1em; /* Adjust height for mobile */
+	        font-size: 1em; /* Further reduce size for mobile */
+	        width: 1.1em; /* Adjust width for mobile */
+	        height: 1.1em; /* Adjust height for mobile */
 	    }
+	}
     
 	    .restofbloglogo {
 	        font-size: 1em; /* Reduced size to 1em for mobile */
@@ -346,7 +329,7 @@ body, input, select, textarea {
 	        justify-content: center;
 	        padding: 0 1em; /* Add padding for spacing */
 	    }
-	}
+	
 	
 	
 	/* End of Blog logo style */
