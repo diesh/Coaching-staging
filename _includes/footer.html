@@ -40,7 +40,7 @@
 	        event.preventDefault();  // Prevent the form from submitting traditionally
         
 	        const formData = new FormData(form);
-	        console.log("Form data: ", formData);  // Log form data
+	        console.log("Form data submitted:", formData);  // Log form data
 
 	        // Send data to Formspree using Fetch API
 	        fetch(form.action, {
@@ -50,6 +50,7 @@
 	        })
 	        .then(response => {
 	            console.log('Response Status:', response.status);  // Log response status
+
 	            if (response.ok) {
 	                // If the response is successful
 	                thankYouMessage.style.display = 'block';   // Show the success message
@@ -70,8 +71,6 @@
 	        });
 	    });
 
-	    // Check if thank you message is showing
-	    console.log('Thank you message visibility:', thankYouMessage.style.display);
 	</script>
 	
        
