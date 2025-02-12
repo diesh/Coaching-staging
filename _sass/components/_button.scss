@@ -9,7 +9,7 @@
   font-size: 14.9333px;
   font-weight: 600;
   letter-spacing: 3.73333px;
-  padding: 0 2.5em;
+  padding: 0 2.5em; /* Adjust padding for horizontal space */
   height: 3.5em;
   text-align: center;
   text-transform: uppercase;
@@ -23,8 +23,10 @@
   background-color: transparent; /* Transparent background */
   box-shadow: none; /* No shadow */
 
-  max-width: 100%;  /* Ensure the button never exceeds the parent width */
+  max-width: 100%;  /* Prevent button from stretching beyond container */
   overflow: hidden; /* Prevent overflow */
+  margin-left: auto; /* Add auto margin to left for centering */
+  margin-right: auto; /* Add auto margin to right for centering */
 }
 
 .masthead_button .arrow svg {
@@ -63,6 +65,8 @@
   .masthead_button {
     padding: 0 1.5em; /* Reduce padding on smaller screens */
     font-size: 12px; /* Adjust font size for better mobile readability */
+    margin-left: auto; /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
   }
 
   .masthead_button .arrow svg {
@@ -70,7 +74,6 @@
     height: 14px;
   }
 }
-
 
 
 /* General button styles */
