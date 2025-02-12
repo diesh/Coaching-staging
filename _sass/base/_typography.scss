@@ -281,51 +281,49 @@ body, input, select, textarea {
 	
 	
 	.bloglogo {
-	  display: inline-flex;
-	  align-items: center;
-	  font-weight: bold;
-	  white-space: nowrap;
-	  line-height: 1;
-	  letter-spacing: -0.03em;
+	    display: flex; 
+	    flex-wrap: wrap; /* Allow wrapping */
+	    align-items: baseline; /* Align both parts of the logo properly */
+	    font-weight: bold;
+	    line-height: 1;
+	    letter-spacing: -0.03em;
 	}
 
 	.highlight-g {
-	  font-weight: 900;
-	  background: #ff7a18; 
-	  color: #fff;
-	  border-radius: 50%;
-	  width: 1.2em;
-	  height: 1.2em;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  flex-shrink: 0;
-	  line-height: 1;
+	    font-weight: 900;
+	    background: #ff7a18; 
+	    color: #fff;
+	    border-radius: 50%;
+	    width: 1.4em; /* Slightly bigger size for the question mark */
+	    height: 1.4em;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-shrink: 0;
+	    font-size: 1.5em; /* Adjust size on mobile */
 	}
 
 	.restofbloglogo {
-	  font-weight: 600;
-	  margin-left: -0.02em;
-	  letter-spacing: -0.03em;
+	    font-weight: 600;
+	    margin-left: 5px; /* Reduced margin to control spacing */
+	    letter-spacing: -0.03em;
+	    font-size: 1.6em; /* Slightly smaller font size on mobile */
 	}
 
-	@media (max-width: 767px) {
-	  .bloglogo {
-	    white-space: normal;
-	    text-align: center;
-	    font-size: 1.05em;
-	  }
+	@media (max-width: 768px) {
+	    .highlight-g {
+	        font-size: 1.2em; /* Adjust size of question mark for mobile */
+	        width: 1.1em; /* Resize the question mark circle */
+	        height: 1.1em;
+	    }
+    
+	    .restofbloglogo {
+	        font-size: 1.4em; /* Smaller text size for mobile */
+	    }
 
-	  .highlight-g {
-	    width: 1.4em;
-	    height: 1.4em;
-	    font-size: 1.3em;
-	    margin-right: 0.3em;
-	  }
-
-	  .restofbloglogo {
-	    font-size: 1em;
-	  }
+	    .bloglogo {
+	        text-align: center; /* Center the logo on smaller screens */
+	    }
 	}
 	
 	
