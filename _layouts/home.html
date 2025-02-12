@@ -83,7 +83,7 @@
    
     <div class="post-content">
         <h3> <span class="icon-small alt fa fa-question-circle"></span>&nbsp;<a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.description | default: post.excerpt }}</p>
+        <p>{{ post.description | default: post.excerpt }} <a href="{{ post.url | relative_url }}">Read More</a></p>
     </div>
 </article>
 <hr> <!-- Divider between posts -->
