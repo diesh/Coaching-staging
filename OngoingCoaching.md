@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "Ongoing Coaching"
-description: Career growth isn’t a one-time event—it’s a journey. With ongoing coaching, you’ll have a trusted partner to help you navigate challenges, stay accountable, and achieve your goals. 
+description: **Career growth isn’t a one-time event—it’s a journey. With ongoing coaching, you’ll have a trusted partner to help you navigate challenges, stay accountable, and achieve your goals. 
 image: assets/images/coaching.jpg
 nav-menu: true
 nav-color: "#FFDDC1" # cream
 masthead_caption: "Lucas van Oort on Unsplash"
 masthead_url: "https://unsplash.com/@switch_dtp_fotografie"
-date: 2016-01-01
+date: 2025-02-01
 ---
 
 <!-- Main -->

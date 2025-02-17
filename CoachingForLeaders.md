@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Coaching for Leaders
-description: In 8 weeks, you’ll gain a deeper understanding of your leadership style—how you show up in calm and high-pressure moments—and develop strategies to lead with empathy, clarity, and impact. You'll learn how to rally your team, navigate challenges with confidence, and bring out the best in others (and yourself).
+description: In 8 weeks, you’ll gain a deeper understanding of your leadership style, how you show up in both calm and high-pressure moments, and develop strategies to lead with empathy, clarity, and impact. You’ll learn to rally your team, navigate challenges with confidence, and bring out the best in others (and yourself).
 image: assets/images/leaders.jpg
 nav-menu: true
 nav-color: "#FF7F50" #coral

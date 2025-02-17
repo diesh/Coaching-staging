@@ -41,8 +41,7 @@ weight: 40
             <p>Throughout my career, I’ve led user research and experience design initiatives for some of the world’s most influential organizations, including the Bill & Melinda Gates Foundation, the OECD, and PEPFAR, the largest global initiative dedicated to combating HIV/AIDS.</p>
            
             <blockquote>Explore my coaching programs for <a href="CoachingForLeaders.html">leaders</a>, <a href="TeamWorkshops.html">team workshops</a>, <a href="NextUp.html">career exploration</a>. I am also available for <a href="OngoingCoaching.html">ongoing coaching</a> to help you level up and tackle work challenges with confidence.</blockquote>
-            <p>Most recently, I served as VP of Experience Design & Research at Thinkific, an online learning platform that achieved unicorn status and went public in 2021. I helped develop the Digital Design program at Vancouver Film School and have taught courses, delivered talks, and led workshops on branding, user experience, and design thinking. I work as an executive coach, partnering with leaders and individual contributors to accelerate their careers and drive impactful, strategic initiatives. I live in Toronto, Canada.</p>
-
+            <p>Most recently, I served as VP of Experience Design & Research at Thinkific, an online learning platform that achieved unicorn status and went public in 2021. I helped develop the Digital Design program at Vancouver Film School and have taught courses, delivered talks, and led workshops on branding, user experience, and design thinking. I work as an executive coach, partnering with leaders and individual contributors to accelerate their careers and drive impactful, strategic initiatives. I live in Toronto, Canada 🇨🇦.</p>
             <hr class="major" />
 
             <h2 id="elements">Why Coaching</h2>
