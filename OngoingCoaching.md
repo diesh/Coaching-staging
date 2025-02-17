@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Ongoing Coaching"
-description: **Career growth isn’t a one-time event—it’s a journey. With ongoing coaching, you’ll have a trusted partner to help you navigate challenges, stay accountable, and achieve your goals. 
+description: Career growth isn’t a one-time event—it’s a journey. With ongoing coaching, you’ll have a trusted partner to help you navigate challenges, stay accountable, and achieve your goals. 
 image: assets/images/coaching.jpg
 nav-menu: true
 nav-color: "#FFDDC1" # cream
