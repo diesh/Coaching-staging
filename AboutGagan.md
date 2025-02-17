@@ -50,7 +50,7 @@ weight: 40
             <div class="row">
                 <!-- Left Column -->
                 <div class="8u 12u$(medium)">
-                    <p>Moving from design leadership to executive coaching felt like a natural next step. After two decades of helping businesses, customers, and technology teams work better together, I realized something: great skills and experience aren't enough to guarantee success. A- teams need two other key ingredients: <br /><span class="fa fa-check" style="color: grey;"></span> Leaders who are empathetic and clear about priorities, and <br /><span class="fa fa-check" style="color: grey;"></span> The team has taken the time and effort required to build real trust.</p>
+                    <p>Moving from design leadership to executive coaching felt like a natural next step. After two decades of helping businesses, customers, and technology teams work better together, I realized something: great skills and experience aren't enough to guarantee success. Exceptional teams need two other key ingredients: <br /><span class="fa fa-check" style="color: grey;"></span> Leaders who are empathetic and clear about priorities, and <br /><span class="fa fa-check" style="color: grey;"></span> The team has taken the time and effort required to build real trust.</p>
 
 <p>Trust helps teams go from the unknown to the known, navigate uncertainty, and feel like they're truly on the same side.</p>
                     
