@@ -4,15 +4,16 @@ subtitle: Executive Coaching
 email: gagan@designstamp.com
 description: I help design + product professionals and teams unlock their full potential.
 
+url: "https://diesh.ca"
 baseurl: "/Coaching"
 url: # the base hostname & protocol for your site
 author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
-country: United States of America
-phone: (716) 555-5555
+street_address: 
+city: 
+state: 
+zip_code: 
+country: U
+phone: 
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
