@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OngoingCoaching.md",
+                "file": "AboutGagan.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "OngoingCoaching"
+              "title": "AboutGagan"
             }
           }
         ]
@@ -166,12 +166,12 @@
   },
   "active": "b238d1a4b853ae88",
   "lastOpenFiles": [
+    "CoachingForLeaders.md",
     "NextUp.md",
+    "TeamWorkshops.md",
+    "OngoingCoaching.md",
     "Coachy/Welcome.md",
     "AboutGagan.md",
-    "OngoingCoaching.md",
-    "CoachingForLeaders.md",
-    "TeamWorkshops.md",
     "_site/favicon.ico",
     "favicon.ico",
     "README.md",

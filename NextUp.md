@@ -148,6 +148,19 @@ nav-color: "#1B9C85"
             <p>By the end of the program, you’ll have a clear action plan for your next steps. You’ll also have the option to continue with additional coaching sessions if you want ongoing support as you implement your career strategy. I can also offer ad hoc sessions for interviw prep, case study refinement or any help you need to ace those interviews!</p>
         </div>
     </div>
+    <!--start of last faq-->
+	<div class="faq-item">
+        <div class="faq-question">
+            <span>Next steps?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+	        <p>Yay ✨ for wanting to take action and move to the next step. Let's do this!</p>
+            <p> <a href="#contact" class="next scrolly">Message me</a>, and let’s set up an initial chat. I’ll reply to organize a session where we can get to know each other, ask questions, and make sure this partnership is the right fit.</p>
+	        <p>Excited to get to know you!</p>          
+	    </div>
+	</div>
+	<!--end of last faq-->
 </div>
 <!-- end of faq -->
 
