@@ -95,7 +95,7 @@ If all lives truly mattered equally, movements like Black Lives Matter wouldn’
             <i class="fa fa-plus faq-icon"></i>
         </div>
         <div class="faq-answer">
-            <p>I work with executives, product and design leaders, and individual contributors looking to accelerate their careers. I also coach teams on leadership, collaboration, and strategic decision-making.</p>
+            <p>I work with executives, product and design leaders, and individual contributors looking to <a href="OngoingCoaching.html">excel at work</a> or figure out <a href="NextUp.html">what's next for their careers</a>. I also <a href="TeamWorkshops.html">coach teams</a> on leadership, collaboration, and strategic decision-making.</p>
         </div>
     </div>
 
