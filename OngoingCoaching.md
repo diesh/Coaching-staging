@@ -136,6 +136,19 @@ date: 2025-02-01
             <p>Beyond reflection, we’ll experiment with strategies to strengthen your relationships with your boss and coworkers. This could include communication frameworks, reporting cadences, and techniques to help you become a more effective leader at work.</p>
         </div>
     </div>
+	<div class="faq-item">
+        <div class="faq-question">
+            <span>Next steps?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+	        <p>Yay!</p>
+            <p> <a href="#contact" class="next scrolly">Message me</a>, and let’s set up an initial chat. I’ll reply to organize a session where we can get to know each other, ask questions, and make sure this partnership is the right fit.</p>
+	        <p>Excited to get to know you!</p>
+            
+    </div>
+
+
 </div>
 
 <!-- end of faq -->
