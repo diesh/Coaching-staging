@@ -144,11 +144,9 @@ date: 2025-02-01
         <div class="faq-answer">
 	        <p>Yay!</p>
             <p> <a href="#contact" class="next scrolly">Message me</a>, and let’s set up an initial chat. I’ll reply to organize a session where we can get to know each other, ask questions, and make sure this partnership is the right fit.</p>
-	        <p>Excited to get to know you!</p>
-            
-    </div>
-
-
+	        <p>Excited to get to know you!</p>          
+	    </div>
+	</div>
 </div>
 
 <!-- end of faq -->
