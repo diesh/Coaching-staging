@@ -75,6 +75,91 @@ nav-color: "#1B9C85"
                     </div>
                 </dl>
 
+
+<!-- start of faq -->
+<h2>Frequently Asked Questions</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Who is this program for?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>This program is designed for professionals at any stage of their career who are looking for clarity, direction, and a structured way to move forward. Whether you're a fresh grad, exploring new opportunities, seeking a promotion, or considering a career shift, this program will provide the guidance and tools to help you make confident decisions.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How is the program structured?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>The program runs over eight weeks, with a structured approach to career planning and development. Each week focuses on a different aspect of your career, from identifying strengths and refining your resume to interview prep and networking strategies.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What can I expect to gain from this program?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>By the end of the program, you’ll have a clear career roadmap, a refined resume and LinkedIn profile, stronger interview skills, and a networking strategy. More importantly, you’ll gain confidence and clarity on your next career move. I can also help you apply for specific jobs and build the material you need to ace the interviews.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How much time should I dedicate each week?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Plan to spend around 2-3 hours per week. This includes attending sessions, completing exercises, and implementing strategies. Some weeks may require more time, especially when working on your resume, LinkedIn profile, or interview prep.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Is there any homework?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, but it’s practical and directly tied to your career goals. You’ll work on refining your resume, optimizing your LinkedIn, practicing interview responses, and developing a networking strategy. These exercises are designed to set you up for success. You'd need to do this work anyways, and now you have a real human helping you along the way!</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Will I receive personalized feedback?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Yes! This isn’t a one-size-fits-all program. You’ll receive individualized feedback on your resume, LinkedIn profile, and interview techniques, ensuring you get the most relevant and actionable insights for your career path.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What happens after the program ends?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>By the end of the program, you’ll have a clear action plan for your next steps. You’ll also have the option to continue with additional coaching sessions if you want ongoing support as you implement your career strategy. I can also offer ad hoc sessions for interviw prep, case study refinement or any help you need to ace those interviews!</p>
+        </div>
+    </div>
+</div>
+<!-- end of faq -->
+
+
+
+
+
+<!-- end of faq -->
+
+
+
+
 			</div>
 
 			<!-- Right Column (What to Expect and Why This Works) -->

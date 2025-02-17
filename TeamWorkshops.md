@@ -61,6 +61,61 @@ nav-color: "#8d82c4" # Lavender Blue
 						Clarify your product vision and strategy. Through collaborative exercises, your team will define the problem space, identify opportunities, and align on a shared direction for your product or service.
 					</li>
 				</ul>
+				<p>Workshops are just the beginning. A great workshop can have a massive positive impact on team morale and how you work together everyday! The best teams continuously refine how they work, communicate, and solve problems together. If you’re curious about my approach or want to explore more ways to grow, learn more <a href="AboutGagan.html">about me</a> and <a href="#contact" class="next scrolly">let's connect!</a></p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How do you tailor workshops to my team’s specific needs?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            Every workshop starts with a discovery session where we discuss your team’s challenges, goals, and dynamics. Based on that, I design a session with hands-on exercises tailored to your needs. I have a few folks that I can also call upon to help me co-facilitate the sessions for larger groups. 
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What’s the ideal team size for a workshop?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            The ideal size depends on the type of workshop, but typically 5-15 people allows for strong engagement and collaboration. Larger teams can benefit from more instructional workshops where we delve into topics to help build a strong culture, such as unbiased hiring, building a culture of feedback and collaboration, and structured brainstorming.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do you offer virtual workshops or only in-person sessions?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            I offer both virtual and in-person workshops, depending on what works best for your team. Virtual workshops are designed to be just as interactive as in-person ones, with breakout sessions, moderated chats, and structured time for both on-camera and off-camera engagement. I'm based in Toronto and happy to travel for in-person sessions if preferred.
+        </div>
+    </div>
+	<div class="faq-item">
+        <div class="faq-question">
+            <span>Our team is shy / introverted / formal. Will this work for them?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Yes! These workshops are built for all team dynamics, including quieter or more formal groups. Here's how I make sure everyone feels comfortable and engaged:</p>
+
+			<ul>
+		    <li><strong>Options for participation</strong> – Not everyone loves speaking up in a big group. I use small breakouts, written reflections, and structured discussions so people can contribute in ways that feel natural.</li>
+		    <li><strong>No forced interaction</strong> – Activities are designed to be inclusive but not overwhelming. Team members can ease in at their own pace. I always follow up after sessions for folks who like time to reflect before contributing.</li>
+		    <li><strong>A thoughtful approach</strong> – I create a supportive, low-pressure environment where even the most reserved team members feel heard. </li>
+		    <li><strong>Engagement beyond talking</strong> – Collaboration doesn’t always mean speaking up. Many exercises involve writing, sketching, or structured brainstorming so ideas flow in different ways.</li>
+			</ul>
+		<p>Your team’s personality shapes the workshop, not the other way around. The goal is to create meaningful engagement in a way that works best for <strong>you.</strong></p>
+
+        </div>
+    </div>
+</div>
+
+<!-- end of faq -->
+
 			</div>
 
 			<!-- Right Column (What to Expect and Why This Works) -->
@@ -76,7 +131,10 @@ nav-color: "#8d82c4" # Lavender Blue
 				</div>
 				<div class ="box">
 					<h3>Why This Works</h3>
-					<p>Teams thrive when they have the tools, mindset, and alignment to tackle challenges together. These workshops provide the structure and expertise to unlock your team’s potential and achieve breakthrough results.</p>
+					<ul><li> The workshops are designed to provide your team with intentional collaboration, creativity, and alignment.</li>
+					<li>Hands-on sessions give your team the practical tools and frameworks they need to tackle challenges with confidence.</li>
+					<li>Every workshop delivers actionable takeaways that create lasting impact! </li>
+					</ul>
 				</div>
 			</div>
 		</div>

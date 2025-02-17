@@ -5,7 +5,7 @@ description: Want to anticipate the future? Build a future-proof company? How ca
 image: assets/images/mark-fletcher-brown-nN5L5GXKFz8-unsplash.jpg
 masthead_caption: "Mark Fletcher-Brown on Unsplash"
 masthead_url: "hhttps://unsplash.com/@markfb"
-date: 2016-01-01
+date: 2025-02-07
 comments: true
 ---
 ### Design Thinking for Executives: The Secret to Smarter Decision-Making

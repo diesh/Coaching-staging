@@ -172,16 +172,17 @@ body, input, select, textarea {
 	    margin-left: auto;
 	    margin-right: auto;
 	    position: relative;
+		background-color: #f8f8f8;
 	}
 
 	blockquote::before {
 	    content: "“";
 	    font-size: 6rem; /* Large for impact */
-	    color: _palette(border);
+	    color: darken(_palette(border), 25%); /* Increases contrast */
 	    font-family: 'Merriweather', serif;
 	    position: absolute;
 	    left: -2rem; /* Keeps some space between quote and text */
-	    top: -2.25rem; /* Raised higher to align better with short quotes */
+	    top: -3.25rem; /* Raised higher to align better with short quotes */
 	}
 
 	

@@ -98,6 +98,23 @@
 <!-- Footer -->
 <footer id="footer">
   <div class="inner">
+	 
+	  	<p class="breadcrumb">
+	          {% assign sorted_pages = site.html_pages | where: "nav-menu", true | sort: "weight" %}
+
+	          {% for page in sorted_pages %}
+	              
+	                  <a href="{{ page.url | absolute_url }}">
+	                      {{ page.title }}
+	                  </a> <br />
+	              
+	          {% endfor %}
+</p>
+	      
+	         
+
+	
+	  <br />
     <ul class="copyright">
       <li>&copy;<span id="current-year"></span> <a href="http://designstamp.com/?GaganDieshCoaching" target="_blank">DesignStamp</a> | Coaching by {{ site.title }}</li>
       <li><a href="https://diesh.substack.com/" target="_blank">Signup for my newsletter</a></li>

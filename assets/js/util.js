@@ -1,3 +1,17 @@
+
+/** for the FAQ accordian */
+
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentNode;
+        parent.classList.toggle('open');
+    });
+});
+
+/**End of FAQ script**/
+
+
+
 (function($) {
 
 	/**

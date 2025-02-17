@@ -5,7 +5,7 @@ description: It's a zoo out there! What (counterintuitive) suggestions would mak
 image: assets/images/guilherme-stecanella-EefsBN5B5GE-unsplash.jpg
 masthead_caption: "Guilherme Stecanella on Unsplash"
 masthead_url: "https://unsplash.com/@guilhermestecanella"
-date: 2016-01-01
+date: 2025-02-02
 comments: true
 ---
 

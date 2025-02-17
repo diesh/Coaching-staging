@@ -35,7 +35,7 @@ weight: 40
             </header>
 
             <!-- Content -->
-            <h2 id="content">Leading by Design</h2>
+            <h2 id="content">Shaping the Future of Work Through Design</h2>
             <p>Driven by an innate curiosity and a passion for crafting engaging experiences, I’ve been a practitioner, mentor, and educator in the field of design for over 20 years. In 2001, I founded DesignStamp, a studio known for its innovative approach to research and user experience. My strength lies in bridging the gap between customers, businesses, and technologists—helping them understand each other's needs and collaborate seamlessly.</p>
 
             <p>Throughout my career, I’ve led user research and experience design initiatives for some of the world’s most influential organizations, including the Bill & Melinda Gates Foundation, the OECD, and PEPFAR, the largest global initiative dedicated to combating HIV/AIDS.</p>
@@ -57,7 +57,7 @@ weight: 40
                     
 <blockquote> You cannot be what you cannot see.
 — Marian Wright Edelman </blockquote>
-                    <p>Coaching lets me take what I’ve learned in research and experience design and apply it in a new way—helping individuals and teams gain clarity, remove roadblocks, and build strategies that drive real impact. Whether I’m working with executives, product teams, or design leaders, my approach is built on curiosity, collaboration, and the belief that leadership isn’t just a title; it’s a skill you can sharpen, refine, and grow.</p>
+                    <p>Coaching lets me take what I’ve learned in research and experience design and apply it in a new way—helping individuals and teams gain clarity, remove roadblocks, and build strategies that drive real impact. Whether I’m working with executives, product teams, or design leaders, my approach is built on curiosity, collaboration, and the belief that leadership isn’t just a title; it’s a skill you can sharpen, refine, and grow. I'm here to help you <b>see yourself in a new way</b>, so that you can craft a career worth waking up for!</p>
                     
                 
                 <h2 id="elements">My Coaching Style</h2>
@@ -75,6 +75,91 @@ If all lives truly mattered equally, movements like Black Lives Matter wouldn’
 <p>Growth isn’t always easy. Transformation takes effort, resilience, and the right kind of support. I know this firsthand. Throughout my career, I’ve had coaches and built my own personal board of directors—mentors who saw my blind spots, challenged my thinking, and kept me moving forward. The best support network isn’t just kind; it’s strong, direct, and unafraid to hold you accountable.</p>
 
 <p>That’s the approach I bring to coaching. I’ll celebrate your wins, call out the gaps, and push you toward the clarity and confidence you need to lead with impact.</p>
+
+<!--   start of faq -->
+<h2>Frequently Asked Questions</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What is your background in design and coaching?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>I’ve been a practitioner, mentor, and educator in design for over 20 years. I founded DesignStamp in 2001 and have led research and experience design initiatives for organizations like the Gates Foundation, OECD, and PEPFAR. Most recently, I served as VP of Design and Research at Thinkific, where I built and scaled high-performing teams at a publicly traded company in Vancouver, BC.</p>
+            <p>My coaching is a natural extension of that work—helping leaders and teams build trust, gain clarity, and navigate challenges with confidence. As a seasoned manager of managers (MoM) and executive team member, I’ve seen firsthand what drives success—and what happens when leadership falls short. </p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Who do you typically coach?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>I work with executives, product and design leaders, and individual contributors looking to accelerate their careers. I also coach teams on leadership, collaboration, and strategic decision-making.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How is your coaching different from mentorship?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Mentorship is advice-based, drawing from personal experience. Coaching, on the other hand, helps you uncover your own answers through strategic questioning, reflection, and accountability.</p>
+            <p>My role as a coach is to challenge your thinking, highlight blind spots, and equip you with strategies to lead with impact.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What can I expect from coaching with you?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>We’ll create a coaching plan tailored to your goals—whether you’re navigating career growth, stepping into leadership, or refining your approach.</p>
+            <p>You can expect deep conversations, actionable strategies, and a mix of empathy and accountability to keep you on track.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What coaching formats do you offer?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>I offer one-on-one coaching, team workshops, and ongoing leadership development programs. Coaching sessions can be weekly, biweekly, or monthly, depending on your needs.</p>
+            <p>I am also available via text for high pressure situations such as those going through job transitions or high-stakes leadership situations.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What makes your coaching approach unique?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>My background in research and design thinking allows me to approach coaching with curiosity, strategic insight, and a problem-solving mindset.</p>
+            <p>I focus on trust-building, clarity, and actionable strategies—ensuring you leave each session with real steps toward growth. I am not afraid to have candid conversations and invite you to come to our sessions with an open mind and willing to change what is not working for you.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Do you offer flexible payment options?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Yes. I believe coaching should be accessible, so I offer flexible payment options to accommodate different financial situations. I’m especially passionate about helping marginalized individuals secure their seat at the table.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
                 </div>
 
                 <!-- Right Column -->
@@ -89,7 +174,7 @@ If all lives truly mattered equally, movements like Black Lives Matter wouldn’
                          <li><strong>Empathy meets accountability</strong> Supportive, yet unafraid to challenge you.</li> 
                           <li><strong>Results-driven approach</strong> Focused on clarity, action, and measurable progress.</li> 
                           <li><strong>Your success partner</strong> Here to help you grow, adapt, and lead with confidence.</li> 
-                          <li><strong>An ally & Advocate</strong> I’m especially passionate about lifting up women, PoC, and LGBTQ+ professionals, ensuring they have the support, visibility, and opportunities to step into the leadership roles they deserve. I offer flexible payment options to make my services more accessible to everyone</li></ul>
+                          <li><strong>An ally & Advocate</strong> I’m especially passionate about lifting up women, PoC, and LGBTQ+ professionals, ensuring they have the support, visibility, and opportunities to step into the leadership roles they deserve. I offer flexible payment options to make my services more accessible to everyone.</li></ul>
                     </div>
                 </div>
             </div>

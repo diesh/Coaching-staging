@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2025-02-09-Exec training.md",
+                "file": "AboutGagan.md",
                 "mode": "source",
                 "source": true,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "2025-02-09-Exec training"
+              "title": "AboutGagan"
             }
           }
         ]
@@ -166,27 +166,30 @@
   },
   "active": "b238d1a4b853ae88",
   "lastOpenFiles": [
+    "_site/favicon.ico",
+    "favicon.ico",
+    "CoachingForLeaders.md",
+    "TeamWorkshops.md",
+    "README.md",
+    "OngoingCoaching.md",
+    "NextUp.md",
+    "_site/CoachingForLeaders.html",
+    "_site/CoachingForLeaders.md",
+    "_posts/2025-02-09-Exec training.md",
+    "_site/2025/02/07/Exec-training.html",
+    "_site/2025/02/07",
+    "_site/2025/02/01/Exec-training.html",
+    "_site/2025/02/01",
+    "_site/2025/01/01/Exec-training.html",
+    "_site/2025/01/01",
+    "_site/2025/01",
     "_posts/2025-02-03-FirstMonthAtNewJob.md",
     "_posts/2025-02-01-Finding a Job.md",
-    "_site/assets/css/main.css.map",
-    "_posts/2025-02-09-Exec training.md",
-    "_site/2016/01/01/Finding-a-Job.html",
-    "_site/2025/02/12/2025-02-01-Finding-a-Job.html",
-    "_site/2025/02/12",
+    "_site/2025/02/02/Finding-a-Job.html",
     "AboutGagan.md",
-    "TeamWorkshops.md",
-    "OngoingCoaching.md",
-    "_site/TeamWorkshops.html",
-    "NextUp.md",
-    "_site/AboutGagan.html",
-    "assets/images/guilherme-stecanella-EefsBN5B5GE-unsplash.jpg.sb-34389156-HAYZtJ",
-    "_site/assets/css/main.css",
-    "_site/assets/css/main.scss",
     "landing.md",
-    "CoachingForLeaders.md",
     "_site/assets/images/Gagan_Diesh_.jpg",
     "assets/images/Gagan_Diesh_.jpg",
-    "assets/images/Gagan_Diesh_.jpeg.sb-34389156-3zfpTX",
     "_site/assets/images/Gagan_Diesh_.jpeg",
     "assets/images/Gagan_Diesh_.jpeg",
     "_site/assets/images/team.jpg",
@@ -208,8 +211,6 @@
     "404.md",
     "LICENSE.md",
     "_posts/2025-01-12.md",
-    "_posts/2025-08-03-tempus.md.md",
-    "_posts/2016-01-01-ipsum.md.md",
-    "_posts/2016-8-22-ipsum.md.md"
+    "_posts/2025-08-03-tempus.md.md"
   ]
 }

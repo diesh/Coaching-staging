@@ -63,6 +63,85 @@ date: 2016-01-01
 						Like a gym coach for your career, we’ll create a system to track your progress, celebrate wins, and identify areas for improvement—so you can keep growing and performing at your best.
 					</li>
 				</ul>
+				<p>Personal growth and learning to work well with others is a continuous process of growth, adaptation, and refinement. Successful people don't react to challenges; they proactively shape their path, deepen their self-awareness, and refine their impact. Coaching can provide you the structure, insight, and accountability to help you navigate complex decisions, lead with confidence, and stay ahead in an ever-changing landscape. If you’re curious about my approach or want to explore more ways to grow, learn more <a href="AboutGagan.html">about me</a> and <a href="#contact" class="next scrolly">let's connect!</a></p>
+
+
+<!-- start of faq -->
+<h2>Frequently Asked Questions</h2>
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What is ongoing coaching, and how does it work?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Ongoing coaching provides continuous support as you navigate leadership challenges, career growth, and team dynamics.</p>
+            <p>We meet regularly—biweekly or monthly—to tackle real-time issues, refine your leadership style, and build strategies for long-term success. Sessions are designed to adapt as your needs evolve.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Is this life coaching?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p><strong>No</strong> (Not that there is anything wrong with it 😉)! My coaching is designed to help you focus on your career, your work, and how you show up for your team.</p>
+            <p>We’ll tackle leadership challenges, decision-making, and strategies to drive impact. While personal growth is a natural byproduct, this coaching is about professional development, not general life advice.</p>
+            <p>If you're ready to figure out what you want and find new ways to reach your goals, I’m here to help!</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What’s the difference between ongoing coaching and a one-time session?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>A one-time session is great for addressing a specific challenge or decision, while ongoing coaching is designed for sustained growth.</p>
+            <p>It allows us to track progress, refine strategies, and develop deeper leadership capabilities over time. I see ongoing coaching as a two-track approach to your career: acting as your co-pilot for immediate workplace challenges while also providing a long-term perspective on your career trajectory and how you navigate change.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>How long should I commit to ongoing coaching?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>That depends on your goals. Most of my clients come to me because they want to "fix something"—whether it’s navigating a difficult work relationship, overcoming career stagnation, or stepping into new leadership challenges.</p>
+            <p>Our first few sessions will map out your journey—clarifying where you’ve been, where you are now, and where you want to go.</p>
+            <p>Many clients experience significant transformation within 3-6 months, but growth is an ongoing process. Some choose to continue coaching for a year or more as they take on new challenges and responsibilities.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>What can I expect to gain from coaching?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Expect to gain clarity, confidence, and stronger leadership and people skills.</p> <p>You’ll sharpen your decision-making, enhance communication, and develop strategies to navigate team dynamics, organizational change, and career growth.</p> <p>Coaching keeps you accountable and intentional in your career journey. You have to put in the work—but I’m here to support you every step of the way. I’ll challenge you with tough questions, provide guidance, and push you forward while ensuring you stay on track to achieve your goals.</p> <p>The benefit of ongoing coaching:</p> <ol> <li>A co-pilot for immediate workplace challenges</li> <li>A long-term perspective and guide on your career trajectory</li> </ol>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            <span>Will I have "homework"?</span>
+            <i class="fa fa-plus faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+            <p>Short answer? Yes.</p>
+            <p>Longer answer? Growth takes work. I’ll give you “homework” to reflect on your journey—documenting what’s worked, what hasn’t, and where you want to go. This helps us map a better path forward.</p>
+            <p>Beyond reflection, we’ll experiment with strategies to strengthen your relationships with your boss and coworkers. This could include communication frameworks, reporting cadences, and techniques to help you become a more effective leader at work.</p>
+        </div>
+    </div>
+</div>
+
+<!-- end of faq -->
+
+
+
 			</div>
 
 			<!-- Right Column (What to Expect and Why This Works) -->
@@ -78,7 +157,10 @@ date: 2016-01-01
 				</div>
 				<div class ="box">
 					<h3>Why This Works</h3>
-					<p>Having a coach is like having a GPS for your career. You’ll always know where you’re going, how to get there, and who to turn to when the road gets tough. With ongoing coaching, you’ll never have to navigate your career alone.</p>
+					<ul>
+					<li> A coach acts as your career GPS, helping you map your <i>career</i>, not just a job.</li>
+					<li> Gain clarity on your direction and the steps to get there.</li>
+					<li>Have a trusted partner to navigate challenges and roadblocks. Learn, adapt, and grow and stay on course!</li></ul>
 				</div>
 			</div>
 		</div>
