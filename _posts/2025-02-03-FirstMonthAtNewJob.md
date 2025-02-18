@@ -39,7 +39,7 @@ This document fosters **transparency** and **alignment**, making it easier to su
 
 ## 👀 Seeing: What Stands Out?
 
-<div class="speechbubble">"What patterns am I noticing in how customers interact with our product? What patterns am I noticing in how customers interact with our product? What patterns am I noticing in how customers interact with our product? What patterns am I noticing in how customers interact with our product?"</div>
+<div class="speechbubble">"What patterns am I noticing in how customers interact with our product? Who else is noticing these patterns? Where are the patterns being recorded"</div>
 
 - Are there common pain points customers mention?
 - Does the product deliver what it promises?
