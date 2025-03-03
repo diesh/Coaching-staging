@@ -13,14 +13,14 @@ _In this 3-part series, I’m using the keynote I created for[ the BLEND confere
 
 ## Table of Contents
 
-1. **[The Career Burnout Epidemic](#the-career-burnout-epidemic)**
+1. **[🪫 The Career Burnout Epidemic](#the-career-burnout-epidemic)**
 2. **[🤦🏾‍♂️ Why is this happening?](#️-why-is-this-happening)**
 3. **[🌟 The Good news!](#--the-good-news)**
 4. **[🗺️ Use your Career GPS](#️-use-your-career-gps)**
 
 In prep for my talk at [BLEND](https://www.blendconf.co/), I spoke with a bunch of folks from my network. I asked them how they felt about their careers and their current jobs. Unsurprisingly, no one said, "I love my job" or "I can't believe I get to do this work and get paid." If you're reading this and things are great in tech, then this post might feel outdated. But 2025? BLEAK.
 
-## The Career Burnout Epidemic
+##  🪫 The Career Burnout Epidemic
 <div class="callout callout-right">
   <span class="fa fa-battery-half"></span> 
  <h3>The Burnout is Real</h3>
