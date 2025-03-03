@@ -1,15 +1,24 @@
 ---
 layout: post
-title: "Building a Career Worth Waking Up To - Part 1: Everyone's tired"
+title: "Building a Career Worth Waking Up To! Part 1: Everyone's tired"
 description: In this three-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to.
 image: assets/images/f-ckyoupayme.png
 masthead_caption: people are not happy at their job. Global stats prove this too.
 date: 2025-03-03
 comments: true
 ---
+_In this 3-part series, I’m using the keynote I created for[ the BLEND conference](https://www.blendconf.co/) as a foundation to discuss what's wrong with tech careers and what we can do to fix them. In **Part 1**, I dive into the problems we’re facing and share some good news. In **Part 2**, I’ll explore your superpowers and the hidden job market. And in **Part 3**, I’ll look at how you can leverage those superpowers, while also coming to terms with a few limitations!_
+
 ### Part 1: Everyone's tired.
 
-In prep for my talk, I spoke with a bunch of folks from my network. I asked them how they felt about their careers and their current jobs. Unsurprisingly, no one said, "I love my job" or "I can't believe I get to do this work and get paid." If you're reading this and things are great in tech, then this post might feel outdated. But 2025? BLEAK.
+## Table of Contents
+
+1. **The Career Burnout Epidemic**
+2. **Why This Is Happening**
+3. **The Good News**
+4. **The Career GPS Framework**
+
+In prep for my keynote talk at BLEND, I spoke with a bunch of folks from my network. I asked them how they felt about their careers and their current jobs. Unsurprisingly, no one said, "I love my job" or "I can't believe I get to do this work and get paid." If you're reading this and things are great in tech, then this post might feel outdated. But 2025? BLEAK.
 
 I also looked at data. Of course, I did! Globally, [77% of us are disengaged at work](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx). Remember that project you were excited about when you started? That feeling has statistically disappeared for most people, replaced by a mundane, clock-punching mentality. The Canadian data is alarming, too: [77% of knowledge workers in Canada have an unhealthy relationship with their work](https://press.hp.com/content/dam/sites/garage-press/press/press-kits/2023/hp-work-relationship-index/_HP%20WRI%2023%20Whitepaper%20Report_091923.pdf). Think about that. Most of us are struggling with how work fits into our lives.
 
@@ -51,7 +60,7 @@ I’m optimistic. Tech is made up of a broken system created by unseasoned folks
 
 ## 🗺️ Use your Career GPS
 
-What you need is a navigation system —   your Career GPS.
+What you need is a navigation system — your **Career GPS**. I dive deeper into identifying strengths and growth areas in my [8-week leadership program](https://www.diesh.ca/CoachingForLeaders.html), but let’s run a few quick diagnostics to get a sense of how well-calibrated your Career GPS is right now!
 
 ## Look Back
 Without overthinking it, jot down three moments of joy and three moments of despair from your past jobs—or, if you're early in your career, think back to school. Look for moments that sparked purpose, excitement, and that elusive feeling of joy. The "wow, I can't believe I get paid to do this" moments. Then, do the same for despair. What were the moments that filled you with dread, the "I really don’t want to do this" or the "I hate this project/team" kind of feelings? 
@@ -76,7 +85,7 @@ Let's do 3 quick tests to figure out how supported and clear you are on where yo
 
 I’ve always tried to have a personal board of directors—a group of 3-4 people who meet with me 4 times a year for an organized session to discuss my career as if it were a company they were advising. By assigning them as my board, I don’t feel guilty hijacking an entire session to talk about _just my career_. It’s incredibly helpful to have the continuity and clarity of someone else’s eyes on your career.
 
-**I'd love to continue this conversation with you. Find me at diesh.ca, and let's navigate this chaotic career landscape together.**
+I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out [what's next for your career](https://www.diesh.ca/NextUp.html), or need help understanding and [working on your leadership](https://www.diesh.ca/CoachingForLeaders.html) skills, <a href="#contact" class="next scrolly">hit me up</a>!
 
 **Stay tuned for Part 2, where we will dive deeper into the myths about career progression, and how you can future-proof your career.**
 
