@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a Career Worth Waking Up To!
+title: Building a Career Worth Waking Up To! Part 1 : Everyone's tired
 description: In this three-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to.
 image: assets/images/f-ckyoupayme.png
 masthead_caption: people are not happy at their job. Global stats prove this too.
