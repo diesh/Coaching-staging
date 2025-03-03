@@ -56,11 +56,8 @@ Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessi
 
 ## 🌟  The Good news!
 <div class="callout callout-left">
-  <span class="fa fa-bullhorn"></span> 
-  <h3>You Are in Control!</h3>
-  You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat. 
-</div>
-I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. You can gain some control. I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have  paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
+  <span class="fa fa-bullhorn"></span><h3>You Are in Control!</h3>You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat.</div>
+I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. While tech figures itself out and "refactors" its code, just know...You have more control than you realise! I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have  paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
 
 ## 🗺️ Use your Career GPS
 
