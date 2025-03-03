@@ -38,7 +38,7 @@ Tech has INVENTED and encouraged toxic behavior in the workplace by prioritizing
 </div>
 Facebook's motto was "Move fast and break things," right? Well, they moved fast alright—building addictive platforms, harvesting our data, and optimizing for engagement over wellbeing. And what broke? Now we have a platform spreading misinformation at an industrial scale. 
 I suggest:
-**Move fast, try things. But never break people. Nothing is more important than people. It's not catchy, it's too long... but so is life.
+**Move fast, try things. But never break people. Nothing is more important than people**. It's not catchy, it's long... but so is life. So don't be painful. Or make [products that cause pain](https://www.theguardian.com/commentisfree/2024/jan/05/metaverse-sexual-assault-vr-game-online-safety-meta). 
 
 WeWork's rise and spectacular fall—the "growth at all costs" mentality—meant taking on unsustainable leases, creating a cult-like culture, and ultimately watching $47 billion in valuation evaporate when reality caught up. Adam Neumann walked away with a billion dollars while employees got pink slips.
 
