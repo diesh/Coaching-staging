@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a Career Worth Waking Up To! Part 1 : Everyone's tired
+title: Building a Career Worth Waking Up To - Part 1: Everyone's tired
 description: In this three-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to.
 image: assets/images/f-ckyoupayme.png
 masthead_caption: people are not happy at their job. Global stats prove this too.
@@ -28,7 +28,7 @@ Tech has INVENTED and encouraged toxic behavior in the workplace by prioritizing
 </div>
 Facebook's motto was "Move fast and break things," right? Well, they moved fast alright—building addictive platforms, harvesting our data, and optimizing for engagement over wellbeing. And what broke? Now we have a platform spreading misinformation at an industrial scale. 
 I suggest:
-**Move fast, try things. But never break people. Nothing is more important than people. It's not catchy, it's too long... but so is life.** </div>
+**Move fast, try things. But never break people. Nothing is more important than people. It's not catchy, it's too long... but so is life.
 
 WeWork's rise and spectacular fall—the "growth at all costs" mentality—meant taking on unsustainable leases, creating a cult-like culture, and ultimately watching $47 billion in valuation evaporate when reality caught up. Adam Neumann walked away with a billion dollars while employees got pink slips.
 
@@ -64,6 +64,17 @@ When I coach executives who feel stuck, we begin by reflecting on their journey.
 Looking around is about honest assessment. What do people come to you for? Unlike the first exercise, this is about other people, not you. Why do *people* find you useful? Are you the one who is calm under pressure? Or are you a helper, the one who would help someone even if you're busy? Or are you an awesome networker, who can connect folks to people they need to know? 
 
 Write down the intrinsic thing that you’re good at. It may have very little to do with your job title. It is who you are and what value you bring to the people around you. I mentored a product designer who was always tapped to explain our customer journey and JTBD by everyone—not just other designers. She switched to research as she realized she cared more about the customer puzzles to solve than moving pixels.
+
+## Look Ahead
+Let's do 3 quick tests to figure out how supported and clear you are on where your career journey is going. 
+
+<ol> 
+<li>Who are your mentors? Paid or unpaid, write down the names of people you’ve relied on to help you view your career moves objectively. Who can help you solve some of work's puzzles and keep you aligned with your values?</li> 
+<li>What are you curious about? What’s happening around us that makes you say, "Hmm, this is interesting, and I need to know more about this?" I’ll take a shot for every person who writes AI—send me some mezcal.</li> 
+<li>What tests are you running? What experiments are you doing to see if a new direction is right for you? For example, taking on extra responsibilities at work, enrolling in a course or certification, or reading a book on something you want to learn about.</li> 
+</ol> 
+
+I’ve always tried to have a personal board of directors—a group of 3-4 people who meet with me 4 times a year for an organized session to discuss my career as if it were a company they were advising. By assigning them as my board, I don’t feel guilty hijacking an entire session to talk about _just my career_. It’s incredibly helpful to have the continuity and clarity of someone else’s eyes on your career.
 
 **I'd love to continue this conversation with you. Find me at diesh.ca, and let's navigate this chaotic career landscape together.**
 
