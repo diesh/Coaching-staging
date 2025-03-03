@@ -46,7 +46,7 @@ WeWork's rise and spectacular fall—the "growth at all costs" mentality—meant
 ### Inhumane, Nonsensical Layoffs: 
 There’s a formula for layoffs. It's so formulaic, it's vulgar—mass email on a Friday, no warning. Stock prices jump up the following Monday. Following massive, irrational growth with massive layoffs seems reckless and heartless. And it is. What the shareholders didn’t see were the devastated folks who’d given years of their lives to that company. 20% layoffs equals 5% stock price jump—but also thousands of people who lost faith in the company they believed in. They'll never be the same again. I coach a few of them and the pain is real. 
 
-Here's my alternate, suspiciously non-profity, motto: **Make things that will benefit generations to come.** But even Jeff bezos has said: "One day, Amazon will fail but our job is to delay it as long as possible". So why not make products that generations of people will use and love? 
+Here's my alternate, suspiciously non-profity, motto: **Make things that will benefit generations to come.** _Even_ billionaire capitalist Jeff Bezos has said: "One day, Amazon will fail but our job is to delay it as long as possible". So why not make products that generations of people will use and love? Ugh, I just quoted Jeff Bezos. I'll do better. 
 
 ### COVID Distancing:
 We are still too close to the COVID pandemic to see how it has changed us—maybe forever. Many of us went from offices to bedrooms overnight. I remember spending eight hours on Zoom calls and, at one point, attending two calls simultaneously. That was the moment I knew I had to quit.
