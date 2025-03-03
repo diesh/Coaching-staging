@@ -6,10 +6,7 @@ image: assets/images/f-ckyoupayme.png
 masthead_caption: people are not happy at their job. Global stats prove this too.
 date: 2025-03-03
 comments: true
-
 ---
-
-
 Everyone's tired.
 
 In prep for my talk, I spoke with a bunch of folks from my network. I asked them how they felt about their careers and their current jobs. Unsurprisingly, no one said, "I love my job" or "I can't believe I get to do this work and get paid." If you're reading this and things are great in tech, then this post might feel outdated. But 2025? BLEAK.
