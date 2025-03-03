@@ -35,6 +35,16 @@
               "icon": "lucide-file",
               "title": "2025-03-03-Building a career worth waking up to"
             }
+          },
+          {
+            "id": "a397a318f96d41fc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
         "currentTab": 1
@@ -181,8 +191,8 @@
   },
   "active": "282ac9af0a054d72",
   "lastOpenFiles": [
-    "_posts/2025-02-09-Exec training.md",
     "_posts/2025-03-03-Building a career worth waking up to.md",
+    "_posts/2025-02-09-Exec training.md",
     "assets/images/f-ckyoupayme.png",
     "assets/images/Screenshot 2025-03-03 at 1.57.46 pm.png",
     "Screenshot 2025-03-03 at 1.57.46 pm.png",
