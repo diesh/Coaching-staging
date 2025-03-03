@@ -21,8 +21,23 @@
               "icon": "lucide-file",
               "title": "2025-02-03-FirstMonthAtNewJob"
             }
+          },
+          {
+            "id": "282ac9af0a054d72",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-03-03-Building a career worth waking up to.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2025-03-03-Building a career worth waking up to"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -164,8 +179,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b238d1a4b853ae88",
+  "active": "282ac9af0a054d72",
   "lastOpenFiles": [
+    "assets/images/f-ckyoupayme.png",
+    "assets/images/Screenshot 2025-03-03 at 1.57.46 pm.png",
+    "Screenshot 2025-03-03 at 1.57.46 pm.png",
+    "_posts/2025-02-03-FirstMonthAtNewJob.md",
+    "_posts/2025-03-03-Building a career worth waking up to.md",
+    "_posts/2025-02-01-Finding a Job.md",
     "AboutGagan.md",
     "CoachingForLeaders.md",
     "NextUp.md",
@@ -185,8 +206,6 @@
     "_site/2025/01/01/Exec-training.html",
     "_site/2025/01/01",
     "_site/2025/01",
-    "_posts/2025-02-03-FirstMonthAtNewJob.md",
-    "_posts/2025-02-01-Finding a Job.md",
     "landing.md",
     "_site/assets/images/Gagan_Diesh_.jpg",
     "assets/images/Gagan_Diesh_.jpg",
@@ -196,8 +215,6 @@
     "_site/assets/images/sigmund-rWE7bTqgMJE-unsplash.jpg",
     "_site/assets/images/pic11.jpg",
     "_site/assets/images/pic10.jpg",
-    "_site/assets/images/pic09.jpg",
-    "_site/assets/images/pic08.jpg",
     "_site/Coachy/Welcome.md",
     "_posts/2025-02-02-Finding a Job.md",
     "_posts/2025-01-12-year.md",
@@ -209,8 +226,6 @@
     "index.md",
     "generic.md",
     "404.md",
-    "LICENSE.md",
-    "_posts/2025-01-12.md",
-    "_posts/2025-08-03-tempus.md.md"
+    "LICENSE.md"
   ]
 }
