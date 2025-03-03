@@ -36,21 +36,22 @@ If everyone else is doing the same thing, consider doing something different.
 Tech has INVENTED and encouraged toxic behavior in the workplace by prioritizing metrics that often conflict with both customer needs and the well-being of the employees who are actually building the products.
 
 </div>
+### Breaking things: 
 Facebook's motto was "Move fast and break things," right? Well, they moved fast alright—building addictive platforms, harvesting our data, and optimizing for engagement over wellbeing. And what broke? Now we have a platform spreading misinformation at an industrial scale. 
-I suggest:
-<blockquote>
-Move fast, try things. But never break people. Nothing is more important than people.
-</blockquote>
-Don't make [products that cause pain](https://www.theguardian.com/commentisfree/2024/jan/05/metaverse-sexual-assault-vr-game-online-safety-meta). 
+I suggest: **Move fast, try things. But never break people. Nothing is more important than people**. It's not catchy, it's long... but so is life. So don't be painful. Or make [products that cause pain](https://www.theguardian.com/commentisfree/2024/jan/05/metaverse-sexual-assault-vr-game-online-safety-meta). 
 
+### Ruthless Growth: 
 WeWork's rise and spectacular fall—the "growth at all costs" mentality—meant taking on unsustainable leases, creating a cult-like culture, and ultimately watching $47 billion in valuation evaporate when reality caught up. Adam Neumann walked away with a billion dollars while employees got pink slips.
 
-And then, there’s the formula for layoffs. It's so formulaic it's vulgar—mass email on a Friday, no warning. Stock prices jump up the following Monday. What the shareholders didn’t see were the devastated folks who’d given years of their lives to that company. 20% layoffs equals 5% stock price jump—but also thousands of people who lost faith in the company they believed in. They'll never be the same again.
-I suggest:
-**Make things that will matter for generations to come.**
+### Inhumane, Nonsensical Layoffs: 
+There’s a formula for layoffs. It's so formulaic, it's vulgar—mass email on a Friday, no warning. Stock prices jump up the following Monday. Following massive, irrational growth with massive layoffs seems reckless and heartless. And it is. What the shareholders didn’t see were the devastated folks who’d given years of their lives to that company. 20% layoffs equals 5% stock price jump—but also thousands of people who lost faith in the company they believed in. They'll never be the same again. I coach a few of them and the pain is real. 
 
+Here's my alternate, suspiciously non-profity, motto: **Make things that will benefit generations to come.** But even Jeff bezos has said: "One day, Amazon will fail but our job is to delay it as long as possible". So why not make products that generations of people will use and love? 
+
+### COVID Distancing:
 We are still too close to the COVID pandemic to see how it has changed us—maybe forever. Many of us went from offices to bedrooms overnight. I remember spending eight hours on Zoom calls and, at one point, attending two calls simultaneously. That was the moment I knew I had to quit.
 
+### The fragile need for Masculine Energy:
 Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessions, and endless militaristic war language references are exclusionary and don’t help people build healthy lives where they set clear work/life boundaries. [Masculine energy](https://theconversation.com/why-does-mark-zuckerberg-want-more-masculine-energy-in-the-corporate-world-the-patriarchy-is-still-in-charge-248600) has not brought peace and joy to the world in recent memory.
 
 ## 🌟  The Good news!
