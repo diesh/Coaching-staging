@@ -21,7 +21,12 @@ _In this 3-part series, I’m using the keynote I created for[ the BLEND confere
 In prep for my talk at [BLEND](https://www.blendconf.co/), I spoke with a bunch of folks from my network. I asked them how they felt about their careers and their current jobs. Unsurprisingly, no one said, "I love my job" or "I can't believe I get to do this work and get paid." If you're reading this and things are great in tech, then this post might feel outdated. But 2025? BLEAK.
 
 ## The Career Burnout Epidemic
-I also looked at data. Of course, I did! Globally, [77% of us are disengaged at work](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx). Remember that project you were excited about when you started? That feeling has statistically disappeared for most people, replaced by a mundane, clock-punching mentality. The Canadian data is alarming, too: [77% of knowledge workers in Canada have an unhealthy relationship with their work](https://press.hp.com/content/dam/sites/garage-press/press/press-kits/2023/hp-work-relationship-index/_HP%20WRI%2023%20Whitepaper%20Report_091923.pdf). Think about that. Most of us are struggling with how work fits into our lives.
+<div class="callout callout-right">
+  <span class="fa fa-battery-half"></span> 
+ <h3>The Burnout is Real</h3>
+We're working longer hours, from our bedrooms. Tech has blurred the lines between work and play, with everything now on our phones. Recently laid-off workers are being asked why they’re excited to work at their next job. It doesn’t quite add up, does it?
+</div>
+I looked at data. Of course, I did! Globally, [77% of us are disengaged at work](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx). Remember that project you were excited about when you started? That feeling has statistically disappeared for most people, replaced by a mundane, clock-punching mentality. The Canadian data is alarming, too: [77% of knowledge workers in Canada have an unhealthy relationship with their work](https://press.hp.com/content/dam/sites/garage-press/press/press-kits/2023/hp-work-relationship-index/_HP%20WRI%2023%20Whitepaper%20Report_091923.pdf). Think about that. Most of us are struggling with how work fits into our lives.
 
 Even more heartbreaking, one in five people report feeling profoundly lonely at work. I felt this acutely at my most recent jobs, where I'd be surrounded by Zoom meetings all day but was the only leader on the exec team fighting to bring design (shorthand for THE CUSTOMER) closer to the heart of the business. A common sentiment shared by a bunch of design leaders I know — it's lonely when, as a leader, you're a minority advocating for a more customer-centric approach rather than focusing solely on the bottom line. 
 
@@ -55,8 +60,9 @@ We are still too close to the COVID pandemic to see how it has changed us—mayb
 Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessions, and endless militaristic war language references are exclusionary and don’t help people build healthy lives where they set clear work/life boundaries. [Masculine energy](https://theconversation.com/why-does-mark-zuckerberg-want-more-masculine-energy-in-the-corporate-world-the-patriarchy-is-still-in-charge-248600) has not brought peace and joy to the world in recent memory.
 
 ## 🌟  The Good news!
-<div class="callout callout-left">
-  <span class="fa fa-bullhorn"></span><h3>You Are in Control!</h3>You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat.</div>
+<div class="callout callout-right">
+  <span class="fa fa-bullhorn"></span> 
+ <h3>You Are in Control!</h3>You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat.</div>
 I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. While tech figures itself out and "refactors" its code, just know...You have more control than you realise! I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have  paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
 
 ## 🗺️ Use your Career GPS
