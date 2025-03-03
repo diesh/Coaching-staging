@@ -11,7 +11,7 @@ comments: true
 
 In prep for my talk, I spoke with a bunch of folks from my network. I asked them how they felt about their careers and their current jobs. Unsurprisingly, no one said, "I love my job" or "I can't believe I get to do this work and get paid." If you're reading this and things are great in tech, then this post might feel outdated. But 2025? BLEAK.
 
-I also looked at data. Of course, I did! Globally, 77% of us are disengaged at work. Remember that project you were excited about when you started? That feeling has statistically disappeared for most people, replaced by a mundane, clock-punching mentality. The Canadian data is alarming, too: 77% of knowledge workers in Canada have an unhealthy relationship with their work. Think about that. Most of us are struggling with how work fits into our lives.
+I also looked at data. Of course, I did! Globally, [77% of us are disengaged at work](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx). Remember that project you were excited about when you started? That feeling has statistically disappeared for most people, replaced by a mundane, clock-punching mentality. The Canadian data is alarming, too: [77% of knowledge workers in Canada have an unhealthy relationship with their work](https://press.hp.com/content/dam/sites/garage-press/press/press-kits/2023/hp-work-relationship-index/_HP%20WRI%2023%20Whitepaper%20Report_091923.pdf). Think about that. Most of us are struggling with how work fits into our lives.
 
 Even more heartbreaking, one in five people report feeling profoundly lonely at work. I felt this acutely at my most recent jobs, where I'd be surrounded by Zoom meetings all day but was the only leader on the exec team fighting to bring design (shorthand for THE CUSTOMER) closer to the heart of the business. A common sentiment shared by a bunch of design leaders I know — it's lonely when, as a leader, you're a minority advocating for a more customer-centric approach rather than focusing solely on the bottom line. 
 
@@ -38,28 +38,25 @@ I suggest:
 
 We are still too close to the COVID pandemic to see how it has changed us—maybe forever. Many of us went from offices to bedrooms overnight. I remember spending eight hours on Zoom calls and, at one point, attending two calls simultaneously. That was the moment I knew I had to quit.
 
-Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessions, and endless militaristic war language references are exclusionary and don’t help people build healthy lives where they set clear work/life boundaries. Masculine energy has not brought peace and joy to the world in recent memory.
+Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessions, and endless militaristic war language references are exclusionary and don’t help people build healthy lives where they set clear work/life boundaries. [Masculine energy](https://theconversation.com/why-does-mark-zuckerberg-want-more-masculine-energy-in-the-corporate-world-the-patriarchy-is-still-in-charge-248600) has not brought peace and joy to the world in recent memory.
 
 ### 🌟  The Good news!
 <div class="callout callout-left">
 
   <span class="fa fa-bullhorn"></span> 
-
   <h3>You Are in Control!</h3>
-
-  You don’t need to wait for the economy to improve or for companies to get their sh** together to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat. 
-
+  You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat. 
 </div>
-I’m optimistic. Tech is made up of a broken system created by unseasoned folks who don’t know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. You can gain some control.**
+I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. You can gain some control. I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have ruhthlessly paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
 
-## 🗺️ CAREER GPS
+## 🗺️ Use your Career GPS
 
 What you need is a navigation system —   your Career GPS.
 
 ## Look Back
 Without overthinking it, jot down three moments of joy and three moments of despair from your past jobs—or, if you're early in your career, think back to school. Look for moments that sparked purpose, excitement, and that elusive feeling of joy. The "wow, I can't believe I get paid to do this" moments. Then, do the same for despair. What were the moments that filled you with dread, the "I really don’t want to do this" or the "I hate this project/team" kind of feelings? 
 
-The moments of joy are like pins you drop on a map—places you want to move towards. The moments of despair are your guardrails, reminding you of turns you don’t want to take and places you'd rather avoid. Yelp ratings: 0 out of 5.
+The moments of joy are like pins you drop on a map—places you want to move towards. The moments of despair are your guardrails, reminding you of turns you don’t want to take and places you'd rather avoid. [Yelp ratings](https://cloutly.com/blog/funniest-yelp-reviews/): 1 star.
 
 When I coach executives who feel stuck, we begin by reflecting on their journey. One client, a staff-level designer, experienced a moment of despair tied to toxic leadership and competitive environments that didn’t align with her collaborative nature. She decided to move to a senior designer role at a different company where she could be closer to the work and still mentor a team. Sometimes, it’s not the job responsibilities you need to change, but the company itself. Titles in our industry can be misleading and often don’t align with actual responsibilities. Once you understand where your expertise truly lies, seek out roles that match your skill set. Titles can be deceiving.
 
