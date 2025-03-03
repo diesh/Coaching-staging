@@ -38,7 +38,10 @@ Tech has INVENTED and encouraged toxic behavior in the workplace by prioritizing
 </div>
 Facebook's motto was "Move fast and break things," right? Well, they moved fast alright—building addictive platforms, harvesting our data, and optimizing for engagement over wellbeing. And what broke? Now we have a platform spreading misinformation at an industrial scale. 
 I suggest:
-**Move fast, try things. But never break people. Nothing is more important than people**. It's not catchy, it's long... but so is life. So don't be painful. Or make [products that cause pain](https://www.theguardian.com/commentisfree/2024/jan/05/metaverse-sexual-assault-vr-game-online-safety-meta). 
+<blockquote>
+Move fast, try things. But never break people. Nothing is more important than people.
+</blockquote>
+Don't make [products that cause pain](https://www.theguardian.com/commentisfree/2024/jan/05/metaverse-sexual-assault-vr-game-online-safety-meta). 
 
 WeWork's rise and spectacular fall—the "growth at all costs" mentality—meant taking on unsustainable leases, creating a cult-like culture, and ultimately watching $47 billion in valuation evaporate when reality caught up. Adam Neumann walked away with a billion dollars while employees got pink slips.
 
@@ -52,12 +55,11 @@ Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessi
 
 ## 🌟  The Good news!
 <div class="callout callout-left">
-
   <span class="fa fa-bullhorn"></span> 
   <h3>You Are in Control!</h3>
   You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat. 
 </div>
-I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. You can gain some control. I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have ruhthlessly paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
+I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. You can gain some control. I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have  paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
 
 ## 🗺️ Use your Career GPS
 
@@ -84,7 +86,7 @@ Let's do 3 quick tests to figure out how supported and clear you are on where yo
 <li>What tests are you running? What experiments are you doing to see if a new direction is right for you? For example, taking on extra responsibilities at work, enrolling in a course or certification, or reading a book on something you want to learn about.</li> 
 </ol> 
 
-I’ve always tried to have a personal board of directors—a group of 3-4 people who meet with me 4 times a year for an organized session to discuss my career as if it were a company they were advising. By assigning them as my board, I don’t feel guilty hijacking an entire session to talk about _just my career_. It’s incredibly helpful to have the continuity and clarity of someone else’s eyes on your career.
+I’ve always tried to have a personal board of directors—a group of 3-4 people who meet with me 4 times a year for an organized session to discuss my career as if it were a company they were advising. By assigning them as my board, I don’t feel guilty hijacking an entire session to talk about _just my career_. It’s mega helpful to have the continuity and clarity of someone else’s eyes on your career.
 
 I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out [what's next for your career](https://www.diesh.ca/NextUp.html), or need help understanding and [working on your leadership](https://www.diesh.ca/CoachingForLeaders.html) skills, <a href="#contact" class="next scrolly">hit me up</a>!
 
