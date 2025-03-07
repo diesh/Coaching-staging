@@ -5,7 +5,7 @@ email: gagan@designstamp.com
 description: I help design + product professionals and teams unlock their full potential.
 
 baseurl: ""  # Leave it empty for staging
-url: "https://diesh.github.io"
+url: "https://staging.diesh.ca"
 
 author:
 street_address: 
