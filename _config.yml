@@ -4,7 +4,8 @@ subtitle: Executive Coaching
 email: gagan@designstamp.com
 description: I help design + product professionals and teams unlock their full potential.
 
-url: "https://diesh.ca"
+baseurl: "/staging"  # This makes the staging site available at /staging
+url: "https://diesh.github.io"
 
 author:
 street_address: 
