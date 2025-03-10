@@ -10,9 +10,10 @@
   > section {
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'row');
-    background-color: #ffffff;  // Background remains white for all sections
+    background-color: #ffffff;  // Keep white background for sections
     border-bottom: 1px solid #d3d3d3; /* Thin grey line between each post */
-    padding: 2em 1em;  // Add padding around each section for better spacing
+    margin-bottom: 1.5em;  // Reduced bottom margin for a tighter layout
+    padding: 0;  // Remove extra padding
 
     > .image {
       background-position: center center;
@@ -20,13 +21,14 @@
       border-radius: 0;
       display: block;
       position: relative;
-      width: 35%;  // Reduced image width for a tighter layout
+      width: 25%;  // Much smaller image width for tighter layout
 
       img {
         border-radius: 0;
         display: block;
         width: 100%;
-        object-fit: cover;  // Ensure the image covers the container without stretching
+        height: auto;  // Maintain aspect ratio for images
+        object-fit: cover;  // Ensure the image doesn't stretch
       }
 
       &:before {
@@ -46,33 +48,28 @@
       @include vendor('display', 'flex');
       @include vendor('flex-direction', 'column');
       @include vendor('justify-content', 'center');
-      @include vendor('align-items', 'flex-start');  // Align to start to keep text tight
-      @include padding(1.5em, 2em);  // Reduce padding to tighten up the content
-      width: 65%;  // Reduced width for content, creating balance with image
+      @include vendor('align-items', 'flex-start');  // Align content to start
+      padding: 1em;  // Tighten padding around content
+      width: 75%;  // Content takes up the remaining width
 
       > .inner {
-        margin: 0 auto;
+        margin: 0;  // Remove extra margins
         max-width: 100%;
         width: _size(inner);
       }
 
       h3 {
-        margin-bottom: 1em;  // Reduce space below the title for a more compact look
+        margin: 0 0 0.5em;  // Tighter margin below the heading
+        font-size: 1.2em;  // Adjust title size for a more compact look
       }
 
       p {
-        margin-bottom: 1.5em;  // Tighter margin below the paragraph
+        margin: 0 0 1em;  // Tighter margin below the paragraph
+        font-size: 1em;  // Adjust paragraph size
       }
 
       ul.actions {
-        margin-top: 0;  // Reduce space above the buttons
-      }
-    }
-
-    /* Remove color cycling for white background */
-    @for $i from 1 through 6 {
-      &:nth-child(#{$i}) {
-        // No color cycling, so remove this part
+        margin-top: 0;  // Remove unnecessary space above buttons
       }
     }
 
@@ -89,11 +86,11 @@
   @include breakpoint(xlarge) {
     > section {
       > .image {
-        width: 40%;  // Slightly larger image at this breakpoint
+        width: 30%;  // Adjust image size for large screens
       }
 
       > .content {
-        width: 60%;
+        width: 70%;  // Content width for large screens
       }
     }
   }
@@ -101,11 +98,11 @@
   @include breakpoint(large) {
     > section {
       > .image {
-        width: 45%;  // Larger image at large breakpoint
+        width: 35%;  // Adjust image size for larger screens
       }
 
       > .content {
-        width: 55%;
+        width: 65%;  // Content width for larger screens
       }
     }
   }
@@ -119,7 +116,7 @@
       }
 
       > .content {
-        @include padding(3em, 1.5em);  // Adjust padding for medium screens
+        @include padding(2em, 1em);  // Reduce padding for mobile
         width: 100%;
       }
     }
@@ -128,7 +125,7 @@
   @include breakpoint(small) {
     > section {
       > .content {
-        @include padding(2em, 1em);  // Adjust for smaller screens with less padding
+        @include padding(1.5em, 1em);  // Reduced padding for smaller screens
       }
     }
   }
