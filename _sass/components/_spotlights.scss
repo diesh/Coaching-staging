@@ -10,9 +10,9 @@
   > section {
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'row');
-    background-color: #ffffff;  // Change background to white for all sections
-	 border-bottom: 1px solid #d3d3d3; /* Add a thin grey line between each post */
-
+    background-color: #ffffff;  // Background remains white for all sections
+    border-bottom: 1px solid #d3d3d3; /* Thin grey line between each post */
+    padding: 2em 1em;  // Add padding around each section for better spacing
 
     > .image {
       background-position: center center;
@@ -20,12 +20,13 @@
       border-radius: 0;
       display: block;
       position: relative;
-      width: 30%;
+      width: 35%;  // Reduced image width for a tighter layout
 
       img {
         border-radius: 0;
         display: block;
         width: 100%;
+        object-fit: cover;  // Ensure the image covers the container without stretching
       }
 
       &:before {
@@ -45,14 +46,26 @@
       @include vendor('display', 'flex');
       @include vendor('flex-direction', 'column');
       @include vendor('justify-content', 'center');
-      @include vendor('align-items', 'center');
-      @include padding(2em, 3em);
-      width: 70%;
+      @include vendor('align-items', 'flex-start');  // Align to start to keep text tight
+      @include padding(1.5em, 2em);  // Reduce padding to tighten up the content
+      width: 65%;  // Reduced width for content, creating balance with image
 
       > .inner {
         margin: 0 auto;
         max-width: 100%;
         width: _size(inner);
+      }
+
+      h3 {
+        margin-bottom: 1em;  // Reduce space below the title for a more compact look
+      }
+
+      p {
+        margin-bottom: 1.5em;  // Tighter margin below the paragraph
+      }
+
+      ul.actions {
+        margin-top: 0;  // Reduce space above the buttons
       }
     }
 
@@ -76,7 +89,7 @@
   @include breakpoint(xlarge) {
     > section {
       > .image {
-        width: 40%;
+        width: 40%;  // Slightly larger image at this breakpoint
       }
 
       > .content {
@@ -88,7 +101,7 @@
   @include breakpoint(large) {
     > section {
       > .image {
-        width: 45%;
+        width: 45%;  // Larger image at large breakpoint
       }
 
       > .content {
@@ -102,11 +115,11 @@
       display: block;
 
       > .image {
-        width: 100%;
+        width: 100%;  // Full width image for smaller screens
       }
 
       > .content {
-        @include padding(4em, 3em);
+        @include padding(3em, 1.5em);  // Adjust padding for medium screens
         width: 100%;
       }
     }
@@ -115,7 +128,7 @@
   @include breakpoint(small) {
     > section {
       > .content {
-        @include padding(3em, 1.5em);
+        @include padding(2em, 1em);  // Adjust for smaller screens with less padding
       }
     }
   }
