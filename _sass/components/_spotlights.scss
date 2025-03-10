@@ -10,15 +10,9 @@
   > section {
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'row');
-    background-color: #ffffff;  // Keep white background for sections
-    border-bottom: 1px solid #d3d3d3; /* Thin grey line between each post */
-    margin-bottom: 1.5em;  // Reduced bottom margin for a tighter layout
-    padding: 0;  // Remove extra padding
+    background-color: #ffffff;  // Change background to white for all sections
+	 border-bottom: 1px solid #d3d3d3; /* Add a thin grey line between each post */
 
-    // Remove any space above all images
-    &:not(:first-child) > .image {
-      margin-top: 0 !important;
-    }
 
     > .image {
       background-position: center center;
@@ -26,14 +20,12 @@
       border-radius: 0;
       display: block;
       position: relative;
-      width: 25%;  // Smaller image width for tighter layout
+      width: 30%;
 
       img {
         border-radius: 0;
         display: block;
         width: 100%;
-        height: auto;  // Maintain aspect ratio for images
-        object-fit: cover;  // Ensure the image doesn't stretch
       }
 
       &:before {
@@ -53,28 +45,21 @@
       @include vendor('display', 'flex');
       @include vendor('flex-direction', 'column');
       @include vendor('justify-content', 'center');
-      @include vendor('align-items', 'flex-start');  // Align content to start
-      padding: 1em;  // Tighten padding around content
-      width: 75%;  // Content takes up the remaining width
+      @include vendor('align-items', 'center');
+      @include padding(2em, 3em);
+      width: 70%;
 
       > .inner {
-        margin: 0;  // Remove extra margins
+        margin: 0 auto;
         max-width: 100%;
         width: _size(inner);
       }
+    }
 
-      h3 {
-        margin: 0 0 0.5em;  // Tighter margin below the heading
-        font-size: 1.2em;  // Adjust title size for a more compact look
-      }
-
-      p {
-        margin: 0 0 1em;  // Tighter margin below the paragraph
-        font-size: 1em;  // Adjust paragraph size
-      }
-
-      ul.actions {
-        margin-top: 0;  // Remove unnecessary space above buttons
+    /* Remove color cycling for white background */
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        // No color cycling, so remove this part
       }
     }
 
@@ -91,11 +76,11 @@
   @include breakpoint(xlarge) {
     > section {
       > .image {
-        width: 30%;  // Adjust image size for large screens
+        width: 40%;
       }
 
       > .content {
-        width: 70%;  // Content width for large screens
+        width: 60%;
       }
     }
   }
@@ -103,11 +88,11 @@
   @include breakpoint(large) {
     > section {
       > .image {
-        width: 35%;  // Adjust image size for larger screens
+        width: 45%;
       }
 
       > .content {
-        width: 65%;  // Content width for larger screens
+        width: 55%;
       }
     }
   }
@@ -117,11 +102,11 @@
       display: block;
 
       > .image {
-        width: 100%;  // Full width image for smaller screens
+        width: 100%;
       }
 
       > .content {
-        @include padding(2em, 1em);  // Reduce padding for mobile
+        @include padding(4em, 3em);
         width: 100%;
       }
     }
@@ -130,7 +115,7 @@
   @include breakpoint(small) {
     > section {
       > .content {
-        @include padding(1.5em, 1em);  // Reduced padding for smaller screens
+        @include padding(3em, 1.5em);
       }
     }
   }
