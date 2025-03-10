@@ -10,7 +10,7 @@
   > section {
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'row');
-    background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+    background-color: #ffffff;  // Change background to white for all sections
 
     > .image {
       background-position: center center;
@@ -54,16 +54,16 @@
       }
     }
 
-    /* Cycling through subtle_accent colors */
+    /* Remove color cycling for white background */
     @for $i from 1 through 6 {
       &:nth-child(#{$i}) {
-        background-color: _palette("subtle_accent#{$i}");
+        // No color cycling, so remove this part
       }
     }
 
     &:nth-child(2n) {
       @include vendor('flex-direction', 'row-reverse');
-      background-color: desaturate(lighten(_palette(brand-color), 4), 2);
+      background-color: #ffffff;  // Change even sections to white too
 
       > .content {
         @include vendor('align-items', 'flex-end');
