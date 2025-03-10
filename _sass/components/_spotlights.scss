@@ -11,6 +11,8 @@
     @include vendor('display', 'flex');
     @include vendor('flex-direction', 'row');
     background-color: #ffffff;  // Change background to white for all sections
+	 border-bottom: 1px solid #d3d3d3; /* Add a thin grey line between each post */
+	 padding-bottom: 1em; 
 
     > .image {
       background-position: center center;
