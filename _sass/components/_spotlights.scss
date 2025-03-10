@@ -15,13 +15,18 @@
     margin-bottom: 1.5em;  // Reduced bottom margin for a tighter layout
     padding: 0;  // Remove extra padding
 
+    // Remove any space above all images
+    &:not(:first-child) > .image {
+      margin-top: 0 !important;
+    }
+
     > .image {
       background-position: center center;
       background-size: cover;
       border-radius: 0;
       display: block;
       position: relative;
-      width: 25%;  // Much smaller image width for tighter layout
+      width: 25%;  // Smaller image width for tighter layout
 
       img {
         border-radius: 0;
