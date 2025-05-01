@@ -103,7 +103,6 @@
         }
     }
 }
-
 /* Callout styles */
 .callout {
     padding: 15px 20px;
@@ -112,10 +111,9 @@
     max-width: none; /* No max-width for mobile */
     width: 100%; /* Full width for mobile */
     position: relative;
-    border: 4px dashed _palette(brand-color);
+    border: 2px solid _palette(brand-color);
 }
 
-/* Callout icon styling */
 .callout .fa {
     font-size: 40px;
     color: _palette(highlight);
@@ -126,11 +124,15 @@
 
 /* For large screens: keep the callout aligned side by side */
 @media only screen and (min-width: 769px) {
-    .callout-left,
-    .callout-right {
+    .callout-left {
         float: left;
         width: 45%;
         margin-right: 20px;
+    }
+    .callout-right {
+        float: right;
+        width: 45%;
+        margin-left: 20px;
     }
 }
 
@@ -167,6 +169,67 @@
 
     .callout ul li::before {
         font-size: 10px; /* Smaller bullets */
+    }
+}
+
+/* Custom warning alert box (non-conflicting with .callout styles) */
+.alert-warning {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff3cd; /* Light yellow */
+    border-left: 6px solid #ffc107; /* Yellow border */
+    border-radius: 6px;
+    padding: 1em 1.25em;
+    margin: 2em 0;
+    font-size: 1rem;
+    color: #856404;
+    gap: 0.75em;
+}
+
+.alert-warning .icon {
+    font-size: 1.5em;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 0.15em;
+}
+
+.alert-warning .content {
+    flex: 1;
+}
+
+.alert-warning .title {
+    font-weight: 600;
+    margin-bottom: 0.4em;
+}
+
+
+
+
+/* Responsive support */
+@media only screen and (max-width: 768px) {
+    .alert-warning {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .alert-warning .icon {
+        margin-top: 0;
+    }
+}
+
+
+
+
+/* Responsive tweaks */
+@media only screen and (max-width: 768px) {
+    .callout {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .callout-icon {
+        margin-bottom: 0.5em;
+        font-size: 1.25em;
     }
 }
 

@@ -21,7 +21,13 @@ _In this 3-part series, I’m using the keynote I created for[ the BLEND confere
 ##  🪜 Myth 1: I'm on a career ladder
 We are still living in what's left of the industrial age. And one of the continuing myths is that of the ONE company and ONE career ladder. Work was structured around factories, assembly lines, hierarchy, and predictability. We have not shed the programming from this age —  stay in your lane, put in the years, and eventually earn promotions, pensions, maybe even a retirement watch. But that world is gone, never to come back. We live in an age of competition, limited resources, massive change, and unpredictability. Career ladders don't exist. Yet education and our inner narrative lie to us and make us think we are still on a rung, making our way upward. 
 
-**Reality:** Promotions are often arbitrary—based on politics, visibility, or vibe-fit with leadership—not merit. 
+<div class="alert-warning">
+  <div class="icon">⚠️</div>
+  <div class="content">
+    <div class="title">Reality</div>
+    <p> Promotions are often arbitrary—based on politics, visibility, or vibe-fit with leadership—not merit. </p>
+    </div>
+    </div>
 
 **Instead:**  
 Treat your career like a *design project*, not a climb. Lead with curiosity and ask yourself:
@@ -29,26 +35,31 @@ Treat your career like a *design project*, not a climb. Lead with curiosity and 
 - What do I want to build next?
 - What skill do I want to develop?
 - Who do I want to become?
+
 ##  👼 If I do good work, I'll be noticed
-Being “head down” and humble might have worked in school—do the assignment, hand it in, and get a grade. But in your career? That mindset can stall your growth.
+Being “head down” might have worked in school—do the work, get the grade. But in your career, that mindset can hold you back.
 
-Data shows that your manager doesn’t even know what you’re doing. Because they might not even be fully engaged in their own role. According to Gallup’s 2025 State of the Global Workplace report, only one in three managers are engaged at work. Your manager is just trying to keep up—overwhelmed, burned out, and unsure how to lead in this new world of endless work/stress.
+Most managers don’t even know what you’re doing. According to Gallup 2025 report, only 1 in 3 are engaged at work. Your manager is likely overwhelmed, burned out, and unsure how to lead you while she considers her own career.
 
-That means your great work might not just go unnoticed—you're building resentment against the world for not noticing!
+So your best work? It’s invisible and you are resentment when no one notices.
 
 **If you’re not telling your story, no one else is.**  
-And if someone is, they may not tell it right.
+And if they are, they might get it wrong.
 
-This doesn’t mean you need to brag or be performative. It means building the muscle to translate effort into visible impact. Ask yourself:
+This isn’t about bragging—it’s about turning effort into visible impact. Ask yourself:
 
 - What changed because of my work?
-    
 - Who benefited?
-    
 - What problems did I solve?
-    
 
-**Reality:** If you don’t advocate for your work, it’s often invisible.
+<div class="alert-warning">
+  <div class="icon">⚠️</div>
+  <div class="content">
+    <div class="title">Reality</div>
+    <p> If you don’t advocate for your work, it’s often invisible.
+    </p>
+    </div>
+    </div>
 
 **Instead:**  
 Build a storytelling muscle. _Translate effort into impact._ That doesn’t mean talking about yourself—it means helping others see the value of your work.
@@ -71,41 +82,55 @@ Sound familiar?
 
 Many of us collect credentials as a way to feel in control. It’s a deeply ingrained reflex—school rewarded us for checking boxes, so we assume our careers will too. But the workplace is much more disorganised, and political today. Your credentials don't always equate to better jobs.
 
-> [!warning] **Reality**  
-> Credentials don’t guarantee better jobs—or deeper fulfillment.  
-> They can open some doors, yes. But they won’t tell you which ones to walk through.  
-> They often become expensive detours if we’re using them to avoid hard questions.
+<div class="alert-warning">
+  <div class="icon">⚠️</div>
+  <div class="content">
+    <div class="title">Reality</div>
+    <p>
+      Credentials don’t guarantee better jobs—or deeper fulfillment.<br>
+      They can open some doors, yes. But they won’t tell you which ones to walk through.<br>
+      They often become expensive detours if we’re using them to avoid hard questions.
+    </p>
+  </div>
+</div>
 
-### ✅ Instead: Use this checklist before investing in more education
+<strong> ✅ Instead: Ask yourself a few questions before investing in more education</strong>
 
-- [ ] **What problem am I trying to solve?**  
-  _Is this addressing a real skills gap—or masking discomfort with uncertainty? Look for proof to know that you are being held back because of the lack of a certain credential_
+<ul>
+  <li><strong>What problem am I trying to solve?</strong> Is this addressing a real skills gap—or masking discomfort with uncertainty? Look for proof to know that you are being held back because of the lack of a certain credential</li> 
+  
 
-- [ ] **What data supports that this credential changes how others perceive or pay me?**  
-  _Not all letters after your name lead to better roles, higher pay, or greater influence. Do your research—talk to hiring managers and people who already hold the credentials you're considering. Ask how, if at all, their careers actually changed after earning them._
+  <li><strong>Why will this credential change how others perceive or pay me?</strong> Not all letters after your name lead to better roles, higher pay, or greater influence. Do your research—talk to hiring managers and people who already hold the credentials you're considering. Ask how, if at all, their careers actually changed after earning them.</li>  
+  
 
-- [ ] **Am I doing this to grow—or to feel “enough”?**  
-  _Sometimes, we chase credentials when what we’re really seeking is confidence. Before enrolling in anything, talk to people who know you well—both professionally and personally—to help validate what you’re truly missing right now._
+  <li><strong>Am I doing this to grow—or to feel “enough”?</strong>Sometimes, we chase credentials when what we’re really seeking is confidence. Before enrolling in anything, talk to people who know you well—both professionally and personally—to help validate what you’re truly missing right now.</li>
+  
+</ul>
 
----
 
 Sometimes the “qualification” we’re chasing is really just a sense of legitimacy. A way to feel allowed.
 
 But what permission are you looking for? From whom? 
 It might need to start with **you**.
 
-> If learning lights you up—great.  
-> But don’t let the pursuit of more credentials delay the real work:  
-> Getting clear on who you are, what you want, and what you’re capable of *today*.
-> You might be able to learn what you need **at your job** - just expand your job description, with or *without* permission 😀 
+If learning lights you up—great. But don’t let the pursuit of more credentials delay the real work:  
+Getting clear on who you are, what you want, and what you’re capable of *today*.
+You might be able to learn what you need **at your job** - just expand your job description, with or *without* permission 😀 
 
 
-### ## 🧍🏽‍♀️ Myth #4: I Have to Do It Alone
+## 🧍🏽‍♀️ Myth #4: I Have to Do It Alone
 
 Hyper-individualism is baked into our careers. We are taught to be 'strong' and rise to the challenge. To fake it till we know it. To brave it alone. But the truth is, we are stronger with others, when we have the courage to lead and be vulnerable. When we lead with curiosity and learn with others. To not know and learn is better than to not know and make it up. So involve others. Teams that collaborate effectively are five times more likely to be high-performing.
 
-> [!warning] **Reality** 
-> Careers aren’t built in isolation—they’re built through connection. Going it alone often leads to burnout, missed opportunities, and a sense that no one sees your struggles—or your wins.
+<div class="alert-warning">
+  <div class="icon">⚠️</div>
+  <div class="content">
+    <div class="title">Reality</div>
+    <p>
+Careers aren’t built in isolation—they’re built through connection. Going it alone often leads to burnout, missed opportunities, and a sense that no one sees your struggles—or your wins.</p>
+</div>
+</div>
+
 
 **Instead:**  
 Curate your *career circle*. This could be:
@@ -113,7 +138,7 @@ Curate your *career circle*. This could be:
 - A coach
 - A “personal board of directors”
 
-You don’t need a huge network—just a few people who get you. In my first post in this series, I talked about building a **Personal Board of Directors**—a small, trusted group who can offer perspective, challenge your assumptions, and support your growth.
+You don’t need a huge network—just a few people who get you. In my first post in this series, I talked about building a [Personal Board of Directors](http://127.0.0.1:4000/2025/03/03/Building-a-career-worth-waking-up-to.html#%EF%B8%8F-use-your-career-gps)—a small, trusted group who can offer perspective, challenge your assumptions, and support your growth.
 
 
 I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out [what's next for your career](https://www.diesh.ca/NextUp.html), or need help understanding and [working on your leadership](https://www.diesh.ca/CoachingForLeaders.html) skills, <a href="#contact" class="next scrolly">hit me up</a>!
