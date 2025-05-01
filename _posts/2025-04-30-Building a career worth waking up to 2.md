@@ -132,7 +132,7 @@ Curate your *career circle*. This could be:
 - A coach
 - A “personal board of directors”
 
-You don’t need a huge network—just a few people who get you. In my first post in this series, I talked about building a [Personal Board of Directors](http://127.0.0.1:4000/2025/03/03/Building-a-career-worth-waking-up-to.html#%EF%B8%8F-use-your-career-gps)—a small, trusted group who can offer perspective, challenge your assumptions, and support your growth.
+You don’t need a huge network—just a few people who get you. In my first post in this series, I talked about building a [Personal Board of Directors](https://diesh.ca/2025/03/03/Building-a-career-worth-waking-up-to.html#%EF%B8%8F-use-your-career-gps)—a small, trusted group who can offer perspective, challenge your assumptions, and support your growth.
 
 
 I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out [what's next for your career](https://www.diesh.ca/NextUp.html), or need help understanding and [working on your leadership](https://www.diesh.ca/CoachingForLeaders.html) skills, <a href="#contact" class="next scrolly">hit me up</a>!
