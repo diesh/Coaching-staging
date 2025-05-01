@@ -1,0 +1,52 @@
+<head>
+  <title>{% if page.title %}{{ site.title }} | {% endif %}{{ page.title | strip_html }}</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <!-- Fallback for older IE versions -->
+  <!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/js/ie/html5shiv.js"></script><![endif]-->
+
+  <!-- Corrected CSS Paths -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+
+  
+  <!-- Conditional CSS for IE -->
+  <!--[if lte IE 9]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie8.css" /><![endif]-->
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+
+  <!-- Dynamic Color Styling -->
+  <style>
+    :root {
+      --nav-color: {{ page.nav-color | default: site.brand-color }};
+    }
+
+    .box {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    .box:hover::before {
+      background-color: {{ page.nav-color | default: site.brand-color }};
+      opacity: 0.2;
+    }
+
+    .box:hover {
+      color: inherit;
+    }
+  </style>
+</head>

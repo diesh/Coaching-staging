@@ -1,0 +1,138 @@
+
+/* Homepage masthead button styling */
+.masthead_button {
+  border: 1px solid #CCDBF8; /* border color */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 14.9333px;
+  font-weight: 600;
+  letter-spacing: 3.73333px;
+  padding: 0 2.5em;  /* Keep this padding, but be mindful of overflow */
+  height: 3.5em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  white-space: nowrap;
+  box-sizing: border-box; /* This ensures padding is included in width calculations */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  color: #CCDBF8; /* Text color */
+  background-color: transparent; /* Transparent background */
+  box-shadow: none;
+
+  /* Removed min-width: max-content to prevent stretching */
+  width: auto;        /* Keep width auto for flexibility */
+  max-width: 100%;    /* Ensure it doesn't overflow container */
+}
+
+.masthead_button .arrow svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+.masthead_button:hover {
+  background-color: transparent;
+  color: #FFF;
+  border-color: #FFF !important;
+}
+
+.masthead_button:active {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  color: #FF6347 !important; /* Adjust for better contrast */
+  border-color: #FF6347;
+}
+
+.masthead_button .arrow svg path {
+  stroke: #CCDBF8;
+  fill: none;
+}
+
+.masthead_button:hover .arrow svg path {
+  stroke: #FFF;
+}
+
+.masthead_button:active .arrow svg path {
+  stroke: #FF6347;
+}
+
+/* Adjust button for mobile screens */
+@media (max-width: 768px) {
+  .masthead_button {
+    padding: 0 1.5em; /* Reduce padding on mobile */
+    font-size: 12px;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+  }
+
+  .masthead_button .arrow svg {
+    width: 14px;  /* Adjust arrow size */
+    height: 14px;
+  }
+}
+
+
+
+/* General button styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  border: 1px solid _palette(highlight); /* Adding 1px solid border with highlight color */
+  background-color: transparent;
+  color: _palette(highlight);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 14.9333px;
+  font-weight: 600;
+  letter-spacing: 3.73333px;
+  padding: 0 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none; /* Remove border effect */
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+  display: inline-block; /* Ensure buttons only take up necessary width */
+  padding: 10px 20px; /* 10px top/bottom, 20px left/right */
+  width: auto; /* Remove any forced full-width behavior */
+  min-width: max-content; /* Ensure button is at least as wide as its content */
+  text-align: center; /* Center the text */
+  border: 1px solid #000; 
+  cursor: pointer; /* Ensure button pointer */
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+  background-color: _palette(brand-color);
+  color: #FFF !important;
+   border-color: #060606 !important; 
+}
+
+button:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.button:active {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: _palette(accent3) !important;
+  border: 1px solid _palette(accent3) !important;
+}

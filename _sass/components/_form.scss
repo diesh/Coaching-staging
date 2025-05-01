@@ -1,0 +1,182 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Form */
+
+form {
+	margin: 20px 0 0 0; /* Adds 20px margin above the form */
+	    padding-top: 20px;  /* Adds 20px padding inside the form at the top */
+
+    .field {
+        margin: 0 0 (_size(element-margin) * 1) 0;
+
+        &.half {
+            width: 50%;
+            float: left;
+            padding: 0 0 0 (_size(element-margin) * 1 * 0.5);
+
+            &.first {
+                padding: 0 (_size(element-margin) * 1 * 0.5) 0 0;
+            }
+        }
+    }
+
+    > .actions {
+        margin: (_size(element-margin) * 1.25) 0 0 0 !important;
+    }
+
+    @include breakpoint(small) {
+        .field {
+            margin: 0 0 (_size(element-margin) * 0.75) 0;
+
+            &.half {
+                padding: 0 0 0 (_size(element-margin) * 0.75 * 0.5);
+
+                &.first {
+                    padding: 0 (_size(element-margin) * 0.75 * 0.5) 0 0;
+                }
+            }
+        }
+
+        > .actions {
+            margin: (_size(element-margin) * 1) 0 0 0 !important;
+        }
+    }
+
+    @include breakpoint(xsmall) {
+        .field {
+            &.half {
+                width: 100%;
+                float: none;
+                padding: 0;
+
+                &.first {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+label {
+    color: _palette(fg-bold);
+    display: block;
+    font-size: 0.8em;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(letter-spacing-alt);
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    text-transform: uppercase;
+}
+
+/* Inputs with bottom border only */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    @include vendor('appearance', 'none');
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Bottom border only */
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.5em 0;
+    text-decoration: none;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus,
+    &:hover {
+        border-bottom-color: #333;
+    }
+}
+
+/* Full border for textarea */
+textarea {
+    @include vendor('appearance', 'none');
+    background: _palette(border-bg);
+    border: 1px solid #ccc;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus,
+    &:hover {
+        border-color: #333;
+    }
+}
+
+.select-wrapper {
+    @include icon;
+    display: block;
+    position: relative;
+
+    &:before {
+        color: _palette(border);
+        content: '\f078';
+        display: block;
+        height: _size(element-height);
+        line-height: _size(element-height);
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: _size(element-height);
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    height: _size(element-height);
+}
+
+/* Placeholder Styles */
+::-webkit-input-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+:-moz-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+::-moz-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+:-ms-input-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+.formerize-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+/* for substack form */
+.contact-method iframe {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  width: 100%;
+  max-width: 480px;
+}
+

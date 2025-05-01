@@ -1,0 +1,43 @@
+# site settings
+title: Gagan Diesh
+subtitle: Executive Coaching
+email: gagan@designstamp.com
+description: I help design + product professionals and teams unlock their full potential.
+
+baseurl: ""  # Leave it empty for staging
+url: "https://staging.diesh.ca"
+
+author:
+street_address: 
+city: 
+state: 
+zip_code: 
+country: U
+phone: 
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+
+
+# social settings (key must match name of font awesome icon)
+# see https://fontawesome.com/icons?d=gallery&p=2&s=brands
+# Icons are not shown if value is empty.
+# You need to restart jekyll for changes to have an effect
+socials:
+ 
+  LinkedIn: http://linkedin.com/in/diesh
+ 
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+- "*.gemspec"
+- LICENSE.md
+- CONTRIBUTING.md
+- README.md 

@@ -1,0 +1,227 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* List */
+
+	ol {
+		list-style: decimal;
+		margin: 0 0 _size(element-margin) 0;
+		padding-left: 1.25em;
+
+		li {
+			padding-left: 0.25em;
+		}
+	}
+
+	ul {
+		list-style: disc;
+		margin: 0 0 _size(element-margin) 0;
+		padding-left: 1em;
+
+		li {
+			padding-left: 0.5em;
+		}
+
+		&.alt {
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				border-top: solid 1px _palette(border);
+				padding: 0.5em 0;
+
+				&:first-child {
+					border-top: 0;
+					padding-top: 0;
+				}
+			}
+		}
+
+		&.icons {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				display: inline-block;
+				padding: 0 1em 0 0;
+
+				&:last-child {
+					padding-right: 0;
+				}
+
+				// Apply the palette color to icons
+				a {
+					color: _palette(bg-alt); // Use the fuchsia color from the palette
+					transition: color 0.3s ease; // Smooth transition for hover effect
+
+					&:hover {
+						color: #000; // Turn black on hover
+					}
+				}
+			}
+
+			@include breakpoint(small) {
+				li {
+					padding: 0 0.75em 0 0;
+				}
+			}
+		}
+
+		&.actions {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+
+			li {
+				display: inline-block;
+				padding: 0 (_size(element-margin) * 0.5) 0 0;
+				vertical-align: middle;
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+
+			&.small {
+				li {
+					padding: 0 (_size(element-margin) * 0.5) 0 0;
+				}
+			}
+
+			&.vertical {
+				li {
+					display: block;
+					padding: (_size(element-margin) * 0.5) 0 0 0;
+
+					&:first-child {
+						padding-top: 0;
+					}
+
+					> * {
+						margin-bottom: 0;
+					}
+				}
+
+				&.small {
+					li {
+						&:first-child {
+							padding-top: 0;
+						}
+					}
+				}
+			}
+
+			&.fit {
+				display: table;
+				margin-left: (_size(element-margin) * -0.5);
+				padding: 0;
+				table-layout: fixed;
+				width: calc(100% + #{(_size(element-margin) * 0.5)});
+
+				li {
+					display: table-cell;
+					padding: 0 0 0 (_size(element-margin) * 0.5);
+
+					> * {
+						margin-bottom: 0;
+					}
+				}
+
+				&.small {
+					margin-left: (_size(element-margin) * -0.5);
+					width: calc(100% + #{(_size(element-margin) * 0.5)});
+
+					li {
+						padding: 0 0 0 (_size(element-margin) * 0.5);
+					}
+				}
+			}
+		}
+	}
+
+/* Initial styles */
+dt, dd {
+    transition: background-color 1s ease; /* Slower fade-in transition */
+    background-color: transparent; /* Initial state: transparent */
+}
+
+/* Hover effect for dt and dd */
+.dt-dd-pair:hover dt,
+.dt-dd-pair:hover dd {
+    background-color: rgba(0, 0, 0, 0.07); /* Lightened grey background on hover */
+}
+
+/* Styles for dt */
+dt {
+    display: block;
+    font-weight: _font(weight-bold);
+    margin: 0 0 1px 0;
+    font-size: 1.1rem;
+    padding: 0.2em 0;
+}
+
+/* Styles for dd */
+dd {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0.2em 0;
+    padding-left: 20px; /* Slight indent on the left */
+}
+
+/* Optional: Apply hover effect on the entire pair (dt + dd) */
+.dt-dd-pair:hover dt,
+.dt-dd-pair:hover dd {
+    background-color: rgba(0, 0, 0, 0.07); /* Light grey */
+}
+
+
+
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+}
+
