@@ -63,4 +63,3 @@ It’s simple, adaptable, and designed for real human mentorship.
 Use it with someone you’re mentoring—and let me know how it goes. No one knows what’s coming next, but I know this for sure:
 
 Mentorship gives back more than you’d expect. 💕
-
