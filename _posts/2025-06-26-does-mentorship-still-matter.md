@@ -3,9 +3,10 @@ layout: post
 title: Does Mentorship Still matter?
 description: Is AI going to kill your job? 🤷‍♂️ AI can’t replace what happens between two people.
 image: assets/images/jeffrey-brandjes-12YsDGgdr28-unsplash.jpg
-masthead_caption: Does mentorship matter?
+masthead_caption: Jeffrey Brandjes on Unsplash
 date: 2025-06-26
 comments: true
+masthead_url: https://unsplash.com/photos/man-in-white-shirt-and-black-shorts-jumping-on-skateboard-12YsDGgdr28
 ---
 _Is AI going to kill your job? 🤷‍♂️ AI can’t replace what happens between two people._
 > “Learn from trends, but design clothes that still flatter the body.”  
