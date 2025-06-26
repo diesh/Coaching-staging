@@ -19,6 +19,7 @@ I’m excited to have a powerful assistant ([who’s not MS Clippy](https://www.
 - the tradition of passing knowledge from one generation to the next  
 - the art of storytelling that helps others do better  
 - the wisdom of history that keeps us from repeating the [same mistakes over and over again](https://archive.ph/lqq8e)   
+
 ## Why Mentorship Still Matters
 
 There’s no work relationship more sacred than mentorship. It’s not advice-giving or casual check-ins.
