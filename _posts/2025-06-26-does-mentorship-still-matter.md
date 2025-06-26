@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Does Mentorship Still matter?"
+title: Does Mentorship Still matter?
 description: Is AI going to kill your job? 🤷‍♂️ AI can’t replace what happens between two people.
-image: /assets/images/jeffrey-brandjes-12YsDGgdr28-unsplash.jpg
+image: assets/images/jeffrey-brandjes-12YsDGgdr28-unsplash.jpg
 masthead_caption: Does mentorship matter?
 date: 2025-06-26
 comments: true
