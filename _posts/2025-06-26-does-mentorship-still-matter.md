@@ -36,12 +36,12 @@ Mentorship takes work. It begins with a promise—and delivers on that promise t
 
 Here are three essential elements:
 <ul>
-<li>Consistency <br/>  
+<li><b>Consistency</b> <br/>  
 With scheduled check-ins, both people stay connected and grounded. “Let’s grab coffee again sometime” isn’t mentorship—it’s drift.
 </li>
-<li>Relevance  <br />
+<li><b>Relevance</b>  <br />
 Mentorship should be practical. The conversations should help the mentee tackle what's on their plate *now*. Defined topics keep it useful and honest.</li>
-<li>Intentionality  <br />
+<li><b>Intentionality</b>  <br />
 If there’s no structure or shared expectation, it’s not mentorship. It’s a good chat. And while good chats are great, mentorship goes deeper.</li>
 </ul>
 
