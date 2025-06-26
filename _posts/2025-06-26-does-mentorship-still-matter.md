@@ -50,8 +50,15 @@ If there’s no structure or shared expectation, it’s not mentorship. It’s a
 I created a **Monthly Mentorship Template**—a tool I use in my coaching and leadership work.
 
 It’s simple, adaptable, and designed for real human mentorship.
+<div class="alert-warning">
+  <div class="icon">📎</div>
+  <div class="content">
+    <div class="title"> [Grab the Mentorship Template (Google Doc)](https://docs.google.com/document/d/1JlLRIG4jXRwv2t163da6evLNTcdYDqrjxu-OJBZ2zsQ/edit?usp=sharing)</div>
+    <p> This template is designed specifically for mentorship that supports growth. You might use this with direct reports, peers, or people you're mentoring outside of work. Tweak it to suit your needs and cadence for mentorship sessions. I have suggested monthly sessions with a couple of async checkins.
+    </p>
+    </div>
+    </div>
 
-🔗 [Grab the Mentorship Template (Google Doc)](https://docs.google.com/document/d/1JlLRIG4jXRwv2t163da6evLNTcdYDqrjxu-OJBZ2zsQ/edit?usp=sharing)
 
 ### Inside the template:
 
