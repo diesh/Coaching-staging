@@ -40,7 +40,7 @@ Here are three essential elements:
 By agreeing to a set of scheduled sessions, both people can make sure they stay connected and keep the topics relevant. “Let’s grab coffee again soon” isn’t where it’s at.
 </li>
 <li><b>Relevance</b>  <br />
-Mentorships must be practical so that the stories and questions directly help the mentee tackle what’s on their plate _right now_. Defined topics help both humans stay on track and keep the conversations useful..</li>
+Mentorships must be practical so that the stories and questions directly help the mentee tackle what’s on their plate  *right now*. Defined topics help both humans stay on track and keep the conversations useful.</li>
 <li><b>Intentionality</b>  <br />
 Real mentorship is designed, agreed upon, and purpose-driven. If you haven’t set expectations and structure, you don’t have a mentorship. Without intentionality, you just had a great chat but that’s not mentorship.</li>
 </ul>
