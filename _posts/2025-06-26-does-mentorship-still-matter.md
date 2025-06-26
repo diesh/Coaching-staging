@@ -7,6 +7,7 @@ masthead_caption: Does mentorship matter?
 date: 2025-06-26
 comments: true
 ---
+_Is AI going to kill your job? 🤷‍♂️ AI can’t replace what happens between two people._
 > “Learn from trends, but design clothes that still flatter the body.”  
 > — My mother, a fashion designer
 
