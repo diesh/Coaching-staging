@@ -20,7 +20,7 @@ nav-color: "#1B9C85"
 
 		<h2 id="content">Design Your Career, Your Way</h2>
 		<p>Over eight weeks, you’ll get clear on what drives you, rebuild your story, and take focused steps toward a career that fits. Whether you’re switching paths, aiming higher, or starting fresh, this program meets you where you are and helps you move forward.</p>
-		<p>I’ve hired over 100 people and helped many build meaningful careers. I draw on years of leading design and product teams in tech, combining coaching and design thinking to help you get unstuck and unlock your next chapter.</p>
+		<p>I’ve hired hundreds of people and helped many build meaningful careers. I draw on years of leading design and product teams in tech, combining coaching and design thinking to help you get unstuck and unlock your next chapter.</p>
 
 		<hr class="major" />
 		<h2 id="elements">Program Details</h2>
@@ -155,16 +155,18 @@ nav-color: "#1B9C85"
 			<!-- Right Column -->
 			<div class="4u 12u$(medium)">
 				<div class="box">
-					<h3>What to Expect</h3>
-					<p>This program is personalized, strategic, and grounded in action. You’ll receive:</p>
-					<ul>
-						<li><b>Career Mapping</b>: Understand where you've been and where you're headed.</li>
-						<li><b>Resume and Story Rewriting</b>: Present your strengths clearly and with impact.</li>
-						<li><b>LinkedIn Optimization</b>: Make your profile work harder for you.</li>
-						<li><b>Live Mock Interviews</b>: Practice with feedback from someone who’s hired hundreds.</li>
-						<li><b>Ongoing Guidance</b>: Optional support between sessions or during high-stakes moments.</li>
-					</ul>
+				<h3>What to Expect</h3>
+				<p>This program is personalized, strategic, and grounded in action. You’ll receive:</p>
+				<ul>
+					<li><b>Career Mapping</b>: Understand where you've been, what drives you, and where you're headed. Get a stronger sense of self including your skills and preferences</li>
+					<li><b>Resume and Story Rewriting</b>: Present your strengths clearly and with impact, both on paper and in person.</li>
+					<li><b>Frameworks for Clarity</b>: Build stronger elevator pitches and case studies, and learn how to talk about your skills and experience in a way that feels authentic and confident.</li>
+					<li><b>LinkedIn Optimization</b>: Make the words you use to talk about your skills and experience line up with where we you want to go next.</li>
+					<li><b>Live Mock Interviews</b>: Practice with someone who’s hired hundreds and get real-time feedback to sharpen your delivery.</li>
+				<li><b>Ongoing Guidance</b>: Optional support between sessions or during high-stakes moments, such as interviews or outreach.</li>
+				</ul>
 				</div>
+
 				<div class="box">
 				    <h3>Why This Works</h3>
 					<ul>
