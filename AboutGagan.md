@@ -50,9 +50,12 @@ weight: 40
       <h2>Why Coaching</h2>
       <div class="row">
         <div class="8u 12u$(medium)">
-          <p>After years in design leadership, coaching felt like a natural next step. I saw how the best ideas often stall, not from lack of effort, but from unclear direction, fractured trust, or fear of change.</p>
+        <p>I’ve witnessed firsthand how even the best ideas stall when teams face unclear direction, misaligned goals, or a lack of trust and accountability.</p>
 
-          <p>Coaching creates space to think, test, reflect, and act. It helps you cut through noise and move with intention, even in uncertainty.</p>
+		<p>Throughout my career, I’ve been lucky to work with great coaches. Coaching created space to think, test, reflect, and act — helping me move with intention, even in times of uncertainty.</p>
+
+		<p>After years in design leadership, coaching felt like a natural next step. The way we build products is broken. I want to do my part to shape healthier ways of working so we can create better outcomes together.</p>
+
 
           <blockquote>
             You cannot be what you cannot see.  
