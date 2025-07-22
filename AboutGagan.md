@@ -4,179 +4,169 @@ title: About Gagan
 description: 
 image: assets/images/Gagan_Diesh_.png
 nav-menu: true
-nav-color: "#c789af" #Fuchsia
+nav-color: "#c789af"
 hide_from_tiles: true
-is_special: true  # <== Adds extra space in the menu in home html file
+is_special: true
 weight: 40
 ---
 
-<!-- Main -->
-<!-- 
-  accent1: #1B9C85; // Teal
-  accent2: #FF7F50; // Coral 
-  accent3: #8d82c4; // Lavender Blue 
-  accent4: #ec8d81; // Soft Coral 
-  accent5: #FFDDC1; // Warm Cream
-  accent6: #c8dbfa; // Cool White 
--->
-
-
 <div id="main" class="alt">
-    
-        
-    
+  <section id="one">
+    <div class="inner">
+      <div class="photo-frame"> 
+        <img src="assets/images/Gagan_Diesh_.jpg" alt="Gagan Diesh"> 
+      </div>
+      <header class="major">
+        <h1>About Gagan</h1>
+      </header>
 
-    <!-- One -->
-    <section id="one">
-        <div class="inner">
-        <div class="photo-frame"> <img src="assets/images/Gagan_Diesh_.jpg" alt="Gagan Diesh"> </div>
-            <header class="major">
-                <h1>About Gagan</h1>
-            </header>
+      
+      <p>I’m a designer, strategist, and coach with 20+ years of experience in product, research, and leadership. I help people find clarity, build trust, and lead with confidence.</p>
 
-            <!-- Content -->
-            <h2 id="content">Shaping the Future of Work Through Design</h2>
-            <p>Driven by an innate curiosity and a passion for crafting engaging experiences, I’ve been a practitioner, mentor, and educator in the field of design for over 20 years. In 2001, I founded DesignStamp, a studio known for its innovative approach to research and user experience. My strength lies in bridging the gap between customers, businesses, and technologists—helping them understand each other's needs and collaborate seamlessly.</p>
+      <h2>My Path</h2>
+      <p>In 2001, I founded <a href="https://designstamp.com" target="blank">DesignStamp</a>, a research and design studio that tackles complex challenges across business, tech, and public health. I have led projects for the Gates Foundation, OECD, and PEPFAR—the world’s largest global health initiative.</p>
 
-            <p>Throughout my career, I’ve led user research and experience design initiatives for some of the world’s most influential organizations, including the Bill & Melinda Gates Foundation, the OECD, and PEPFAR, the largest global initiative dedicated to combating HIV/AIDS.</p>
-           
-            <blockquote>Explore my coaching programs for <a href="CoachingForLeaders.html">leaders</a>, <a href="TeamWorkshops.html">team workshops</a>, <a href="NextUp.html">career exploration</a>. I am also available for <a href="OngoingCoaching.html">ongoing coaching</a> to help you level up and tackle work challenges with confidence.</blockquote>
-            <p>Most recently, I served as VP of Experience Design & Research at Thinkific, an online learning platform that achieved unicorn status and went public in 2021. I helped develop the Digital Design program at Vancouver Film School and have taught courses, delivered talks, and led workshops on branding, user experience, and design thinking. I work as an executive coach, partnering with leaders and individual contributors to accelerate their careers and drive impactful, strategic initiatives. I live in Toronto, Canada 🇨🇦.</p>
-            <hr class="major" />
+      <p>I’ve created UX and management courses, taught at Vancouver Film School, delivered talks across Canada, and spent years mentoring and managing growing teams. As VP of Experience Design at Thinkific, I scaled design and research during a period of rapid growth and helped lead the company to a $1B IPO valuation.</p>
 
-            <h2 id="elements">Why Coaching</h2>
+      <h2>What I Do Today</h2>
+      <p>Today, I coach tech professionals and leaders, facilitate strategy workshops, and help people navigate big decisions and moments of change. I specialise in helping people see their strengths clearly, and use them more intentionally.</p>
+    <p>I live in Toronto, Canada 🇨🇦, and work with clients across North America and Europe.</p>
 
-            <!-- Row for Two Columns -->
-            <div class="row">
-                <!-- Left Column -->
-                <div class="8u 12u$(medium)">
-                    <p>Moving from design leadership to executive coaching felt like a natural next step. After two decades of helping businesses, customers, and technology teams work better together, I realized something: great skills and experience aren't enough to guarantee success. Exceptional teams need two other key ingredients: <br /><span class="fa fa-check" style="color: grey;"></span> Leaders who are empathetic and clear about priorities, and <br /><span class="fa fa-check" style="color: grey;"></span> The team has taken the time and effort required to build real trust.</p>
 
-<p>Trust helps teams go from the unknown to the known, navigate uncertainty, and feel like they're truly on the same side.</p>
-                    
-<blockquote> You cannot be what you cannot see.
-— Marian Wright Edelman </blockquote>
-                    <p>Coaching lets me take what I’ve learned in research and experience design and apply it in a new way—helping individuals and teams gain clarity, remove roadblocks, and build strategies that drive real impact. Whether I’m working with executives, product teams, or design leaders, my approach is built on curiosity, collaboration, and the belief that leadership isn’t just a title; it’s a skill you can sharpen, refine, and grow. I'm here to help you <b>see yourself in a new way</b>, so that you can craft a career worth waking up for!</p>
-                    
-                
-                <h2 id="elements">My Coaching Style</h2>
-                    <div class="speechbubble">					  
-						 <strong>Hope is not a plan!</strong> A coach helps you move from  
-<span class="fa fa-map-marker" style="color: grey;"></span> where you are  
-to where you want to be <span class="fa fa-trophy" style="color: grey;"></span> — equipping you with a clear plan to get there.
-
-					 </div>
- <p>Coaching starts with trust. Before anything else, I take the time to understand you—your ambitions, challenges, and what drives you. I believe great coaching is a mix of deep empathy and unwavering accountability. My role isn’t just to support you but to challenge you, push you, and keep you honest in the pursuit of your goals.</p>
-
-<blockquote>
-If all lives truly mattered equally, movements like Black Lives Matter wouldn’t be necessary. Initiatives like DEI exist to address the disparities we've created by valuing some lives over others. It’s about equity, not equality. My goal is to lift people up, especially those who need the most support.
-</blockquote>
-<p>Growth isn’t always easy. Transformation takes effort, resilience, and the right kind of support. I know this firsthand. Throughout my career, I’ve had coaches and built my own personal board of directors—mentors who saw my blind spots, challenged my thinking, and kept me moving forward. The best support network isn’t just kind; it’s strong, direct, and unafraid to hold you accountable.</p>
-
-<p>That’s the approach I bring to coaching. I’ll celebrate your wins, call out the gaps, and push you toward the clarity and confidence you need to lead with impact.</p>
-
-<!--   start of faq -->
-<h2>Frequently Asked Questions</h2>
-<div class="faq-container">
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>What is your background in design and coaching?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>I’ve been a practitioner, mentor, and educator in design for over 20 years. I founded DesignStamp in 2001 and have led research and experience design initiatives for organizations like the Gates Foundation, OECD, and PEPFAR. Most recently, I served as VP of Design and Research at Thinkific, where I built and scaled high-performing teams at a publicly traded company in Vancouver, BC.</p>
-            <p>My coaching is a natural extension of that work—helping leaders and teams build trust, gain clarity, and navigate challenges with confidence. As a seasoned manager of managers (MoM) and executive team member, I’ve seen firsthand what drives success—and what happens when leadership falls short. </p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Who do you typically coach?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>I work with executives, product and design leaders, and individual contributors looking to <a href="OngoingCoaching.html">excel at work</a> or figure out <a href="NextUp.html">what's next for their careers</a>. I also <a href="TeamWorkshops.html">coach teams</a> on leadership, collaboration, and strategic decision-making.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>How is your coaching different from mentorship?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>Mentorship is advice-based, drawing from personal experience. Coaching, on the other hand, helps you uncover your own answers through strategic questioning, reflection, and accountability.</p>
-            <p>My role as a coach is to challenge your thinking, highlight blind spots, and equip you with strategies to lead with impact.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>What can I expect from coaching with you?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>We’ll create a coaching plan tailored to your goals—whether you’re navigating career growth, stepping into leadership, or refining your approach.</p>
-            <p>You can expect deep conversations, actionable strategies, and a mix of empathy and accountability to keep you on track.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>What coaching formats do you offer?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>I offer one-on-one coaching, team workshops, and ongoing leadership development programs. Coaching sessions can be weekly, biweekly, or monthly, depending on your needs.</p>
-            <p>I am also available via text for high pressure situations such as those going through job transitions or high-stakes leadership situations.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>What makes your coaching approach unique?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>My background in research and design thinking allows me to approach coaching with curiosity, strategic insight, and a problem-solving mindset.</p>
-            <p>I focus on trust-building, clarity, and actionable strategies—ensuring you leave each session with real steps toward growth. I am not afraid to have candid conversations and invite you to come to our sessions with an open mind and willing to change what is not working for you.</p>
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Do you offer flexible payment options?</span>
-            <i class="fa fa-plus faq-icon"></i>
-        </div>
-        <div class="faq-answer">
-            <p>Yes. I believe coaching should be accessible, so I offer flexible payment options to accommodate different financial situations. I’m especially passionate about helping marginalized individuals secure their seat at the table.</p>
-        </div>
-    </div>
+<div class="cta-links">
+  <p>
+    Explore my coaching programs for 
+    <a href="CoachingForLeaders.html">leaders</a>, 
+    <a href="TeamWorkshops.html">teams</a>, and 
+    <a href="NextUp.html">career transitions</a>. 
+    I also offer <a href="OngoingCoaching.html">ongoing coaching</a> for long-term growth and accountability.
+  </p>
 </div>
 
 
+    
 
 
+      <h2>Why Coaching</h2>
+      <div class="row">
+        <div class="8u 12u$(medium)">
+          <p>After years in design leadership, coaching felt like a natural next step. I saw how the best ideas often stall—not from lack of effort, but from unclear direction, fractured trust, or fear of change.</p>
+
+          <p>Coaching creates space to think, test, reflect, and act. It helps you cut through noise and move with intention—even in uncertainty.</p>
+
+          <blockquote>
+            You cannot be what you cannot see.  
+            — Marian Wright Edelman
+          </blockquote>
+
+          <p>My approach blends systems thinking, user-centered design, and strategic questioning. Whether you’re stepping into leadership, navigating a pivot, or trying to communicate with more impact—I’ll help you do it with clarity and purpose.</p>
+
+          <h2>My Coaching Style</h2>
+          <div class="cta-links"><p>			  
+            <strong>Hope is not a plan!</strong> A coach helps you move from             <span class="fa fa-map-marker" style="color: grey;"></span> where you are  
+            to <br /><span class="fa fa-trophy" style="color: grey;"></span> where you want to go ...with a plan to get there.</p>
+          </div>
+
+          <p>I coach with a mix of empathy and accountability. I’ll support you—but I’ll also challenge you to name what you want, own what’s holding you back, and do the work to grow.</p>
+
+          <p>I work especially well with curious people who think deeply, lead quietly, and care about others—but sometimes need help speaking up, zooming out, or stepping into their full power.</p>
+
+          <p>I believe in equity, access, and representation. I’m especially committed to supporting women, BIPOC, and LGBTQ+ leaders in shaping the future of work.</p>
 
 
-                </div>
-
-                <!-- Right Column -->
-                <div class="4u 12u$(medium)">
-                    <div class="box">
-                        <h3>What to Expect</h3>
-                        <p>Depending on your needs, we'll create a plan that works for you. If you're job searching, weekly coaching often provides the momentum you need. For executives and leaders, a monthly cadence tends to be more effective—offering steady guidance while ensuring I'm available when you need support, whether it's refining a strategy deck or planning for the next quarter.</p>
-                    </div>
-                    <div class="box">
-                        <h3>Why Me</h3>
-                        <ul> <li><strong>Experience that matters</strong> Decades of leadership in design, product, and strategy.</li>
-                         <li><strong>Empathy meets accountability</strong> Supportive, yet unafraid to challenge you.</li> 
-                          <li><strong>Results-driven approach</strong> Focused on clarity, action, and measurable progress.</li> 
-                          <li><strong>Your success partner</strong> Here to help you grow, adapt, and lead with confidence.</li> 
-                          <li><strong>An ally & Advocate</strong> I’m especially passionate about lifting up women, PoC, and LGBTQ+ professionals, ensuring they have the support, visibility, and opportunities to step into the leadership roles they deserve. I offer flexible payment options to make my services more accessible to everyone.</li></ul>
-                    </div>
-                </div>
+          <!--   start of faq -->
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What is your background in design and coaching?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>I’ve been a designer, researcher, and team builder for over 20 years. I’ve worked with global NGOs, tech companies, and startups. Most recently, I led design and research at Thinkific during a period of rapid growth and IPO. I’ve coached emerging leaders, ICs, and senior execs through transitions, team challenges, and moments of career change.</p>
+              </div>
             </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Who do you typically coach?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>I work with product and design professionals—ICs, new managers, senior leaders, and teams. Some are trying to grow into their next role; others are figuring out what comes after a plateau or burnout. I also coach people navigating systems that weren’t designed for them, including BIPOC, women, and LGBTQ+ professionals in tech.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How is coaching different from mentorship?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Mentorship is often advice-based. Coaching is about reflection, alignment, and accountability. I won’t give you answers—I’ll help you find your own, challenge your assumptions, and move toward what you want with clarity and confidence.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What can I expect from coaching with you?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>We’ll start by getting clear on what’s most important to you. Then we’ll build a structure to get there—through regular coaching, tools, reflection prompts, and accountability. I’ll adapt the process as we go to match your energy, schedule, and growth goals.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What coaching formats do you offer?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>One-on-one coaching (weekly, biweekly, or monthly), team workshops, and longer-term development programs. I also offer Slack/text-based support in high-stakes seasons (job interviews, leadership transitions, major decisions).</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What makes your coaching approach unique?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>I bring a blend of strategic thinking, research depth, and real-world leadership experience. I’m deeply empathetic, quick to spot patterns, and not afraid to ask the question behind the question. I am here to support you in the journey ahead!.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you offer flexible payment options?</span>
+                <i class="fa fa-plus faq-icon"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. Coaching should be accessible. I offer payment plans and reduced rates for those from underrepresented or marginalized backgrounds in tech. I want great coaching to be within reach for anyone who needs it.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Right Column -->
+        <div class="4u 12u$(medium)">
+          <div class="box">
+            <h3>What to Expect</h3>
+            <p>Depending on your needs, we’ll tailor a plan. If you’re in transition, weekly coaching builds momentum. If you’re a senior leader, monthly check-ins offer just-in-time support—on anything from team dynamics to strategic decisions.</p>
+          </div>
+          <div class="box">
+            <h3>Why Me</h3>
+            <ul>
+              <li><strong>Experience that matters:</strong> 20+ years in design, research, and leadership.</li>
+              <li><strong>Empathy and edge:</strong> I’ll meet you where you are—and help you move forward.</li>
+              <li><strong>Tools that work:</strong> Frameworks to clarify your thinking and build confidence.</li>
+              <li><strong>An equity lens:</strong> I support people from all backgrounds and walk the talk.</li>
+              <li><strong>Your growth partner:</strong> I’m here to help you unlock your next chapter—and enjoy it.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
