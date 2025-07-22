@@ -50,16 +50,16 @@ weight: 40
       <h2>Why Coaching</h2>
       <div class="row">
         <div class="8u 12u$(medium)">
-          <p>After years in design leadership, coaching felt like a natural next step. I saw how the best ideas often stall—not from lack of effort, but from unclear direction, fractured trust, or fear of change.</p>
+          <p>After years in design leadership, coaching felt like a natural next step. I saw how the best ideas often stall, not from lack of effort, but from unclear direction, fractured trust, or fear of change.</p>
 
-          <p>Coaching creates space to think, test, reflect, and act. It helps you cut through noise and move with intention—even in uncertainty.</p>
+          <p>Coaching creates space to think, test, reflect, and act. It helps you cut through noise and move with intention, even in uncertainty.</p>
 
           <blockquote>
             You cannot be what you cannot see.  
             — Marian Wright Edelman
           </blockquote>
 
-          <p>My approach blends systems thinking, user-centered design, and strategic questioning. Whether you’re stepping into leadership, navigating a pivot, or trying to communicate with more impact—I’ll help you do it with clarity and purpose.</p>
+          <p>My approach blends systems thinking, user-centered design, and strategic questioning. Whether you’re stepping into leadership, navigating a pivot, or trying to communicate with more impact, I’ll help you do it with clarity and purpose.</p>
 
           <h2>My Coaching Style</h2>
           <div class="cta-links"><p>			  
