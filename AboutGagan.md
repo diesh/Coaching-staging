@@ -67,9 +67,9 @@ weight: 40
             to <br /><span class="fa fa-trophy" style="color: grey;"></span> where you want to go ...with a plan to get there.</p>
           </div>
 
-          <p>I coach with a mix of empathy and accountability. I’ll support you—but I’ll also challenge you to name what you want, own what’s holding you back, and do the work to grow.</p>
+          <p>I coach with a mix of empathy and accountability. I’ll support you *and* I’ll  challenge you to name what you want, own what’s holding you back, and do the work to grow.</p>
 
-          <p>I work especially well with curious people who think deeply, lead quietly, and care about others—but sometimes need help speaking up, zooming out, or stepping into their full power.</p>
+          <p>I work especially well with curious people who think deeply, lead quietly, and care about others but sometimes need help speaking up, zooming out, or stepping into their full power.</p>
 
           <p>I believe in equity, access, and representation. I’m especially committed to supporting women, BIPOC, and LGBTQ+ leaders in shaping the future of work.</p>
 
@@ -103,7 +103,7 @@ weight: 40
                 <i class="fa fa-plus faq-icon"></i>
               </div>
               <div class="faq-answer">
-                <p>Mentorship is often advice-based. Coaching is about reflection, alignment, and accountability. I won’t give you answers—I’ll help you find your own, challenge your assumptions, and move toward what you want with clarity and confidence.</p>
+                <p>Mentorship is often advice-based. Coaching is about reflection, alignment, and accountability. Each of us do better when we find our own answers instead of someone giving them to us. I’ll help you find yours, challenge your assumptions, and move toward what you want with clarity and confidence.</p>
               </div>
             </div>
 
@@ -113,7 +113,7 @@ weight: 40
                 <i class="fa fa-plus faq-icon"></i>
               </div>
               <div class="faq-answer">
-                <p>We’ll start by getting clear on what’s most important to you. Then we’ll build a structure to get there—through regular coaching, tools, reflection prompts, and accountability. I’ll adapt the process as we go to match your energy, schedule, and growth goals.</p>
+                <p>We’ll start by getting clear on what’s most important to you. Then we’ll build a structure to get there through regular coaching, tools, reflection prompts, and accountability. I’ll adapt the process as we go to match your energy, schedule, and growth goals.</p>
               </div>
             </div>
 
@@ -123,7 +123,7 @@ weight: 40
                 <i class="fa fa-plus faq-icon"></i>
               </div>
               <div class="faq-answer">
-                <p>One-on-one coaching (weekly, biweekly, or monthly), team workshops, and longer-term development programs. I also offer Slack/text-based support in high-stakes seasons (job interviews, leadership transitions, major decisions).</p>
+                <p>One-on-one coaching (weekly, biweekly, or monthly), team workshops, and longer-term development programs. I also offer text-based support when you need it (especially around job interviews, leadership transitions, major decisions).</p>
               </div>
             </div>
 
@@ -159,10 +159,10 @@ weight: 40
             <h3>Why Me</h3>
             <ul>
               <li><strong>Experience that matters:</strong> 20+ years in design, research, and leadership.</li>
-              <li><strong>Empathy and edge:</strong> I’ll meet you where you are—and help you move forward.</li>
+              <li><strong>Empathy and edge:</strong> I’ll meet you where you are and help you move forward.</li>
               <li><strong>Tools that work:</strong> Frameworks to clarify your thinking and build confidence.</li>
               <li><strong>An equity lens:</strong> I support people from all backgrounds and walk the talk.</li>
-              <li><strong>Your growth partner:</strong> I’m here to help you unlock your next chapter—and enjoy it.</li>
+              <li><strong>Your growth partner:</strong> I’m here to help you unlock your next chapter...and enjoy it!</li>
             </ul>
           </div>
         </div>
