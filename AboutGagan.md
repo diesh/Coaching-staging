@@ -21,7 +21,7 @@ weight: 40
       </header>
 
       
-      <p>I’m a designer, strategist, and coach with 20+ years of experience in product, research, and leadership. I help people find clarity, build trust, and lead with confidence.</p>
+      <p>I’m a designer, strategist, and coach with two decades of experience leading product and design teams. I use what I’ve learned from design thinking, product strategy, and leadership to help people find clarity, build trust, and lead with confidence.</p>
 
       <h2>My Path</h2>
       <p>In 2001, I founded <a href="https://designstamp.com" target="blank">DesignStamp</a>, a research and design studio that tackles complex challenges across business, tech, and public health. I have led projects for the Gates Foundation, OECD, and PEPFAR—the world’s largest global health initiative.</p>
@@ -52,10 +52,9 @@ weight: 40
         <div class="8u 12u$(medium)">
         <p>I’ve witnessed firsthand how even the best ideas stall when teams face unclear direction, misaligned goals, or a lack of trust and accountability.</p>
 
-		<p>Throughout my career, I’ve been lucky to work with great coaches. Coaching created space to think, test, reflect, and act — helping me move with intention, even in times of uncertainty.</p>
+		<p>Throughout my career, I’ve been lucky to work with great coaches. Coaching gave me space to think, test, reflect, and act, and it helped me move with intention, even in times of uncertainty. The best coaches helped me recognise my patterns, both helpful and limiting, and taught me how to use my strengths to reach the goals we set together.</p>
 
 		<p>After years in design leadership, coaching felt like a natural next step. The way we build products is broken. I want to do my part to shape healthier ways of working so we can create better outcomes together.</p>
-
 
           <blockquote>
             You cannot be what you cannot see.  
