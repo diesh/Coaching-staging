@@ -5,6 +5,7 @@ description: In this three-part series, I break down how the career landscape is
 image: assets/images/f-ckyoupayme.png
 masthead_caption: people are not happy at their job. Global stats prove this too.
 date: 2025-03-03
+nav-color: "#8d82c4"
 comments: true
 ---
 _In this 3-part series, I’m using the keynote I created for[ the BLEND conference](https://www.blendconf.co/) as a foundation to discuss what's wrong with tech careers and what we can do to fix them. In **Part 1**, I dive into the problems we’re facing and share some good news. In **Part 2**, I’ll explore your superpowers and the hidden job market. And in **Part 3**, I’ll look at how you can leverage those superpowers, while also coming to terms with a few limitations!_
@@ -62,8 +63,10 @@ Let’s be honest about "bro culture" too—beer pong games, 11 PM whiskey sessi
 
 ## 🌟  The Good news!
 <div class="callout callout-right">
-  <span class="fa fa-bullhorn"></span> 
- <h3>You Are in Control!</h3>You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat.</div>
+  <span class="fa fa-bullhorn"></span>
+  <h3>You Are in Control!</h3>
+  <p>You don’t need to wait for the economy to improve to take control of your career! A few simple shifts in mindset and ways of being will have you back in the driver’s seat.</p>
+</div>
 I’m optimistic. Tech is made up of a broken system created by unseasoned folks who didn't know better. They’re not *your* personal failures. More importantly, you don’t need to wait for entire industries to reform to create a fulfilling career. While tech figures itself out and "refactors" its code, just know...You have more control than you realise! I am here to suggest a few reframes that might just help you shift your mindset, focus on what's important to you. And when you're clearer on what you want, the world will conspire to get it for you. (I have  paraphrased [Paulo Coelho and the Alchemist](https://en.wikipedia.org/wiki/The_Alchemist_(novel))) 
 
 ## 🗺️ Use your Career GPS

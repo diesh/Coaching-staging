@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
+  {% include head.html %}
 
-{% include head.html %}
+  <body style="--brand-color: {{ page.brand_color }}; --nav-color: {{ page.nav-color | default: '#1B9C85' }};">
+    {% include header.html %}
 
-<body style="--brand-color: {{ page.brand_color }};">
-    <script type="text/javascript">document.body.classList.add("is-loading");</script>
+    <main id="main" class="{{ page.main_class | default: '' }}">
+      {{ content }}
+    </main>
 
-    {% include header.html %} {{ content }} {% include footer.html %}
-
-</body>
-
+    {% include footer.html %}
+  </body>
 </html>

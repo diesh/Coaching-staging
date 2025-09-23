@@ -1,55 +1,57 @@
-<!-- Wrapper -->
-<div id="wrapper">
+<header id="header">
+  <div class="inner">
+    <a href="/" class="logo">
+      <strong>GAGAN DIESH</strong>
+      <span>Executive Coaching</span>
+    </a>
 
-<!-- Header -->
-<header id="header"{% if page.layout == "landing" %} class="alt style2"{% endif %}{% if page.layout == "home" %} class="alt"{% endif %}>
-	<a href="{{ "" | absolute_url }}/" class="logo"><strong>{{ site.title }}</strong> <span>{{ site.subtitle }}</span></a>
-	<nav>
-		<a href="#menu">Menu</a>
-	</nav>
-</header>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Get all the headings with class 'link'
-    const headings = document.querySelectorAll('header.major h3 a.link');
+    <input type="checkbox" id="menu-btn" class="menu-btn" />
+    <label for="menu-btn" class="menu-icon" aria-label="Toggle menu">
+      <span class="navicon"></span>
+    </label>
 
-    // Iterate over each heading
-    headings.forEach(function(heading) {
-      // Match "Program" followed by a number and the colon
-      const regex = /(Program \d+:)/;
-      const text = heading.innerHTML;
+    <nav id="main-nav" class="site-nav menu">
+      <ul id="nav-menu">
+       {%- assign active = nav_active | default: page.nav_active | default: page.url -%}
 
-      // Check if the regex matches
-      if (regex.test(text)) {
-        // Replace the matched part with a span that has dark grey color, uppercase, and adjusted font size
-        heading.innerHTML = text.replace(regex, function(match) {
-          return `<span style="color: #666; text-transform: uppercase; font-size: 50%">${match}</span>`;
-        });
-      }
-    });
-  });
-  
+
+        <li>
+          <a href="/coaching/"
+             class="{% if active == 'coaching' or page.url == '/coaching/' %}active{% endif %}">
+            Coaching
+          </a>
+        </li>
+        <li>
+          <a href="/coaching/TeamWorkshops.html"
+             class="{% if active == 'workshops' or page.url == '/coaching/TeamWorkshops.html' %}active{% endif %}">
+            Team Workshops
+          </a>
+        </li>
+        <li>
+          <a href="/AboutGagan.html"
+             class="{% if active == 'about' or page.url == '/AboutGagan.html' %}active{% endif %}">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="/landing.html"
+             class="{% if active == 'goodquestion' or page.url contains 'landing' %}active{% endif %}">
+            Good Question
+          </a>
+        </li>
+        <li>
+          {% if page.url == '/' %}
+            <a href="#contact" class="next scrolly contact-link" data-offset="100">Contact</a>
+          {% else %}
+            <a href="#contact"
+               class="{% if active == 'contact' or page.url == '/#contact' %}active{% endif %}">
+              Contact
+            </a>
+          {% endif %}
+        </li>
+      </ul>
+    </nav>
+  </div>
  
-</script>
 
-
-
-
-<!-- Menu -->
-<nav id="menu">
-	<p>Coaching Programs:</p>
-    <ul class="links">
-        {% assign sorted_pages = site.html_pages | where: "nav-menu", true | sort: "weight" %}
-
-        {% for page in sorted_pages %}
-            <li {% if page.title contains "About Gagan" %}class="spaced-item"{% endif %}>
-                <a href="{{ page.url | absolute_url }}">
-                    {{ page.title }}
-                </a>
-            </li>
-        {% endfor %}
-
-        <!-- Manually add Contact Me at the end -->
-        <li><a href="#contact" class="next scrolly">Message Me</a></li>
-    </ul>
-</nav>
+</header>

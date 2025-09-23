@@ -1,61 +1,56 @@
 <!DOCTYPE html>
-<!--
-    Forty by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!-- Forty by HTML5 UP html5up.net | @ajlkn -->
 <html>
+  {% include head.html %}
 
-    {% include head.html %}
+  <body>
+    <div id="wrapper">
+      {% include header.html %}
 
-    <body>
-
-        {% include header.html %}
-
-        <section id="banner" class="style6">
-            <div class="inner">
-                <span class="image">
-                    <img src="{{ site.baseurl }}/{{ page.image }}" alt="">
-                </span>
-                <header>
-				   <h1 class="bloglogo">
-				     <span class="highlight-g">?</span>&nbsp;<span class="restofbloglogo">Good Question!</span>
-				   </h1>
-                </header>
-                <div class="content">
-                    {{ page.description }}
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        <div id="main" class="wrapper style1">
-            <div class="container">
-                <section class="spotlights">
-                    {% for post in site.posts %}
-                    <section>
-                        <span class="image">
-                            <img src="{{ site.baseurl }}/{{ post.image }}" alt="">
-                        </span>
-                        <div class="content">
-                            <div class="inner">
-                            
-                                    <h3><span class="icon-small alt fa fa-question-circle"></span>&nbsp; <a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                               
-                                <p>{{ post.description }}</p>
-                                <ul class="actions">
-                                    <li><a href="{{ post.url | relative_url }}" class="button">Read More</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    {% endfor %}
-                </section>
-            </div>
+      <!-- Good Question banner with is-hero-loaded to show text/icon -->
+      <section id="banner" class="goodquestion-landing is-hero-loaded">
+        <div class="inner">
+          <header>
+            <!-- hero-display and hero-icon are required for the CSS to work -->
+            <h1 class="hero-display">
+              <span class="hero-icon highlight-g">?</span>
+              <span>Good&nbsp;Question</span>
+            </h1>
+            <p class="hero-tagline">
+              Spicy musings about UX, design, tech, and the world we live in.
+            </p>
+          </header>
         </div>
+      </section>
 
-        {% include footer.html %}
+      <!-- Main Content -->
+      <div id="main">
+        <div class="container">
+          <section class="spotlights">
+            {% for post in site.posts %}
+              <section>
+                <span class="image">
+                  <img src="{{ site.baseurl }}/{{ post.image }}" alt="">
+                </span>
+                <div class="content">
+                  <div class="inner">
+                    <h3>
+                      <span class="icon-small alt fa fa-question-circle"></span>&nbsp;
+                      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h3>
+                    <p>{{ post.description }}</p>
+                    <ul class="actions">
+                      <li><a href="{{ post.url | relative_url }}" class="button">Read More</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            {% endfor %}
+          </section>
+        </div>
+      </div>
 
-    </body>
-
+      {% include footer.html %}
+    </div>
+  </body>
 </html>

@@ -1,0 +1,19 @@
+{% assign coaching_pages = site.pages | where: "dir", "/coaching/" %}
+{% assign sorted_pages = coaching_pages | sort: "weight" %}
+
+<div class="box {{ include.subnav_class | default: 'subnav' }}">
+  <h3>
+    {% if page.dir == "/coaching/" %}
+      Other Coaching Programs
+    {% else %}
+      My Coaching Programs
+    {% endif %}
+  </h3>
+  <ul>
+    {% for p in sorted_pages %}
+      {% if p.title != page.title and p.title != "Coaching Programs" %}
+        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

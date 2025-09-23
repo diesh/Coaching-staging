@@ -7,86 +7,206 @@
 /* Image */
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .image {
-		border: 0;
-		display: inline-block;
-		position: relative;
+	border: 0;
+	display: inline-block;
+	position: relative;
+
+	img {
+		display: block;
+	}
+
+	&.left,
+	&.right {
+		max-width: 30%;
 
 		img {
-			display: block;
-		}
-
-		&.left,
-		&.right {
-			max-width: 30%;
-
-			img {
-				width: 100%;
-			}
-		}
-
-		&.left {
-			float: left;
-			margin: 0 1.5em 1.25em 0;
-			top: 0.25em;
-		}
-
-		&.right {
-			float: right;
-			margin: 0 0 1.25em 1.5em;
-			top: 0.25em;
-		}
-
-		&.fit {
-			display: block;
-			margin: 0 0 _size(element-margin) 0;
 			width: 100%;
-
-			img {
-				width: 100%;
-			}
-		}
-
-		&.main {
-			display: block;
-			margin: (_size(element-margin) * 1.25) 0;
-			width: 100%;
-
-			img {
-				width: 100%;
-			}
-
-			@include breakpoint(small) {
-				margin: (_size(element-margin) * 0.75) 0;
-			}
 		}
 	}
+
+	&.left {
+		float: left;
+		margin: 0 1.5em 1.25em 0;
+		top: 0.25em;
+	}
+
+	&.right {
+		float: right;
+		margin: 0 0 1.25em 1.5em;
+		top: 0.25em;
+	}
+
+	&.fit {
+		display: block;
+		margin: 0 0 _size(element-margin) 0;
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&.main {
+		display: block;
+		margin: (_size(element-margin) * 1.25) 0;
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-height: 625px;
+			object-position: left;
+			object-fit: contain; // ensures image scales proportionally without cropping
+		}
+
+		@include breakpoint(small) {
+			margin: (_size(element-margin) * 0.75) 0;
+		}
+	}
+}
+
+.brandimage_masthead {
+	display: block;
+	width: 100%;
+	position: relative;
+	padding-top: var(--header-h);
+	margin-bottom: 2rem;
+	min-height: 300px; // bump height for better visibility
+	overflow: hidden;
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+
+
+	@include breakpoint(small) {
+		padding-top: calc(var(--header-h) + 1rem);
+	}
+
+	// Color wash overlay
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: var(--nav-color);
+		opacity: 0.3;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	// Solid top bar
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 5rem;
+		width: 100%;
+		background: var(--nav-color);
+		z-index: 3;
+		pointer-events: none;
+	}
+}
+
+.brandimage_masthead {
+  min-height: 300px;
+
+  @include breakpoint(xlarge) {
+    min-height: 450px;
+  }
+
+  @include breakpoint(xxlarge) {
+    min-height: 550px;
+  }
+}
+
+.profile-image {
+  position: relative;
+  float: right;
+  margin: 0 0 2rem 2rem;
+  width: 100%;
+  max-width: 1000px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+
 	
-	/* this is the color wash on the pages for each image. The .md for the pages contains nav-color that is the color used here. And head.html creates the hover for the boxes on the page */
-	.brandimage_masthead {
-	  position: relative;
-	  max-height: 400px;
-	  overflow: hidden;
-	}
+}
 
-	.brandimage_masthead img {
-	  width: 100%;
-	  height: auto;
-	  object-fit: cover;
-	}
+ &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    background-color: map-get($palette, 'spicy');
+    z-index: 1;
+  }
+  .smiley-overlay {
+    position: absolute;
+    bottom: -40px;    
+    right: 10px;     
+    width: 90px;
+    height: 90px;
+    transform: rotate(-30deg) scale(1);
+    transform-origin: center;
+    transition: transform 0.3s ease;
 
-	.brandimage_masthead::before {
-	  content: '';
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	  bottom: 0;
-	  background-color: var(--nav-color); /* Ensure brand color is used */
-	 opacity: 0.3; /* Increased opacity for more color */
-	  pointer-events: none; /* Allow interaction with the image */
-	  z-index: 1; /* Ensures overlay appears above the image */
-	}
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+	@media (hover: none) and (pointer: coarse) {
+  animation: mobileBoop 1s ease-out 1.5s forwards;
+}
+
+@keyframes mobileBoop {
+  0%   { transform: rotate(-30deg) scale(1); }
+  50%  { transform: rotate(0deg) scale(1.2); }
+  100% { transform: rotate(-30deg) scale(1); }
+}
+  }
+
+  &:hover .smiley-overlay {
+    transform: rotate(0deg) scale(1.2);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 980px) {
+    width: 40%;
+    max-width: 500px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 35%;
+    max-width: 600px;
+  }
+}
+
+.smiley {
+  .eye {
+    fill: map-get($palette, 'spicy');
+  }
+
+  .smile {
+    stroke: map-get($palette, 'spicy');
+    fill: none; 
+  }
+}
+
+
+

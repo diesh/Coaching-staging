@@ -1,404 +1,404 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+/* ==========================================================================
+   _typography.scss — Mobile-first
+   Fonts: Inter (body), Playfair Display (hero headline)
+   ========================================================================== */
 
-/* Type */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap');
+@import "../libs/vars";
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+/* Base setup */
 html {
-  font-size: 1.05rem; 
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
-body, input, select, textarea {
-    color: _palette(fg);
-    font-family: _font(family);
-    font-size: 1.05rem; /* Default font size for larger screens */
-    font-weight: _font(weight);
-    letter-spacing: _font(letter-spacing);
+body {
+  font-family: map-get($font, 'family');
+  color: map-get($palette, 'fg');
+  font-size: 1.05rem;
+  font-weight: map-get($font, 'weight');
+  line-height: 1.65;
+}
+
+/* Responsive font scaling */
+@include breakpoint(xlarge) { body { font-size: 1.08rem; } }
+@include breakpoint(xxsmall) { body { font-size: 1.15rem; } }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: map-get($font, 'family');
+  font-weight: 700;
+  line-height: 1.2;
+  color: map-get($palette, 'fg-bold');
+  margin: 0 0 0.6em 0;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 0.9rem; }
+h6 { font-size: 0.7rem; color: map-get($palette, 'muted'); }
+@include breakpoint(small) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+/* Paragraphs and text */
+p { margin: 0 0 1.1rem 0; }
+small { font-size: 0.875rem; color: map-get($palette, 'muted'); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+b { font-weight: 700; };
+
+/* Links */
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover { color: map-get($palette, 'nav-color'); }
+}
+
+/* -------------------------------------------------
+   CALLOUTS
+   ------------------------------------------------- */
+.callout {
+  position: relative;
+  padding: 2em 2em 1.5em;
+  margin: 2em 0;
+  border: 2px map-get($palette, 'subtle_accent3') solid;
+  border-radius: 0;
+  background: white;
+  font-size: 1rem;
+
+  .fa {
+    position: absolute;
+    top: -1.4em;
+    left: -1.4em;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: map-get($palette, 'subtle_accent3');
+    color: white;
+    font-size: 1.2em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+}
+
+/* Callout layout modifiers */
+.callout-left {
+  float: left;
+  width: 45%;
+  margin-right: 20px;
+}
+.callout-right {
+  float: right;
+  width: 45%;
+  margin-left: 20px;
+}
+
+/* Responsive reset for callouts */
+@include breakpoint(small) {
+  .callout {
+    padding: 1.5em 1.25em 1.25em;
+    margin: 1em 0;
+    .fa { font-size: 1.1em; width: 2em; height: 2em; top: -1em; left: -1em; }
+  }
+  .callout-left,
+  .callout-right {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* -------------------------------------------------
+   TESTIMONIALS
+   ------------------------------------------------- */
+.testimonials-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  position: relative;
+
+  &.single-column .callout.testimonial {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  @include breakpoint(medium) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+#testimonial-reload-wrapper {
+  margin: 0 0 2rem 0;
+  flex: none;
+  @include breakpoint(medium) { margin: 2rem 0 3rem 0; }
+}
+
+/* Testimonial box */
+.callout.testimonial {
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+  border: 0;
+  padding: 1.5rem 1.75rem;
+  font-family: 'Karla', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: map-get($palette, 'fg-regular');
+  position: relative;
+  text-align: left;
+
+  @include breakpoint(medium) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* Decorative borders */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    width: 60%;
+    height: 1px;
+    background: map-get($palette, 'subtle_accent3');
+  }
+  &::before { top: 0; }
+  &::after  { bottom: 0; }
+
+  p.quote {
+    position: relative;
+    margin: 0;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInText 1s ease-out forwards;
+  }
+}
+
+/* Curly quote */
+.testimonial::before {
+  content: "“";
+  font-size: 10rem;
+  line-height: 1;
+  position: absolute;
+  top: -0.5rem;
+  left: -1.5rem;
+  color: rgba(0, 0, 0, 0.15);
+  font-family: Georgia, serif;
+  z-index: 1;
+}
+
+/* Testimonial header and avatar */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 20;
+  color: #000;
+}
+.testimonial-meta {
+  font-size: 0.95rem;
+  .testimonial-title { color: #666; font-weight: normal; }
+}
+
+/* Testimonial footer */
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  gap: 0.75rem;
+
+  .person {
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    color: map-get($palette, 'brand-color');
+    flex: 1;
+    text-align: right;
+  }
+  .reload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(map-get($palette, 'subtle_accent3'), 0.15);
+    border: none;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: map-get($palette, 'brand-color');
+    transition: background 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+
+    &:hover {
+      background: rgba(map-get($palette, 'subtle_accent3'), 0.3);
+      color: darken(map-get($palette, 'brand-color'), 10%);
+    }
+    i { pointer-events: none; }
+  }
+}
+
+.testimonials-wrapper .callout.testimonial { margin-bottom: 0; }
+
+/* Animations */
+.fade-in-box { animation: fadeBox 0.3s ease-out forwards; }
+@keyframes fadeBox {
+  0%   { background-color: map-get($palette, 'brand-color'); opacity: 0; }
+  50%  { background-color: map-get($palette, 'brand-color'); opacity: 0.2; }
+  100% { background-color: white; opacity: 1; }
+}
+@keyframes fadeInText { to { opacity: 1; } }
+
+/* -------------------------------------------------
+   OTHER COMPONENTS
+   ------------------------------------------------- */
+.speechbubble {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid map-get($palette, 'brand-color');
+  border-radius: 8px;
+  position: relative;
+  font-style: normal;
+  color: map-get($palette, 'fg-bold');
+  background: transparent;
+  margin: 20px;
+  max-width: 700px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    border-top: 10px solid map-get($palette, 'brand-color');
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  &.no-border { border-left: none !important; }
+}
+
+.page-intro {
+  margin-top: 100px;
+  p {
+    font-style: italic;
+    color: #666;
+    font-size: 1.15rem;
     line-height: 1.6;
+    margin-bottom: 2rem;
+    border-left: 4px solid #ddd;
+    padding-left: 1.25rem;
+    @media screen and (min-width: 768px) { font-size: 1.25rem; }
+    @media screen and (min-width: 1280px) { font-size: 1.35rem; line-height: 1.7; }
+  }
+}
 
-    /* Breakpoint for larger screens (xlarge) */
-    @include breakpoint(xlarge) {
-        font-size: 1.08rem; /* Slightly larger font for larger screens */
-    }
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 1.5em;
+  border-top: 1px solid map-get($palette, 'subtle_accent3');
+  border-bottom: 1px solid map-get($palette, 'subtle_accent3');
+  background: white;
+  max-width: 100%;
+  margin: 2em 0;
+  text-align: left;
+  clear: both;
 
-    /* Breakpoint for smaller screens (large) */
-    @include breakpoint(large) {
-        font-size: 1.05rem; /* Adjusted to be slightly larger than the default size */
-    }
+  &.left {
+    float: left;
+    width: 45%;
+    margin-right: 2rem;
+  }
 
-    /* Breakpoint for medium screens */
-    @include breakpoint(medium) {
-        font-size: 1.05rem; /* Default font size for medium screens */
-    }
+  &.right {
+    float: right;
+    width: 45%;
+    margin-left: 2rem;
+  }
 
-    /* Breakpoint for small screens */
-    @include breakpoint(small) {
-        font-size: 1.05rem; /* Same as default for smaller screens */
+  @include breakpoint(small) {
+    &,
+    &.left,
+    &.right {
+      float: none;
+      width: 100%;
+      margin: 1.5rem 0;
     }
-
-    /* Breakpoint for extra small screens (xxsmall) */
-    @include breakpoint(xxsmall) {
-        font-size: 1.15rem; /* Increased size for mobile to be more readable */
-    }
+  }
 }
 
 
-	// Default anchor styles for all links
-	a {
-	  @include vendor('transition', (
-	    'color #{_duration(transition)} ease-in-out',
-	    'border-bottom-color #{_duration(transition)} ease-in-out'
-	  ));
-  
-	  border-bottom: dotted 1px; // Default border under text links
-	  color: inherit;
-	  text-decoration: none; // Ensures text doesn't have underlines by default
+/* Blog logo */
+.bloglogo {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.highlight-g {
+  font-weight: 900;
+  background: map-get($palette, 'spicy');
+  color: #FFF !important;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.restofbloglogo {
+  font-weight: 600;
+  margin-left: -0.02em;
+  letter-spacing: -0.03em;
+}
+.icon-small {
+  font-size: 1.2em;
+  color: map-get($palette, 'spicy');
+  flex-shrink: 0;
+}
 
-	  /* Apply hover effects to text links (no underline on hover) */
-	  &:not(a img):hover {
-	    border-bottom-color: transparent; // Remove underline on hover
-	    color: _palette(highlight); // Change color to highlight
-	  }
-	}
-
-	// Remove underline from image links (only)
-	a img {
-	  display: inline-block;  // Make sure the image doesn't affect the layout of the link
-	  pointer-events: none;   // Prevent hover effects on the image itself
-	}
-
-	// Specifically target links with images, remove underline and border
-	a.image-with-download {
-	  text-decoration: none !important; // Prevent underline for image links
-	  border-bottom: none; // Remove any border on image links
-	  display: inline-block;  // Make sure it behaves like an inline element
-	}
-	
-	strong, b {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
-	}
-
-	i, em {
-		font-style: italic;
-	}
-	
-	
-
-	
-
-	p {
-		margin: 0 0 _size(element-margin) 0;
-	}
-
-	blockquote > p {
-		margin: 0;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
-
-		line-height: 1.3;
-		margin: 0 0 (_size(element-margin) * 0.8) 0;
-
-		a {
-			color: inherit;
-			border-bottom: 0;
-		}
-	}
-
-	h1 {
-		font-size: 2rem;
-		 font-weight: _font(weight-bold);
-	}
-
-	h2 {
-		font-size: 1.5rem;
-		 font-weight: _font(weight-bold);
-	}
-
-	h3 {
-		font-size: 1.25rem;
-		 font-weight: _font(weight-bold);
-	}
-
-	h4 {
-		font-size: 1.0rem;
-	}
-
-	h5 {
-		font-size: 0.9rem;
-	}
-
-	h6 {
-		font-size: 0.7rem;
-	}
-
-	@include breakpoint(small) {
-		h1 {
-			font-size: 2rem;
-		}
-
-		h2 {
-			font-size: 1.5rem;
-		}
-
-		h3 {
-			font-size: 1.25rem;
-		}
-	}
-
-	sub {
-		font-size: 0.8rem;
-		position: relative;
-		top: 0.5em;
-	}
-
-	sup {
-		font-size: 0.8rem;
-		position: relative;
-		top: -0.5em;
-	}
-
-	blockquote {
-	   
-	    margin: 0 0 _size(element-margin) 0;
-	    padding: (_size(element-margin) / 4) _size(element-margin) (_size(element-margin) / 4) _size(element-margin);
-	    color: _palette(fg-bold);
-	    margin-left: auto;
-	    margin-right: auto;
-	    position: relative;
-		background-color: #f8f8f8;
-	}
-
-	blockquote::before {
-	    content: "“";
-	    font-size: 6rem; /* Large for impact */
-	    color: darken(_palette(border), 25%); /* Increases contrast */
-	    font-family: 'Merriweather', serif;
-	    position: absolute;
-	    left: -2rem; /* Keeps some space between quote and text */
-	    top: -3.25rem; /* Raised higher to align better with short quotes */
-	}
-
-	
-
-	code {
-		background: _palette(border-bg);
-		font-family: _font(family-fixed);
-		font-size: 0.9em;
-		margin: 0 0.25em;
-		padding: 0.25em 0.65em;
-	}
-
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: _font(family-fixed);
-		font-size: 0.9em;
-		margin: 0 0 _size(element-margin) 0;
-
-		code {
-			display: block;
-			line-height: 1.75;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
-	}
-
-	hr {
-		border: 0;
-		border-bottom: solid 1px _palette(border);
-		margin: _size(element-margin) 0;
-
-		&.major {
-			margin: (_size(element-margin) * 1.5) 0;
-			content: "";
-			    background-color: var(--nav-color);
-			    display: block;
-			    height: 1px;
-			    width: 100%;
-			    border: none; /* Remove default border */
-			
-		}
-	}
-
-	.align-left {
-		text-align: left;
-	}
-
-	.align-center {
-		text-align: center;
-	}
-
-	.align-right {
-		text-align: right;
-	}
-	
-	.name {
-	  color: initial; /* Default color for the sentence */
-	}
-	
-	#banner p {
-	    color: #111;
-	    letter-spacing: 0.25em !important;
-	}
-
-	#banner p a {
-	    letter-spacing: normal;
-	    
-	}
-	
-
-	.gagan {
-	  position: relative; /* Ensure we can position the pronunciation box relative to the word */
-	  display: inline-block;
-	  color: _palette(accent6); /* Accent color for Gagan */
-	}
-
-	.pronunciation {
-	  visibility: hidden; /* Hidden by default */
-	  color: _palette(accent6); /* Accent color for pronunciation */
-	  background-color: #676F91; /* White background for pronunciation */
-	  position: absolute;
-	  top: 0px; /* Lowered the position to bring it closer to the word */
-	  left: 0;
-	  min-width: 100%; /* Ensure box spans the full width of "Gagan" */
-	  text-align: center;
-	  white-space: nowrap; /* Prevent wrapping of the pronunciation */
-	  z-index: 1; /* Make sure it appears above the text */
-	  padding: 0 0 10px 0;
-	}
-	.gagan:hover .pronunciation {
-	  visibility: visible; /* Show pronunciation when hovered */
-	}
-	
-	/* Mobile styles: Hide pronunciation by default */
-	@media (max-width: 768px) {
-	    .pronunciation {
-	        visibility: hidden;
-	        opacity: 0;
-	    }
-
-	    .gagan:active .pronunciation {
-	        visibility: visible;
-	        opacity: 1;
-	    }
-	}
-	
-	
-	/* Blog logo */
-	
-	.bloglogo {
-	    display: inline-flex;
-	    align-items: center;
-	    font-weight: bold;
-	    white-space: nowrap; /* Prevents wrapping */
-	    line-height: 1; /* Ensures consistent vertical alignment */
-	    letter-spacing: -0.03em; /* Tightens spacing between all letters */
-	    width: 100%; /* Ensures it doesn't overflow on smaller screens */
-	    box-sizing: border-box; /* Makes sure padding/margin does not affect width calculation */
-	    overflow: hidden; /* Prevents the content from overflowing on smaller screens */
-	}
-
-	.highlight-g {
-	    font-weight: 900;
-	    background: #ff7a18;
-	    color: #fff;
-	    border-radius: 50%; /* Keeps it a circle */
-	    width: 1.2em; /* Default size for desktop */
-	    height: 1.2em;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    flex-shrink: 0; /* Prevents shrinking */
-	    line-height: 1; /* Prevents extra spacing inside */
-	    letter-spacing: normal; /* Ensures the 'G' itself isn’t squeezed */
-	}
-
-	.restofbloglogo {
-	    font-weight: 600;
-	    margin-left: -0.02em; /* Keeps spacing between "G" and text as tight as all other letters */
-	    letter-spacing: -0.03em; /* Matches overall text tightness */
-	}
-
-	@media (max-width: 768px) {
-	    /* Adjusts the size of the circle and text on mobile devices */
-	    .highlight-g {
-	        font-size: 6vw; /* Scales down question mark for mobile */
-	        width: 6vw; /* Keep the circle size proportional */
-	        height: 6vw; /* Keep the circle size proportional */
-	    }
-
-	    .restofbloglogo {
-	        font-size: 6vw; /* Scales down text for mobile */
-	    }
-	}
-
-	@media (max-width: 480px) {
-	    /* Further adjustments for smaller screens (like very small phones) */
-	    .highlight-g {
-	        font-size: 8vw; /* Bigger size for the circle on smaller phones */
-	        width: 8vw; /* Circle scaling up for very small screens */
-	        height: 8vw; /* Circle scaling up for very small screens */
-	    }
-
-	    .restofbloglogo {
-	        font-size: 8vw; /* Larger text size for mobile */
-	    }
-	}
-	
-
-	
-	/* End of Blog logo style */
-	
-	
-	.breadcrumb {
-	    font-size: 14px;
-	    margin-bottom: 10px;
-	}
-
-	.breadcrumb a {
-	    text-decoration: none;
-	   
-	}
-
-	.speechbubble {
-	    display: inline-block;
-	    padding: 10px 15px;
-	    border: 1px solid _palette(brand-color); // Uses _palette(fg-bold) directly
-	    border-radius: 8px;
-	    position: relative;
-	    font-style: normal;
-	    color: _palette(fg-bold); 
-	    background: transparent; 
-		margin:20px;
-		 max-width: 700px; // Limits the speech bubble width
-	
-
-	    &::before {
-	        content: "";
-	        position: absolute;
-	        bottom: -10px;
-	        left: 15px;
-	        width: 0;
-	        height: 0;
-	        border-top: 10px solid _palette(brand-color); // color of the arrow 
-	        border-left: 10px solid transparent;
-	        border-right: 10px solid transparent;
-	    }
-
-	    &.no-border {
-	        border-left: none !important;
-	    }
-		
-	}
-	// used in blog posts to give credit to photo authors
-	.masthead-caption {
-	    font-size: 0.5em;
-	    color: #666;
-	    margin-top: 5px;
-	}
+/* Post list separators */
+.post-link + hr {
+  border: none;
+  border-top: 1px solid map-get($palette, 'subtle_accent3');
+  width: 80%;
+  margin: 2rem auto;
+  opacity: 0.7;
+}
+.post-description a.post-title {
+  color: map-get($palette, 'fg');
+  text-decoration: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+main .spacer {
+  height: var(--header-h, 72px); // a hack for now to create space above the posts so that top nav doesn't fall on header
+}

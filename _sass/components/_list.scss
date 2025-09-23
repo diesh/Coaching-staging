@@ -1,227 +1,473 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+/* List
+   ========================================================================== */
 
-/* List */
+ol {
+  list-style: decimal;
+  margin: 0 0 _size(element-margin) 0;
+  padding-left: 1.25em;
 
-	ol {
-		list-style: decimal;
-		margin: 0 0 _size(element-margin) 0;
-		padding-left: 1.25em;
-
-		li {
-			padding-left: 0.25em;
-		}
-	}
-
-	ul {
-		list-style: disc;
-		margin: 0 0 _size(element-margin) 0;
-		padding-left: 1em;
-
-		li {
-			padding-left: 0.5em;
-		}
-
-		&.alt {
-			list-style: none;
-			padding-left: 0;
-
-			li {
-				border-top: solid 1px _palette(border);
-				padding: 0.5em 0;
-
-				&:first-child {
-					border-top: 0;
-					padding-top: 0;
-				}
-			}
-		}
-
-		&.icons {
-			cursor: default;
-			list-style: none;
-			padding-left: 0;
-
-			li {
-				display: inline-block;
-				padding: 0 1em 0 0;
-
-				&:last-child {
-					padding-right: 0;
-				}
-
-				// Apply the palette color to icons
-				a {
-					color: _palette(bg-alt); // Use the fuchsia color from the palette
-					transition: color 0.3s ease; // Smooth transition for hover effect
-
-					&:hover {
-						color: #000; // Turn black on hover
-					}
-				}
-			}
-
-			@include breakpoint(small) {
-				li {
-					padding: 0 0.75em 0 0;
-				}
-			}
-		}
-
-		&.actions {
-			cursor: default;
-			list-style: none;
-			padding-left: 0;
-
-			li {
-				display: inline-block;
-				padding: 0 (_size(element-margin) * 0.5) 0 0;
-				vertical-align: middle;
-
-				&:last-child {
-					padding-right: 0;
-				}
-			}
-
-			&.small {
-				li {
-					padding: 0 (_size(element-margin) * 0.5) 0 0;
-				}
-			}
-
-			&.vertical {
-				li {
-					display: block;
-					padding: (_size(element-margin) * 0.5) 0 0 0;
-
-					&:first-child {
-						padding-top: 0;
-					}
-
-					> * {
-						margin-bottom: 0;
-					}
-				}
-
-				&.small {
-					li {
-						&:first-child {
-							padding-top: 0;
-						}
-					}
-				}
-			}
-
-			&.fit {
-				display: table;
-				margin-left: (_size(element-margin) * -0.5);
-				padding: 0;
-				table-layout: fixed;
-				width: calc(100% + #{(_size(element-margin) * 0.5)});
-
-				li {
-					display: table-cell;
-					padding: 0 0 0 (_size(element-margin) * 0.5);
-
-					> * {
-						margin-bottom: 0;
-					}
-				}
-
-				&.small {
-					margin-left: (_size(element-margin) * -0.5);
-					width: calc(100% + #{(_size(element-margin) * 0.5)});
-
-					li {
-						padding: 0 0 0 (_size(element-margin) * 0.5);
-					}
-				}
-			}
-		}
-	}
-
-/* Initial styles */
-dt, dd {
-    transition: background-color 1s ease; /* Slower fade-in transition */
-    background-color: transparent; /* Initial state: transparent */
+  li {
+    padding-left: 0.25em;
+  }
 }
 
-/* Hover effect for dt and dd */
-.dt-dd-pair:hover dt,
-.dt-dd-pair:hover dd {
-    background-color: rgba(0, 0, 0, 0.07); /* Lightened grey background on hover */
+ul {
+  list-style: disc;
+  margin: 0 0 _size(element-margin) 0;
+  padding-left: 1em;
+
+  li {
+    padding-left: 0.5em;
+  }
+
+  &.alt {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      border-top: solid 1px _palette(border);
+      padding: 0.5em 0;
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 1em 0 0;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        color: _palette(bg-alt);
+        transition: color 0.3s ease;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      li {
+        padding: 0 0.75em 0 0;
+      }
+    }
+  }
+
+  &.actions {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 (_size(element-margin) * 0.5) 0 0;
+      vertical-align: middle;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &.small li {
+      padding: 0 (_size(element-margin) * 0.5) 0 0;
+    }
+
+    &.vertical {
+      li {
+        display: block;
+        padding: (_size(element-margin) * 0.5) 0 0 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        > * {
+          margin-bottom: 0;
+        }
+      }
+
+      &.small li:first-child {
+        padding-top: 0;
+      }
+    }
+
+    &.fit {
+      display: table;
+      margin-left: (_size(element-margin) * -0.5);
+      padding: 0;
+      table-layout: fixed;
+      width: calc(100% + #{(_size(element-margin) * 0.5)});
+
+      li {
+        display: table-cell;
+        padding: 0 0 0 (_size(element-margin) * 0.5);
+
+        > * {
+          margin-bottom: 0;
+        }
+      }
+
+      &.small {
+        margin-left: (_size(element-margin) * -0.5);
+        width: calc(100% + #{(_size(element-margin) * 0.5)});
+        li {
+          padding: 0 0 0 (_size(element-margin) * 0.5);
+        }
+      }
+    }
+  }
 }
 
-/* Styles for dt */
-dt {
-    display: block;
-    font-weight: _font(weight-bold);
-    margin: 0 0 1px 0;
-    font-size: 1.1rem;
-    padding: 0.2em 0;
-}
-
-/* Styles for dd */
+/* dt/dd styles */
+dt,
 dd {
-    margin-left: 0;
-    margin-top: 0;
-    margin-bottom: 16px;
-    padding: 0.2em 0;
-    padding-left: 20px; /* Slight indent on the left */
+  transition: background-color 1s ease;
+  background-color: transparent;
 }
-
-/* Optional: Apply hover effect on the entire pair (dt + dd) */
 .dt-dd-pair:hover dt,
 .dt-dd-pair:hover dd {
-    background-color: rgba(0, 0, 0, 0.07); /* Light grey */
+  background-color: rgba(0, 0, 0, 0.07);
+}
+dt {
+  display: block;
+  font-weight: _font(weight-bold);
+  margin: 0 0 1px 0;
+  font-size: 1.1rem;
+  padding: 0.2em 0;
+}
+dd {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 0.2em 0;
+  padding-left: 20px;
+}
+dd b {
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  &::after {
+    content: "›";
+    font-size: 1em;
+    margin-left: 0.4em;
+    color: var(--nav-color);
+  }
 }
 
-
-
+/* FAQ / Expandable Cards
+   ========================================================================== */
 
 .faq-container {
-    max-width: 800px;
-    margin: 0 auto;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+.faq-container .faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-item {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.faq-item .faq-answer {
+  cursor: default;
 }
 
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.faq-question:hover {
-    background: #f9f9f9;
+.faq-question,
+h3.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 .faq-icon {
-    transition: transform 0.3s ease;
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  display: inline-block;
+}
+.timeline-card .faq-icon {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.8rem;
+  pointer-events: none;
+  color: var(--nav-color, #1B9C85);
 }
 
 .faq-answer {
-    display: none;
-    padding: 15px;
-    font-size: 1rem;
-    color: #555;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: #555;
+  font-size: 1rem;
+  padding-top: 0;
+}
+.faq-item.open .faq-answer,
+.timeline-card.open .faq-answer {
+  max-height: 2000px;
+  padding-top: 0.5rem;
+}
+.faq-item.open .faq-icon,
+.timeline-card.open .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-answer p,
+.faq-answer ol {
+  margin: 0 0 1rem;
 }
 
-.faq-item.open .faq-answer {
+/* Breadcrumb/footer nav */
+.breadcrumb {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     display: block;
+  }
+
+  li {
+    display: block;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.secondary-pages {
+  margin-top: 1em;
+  padding-top: 1em;
+  font-size: 0.9em;
+  color: #555;
+}
+.secondary-pages h4 {
+  font-weight: 600;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+.secondary-pages ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.secondary-pages li {
+  margin-bottom: 0.3em;
 }
 
-.faq-item.open .faq-icon {
-    transform: rotate(45deg);
+/* Workshop Cards Container */
+.content-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  .content-cards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
+/* Base Card Style */
+.content-card,
+.timeline-card,
+.timeline-card.victory {
+  background: #fff;
+  border: solid 1px var(--nav-color);
+  border-radius: 0;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none;
+  transition: transform 0.2s cubic-bezier(.51, .19, .26, .98),
+    border-width 0.2s cubic-bezier(.51, .19, .26, .98);
+  cursor: hand;
+}
+
+.timeline-card {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+}
+
+/* Hover / Open Effects */
+.content-card:hover,
+.timeline-card:hover {
+  transform: translateX(0px);
+  border-width: 3px;
+  box-shadow: none;
+}
+.content-card.open,
+.timeline-card.open,
+.faq-item.open,
+.expandable-card.open,
+.timeline-card.expanded {
+  transform: translateX(0px);
+  border-width: 3px !important;
+  box-shadow: none;
+}
+
+/* Victory Card */
+.timeline-card.victory,
+.timeline-card.victory:hover,
+.timeline-card.victory.open {
+  border-width: 2px !important;
+  transform: translateX(4px);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Title and Description inside card */
+.content-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #222;
+}
+.content-card p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #444;
+  margin: 0;
+}
+
+/* Timeline line */
+.timeline {
+  position: relative;
+  margin: 3rem 0;
+  padding-left: 2rem;
+}
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.timeline-line path {
+  stroke: #1B9C85;
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: var(--path-length, 2000);
+  stroke-dashoffset: var(--path-length, 2000);
+  transition: none;
+}
+.timeline-line.reveal path {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* Extra timeline content */
+.timeline-card .more {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+.timeline-card.expanded .more {
+  max-height: 8500px;
+  opacity: 1;
+}
+
+/* Victory trophy */
+.timeline-card.victory {
+  padding: 2rem 2rem 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.timeline-card.victory::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-right: 0;
+  width: 0rem;
+  height: 0;
+}
+.timeline-card.victory .fa {
+  position: absolute;
+  top: 20%;               // middle of the victory box
+  left: -1.2em;           // just outside the left edge
+  transform: translateY(-20%) scale(0); // vertically center + hidden by default
+  width: 2.5em;
+  height: 2.5em;
+  background-color: gold;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: none;
+}
+
+.timeline-card.victory.show-trophy .fa {
+  opacity: 1;
+  animation: popIn 0.4s cubic-bezier(.34, 1.56, .64, 1) forwards;
+}
+
+.timeline-card.victory.show-trophy .fa {
+  opacity: 1;
+  animation: popIn 0.4s cubic-bezier(.34, 1.56, .64, 1) forwards;
+}
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Responsive adjustments for timeline for mobile not using skel for now 
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1rem;  
+  }
+
+  .timeline-line {
+    left: 0rem;          
+  }
+
+  .timeline-card,
+  .timeline-card.victory {
+    margin-left: 0;      
+  }
+}

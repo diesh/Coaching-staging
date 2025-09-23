@@ -1,3 +1,5 @@
+// File: _sass/libs/_vars.scss
+
 // Misc.
 $misc: (
   z-index-base: 10000
@@ -28,10 +30,40 @@ $font: (
   letter-spacing-alt: 0.25em
 );
 
+// Grid.
+$grid: (
+  columns: 12,
+  gutter: 1rem
+);
+
+// Site config for colors and fonts.
+$config: (
+  colors: (
+    background: #ffffff,
+    text:       #333333,
+    heading:    #111111,
+    link:       #49518a,
+    highlight:  #ffcc00
+  ),
+  fonts: (
+    body:    map-get($font, 'family'),
+    heading: map-get($font, 'family')
+  )
+);
+
+// Derived variables
+$background-color: map-get(map-get($config, 'colors'), 'background');
+$text-color:       map-get(map-get($config, 'colors'), 'text');
+$heading-color:    map-get(map-get($config, 'colors'), 'heading');
+$link-color:       map-get(map-get($config, 'colors'), 'link');
+$highlight-color:  map-get(map-get($config, 'colors'), 'highlight');
+
+$font-body:    map-get(map-get($config, 'fonts'), 'body');
+$font-heading: map-get(map-get($config, 'fonts'), 'heading');
 
 // Palette.
 $palette: (
-  brand-color:#CCDBF8, // Brand color
+  brand-color:#687eac, // Brand color
   nav-color:#666, // Fallback for nav color
   bg: #ffffff,
   bg-alt: #f587d6, // Dusty pink used in landing page for blog
@@ -40,20 +72,29 @@ $palette: (
   fg-light: rgba(244, 244, 255, 0.2),
   border: rgba(211, 211, 211, 1), // Light Grey with full opacity
   border-bg: rgba(212, 212, 255, 0.035),
-  highlight: #919e44,
+  highlight: $highlight-color, // Needed by _palette(highlight)
+  muted: #475569,
 
-  accent1: #1B9C85, // Teal
-  accent2: #FF7F50, // Coral 
-  accent3: #8d82c4, // Lavender Blue 
-  accent4: #ec8d81, // Soft Coral 
-  accent5: #FFDDC1, // Warm Cream
-  accent6: #c8dbfa, // Cool White
+  
+  // accent1: #1B9C85, // Teal
+  // accent2: #FF7F50, // Coral 
+  // accent3: #8d82c4, // Lavender Blue 
+  // accent4: #ec8d81, // Soft Coral 
+  // accent5: #FFDDC1, // Warm Cream
+  // accent6: #c8dbfa, // Cool White
 
-  subtle_accent1: #A8D5BA, // **Pale Teal** 
+  accent1: #1B9C85,  // Persian Green  
+accent2: #CFDA90,  // Straw 
+accent3: #8F6593,  // Pomp and power
+accent4: #D5896F,  // Sienna 
+accent5: #D4B483,  // Ecru  
+
+  spicy: #ff7a18, // Orange for goodquestion
+
+  subtle_accent1: #A8D5BA, // Pale Teal
   subtle_accent2: #fad1c5, // Lighter Coral
   subtle_accent3: #e4ddf0, // Lighter Lavender Blue
   subtle_accent4: #f7d4cd, // Lighter Soft Coral
   subtle_accent5: #F9E1D6, // Lighter Warm Cream
   subtle_accent6: #D1E1FA // Lighter Cool White
 );
-

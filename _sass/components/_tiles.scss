@@ -1,187 +1,146 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+// ✅ FULLY UPDATED _tiles.scss
+// Includes:
+// - Full width on small screens
+// - Respect for top nav height
+// - Proper horizontal padding
+// - Animated borders retained
+// - Left border stripe always visible (20px)
+// - Hover draws a border of the same thickness around
 
-/* Tiles */
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: var(--header-h, 72px); // space below sticky nav
+  padding-top: 0rem;     // space between nav and grid
+  padding-bottom: 4rem;  // space before footer
+  padding-left: 0;
+  padding-right: 0;
 
-	.tiles {
-		@include vendor('display', 'flex');
-		@include vendor('flex-wrap', 'wrap');
-		border-top: 0 !important;
+  article {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    padding: 4em 3em 2em;
+    width: calc(50% - 1rem);
+    min-height: 18em;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: map-get($font, primary);
+    font-size: map-get($size, base);
+    line-height: map-get($size, line-height);
+    z-index: 0; // establish stacking context
 
-		& + * {
-			border-top: 0 !important;
-		}
+    header, h3, p,
+    .tile-inner,
+    .tile-image img {
+      position: relative;
+      z-index: 2; // keep content above borders
+      margin: 0 0 1em;
+    }
 
-		article {
-			@include vendor('align-items', 'center');
-			@include vendor('display', 'flex');
-			@include vendor('transition', (
-				'transform 0.25s ease',
-				'opacity 0.25s ease',
-				'filter 1s ease',
-				'-webkit-filter 1s ease'
-			));
-			@include padding(4em, 4em);
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			cursor: default;
-			height: 40vh;
-			max-height: 40em;
-			min-height: 23em;
-			overflow: hidden;
-			position: relative;
-			width: 40%;
+    .tile-inner {
+      width: 100%;
+    }
 
-			.image {
-				display: none;
-			}
+    .tile-image img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 1.5;
+      object-fit: cover;
+      margin-bottom: 1.5em;
+      flex-shrink: 0;
+    }
 
-			header {
-				position: relative;
-				z-index: 3;
-			}
+    /* Persistent left border */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-left: 20px solid inherit; // solid accent border
+      z-index: 1;
+      opacity: 0.3; // subtle, like OG
+    }
 
-			h3 {
-				font-size: 1.75em;
+    /* Animated full border (hover) */
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 20px solid inherit; // same thickness as left stripe
+      z-index: 1;
+      opacity: 0;
+      pointer-events: none;
+      clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    }
 
-				a {
-					&:hover {
-						color: inherit !important;
-					}
-				}
-			}
+    &:hover::after {
+      opacity: 1;
+      animation: draw-border 0.5s ease forwards;
+    }
 
-			.link.primary {
-				border: 0;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 4;
-			}
 
-			&:before {
-			    @include vendor('transition', 'opacity 0.5s ease');
-			    bottom: 0;
-			    content: '';
-			    display: block;
-			    height: 100%;
-			    left: 0;
-			    opacity: 0.65; // Lowered opacity to reduce saturation
-			    position: absolute;
-			    width: 100%;
-			    z-index: 2;
-			    filter: saturate(80%); // Slightly reduce saturation
-			}
-		
+  //   accent1: #1B9C85, // Teal
+  // accent2: #FF7F50, // Coral 
+  // accent3: #8d82c4, // Lavender Blue 
+  // accent4: #ec8d81, // Soft Coral 
+  // accent5: #FFDDC1, // Warm Cream
+  // accent6: #c8dbfa, // Cool White
 
-			&:after {
-				background-color: transparentize(_palette(bg), 0.75);
-				content: '';
-				display: block;
-				height: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				width: 100%;
-				z-index: 1;
-			}
+    /* Accent colors */
+    &:nth-child(6n - 5)::before,
+    &:nth-child(6n - 5)::after { border-color: _palette(accent1); }
+    &:nth-child(6n - 4)::before,
+    &:nth-child(6n - 4)::after { border-color: _palette(accent2); }
+    &:nth-child(6n - 3)::before,
+    &:nth-child(6n - 3)::after { border-color: _palette(accent3); }
+    &:nth-child(6n - 2)::before,
+    &:nth-child(6n - 2)::after { border-color: _palette(accent4); }
+    &:nth-child(6n - 1)::before,
+    &:nth-child(6n - 1)::after { border-color: _palette(accent2); }
+    &:nth-child(6n)::before,
+    &:nth-child(6n)::after     { border-color: _palette(accent6); }
 
-			&:hover {
-				&:before {
-					opacity: 0;
-				}
-			}
+    .link.primary {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      display: block;
+      border: none;
+    }
+  }
 
-			&.is-transitioning {
-				@include vendor('transform', 'scale(0.95)');
-				@include vendor('filter', 'blur(0.5em)');
-				opacity: 0;
-			}
+  @include breakpoint(medium) {
+    article {
+      width: 100%;
+      min-height: 0;
+      padding: 4em 3em 2em;
+    }
+  }
+}
 
-			&:nth-child(4n - 1),
-			&:nth-child(4n - 2) {
-				flex: 1 auto;
-			}
+/* Border draw animation */
+@keyframes draw-border {
+  0%   { clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }
+  25%  { clip-path: polygon(0% 100%, 0% 0%, 0% 0%, 0% 0%); }
+  50%  { clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 0%); }
+  75%  { clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%); }
+  100% { clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%); }
+}
 
-			&:nth-child(6n - 5) {
-				&:before {
-					background-color: _palette(accent2);
-				}
-			}
+/* Coaching/Home padding overrides */
+body.coaching .tiles,
+main.coaching .tiles {
+  padding-top: 4rem;
+}
 
-			&:nth-child(6n - 4) {
-				&:before {
-					background-color: _palette(accent1);
-				}
-			}
-
-			&:nth-child(6n - 3) {
-				&:before {
-					background-color: _palette(accent5);
-				}
-			}
-
-			&:nth-child(6n - 2) {
-				&:before {
-					background-color: _palette(accent3);
-				}
-			}
-
-			&:nth-child(6n - 1) {
-				&:before {
-					background-color: _palette(accent5);
-				}
-			}
-
-			&:nth-child(6n) {
-				&:before {
-					background-color: _palette(accent6);
-				}
-			}
-		}
-
-		@include breakpoint(large) {
-			article {
-				@include padding(4em, 3em);
-				 height: auto;
-				max-height: 30em;
-				min-height: 20em;
-			}
-		}
-
-		@include breakpoint(medium) {
-			article {
-				width: 50% !important;
-			}
-		}
-
-		@include breakpoint(small) {
-			article {
-				@include padding(3em, 1.5em);
-				height: auto; 
-				max-height: none;
-				min-height: 0;
-
-				h3 {
-					font-size: 1.5em;
-				}
-			}
-		}
-
-		@include breakpoint(xsmall) {
-			display: block;
-
-			article {
-				height: auto; /* Allow the tile to expand vertically */
-				width: 100% !important;
-			}
-		}
-	}
-	
-	
+body.home .tiles,
+main.home .tiles {
+  padding-top: 0;
+}

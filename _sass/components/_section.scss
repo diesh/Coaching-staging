@@ -1,70 +1,201 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
 
-/* Section/Article */
+  &:hover article:not(:hover) {
+    &::before,
+    &::after {
+      width: 0 !important;
+      height: 0 !important;
+      border-width: 0 !important;
+      opacity: 0.1;
+    }
+  }
+}
 
-	section, article {
-		&.special {
-			text-align: center;
-		}
-	}
+.tiles article {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  padding: 4em 3em 2em;
+  padding-left: calc(3em + 20px); // account for the left border
+  width: calc(50% - 1rem);
+  height: auto;
+  min-height: 18em;
+  max-height: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: map-get($font, primary);
+  font-size: map-get($size, base);
+  line-height: map-get($size, line-height);
 
-	header {
-		&.major {
-			width: -moz-max-content;
-			width: -webkit-max-content;
-			width: -ms-max-content;
-			width: max-content;
-      max-width: 100%;
-			margin-bottom: _size(element-margin);
+  header,
+  h3,
+  p {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 1em;
+  }
 
-			> :first-child {
-				  margin-bottom: 0;
-				  width: calc(100% + 0.5em);
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1.5;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+    flex-shrink: 0;
+  }
 
-				  &:after {
-					    content: '';
-					    background-color: var(--nav-color); /* Use the CSS variable */
-					    display: block;
-					    height: 8px;
-					    margin: 0.325em 0 0.5em 0;
-					    width: 100%;
-				  }
-			}
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
 
-			> p {
-				//font-size: 0.7em;
-	
-		
-				//margin-bottom: 0;
-				//text-transform: uppercase;//
-			}
+  &::before {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    border-left: 20px solid transparent;
+    opacity: 0.3;
+  }
 
-			body.is-ie & {
-				> :first-child {
-					&:after {
-						max-width: 9em;
-					}
-				}
+  &::after {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: none;
+  }
 
-				> h1 {
-					&:after {
-						max-width: 100% !important;
-					}
-				}
-			}
-		}
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+    border-left: 20px solid;
+    border-top: 20px solid;
+    opacity: 1;
+  }
 
-		@include breakpoint(small) {
-			&.major {
-				> p {
-					br {
-						display: none;
-					}
-				}
-			}
-		}
-	}
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+    border-bottom: 20px solid;
+    border-right: 20px solid;
+    opacity: 1;
+  }
+
+  
+
+  .link.primary {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: block;
+    border: none;
+  }
+}
+
+@include breakpoint(xxlarge) {
+  .tiles article {
+    width: calc(33.333% - 1rem);
+  }
+}
+
+@include breakpoint(xlarge) {
+  .tiles article {
+    width: calc(50% - 1rem);
+    padding: 3em 2em 2em;
+    padding-left: calc(2em + 20px);
+  }
+}
+
+@include breakpoint(large) {
+  .tiles article {
+    width: calc(50% - 1rem);
+    padding: 3em 2em 2em;
+    padding-left: calc(2em + 20px);
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1025px) {
+  .tiles article {
+    width: calc(50% - 1rem);
+  }
+}
+
+@include breakpoint(medium) {
+  .tiles article {
+    width: 100% !important;
+    padding: 2.25em 1.5em 1.75em;
+    padding-left: calc(1.5em + 20px);
+    font-size: map-get($size, small);
+    max-height: none;
+  }
+}
+
+@include breakpoint(small) {
+  .tiles article {
+    width: 100% !important;
+    padding: 2em 1.25em 1.5em;
+    padding-left: calc(1.25em + 20px);
+    font-size: map-get($size, xsmall);
+
+    h3 {
+      font-size: map-get($size, h3-small);
+    }
+  }
+}
+
+.tiles article header.major::after,
+.tiles article header.major h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ==============================
+Section Styling for Coaching Pages
+============================== */
+.two-col-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  .left-col {
+    flex: 2 1 60%;
+    min-width: 300px;
+  }
+
+  .right-col {
+    flex: 1 1 35%;
+    min-width: 250px;
+  }
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+
+    .right-col {
+      order: 1; // Right column stacks below
+    }
+
+    .left-col {
+      order: 0; // Left column stacks above
+    }
+
+    .left-col,
+    .right-col {
+      min-width: 100%;
+    }
+  }
+}
+

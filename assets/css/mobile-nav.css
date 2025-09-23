@@ -1,0 +1,163 @@
+/* Mobile nav override */
+/* Applies after main.css to win cascade */
+
+:root { --header-h: 72px; } 
+
+#menu-btn {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important
+}
+
+.menu-icon {
+  display: none
+}
+
+/* Hamburger bars */
+.menu-icon .navicon,
+.menu-icon .navicon::before,
+.menu-icon .navicon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.menu-icon .navicon::before {
+  position: absolute;
+  top: -7px;
+  left: 0
+}
+
+.menu-icon .navicon::after {
+  position: absolute;
+  top: 7px;
+  left: 0
+}
+
+/* Mobile */
+@media(max-width:1100px) {
+  .menu-icon {
+    position: fixed;
+    top: 30px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 2000;
+    display: block;
+    align-self: center; 
+  }
+
+  #menu-btn:checked+.menu-icon .navicon {
+    background: transparent
+  }
+
+  #menu-btn:checked+.menu-icon .navicon::before {
+    transform: translateY(7px) rotate(45deg)
+  }
+
+  #menu-btn:checked+.menu-icon .navicon::after {
+    transform: translateY(-7px) rotate(-45deg)
+  }
+
+  #nav-menu {
+    position: fixed !important;
+    top: var(--header-h, 64px); 
+    right: 0;
+    left: auto !important;
+    width: 220px;
+    max-width: 102vw;
+    background: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 12px 18px;
+    display: none !important;
+    flex-direction: column;
+    z-index: 1999;
+    align-items: flex-start;   /* new */
+  text-align: left;          /* new */
+  }
+
+  #menu-btn:checked~nav #nav-menu {
+    display: flex !important
+  }
+
+  #nav-menu li {
+    width: 100%; 
+    padding: 10px 0px;
+    margin: 0
+  }
+
+  #nav-menu a {
+     width: 100%;  
+    display: inline-block;
+    position: relative;
+    padding: 0 18px !important;
+    text-decoration: none
+  }
+
+  #nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    opacity: .85;
+    transition: width .18s ease;
+  }
+
+  #nav-menu a:hover::after,
+  #nav-menu a:focus-visible::after,
+  #nav-menu .active>a::after {
+    width: 100%
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1100px) {
+ 
+  #nav-menu {
+    box-shadow: 0 0 12px rgba(41, 40, 40, 0.1) !important;   
+  }
+}
+
+/* Desktop */
+@media(min-width:1101px) {
+  .menu-icon {
+    display: none !important
+  }
+
+  #nav-menu {
+    display: flex !important;
+    position: static !important
+  }
+}
+
+/* Kill the arrow and extra border, once and for all */
+
+#nav-menu a.active         { border: none !important; }
+
+/* Remove pressed/active highlight on menu links */
+#nav-menu a:active {
+  background: none !important;   /* no grey box */
+  outline: none !important;      /* no focus outline */
+}
+
+/* Final overrides */
+#nav-menu a::before        { display:none !important; }   /* kill arrow   */
+#nav-menu a                { background:none !important;
+                              -webkit-tap-highlight-color:transparent;
+                              border-bottom:none !important; }
+#nav-menu a:active         { background:none !important; outline:none !important; }
+
+/* FINAL fixes ---------------------------------------------------- */
+/* 1 – Kill the grey press-state highlight on every browser         */
+#nav-menu a {
+  -webkit-tap-highlight-color: transparent;   /* iOS/Android */
+  background: none !important;                /* Firefox/Chromium */
+}

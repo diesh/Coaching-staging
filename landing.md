@@ -1,68 +1,113 @@
 ---
-title:  <span class="icon-small alt fa fa-question-circle"></span> Good question!
-layout: landing
-description: 'Spicy musings about UX, design, tech, and the world we live in.'
-image: assets/images/pic11.jpg
+title: <span class="icon-small alt fa fa-question-circle"></span> Good Question!
+layout: page
+description: "Spicy musings about UX, design, tech, and the world we live in."
+image: assets/images/goodquestion-cover.jpg
 nav-menu: true
 hide_from_tiles: true
-nav-color: "#8d82c4" 
-is_special: true  # <== Adds extra space in the menu in header html file
+nav-color: "#8d82c4"
+is_special: true
 weight: 50
-
+permalink: /landing.html
+nav_active: goodquestion
 ---
+<!-- <style>
 
-<!-- Main -->
-<!--   	accent1: #FF6F61, // Fuchsia
- 	accent2: #FF7F50, // Coral
-    accent3: #8d82c4, // Lavender Blue 
-    accent4: #ec8d81, // Soft Coral 
-    accent5: #FFDDC1 // Warm Cream -->
-<div id="main">
+a.post-title:link,
+a.post-title:visited { color:#333 !important; text-decoration:none; font-weight:600; }
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h2>landing page</h2>
-		</header>
-		<p>This is blog landing page and this is the landing md.</p>
-	</div>
+a.post-title:hover,
+a.post-title:focus { color:var(--nav-color) !important; text-decoration:none; }
+
+
+</style> -->
+<!-- Hero Banner -->
+<section id="banner" class="goodquestion-landing is-hero-loaded brandimage_masthead">
+  <div class="inner">
+    <header>
+      <h1 class="hero-display">
+        <span class="hero-icon highlight-g">?</span>
+        <span>Good&nbsp;Question</span>
+      </h1>
+      <p class="hero-tagline">
+        {{ page.blog_tagline | default: site.blog_tagline }}
+      </p>
+    </header>
+  </div>
 </section>
 
-<!-- Blog Post Section -->
-<section id="two" class="spotlights">
-	{% for post in site.posts %}
-		<section>
-			<a href="{{ post.url | absolute_url }}" class="image">
-				<!-- Optional: Add an image here related to the post -->
-				<img src="{% link assets/images/pic08.jpg %}" alt="{{ post.title }}" data-position="center center" />
-			</a>
-			<div class="content">
-				<div class="inner">
-					<header class="major">
-						<h3>{{ post.title }}</h3>
-					</header>
-					<p>{{ post.excerpt }}</p>
-					<ul class="actions">
-						<li><a href="{{ post.url | absolute_url }}" class="button">Read More</a></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-	{% endfor %}
-</section>
+<div id="main" class="alt inner">
+  <!-- Page Header -->
+  <header class="major">
+    <h1>All the Good Questions</h1>
+  </header>
 
-<!-- Three -->
-<section id="three">
-	<div class="inner">
-		<header class="major">
-			<h2>Massa libero</h2>
-		</header>
-		<p>You can write footer stuff here.</p>
-		<ul class="actions">
-			<li><a href="generic.html" class="button next">Get Started</a></li>
-		</ul>
-	</div>
-</section>
+  <!-- Two Column Layout -->
+  <div class="two-col-layout">
+    <!-- Left Column -->
+    <div class="left-col">
+      <p>
+        My riffs on design, tech, leadership, and the weird, wonderful (and
+        terrible) world we build and live in. Some posts are sharp. Some are
+        playful…
+      </p>
 
-</div>
+      <!-- Spotlight Posts -->
+      <section id="goodquestion-posts" class="spotlights">
+        {% for post in site.posts %}
+        <section class="post-row">
+          <a href="{{ post.url | relative_url }}" class="image">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+          </a>
+          <div class="content">
+            <header>
+              <h3>
+                <span class="icon-small alt fa fa-question-circle"></span>&nbsp;
+                <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+            </header>
+            <p>{{ post.excerpt | strip_html }}</p>
+            <ul class="actions">
+              <li>
+                <a href="{{ post.url | relative_url }}" class="button">Read More</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        {% unless forloop.last %}<hr class="post-divider">{% endunless %}
+        {% endfor %}
+      </section>
+    </div><!-- end left-col -->
+
+    <!-- Right Column -->
+    <div class="right-col">
+      {% if page.boxes %}
+        {% for box in page.boxes %}
+        <div class="box">
+          <h3>{{ box.title }}</h3>
+          {% if box.content %}
+            <p>{{ box.content }}</p>
+          {% endif %}
+          {% if box.items %}
+            <ul>
+              {% for item in box.items %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% endif %}
+
+
+         <!-- Dynamic Coaching Sidebar -->
+{% include coaching-sidebar.html %}
+
+
+      <!-- Optional Testimonial Block -->
+      <div class="testimonials-wrapper single-column" id="testimonial-box"
+           data-count="1" data-box-wrap="true">
+      </div>
+    </div><!-- end right-col -->
+  </div><!-- end two-col-layout -->
+</div><!-- end main -->

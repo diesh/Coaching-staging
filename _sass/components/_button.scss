@@ -1,60 +1,75 @@
 
 /* Homepage masthead button styling */
+/* ---- Global brand colour variable ---- */
+:root {
+  --brand-color: #2f66ff;           /* adjust to your brand blue */
+  --brand-color-hover: #1d4ed8;     /* slightly darker on hover */
+}
+
+/* ---- Masthead CTA ---- */
 .masthead_button {
-  border: 1px solid #CCDBF8; /* border color */
-  cursor: pointer;
-  display: flex;
+  /* box & layout */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: Arial, sans-serif;
-  font-size: 14.9333px;
-  font-weight: 600;
-  letter-spacing: 3.73333px;
-  padding: 0 2.5em;  /* Keep this padding, but be mindful of overflow */
+  gap: 0.5rem;                      /* space between text and arrow */
+  padding: 0 2.5em;
   height: 3.5em;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 20px;
+  border: 1px solid #fafafa;
+  border-radius: 0px;
+  box-sizing: border-box;
   white-space: nowrap;
-  box-sizing: border-box; /* This ensures padding is included in width calculations */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-  color: #CCDBF8; /* Text color */
-  background-color: transparent; /* Transparent background */
-  box-shadow: none;
+  width: auto;                      /* flexible width */
+  max-width: 100%;
 
-  /* Removed min-width: max-content to prevent stretching */
-  width: auto;        /* Keep width auto for flexibility */
-  max-width: 100%;    /* Ensure it doesn't overflow container */
+  /* type & colour */
+  font: 600 14.9333px/1 Arial, sans-serif;
+  letter-spacing: 3.73333px;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* interaction */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  touch-action: manipulation;       /* faster taps on mobile */
+  position: relative;
+  z-index: 3;                       /* stay above overlays */
 }
 
 .masthead_button .arrow svg {
   width: 16px;
   height: 16px;
-  margin-left: 8px;
-}
-
-.masthead_button:hover {
-  background-color: transparent;
-  color: #FFF;
-  border-color: #FFF !important;
-}
-
-.masthead_button:active {
-  background-color: rgba(255, 255, 255, 0.4) !important;
-  color: #FF6347 !important; /* Adjust for better contrast */
-  border-color: #FF6347;
 }
 
 .masthead_button .arrow svg path {
-  stroke: #CCDBF8;
+  stroke: currentColor;             /* inherits text colour */
   fill: none;
 }
 
-.masthead_button:hover .arrow svg path {
-  stroke: #FFF;
+/* hover & focus */
+/* hover / keyboard focus */
+.masthead_button:hover,
+.masthead_button:focus-visible {
+  background: _palette(brand-color);
+  color: #fff;
+  border-color: #fff;
+  outline: none;
+  text-decoration: none;
 }
 
+.masthead_button:hover .arrow svg path,
+.masthead_button:focus-visible .arrow svg path {
+  stroke: #fff;
+}
+
+/* active (tap-down) */
+.masthead_button:active {
+  background: rgba(255, 255, 255, 0.4);
+  color: #FF6347;
+  border-color: #FF6347;
+}
 .masthead_button:active .arrow svg path {
   stroke: #FF6347;
 }
@@ -74,47 +89,41 @@
   }
 }
 
+html { scroll-behavior: smooth; }
 
 
 /* General button styles */
+button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
-button,
 .button {
-  border: 1px solid _palette(highlight); /* Adding 1px solid border with highlight color */
-  background-color: transparent;
-  color: _palette(highlight);
+  all: unset; /* reset native styles */
+  font: inherit;
+  color: _palette(brand-color);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  font-size: 14.9333px;
-  font-weight: 600;
-  letter-spacing: 3.73333px;
-  padding: 0 2.5em;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 20px;
-  white-space: nowrap;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: none; /* Remove border effect */
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  border: none;
+  background: none;
+  transition: color 0.9s ease, background-color 0.3s ease;
 }
 
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-.button {
-  display: inline-block; /* Ensure buttons only take up necessary width */
-  padding: 10px 20px; /* 10px top/bottom, 20px left/right */
-  width: auto; /* Remove any forced full-width behavior */
-  min-width: max-content; /* Ensure button is at least as wide as its content */
-  text-align: center; /* Center the text */
-  border: 1px solid #000; 
-  cursor: pointer; /* Ensure button pointer */
+button::after,
+input[type="submit"]::after,
+input[type="reset"]::after,
+input[type="button"]::after,
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: _palette(brand-color);
+  transition: background-color 0.3s;
+   background-color: _palette(brand-color);
 }
 
 button:hover,
@@ -122,17 +131,14 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
-  background-color: _palette(brand-color);
-  color: #FFF !important;
-   border-color: #060606 !important; 
+  color: #fff;
+     background-color: _palette(brand-color);
 }
 
-button:active,
-input[type="submit"]:active,
-input[type="reset"]:active,
-input[type="button"]:active,
-.button:active {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: _palette(accent3) !important;
-  border: 1px solid _palette(accent3) !important;
+button:hover::after,
+input[type="submit"]:hover::after,
+input[type="reset"]:hover::after,
+input[type="button"]:hover::after,
+.button:hover::after {
+  background-color: darken(_palette(brand-color), 10%);
 }

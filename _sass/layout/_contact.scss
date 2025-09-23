@@ -1,94 +1,109 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+#contact {
+  border-top: solid 1px _palette(border);
+  border-bottom: solid 1px _palette(border);
+  overflow-x: hidden;
 
-/* Contact */
+  > .inner {
+    display: flex;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0.75rem 0 0 !important; // Right pad only, left flush
 
-	#contact {
-		border-bottom: solid 1px _palette(border);
-		overflow-x: hidden;
+    // LEFT: Contact form col (hug left)
+    > :nth-child(2n-1) {
+      @include padding(4em, 0, (0, 3em, 0, 0));
+      border-right: solid 1px _palette(border);
+      width: 70%;
+      min-width: 340px;
+      max-width: 640px; // <—— LIMIT form stretch on wide screens
+      z-index: 1;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
 
-		> .inner {
-			@include vendor('display', 'flex');
-			padding: 0 !important;
+    // RIGHT: Social/newsletter col
+    > :nth-child(2n) {
+      width: 30%;
+      min-width: 250px;
+      max-width: 100%;
+      padding-left: 3em;
+      box-sizing: border-box;
 
-			> :nth-child(2n - 1) {
-				@include padding(4em, 0, (0, 3em, 0, 0));
-				border-right: solid 1px _palette(border);
-				width: 60%;
-				z-index: 1;
-			}
+      > * {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
 
-			> :nth-child(2n) {
-				padding-left: 3em;
-				width: 40%;
-			}
+    // Special split rows
+    > .split {
+      padding: 0;
+      > * {
+        @include padding(3em, 0, (0, 0, 0, 3em));
+        position: relative;
+        &:before {
+          border-top: solid 1px _palette(border);
+          content: '';
+          display: block;
+          margin-left: -3em;
+          position: absolute;
+          top: 0;
+          width: calc(100vw + 3em);
+        }
+      }
+      > :first-child {
+        &:before { display: none; }
+      }
+    }
+  }
 
-			> .split {
-				padding: 0;
+  // Responsive: Stack cols on medium and below
+  @include breakpoint(medium) {
+    > .inner {
+      display: block;
+      padding: 0 !important;
+      > :nth-child(2n-1),
+      > :nth-child(2n) {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+      }
+      > .split {
+        > * { @include padding(3em, 0, (0, 0, 0, 0)); }
+        > :first-child { &:before { display: block; } }
+      }
+    }
+  }
+  @include breakpoint(small) {
+    > .inner {
+      padding: 0 !important;
+      > :nth-child(2n-1) {
+        @include padding(3em, 0, (0, 0, 0, 0));
+      }
+    }
+  }
 
-				> * {
-					@include padding(3em, 0, (0, 0, 0, 3em));
-					position: relative;
+  /* Form flush left inside left col */
+  form {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
 
-					&:before {
-						border-top: solid 1px _palette(border);
-						content: '';
-						display: block;
-						margin-left: -3em;
-						position: absolute;
-						top: 0;
-						width: calc(100vw + 3em);
-					}
-				}
 
-				> :first-child {
-					&:before {
-						display: none;
-					}
-				}
-			}
-		}
+#contact .inner,
+#footer .inner {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 
-		@include breakpoint(medium) {
-			> .inner {
-				display: block;
+}
 
-				> :nth-child(2n - 1) {
-					@include padding(4em, 0, (0, 0, 0, 0));
-					border-right: 0;
-					width: 100%;
-				}
+#contact > .inner {
+  position: relative;
+}
 
-				> :nth-child(2n) {
-					padding-left: 0;
-					width: 100%;
-				}
 
-				> .split {
-					> * {
-						@include padding(3em, 0, (0, 0, 0, 0));
-
-						&:before {
-						}
-					}
-
-					> :first-child {
-						&:before {
-							display: block;
-						}
-					}
-				}
-			}
-		}
-
-		@include breakpoint(small) {
-			> .inner {
-				> :nth-child(2n - 1) {
-					@include padding(3em, 0, (0, 0, 0, 0));
-				}
-			}
-		}
-	}

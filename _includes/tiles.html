@@ -1,21 +1,29 @@
-{% if 'posts' == site.tiles-source %}
-    {% assign tiles = site.posts %}
-{% elsif 'pages' == site.tiles-source %}
-    {% assign tiles = site.html_pages | where_exp: "item", "item.show_tile != false" %}
-{% endif %}
+{%- assign tiles = site.html_pages
+     | where_exp: "item", "item.url contains '/coaching/' and item.url != '/coaching/' and item.show_tile != false"
+     | sort: 'weight' -%}
 
-<section id="one" class="tiles">
-  {% for tile in tiles limit:site.tiles-count %}
-    {% if tile.hide_from_tiles != true and tile.url != "/your-hidden-page/" %}
+<section class="tiles tiles--grid">
+  {% for tile in tiles %}
+    {% unless tile.hide_from_tiles or tile.url == "/your-hidden-page/" %}
       <article>
-        <span class="image">
-          <img src="{{ tile.image }}" alt="{{ tile.title }}" />
-        </span>
-        <header class="major">
-          <h3><a href="{{ tile.url | relative_url }}" class="link">{{ tile.title }}</a></h3>
-          <p>{{ tile.description }}</p>
-        </header>
-      </article>
-    {% endif %}
+  <a href="{{ tile.url | relative_url }}" class="link primary"></a>
+
+  <div class="tile-inner"> <!-- NEW WRAPPER -->
+    {% unless page.title == "Executive Coaching" %}
+  {% if tile.image %}
+    <div class="tile-image">
+      <img src="{{ tile.image | relative_url }}" alt="{{ tile.title }}">
+    </div>
+  {% endif %}
+{% endunless %}
+
+    <header class="major">
+      <h3>{{ tile.title }}</h3>
+      <p>{{ tile.description }}</p>
+    </header>
+  </div>
+</article>
+
+    {% endunless %}
   {% endfor %}
 </section>

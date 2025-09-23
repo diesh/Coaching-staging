@@ -1,28 +1,84 @@
-///
-/// Forty by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
+/* Box base */
+.box {
+  border: solid 1px var(--nav-color);
+  margin-bottom: _size(element-margin);
+  padding: 1.5em;
 
-/* Box */
+  > :last-child,
+  > :last-child > :last-child,
+  > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
+  }
 
-	.box {
-		border: solid 1px var(--nav-color);
-		margin-bottom: _size(element-margin);
-		padding: 1.5em;
+  &.alt {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}
 
+/* Default: show sidebar version */
+.box.subnav {
+  display: block;
+}
+.subnav-mobile {
+  display: none;
+}
 
-	    > :last-child,
-	    > :last-child > :last-child,
-	    > :last-child > :last-child > :last-child {
-	      margin-bottom: 0;
-	    }
+/* Mobile: swap versions */
+@media (max-width: 768px) {
+  .box.subnav {
+    display: none;
+  }
+  .subnav-mobile {
+    display: block;
+    margin-top: 2rem;
+  }
+}
 
-	    &.alt {
-	      border: 0;
-	      border-radius: 0;
-	      padding: 0;
-	    }
+/* Shared subnav styling (applies to both sidebar + mobile inline) */
+.box.subnav,
+.subnav-mobile {
+  border: 2px solid var(--nav-color);
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+}
 
-	 
-	  }
+.box.subnav h3,
+.subnav-mobile h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.box.subnav ul,
+.subnav-mobile ul {
+  list-style: none; /* remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.box.subnav li,
+.subnav-mobile li {
+  margin-bottom: 0.75rem;
+}
+.box.subnav li:last-child,
+.subnav-mobile li:last-child {
+  margin-bottom: 0;
+}
+
+.box.subnav a,
+.subnav-mobile a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.box.subnav a:hover,
+.subnav-mobile a:hover {
+  background-color: color-mix(in srgb, var(--nav-color) 20%, white);
+  
+}

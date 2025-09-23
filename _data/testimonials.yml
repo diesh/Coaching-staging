@@ -1,0 +1,58 @@
+# https://www.dicebear.com/ for avatars
+
+testimonials:
+
+- name: Abhay S
+  title: Team Lead, Product Experiences at Vosyn 
+  quote: Highly motivating and someone who knows what he is saying. He wanted to know who I was, was able to understand where I come from, what I do and what I am capable of. I think you should definitely talk to Gagan if you are stuck. He can pull you out from misery like a vacuum cleaner works on dust!
+  avatar_slug: Emery
+
+- name: Monil J
+  title: Account manager at Orbit
+  quote: I had the opportunity to engage with Gagan, and the coaching session exceeded my expectations. His ability to listen deeply and tailor his advice to my needs was remarkable. He provided practical guidance, shared fresh perspectives, and offered immediately applicable strategies. His approachable nature and genuine interest in my progress made the experience insightful and inspiring. I highly recommend him.
+  avatar_slug: Andrea
+
+- name: Ran N
+  title: UI Designer
+  quote: Gagan knows exactly who he's talking with. He listens and empathizes. I've received not only industry advice but also personal advice. Thank you so much, Gagan!
+  avatar_slug: Amaya
+
+- name: Arnel I
+  title: Staff Product Designer at PocketHealth
+  quote: Gagan is a rare leader who combines innate emotional intelligence with his many years of experience designing in tech. In 3 quick months, I was able to get out of a funk during a layoff and produce the best portfolio I've ever had in the 15+ years of my career. More importantly, I was also able to get coaching around some vulnerabilities and insecurities as a designer which was such a big light in a dark time in my career.
+  avatar_slug: George
+
+- name: Joseph L
+  title: Senior UX Designer at CIBC
+  quote: Gagan is an exceptional mentor, career coach and a wonderful person. I was fortunate enough to work with him as. my coach for a few weeks. He is a great listener and was able to quickly understand the challenges I was facing in my career. He guided me on how to deeply understand myself and my goals, and provided advice on different methods and mindsets to positively influence the outcome I wanted. My experience working with Gagan has been enlightening and empowering. For anyone looking for career guidance or direction, I cannot recommend him enough!
+  avatar_slug: Aidan
+
+- name: Nathan B
+  title: Digital Marketing Strategist at Corcoran
+  quote: I had a career breakthrough while working with Gagan. Working with him made me realize I had been job hopping for 7 years but couldn't give a career narrative that helped recruiters know what I could offer. I looked like a jack-of-all-trade without direction but Gagan skillfully pointed out my strengths and provided the tools to present myself in a way that recruiters would hire me, which they did. I'm happy I made this investment in myself, and I know this experience with Gagan has shaped my career outlook for the next chapter of my career.
+  avatar_slug: Jade
+
+- name: Alice y
+  title: UX Researcher
+  quote: Thank you Gagan! Your session has had so many great takeaways that have got me excited about my career again and where I would like it to go in the future!
+  avatar_slug: Lily
+
+- name: Anna F
+  title: Director of Design
+  quote: I loved our session so much. I needed to hear everything you shared. It allowed me to connect a bunch of things rumbling around in my mind. So thank you. Very much.
+  avatar_slug: Katherine
+
+- name: Steve K
+  title: Senior Director of Design
+  quote: It's been a workout each week that's tough af, but I feel like I am getting so much stronger! Leading design is never easy and having you in my corner has helped me validate my approach and truly explore my blind spots. Looking forward to our next session!
+  avatar_slug: Avery
+
+- name: --
+  title: Newly promoted Director of Design
+  quote: Gagan helped me clarify my role and leadership style. I used to feel like a player-coach who only played. Now I'm leading with intention and building the muscle to make sure that my team has a clear voice at the table. 
+  avatar_slug: Mary
+
+- name: --
+  title: Engineer 
+  quote: Having a coach who knows design helps me a lot to understand better how to work with designers. Thanks to my secret design translator!
+  avatar_slug: John

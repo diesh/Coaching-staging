@@ -1,101 +1,94 @@
-<!DOCTYPE html>
+---
+layout: page
+---
 
-<html>
+<!-- Banner -->
+<section id="banner" class="major">
 
-{% include head.html %}
+    <header class="major hero-center">
+      <div class="hero-wrap">
+        <h1 class="hero-display">{{ page.hero_title }}</h1>
+      </div>
+    </header>
 
-<body>
+    <p class="hero-tagline">
+      {{ page.hero_tagline }}
+    </p>
 
-    {% include header.html %}
-
-    <!-- Banner -->
-    <section id="banner" class="major">
-        <div class="inner">
-            <header class="major">
-                <h1>{{ page.landing-title }}</h1>
-            </header>
-            <div class="content">
-		    <p>I help design & product professionals and teams <br />unlock their full potential.</p><br />
-			<a href="#one" class="next scrolly" style="text-decoration: none; display: inline-block;">
-			  <button class="masthead_button">
-			    <span class="button-text">Explore my coaching</span>
-				
-			    
-				<div class="arrow">
-				  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-				    <path d="M3 4L6 7L9 4" stroke="_palette(brand-color)" stroke-width="2" fill="none"/>
-				  </svg>
-			    </div>
-			  </button>
-			</a>
-	
-			
-            </div>
-        </div>
-    </section>
-
-    <!-- Main -->
-    <div id="main">
-
-        <!-- One -->
-        {% include tiles.html %}
-		
-				            <div class="inner">
-				                <header class="major">
-							 
-				  				 <h1>
-				  				   About me
-				  				 </h1>
-				                    <p>I’ve spent over 20 years building things that people love to use. From founding DesignStamp in 2001 to leading design and research teams for organizations like the Bill & Melinda Gates Foundation and PEPFAR, I’ve learned how to bring people together—whether it’s businesses, tech teams, or customers—to create seamless, meaningful experiences.</p>
-
-<p>Most recently, I served as VP of Experience Design & Research at Thinkific, where I played a role in helping the company hit unicorn status and go public in 2021. </p>
-
-<p>Today, I help leaders, high-performing professionals, and teams level up through executive coaching&mdash;partnering with them to tackle big challenges and create meaningful impact in their work. Check out my full story.</p>
-				                </header>
-		<a href="AboutGagan.html" class="button next">More about me </a>
-	
-				            </div>
-
-      <!-- Two: Other Posts -->
-      <section id="two">
-		  
-	
-		
-				
-          <div class="inner">
-              <header class="major">
-							 
-			   <h1 class="bloglogo">
-			     <span class="highlight-g">?</span>&nbsp;<span class="restofbloglogo">Good Question!</span>
-			   </h1>
-                  <p class="subheading">Spicy musings about UX, design, tech, and the world we live in</p>
-              </header>
-
-              <!-- Loop through posts and display the title, description, and content -->
-              {% for post in site.posts %}
-		
-		
-<article class="post">
-   
-    <div class="post-content">
-        <h3> <span class="icon-small alt fa fa-question-circle"></span>&nbsp;<a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.description | default: post.excerpt }} <a href="{{ post.url | relative_url }}">Read More</a></p>
+    <div class="content">
+      <a href="#one" class="masthead_button scrolly">
+        <span class="button-text">Explore my coaching</span>
+        <span class="arrow">
+          <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+            <path d="M3 4L6 7L9 4" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+        </span>
+      </a>
     </div>
-</article>
-<hr> <!-- Divider between posts -->
 
-	
-		
-              {% endfor %}
-              <a href="landing.html" class="button next">All the Good Questions</a>
-          </div>
+</section>
+
+
+  <!-- One -->
+     <div class="inner">
+   <section id="one">
+  {% include tiles.html %}
+</section>
+
+  <section id="about">
+    <div class="inner">
+      <header class="major">
+        <h1>{{ page.about_heading | default: "About me" }}</h1>
+        {% if page.about_paragraphs %}
+          {% for p in page.about_paragraphs %}
+            <p>{{ p }}</p>
+          {% endfor %}
+        {% endif %}
+      </header>
+
+      <a href="{{ page.about_link_href }}" class="button next">{{ page.about_link_text }}</a>
+
+  
+
+  
+
+    </div>
+  </section>
+
+      <section class="testimonial-section">    
+        <div id="testimonial-box" class="testimonials-wrapper" data-count="2">
+        <!-- Testimonials will be injected here by JS -->
+      </div>
       </section>
-      
 
+
+  <!-- Two: Other Posts -->
+  <section id="two">
+    <div class="inner">
+      <header class="major">
+        
+        <h1 class="bloglogo">
+          <span class="highlight-g">?</span>&nbsp;<span class="restofbloglogo">Good Question!</span>
+        </h1>
+        <p class="subheading">{{ site.blog_tagline }}</p>
+
+      </header>
+
+      {% for post in site.posts %}
+       <article class="post">
+  <h3>
+    <a href="{{ post.url | relative_url }}" class="post-title">
+      <span class="icon-small alt fa fa-question-circle"></span>&nbsp;{{ post.title }}
+    </a>
+  </h3>
+  <p class="post-description"><a href="{{ post.url | relative_url }}" class="post-title">{{ post.description | default: post.excerpt }}</a></p>
+</article>
+
+        
+        <hr class="post-divider" /> <!-- Add a horizontal line between posts -->
+
+      {% endfor %}
+
+      <a href="landing.html" class="button next">All the Good Questions</a>
     </div>
-
-    {% include footer.html %}
-
-</body>
-
-</html>
+  </section>

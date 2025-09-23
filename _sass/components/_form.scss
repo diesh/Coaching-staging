@@ -171,12 +171,19 @@ select {
     opacity: 1.0;
 }
 
-/* for substack form */
-.contact-method iframe {
-  display: block;
-  margin-left: 0;
-  margin-right: auto;
-  width: 100%;
-  max-width: 480px;
-}
+/* Substack embed form: force full width and remove left margin */
+/* Make the Substack block expand in the right column */
 
+
+.contact-method {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.contact-method iframe {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  display: block;
+  box-sizing: border-box;
+}
