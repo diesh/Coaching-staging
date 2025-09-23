@@ -78,19 +78,19 @@
 </nav>
 <div class="secondary-pages">
 
-  <ul>
-   {% assign other_pages = site.html_pages | sort: "title" %}
-{% for page in other_pages %}
-  {% unless page.url contains '/coaching/' %}
-    {% if page.nav-menu == true and page.title %}
-      <li>
-        <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-      </li>
-    {% endif %}
-  {% endunless %}
-{% endfor %}
+ <ul>
+  {% assign other_pages = site.html_pages | where: "title" | sort: "title" %}
+  {% for page in other_pages %}
+    {% unless page.url contains '/coaching/' %}
+      {% if page.nav-menu == true %}
+        <li>
+          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
+        </li>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+</ul>
 
-  </ul>
 </div>
 
 
