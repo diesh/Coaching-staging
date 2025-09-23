@@ -64,7 +64,8 @@
 <footer id="footer">
   <div class="inner">
     <br />
-  {% assign coaching_pages = site.pages | where:"dir","/coaching/" | sort:"weight" %}
+  {% assign coaching_pages = site.pages | where:"dir","/coaching/" | sort:"weight" %}<nav class="breadcrumb"><ul><li><strong><a href="{{ '/coaching/' | relative_url }}">Coaching Programs</a></strong></li>{% for page in coaching_pages %}{% unless page.url == '/coaching/' %}<li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>{% endunless %}{% endfor %}</ul></nav>
+
 
 <!-- has to be in one line for git-->
 
