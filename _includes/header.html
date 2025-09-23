@@ -10,47 +10,47 @@
       <span class="navicon"></span>
     </label>
 
-    <nav id="main-nav" class="site-nav menu">
-      <ul id="nav-menu">
-       {%- assign active = nav_active | default: page.nav_active | default: page.url -%}
+   <nav id="main-nav" class="site-nav menu">
+  <ul id="nav-menu">
+    {%- assign active = nav_active | default: page.nav_active | default: page.url -%}
 
+    <li>
+      <a href="{{ site.baseurl }}/coaching/"
+         class="{% if active == 'coaching' or page.url == '/coaching/' %}active{% endif %}">
+        Coaching
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/coaching/TeamWorkshops.html"
+         class="{% if active == 'workshops' or page.url == '/coaching/TeamWorkshops.html' %}active{% endif %}">
+        Team Workshops
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/AboutGagan.html"
+         class="{% if active == 'about' or page.url == '/AboutGagan.html' %}active{% endif %}">
+        About
+      </a>
+    </li>
+    <li>
+      <a href="{{ site.baseurl }}/landing.html"
+         class="{% if active == 'goodquestion' or page.url contains 'landing' %}active{% endif %}">
+        Good Question
+      </a>
+    </li>
+    <li>
+      {% if page.url == '/' %}
+        <a href="#contact" class="next scrolly contact-link" data-offset="100">Contact</a>
+      {% else %}
+        <a href="#contact"
+           class="{% if active == 'contact' or page.url == '/#contact' %}active{% endif %}">
+          Contact
+        </a>
+      {% endif %}
+    </li>
+  </ul>
+</nav>
 
-        <li>
-          <a href="/coaching/"
-             class="{% if active == 'coaching' or page.url == '/coaching/' %}active{% endif %}">
-            Coaching
-          </a>
-        </li>
-        <li>
-          <a href="/coaching/TeamWorkshops.html"
-             class="{% if active == 'workshops' or page.url == '/coaching/TeamWorkshops.html' %}active{% endif %}">
-            Team Workshops
-          </a>
-        </li>
-        <li>
-          <a href="/AboutGagan.html"
-             class="{% if active == 'about' or page.url == '/AboutGagan.html' %}active{% endif %}">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="/landing.html"
-             class="{% if active == 'goodquestion' or page.url contains 'landing' %}active{% endif %}">
-            Good Question
-          </a>
-        </li>
-        <li>
-          {% if page.url == '/' %}
-            <a href="#contact" class="next scrolly contact-link" data-offset="100">Contact</a>
-          {% else %}
-            <a href="#contact"
-               class="{% if active == 'contact' or page.url == '/#contact' %}active{% endif %}">
-              Contact
-            </a>
-          {% endif %}
-        </li>
-      </ul>
-    </nav>
   </div>
  
 
