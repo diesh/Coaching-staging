@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expandable Card Test</title>
+  <style>
+    .expandable-card {
+      background: #fff;
+      border: 2px solid #1B9C85;
+      padding: 1.5em;
+      margin: 2em auto;
+      max-width: 420px;
+      font-family: Inter, sans-serif;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    .expandable-card:hover {
+      box-shadow: 0 4px 24px rgba(27, 156, 133, 0.07);
+      border-color: #16a085;
+    }
+    .expandable-card h3 {
+      margin: 0 0 0.5em 0;
+      font-size: 1.1em;
+      color: #222;
+      font-weight: bold;
+      pointer-events: none; /* Heading does NOT steal click from card */
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s, opacity 0.3s;
+      color: #333;
+      margin-top: 1em;
+    }
+    .expandable-card.open .faq-answer {
+      max-height: 400px;
+      opacity: 1;
+    }
+    /* Links & buttons look normal and still work */
+    .expandable-card a, .expandable-card button {
+      color: #1B9C85;
+      text-decoration: underline;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="expandable-card">
+    <h3>Step 1: Entire Card Clickable</h3>
+    <p>This is a summary. <a href="https://google.com" target="_blank">External link</a> and <button>Button</button> don’t toggle.</p>
+    <div class="faq-answer">
+      <p>This is the hidden/expandable answer section. Should open/close when you click <b>anywhere else on the box</b>, not just heading.</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.expandable-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        // Only toggle if click is NOT inside an anchor, button, or answer
+        if (
+          e.target.closest('a') ||
+          e.target.closest('button') ||
+          e.target.closest('.faq-answer')
+        ) return;
+        card.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
