@@ -79,17 +79,11 @@
 <div class="secondary-pages">
 
 <ul>
-  {% assign other_pages = site.html_pages | sort: "title" %}
-  {% for page in other_pages %}
-    {% assign nav_flag = page['nav-menu'] %}
-    {% if page.title and nav_flag and nav_flag != empty and nav_flag != false %}
-      {% unless page.url contains '/coaching/' %}
-        <li>
-          <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-        </li>
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
+  <li><a href="/CoachingForLeaders">Coaching for Leaders</a></li>
+  <li><a href="/NextUp">What's Next for Your Career</a></li>
+  <li><a href="/OngoingCoaching">Ongoing Coaching</a></li>
+  <li><a href="/TeamWorkshops">Team Workshops</a></li>
+  <li><a href="/AboutGagan">About Gagan</a></li>
 </ul>
 
 
