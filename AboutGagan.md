@@ -27,7 +27,7 @@ main_class: alt
       <h1>Hi! I'm Gagan!</h1>
     </header>
 <div class="profile-image">
-     <img src="assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
+     <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
   <div class="smiley-overlay">
    <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
   <circle class="eye" cx="20" cy="20" r="4" />
