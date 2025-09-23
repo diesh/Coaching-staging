@@ -64,10 +64,8 @@
 <footer id="footer">
   <div class="inner">
     <br />
-   {% assign coaching_pages = site.html_pages 
-   | where_exp: "p", "p.url contains '/coaching/' and p.url != '/coaching/'" 
-   | sort: "weight" %}
-
+  {% assign coaching_pages = site.html_pages | where_exp: "p", "p.url contains '/coaching/' and p.url != '/coaching/'" | sort: "weight" %}
+<!-- has to be in one line for git-->
 
 <nav class="breadcrumb">
   <ul>
