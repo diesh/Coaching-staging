@@ -272,146 +272,81 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
+// ----------------------------------------------
+// TESTIMONIALS FADE-IN LOGIC
+// ----------------------------------------------
+function runTestimonialsScript() {
+  const container = document.getElementById("testimonial-box");
+  if (!container) return;
 
-function initTestimonials() {
-  const containers = document.querySelectorAll('[id^="testimonial-box"]');
-  if (!containers.length) {
-    setTimeout(initTestimonials, 100); // Retry until at least one container exists
-    return;
-  }
-
-  // Dynamically build path to testimonials JSON
-  const baseEl = document.querySelector('base');
-  const basePath = baseEl
-    ? baseEl.getAttribute('href').replace(/\/$/, '')
-    : window.location.pathname.replace(/\/[^/]*$/, '');
-
-  fetch(`${basePath}/assets/js/testimonials.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      const testimonials = data.testimonials;
-      if (!testimonials || testimonials.length === 0) return;
-
-      containers.forEach((container) => {
-        const count = parseInt(container.dataset.count) || 1;
-        const wrapInBox = container.dataset.boxWrap === "true";
-
-        const selected = [];
-        while (selected.length < Math.min(count, testimonials.length)) {
-          const t = testimonials[Math.floor(Math.random() * testimonials.length)];
-          if (!selected.includes(t)) selected.push(t);
-        }
-
-        const blocks = selected.map((t) => {
-          const avatar = t.avatar_slug
-            ? `<img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(t.avatar_slug)}" alt="${t.name}" class="testimonial-avatar" />`
-            : "";
-
-          const outerClass = wrapInBox
-            ? "callout testimonial box fade-in-box"
-            : "callout testimonial fade-in-box";
-
-          return `
-            <div class="${outerClass}">
-              <div class="testimonial-header">
-                ${avatar}
-                <div class="testimonial-meta">
-                  <p><strong>${t.name}</strong><br><span class="testimonial-title">${t.title}</span></p>
-                </div>
-              </div>
-              <p class="quote">${t.quote}</p>
-            </div>
-          `;
-        });
-
-        container.innerHTML = blocks.join("");
-
-        setTimeout(() => {
-          const boxes = container.querySelectorAll(".fade-in-box");
-          boxes.forEach((box) => box.classList.remove("fade-in-box"));
-        }, 900);
-
-        let buttonContainer = container.querySelector(".testimonial-reload-wrapper");
-        if (!buttonContainer) {
-          buttonContainer = document.createElement("div");
-          buttonContainer.className = "testimonial-reload-wrapper";
-          container.appendChild(buttonContainer);
-        }
-
-        buttonContainer.innerHTML = `
-          <a href="#" class="button next">More testimonials ↻</a>
-        `;
-
-        buttonContainer.querySelector("a").addEventListener("click", (e) => {
-          e.preventDefault();
-          // Reload testimonials into this specific container only
-          container.innerHTML = ""; // Clear old content
-          fadeAndLoadInto(container, testimonials);
-        });
-      });
-    })
-    .catch((err) => {
-      console.warn("Failed to load testimonials:", err);
-    });
-}
-
-function fadeAndLoadInto(container, testimonials) {
   const count = parseInt(container.dataset.count) || 1;
   const wrapInBox = container.dataset.boxWrap === "true";
 
-  const selected = [];
-  while (selected.length < Math.min(count, testimonials.length)) {
-    const t = testimonials[Math.floor(Math.random() * testimonials.length)];
-    if (!selected.includes(t)) selected.push(t);
-  }
+  function fadeAndLoad(testimonials) {
+    const selected = [];
+    while (selected.length < Math.min(count, testimonials.length)) {
+      const t = testimonials[Math.floor(Math.random() * testimonials.length)];
+      if (!selected.includes(t)) selected.push(t);
+    }
 
-  const blocks = selected.map((t) => {
-    const avatar = t.avatar_slug
-      ? `<img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(t.avatar_slug)}" alt="${t.name}" class="testimonial-avatar" />`
-      : "";
+    const blocks = selected.map((t) => {
+      const avatar = t.avatar_slug
+        ? `<img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(t.avatar_slug)}" alt="${t.name}" class="testimonial-avatar" />`
+        : "";
 
-    const outerClass = wrapInBox
-      ? "callout testimonial box fade-in-box"
-      : "callout testimonial fade-in-box";
+      const outerClass = wrapInBox
+        ? "callout testimonial box fade-in-box"
+        : "callout testimonial fade-in-box";
 
-    return `
-      <div class="${outerClass}">
-        <div class="testimonial-header">
-          ${avatar}
-          <div class="testimonial-meta">
-            <p><strong>${t.name}</strong><br><span class="testimonial-title">${t.title}</span></p>
+      return `
+        <div class="${outerClass}">
+          <div class="testimonial-header">
+            ${avatar}
+            <div class="testimonial-meta">
+              <p><strong>${t.name}</strong><br><span class="testimonial-title">${t.title}</span></p>
+            </div>
           </div>
+          <p class="quote">${t.quote}</p>
         </div>
-        <p class="quote">${t.quote}</p>
-      </div>
+      `;
+    });
+
+    container.innerHTML = blocks.join("");
+
+    setTimeout(() => {
+      const boxes = container.querySelectorAll(".fade-in-box");
+      boxes.forEach((box) => box.classList.remove("fade-in-box"));
+    }, 900);
+
+    let buttonContainer = document.getElementById("testimonial-reload-wrapper");
+    if (!buttonContainer) {
+      buttonContainer = document.createElement("div");
+      buttonContainer.id = "testimonial-reload-wrapper";
+      container.appendChild(buttonContainer);
+    }
+
+    buttonContainer.innerHTML = `
+      <a href="#" class="button next" id="more-testimonials-btn">More testimonials ↻</a>
     `;
-  });
 
-  container.innerHTML = blocks.join("");
-
-  setTimeout(() => {
-    const boxes = container.querySelectorAll(".fade-in-box");
-    boxes.forEach((box) => box.classList.remove("fade-in-box"));
-  }, 900);
-
-  let buttonContainer = container.querySelector(".testimonial-reload-wrapper");
-  if (!buttonContainer) {
-    buttonContainer = document.createElement("div");
-    buttonContainer.className = "testimonial-reload-wrapper";
-    container.appendChild(buttonContainer);
+    document.getElementById("more-testimonials-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      fadeAndLoad(testimonials);
+    });
   }
 
-  buttonContainer.innerHTML = `
-    <a href="#" class="button next">More testimonials ↻</a>
-  `;
-
-  buttonContainer.querySelector("a").addEventListener("click", (e) => {
-    e.preventDefault();
-    container.innerHTML = "";
-    fadeAndLoadInto(container, testimonials);
-  });
+  fetch("/assets/js/testimonials.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const testimonials = data.testimonials;
+      if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
+    })
+    .catch(() => {});
 }
 
-window.addEventListener("load", () => {
-  setTimeout(initTestimonials, 50);
+// Run after page is stable
+window.addEventListener("load", function () {
+  requestAnimationFrame(() => {
+    setTimeout(runTestimonialsScript, 50);
+  });
 });
