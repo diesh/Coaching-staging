@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ----------------------------------------------
-// TESTIMONIALS FADE-IN LOGIC
+// TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.getElementById("testimonial-box");
@@ -332,18 +332,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
- fetch("{{ site.baseurl }}/assets/js/testimonials.json")
-  .then((res) => res.json())
-  .then((data) => {
-    const testimonials = data.testimonials;
-    if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
-  })
-  .catch(() => {});
+  // Dynamically calculate base path for subdirectory-safe JSON fetch
+  const baseEl = document.querySelector('base');
+  const basePath = baseEl
+    ? baseEl.getAttribute('href').replace(/\/$/, '')
+    : window.location.pathname.replace(/\/[^/]*$/, '');
 
+  fetch(`${basePath}/assets/js/testimonials.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      const testimonials = data.testimonials;
+      if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
+    })
+    .catch((err) => {
+      console.warn('Failed to load testimonials:', err);
+    });
 });
 
+// Optional banner animation logic (unchanged)
 window.addEventListener("DOMContentLoaded", function () {
-  var banner = document.getElementById("banner");
+  const banner = document.getElementById("banner");
   if (banner && !banner.classList.contains("is-hero-loaded")) {
     banner.classList.add("is-hero-loaded");
   }
