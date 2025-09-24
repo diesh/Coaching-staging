@@ -286,8 +286,7 @@ function initTestimonials() {
     ? baseEl.getAttribute('href').replace(/\/$/, '')
     : window.location.pathname.replace(/\/[^/]*$/, '');
 
-fetch('/assets/js/testimonials.json')
-
+  fetch(`${basePath}/assets/js/testimonials.json`)
     .then((res) => res.json())
     .then((data) => {
       const testimonials = data.testimonials;
