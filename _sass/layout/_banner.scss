@@ -58,9 +58,11 @@ $header-h: 72px !default;
 }
 
 /* no-banner pages */
-.banner .inner {
+
+.no-banner .inner {
   padding-top: var(--header-h, 72px);
 }
+
 
 
 #banner .hero-wrap {
