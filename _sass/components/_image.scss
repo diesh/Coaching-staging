@@ -211,31 +211,23 @@ img {
 
 /* For the about page */
 /* Profile image box styling */
-/* Profile image box should match other sidebar boxes */
+/* Profile image box – match sidebar boxes */
 .profile-box {
   margin-bottom: 2rem;
-  border: 1px solid #ccc; /* match sidebar box */
+  border: 1px solid #c789af; 
   background: #fff;
-  display: block;
-  padding: 0; /* remove inner padding so image spans edge-to-edge */
+  padding: 0;
+  overflow: hidden; 
 }
 
 .profile-box .profile-image {
-  position: relative;
   width: 100%;
+  display: block;
 }
 
 .profile-box img {
-  width: 100%;   /* fill the entire box width */
-  height: auto;  /* keep aspect ratio */
   display: block;
-  border: none;  /* remove rounding/extra styling */
-}
+  width: 100%;    /* scale to fit box width */
+  height: auto;   /* preserve aspect ratio */
+  object-fit: cover; 
 
-.profile-box .smiley-overlay {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  width: 40px;
-  height: 40px;
-}
