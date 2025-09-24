@@ -10,101 +10,94 @@ hide_from_tiles: true
 is_special: true
 weight: 10
 main_class: alt
+
+
+
 ---
 
-<div class="inner">
+
+<!--<div class="brandimage_masthead" style="background-image: url('{{ site.baseurl }}/{{ page.image }}');"></div>-->
+
+  <div class="inner">
+
+
   <div class="page-intro">
+    
     <header class="major">
       <h1>Hi! I'm Gagan!</h1>
     </header>
+<div class="profile-image">
+     <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
+  <div class="smiley-overlay">
+   <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <circle class="eye" cx="20" cy="20" r="4" />
+  <circle class="eye" cx="40" cy="20" r="4" />
+  <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
+</svg>
 
-    <div class="profile-image">
-      <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
-      <div class="smiley-overlay">
-        <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-          <circle class="eye" cx="20" cy="20" r="4" />
-          <circle class="eye" cx="40" cy="20" r="4" />
-          <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
-        </svg>
-      </div>
-    </div>
-
-    I’m a designer, strategist, and coach with two decades of experience leading product and design teams.  
-    I use what I’ve learned from design thinking, product strategy, and leadership to help people find clarity, build trust, and lead with confidence.
   </div>
 </div>
+    <p>I’m a designer, strategist, and coach with two decades of experience leading product and design teams. I use what I’ve learned from design thinking, product strategy, and leadership to help people find clarity, build trust, and lead with confidence.</p>
+    </div>
 
----
+ 
 
-## My Path
+    <h2>My Path</h2>
+    <p>In 2001, I founded <a href="https://designstamp.com" target="_blank">DesignStamp</a>, a research and design studio that tackles complex challenges across business, tech, and public health. I have led projects for the Gates Foundation, OECD, and PEPFAR—the world’s largest global health initiative.</p>
 
-In 2001, I founded [DesignStamp](https://designstamp.com){:target="_blank"}, a research and design studio that tackles complex challenges across business, tech, and public health. I have led projects for the Gates Foundation, OECD, and PEPFAR, the world’s largest global health initiative.
+    <p>I’ve led strategy, research, and design projects across Canada, U.S., France, Mexico, and India. I’ve created UX, design and leadership courses, taught at Vancouver Film School, and delivered keynotes and talks around the world. I’ve spent years mentoring and managing growing teams. As VP of Experience Design at Thinkific, I scaled design and research during a period of rapid growth and helped lead the company to a $1B IPO valuation..</p>
 
-I’ve led strategy, research, and design projects across Canada, the U.S., France, Mexico, and India. I’ve created UX, design, and leadership courses, taught at Vancouver Film School, and delivered keynotes and talks around the world. I’ve spent years mentoring and managing growing teams. As VP of Experience Design at Thinkific, I scaled design and research during a period of rapid growth and helped lead the company to a $1B IPO valuation.
+    <h2>What I Do Today</h2>
+    <p>Today, I coach tech professionals and leaders, facilitate strategy workshops, and help people navigate big decisions and moments of change. I specialise in helping people see their strengths clearly, and use them more intentionally.</p>
 
----
+    <p>I live in Toronto, Canada 🇨🇦, and work with clients across North America and Europe.</p>
 
-## What I Do Today
+    <div class="cta-links">
+      <p>
+        Explore my coaching programs for 
+        <a href="/coaching/coachingForLeaders.html">leaders</a>, 
+        <a href="/coaching/TeamWorkshops.html">teams</a>, and 
+        <a href="/coaching/NextUp.html">career transitions</a>. 
+        I also offer <a href="OngoingCoaching.html">ongoing coaching</a> for long-term growth and accountability.
+      </p>
+    </div>
 
-Today, I coach tech professionals and leaders, facilitate strategy workshops, and help people navigate big decisions and moments of change.  
-I specialise in helping people see their strengths clearly and use them more intentionally.
+    <h2>Why Coaching</h2>
+    <blockquote class="right">You cannot be what you cannot see. <br /> — Marian Wright Edelman</blockquote><p>I’ve witnessed firsthand how even the best ideas stall when teams face unclear direction, misaligned goals, or a lack of trust and accountability.</p>
 
-I live in Toronto, Canada 🇨🇦, and work with clients across North America and Europe.
+      <p>Throughout my career, I’ve been lucky to work with great coaches. Coaching gave me space to think, test, reflect, and act, and it helped me move with intention, even in times of uncertainty. The best coaches helped me recognise my patterns, both helpful and limiting, and taught me how to use my strengths to reach the goals we set together.</p>
 
-<div class="cta-links">
-Explore my coaching programs for  
-[leaders](/coaching/coachingForLeaders.html),  
-[teams](/coaching/TeamWorkshops.html), and  
-[career transitions](/coaching/NextUp.html).  
-I also offer [ongoing coaching](OngoingCoaching.html) for long-term growth and accountability.
-</div>
+    <p>After years in design leadership, coaching felt like a natural next step. The way we build products is broken. I want to do my part to shape healthier ways of working so we can create better outcomes together.</p>
 
----
+  
 
-## Why Coaching
+    <p>My approach blends systems thinking, user-centered design, and strategic questioning. Whether you’re stepping into leadership, navigating a pivot, or trying to communicate with more impact, I’ll help you do it with clarity and purpose.</p>
 
-<blockquote class="right">
-  You cannot be what you cannot see.<br />
-  — Marian Wright Edelman
-</blockquote>
+    <h2>My Coaching Style</h2>
 
+    <div class="callout callout-left">
+  <span class="fa fa-map"></span> 				  
+						 <h3>Hope is not a plan!</h3> A coach helps you move from where you are  
+to where you want to be, equipping you with a clear plan to get there.
 
-I’ve witnessed firsthand how even the best ideas stall when teams face unclear direction, misaligned goals, or a lack of trust and accountability.
+					 </div>
 
-Throughout my career, I’ve been lucky to work with great coaches. Coaching gave me space to think, test, reflect, and act, and it helped me move with intention, even in times of uncertainty. The best coaches helped me recognise my patterns, both helpful and limiting, and taught me how to use my strengths to reach the goals we set together.
+    <p>Only Humans can lift other humans. If we want to fix how we work, our processes, or our relationships, it all begins with empathy. Chances are I have been where you are. I see you. I use AI to support my process, but the coaching relationship is sacred and always between you and me. Psst, <a href="{{ '/UseofAI.html' | relative_url }}">here’s how I use AI</a>.
+    </p>
+    
+    <p>I coach with a mix of empathy and accountability. I’ll support you AND I’ll challenge you to name what you want, own what’s holding you back, and do the work to grow.</p>
 
-After years in design leadership, coaching felt like a natural next step. The way we build products is broken. I want to do my part to shape healthier ways of working so we can create better outcomes together.
+    <p>I work especially well with curious people who think deeply, lead quietly, and care about others but sometimes need help speaking up, zooming out, or stepping into their full power.</p>
 
-My approach blends systems thinking, user-centered design, and strategic questioning.  
-Whether you’re stepping into leadership, navigating a pivot, or trying to communicate with more impact, I’ll help you do it with clarity and purpose.
+    <p>I believe in equity, access, and representation. I’m especially committed to supporting women, BIPOC, and LGBTQ+ leaders in shaping the future of work.</p>
 
----
-
-## My Coaching Style
-
-Only humans can lift other humans.  
-If we want to fix how we work, our processes, or our relationships, it all begins with empathy.  
-Chances are I have been where you are. I see you. I use AI to support my process, but the coaching relationship is sacred and always between you and me.  
-[Psst, here’s how I use AI]({{ '/UseofAI.html' | relative_url }}).
-
-<div class="callout callout-left">
-  <span class="fa fa-map"></span>
-  <h3>Hope is not a plan!</h3>
-  A coach helps you move from where you are to where you want to be, equipping you with a clear plan to get there.
-</div>
-
-I coach with a mix of empathy and accountability.  
-I’ll support you **and** I’ll challenge you to name what you want, own what’s holding you back, and do the work to grow.
-
-I work especially well with curious people who think deeply, lead quietly, and care about others but sometimes need help speaking up, zooming out, or stepping into their full power.
-
-I believe in equity, access, and representation.  
-I’m especially committed to supporting women, BIPOC, and LGBTQ+ leaders in shaping the future of work.
-
----
-
-<section class="testimonial-section">
+    <section class="testimonial-section">
   <div id="testimonial-box" class="testimonials-wrapper" data-count="2">
     <!-- Testimonials will be injected here by JS -->
   </div>
 </section>
+
+
+  </div>
+
+    
