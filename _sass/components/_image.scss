@@ -212,23 +212,24 @@ img {
 /* For the about page */
 /* Profile image box styling */
 
-.profile-box {
+/* Profile box styling */
+.right-col .profile-box {
   margin-bottom: 2rem;
-  border: 1px solid #c789af; 
+  border: 1px solid #c789af; /* match other box borders */
   background: #fff;
-  padding: 0;
-  overflow: hidden; 
-}
-
-.profile-box .profile-image {
+  overflow: hidden;          /* ensures image stays inside */
+  display: block;
   width: 100%;
-  display: block;
+  box-sizing: border-box;
+  padding: 0;                /* no padding around image */
 }
 
-.profile-box img {
+/* Ensure profile image fills the box */
+.right-col .profile-box img {
   display: block;
-  width: 100%;    /* scale to fit box width */
-  height: auto;   /* preserve aspect ratio */
-  object-fit: cover; 
-
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
 }
