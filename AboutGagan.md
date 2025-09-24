@@ -83,7 +83,10 @@ main_class: alt
 
     <!-- RIGHT COLUMN -->
 
-    <div class="profile-image">
+   
+    <div class="right-col">
+
+     <div class="profile-image">
           <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
           <div class="smiley-overlay">
             <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +96,6 @@ main_class: alt
             </svg>
           </div>
         </div>
-    <div class="right-col">
       <!-- Dynamic Coaching Sidebar -->
       {% include coaching-sidebar.html %}
 
