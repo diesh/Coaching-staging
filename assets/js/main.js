@@ -277,96 +277,90 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC (Robust & Flexible)
 // ----------------------------------------------
-window.requestAnimationFrame(() => {
-  const checkAndLoad = () => {
-    const container = document.getElementById("testimonial-box");
-    if (!container) {
-      setTimeout(checkAndLoad, 50); // Retry until container exists
-      return;
-    }
-
-    const count = parseInt(container.dataset.count) || 1;
-    const wrapInBox = container.dataset.boxWrap === "true";
-
-    function fadeAndLoad(testimonials) {
-      const selected = [];
-      while (selected.length < Math.min(count, testimonials.length)) {
-        const t = testimonials[Math.floor(Math.random() * testimonials.length)];
-        if (!selected.includes(t)) selected.push(t);
-      }
-
-      const blocks = selected.map((t) => {
-        const avatar = t.avatar_slug
-          ? `<img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(t.avatar_slug)}" alt="${t.name}" class="testimonial-avatar" />`
-          : "";
-
-        const outerClass = wrapInBox
-          ? "callout testimonial box fade-in-box"
-          : "callout testimonial fade-in-box";
-
-        return `
-          <div class="${outerClass}">
-            <div class="testimonial-header">
-              ${avatar}
-              <div class="testimonial-meta">
-                <p><strong>${t.name}</strong><br><span class="testimonial-title">${t.title}</span></p>
-              </div>
-            </div>
-            <p class="quote">${t.quote}</p>
-          </div>
-        `;
-      });
-
-      container.innerHTML = blocks.join("");
-
-      setTimeout(() => {
-        const boxes = container.querySelectorAll(".fade-in-box");
-        boxes.forEach((box) => box.classList.remove("fade-in-box"));
-      }, 900);
-
-      let buttonContainer = document.getElementById("testimonial-reload-wrapper");
-      if (!buttonContainer) {
-        buttonContainer = document.createElement("div");
-        buttonContainer.id = "testimonial-reload-wrapper";
-        container.appendChild(buttonContainer);
-      }
-
-      buttonContainer.innerHTML = `
-        <a href="#" class="button next" id="more-testimonials-btn">More testimonials ↻</a>
-      `;
-
-      document.getElementById("more-testimonials-btn").addEventListener("click", (e) => {
-        e.preventDefault();
-        fadeAndLoad(testimonials);
-      });
-    }
-
-    // Subdirectory-safe path handling
-    const baseEl = document.querySelector('base');
-    const basePath = baseEl
-      ? baseEl.getAttribute('href').replace(/\/$/, '')
-      : window.location.pathname.replace(/\/[^/]*$/, '');
-
-    fetch(`${basePath}/assets/js/testimonials.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        const testimonials = data.testimonials;
-        if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
-      })
-      .catch((err) => {
-        console.warn("Failed to load testimonials:", err);
-      });
-  };
-
-  checkAndLoad();
-});
-
 // ----------------------------------------------
-// OPTIONAL: Banner animation logic (unchanged)
+// TESTIMONIALS FADE-IN LOGIC (Stable across all layouts)
 // ----------------------------------------------
-window.addEventListener("DOMContentLoaded", function () {
-  const banner = document.getElementById("banner");
-  if (banner && !banner.classList.contains("is-hero-loaded")) {
-    banner.classList.add("is-hero-loaded");
+function initTestimonials() {
+  const container = document.getElementById("testimonial-box");
+  if (!container) {
+    setTimeout(initTestimonials, 100); // Retry until container exists
+    return;
   }
+
+  const count = parseInt(container.dataset.count) || 1;
+  const wrapInBox = container.dataset.boxWrap === "true";
+
+  function fadeAndLoad(testimonials) {
+    const selected = [];
+    while (selected.length < Math.min(count, testimonials.length)) {
+      const t = testimonials[Math.floor(Math.random() * testimonials.length)];
+      if (!selected.includes(t)) selected.push(t);
+    }
+
+    const blocks = selected.map((t) => {
+      const avatar = t.avatar_slug
+        ? `<img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(t.avatar_slug)}" alt="${t.name}" class="testimonial-avatar" />`
+        : "";
+
+      const outerClass = wrapInBox
+        ? "callout testimonial box fade-in-box"
+        : "callout testimonial fade-in-box";
+
+      return `
+        <div class="${outerClass}">
+          <div class="testimonial-header">
+            ${avatar}
+            <div class="testimonial-meta">
+              <p><strong>${t.name}</strong><br><span class="testimonial-title">${t.title}</span></p>
+            </div>
+          </div>
+          <p class="quote">${t.quote}</p>
+        </div>
+      `;
+    });
+
+    container.innerHTML = blocks.join("");
+
+    setTimeout(() => {
+      const boxes = container.querySelectorAll(".fade-in-box");
+      boxes.forEach((box) => box.classList.remove("fade-in-box"));
+    }, 900);
+
+    let buttonContainer = document.getElementById("testimonial-reload-wrapper");
+    if (!buttonContainer) {
+      buttonContainer = document.createElement("div");
+      buttonContainer.id = "testimonial-reload-wrapper";
+      container.appendChild(buttonContainer);
+    }
+
+    buttonContainer.innerHTML = `
+      <a href="#" class="button next" id="more-testimonials-btn">More testimonials ↻</a>
+    `;
+
+    document.getElementById("more-testimonials-btn").addEventListener("click", (e) => {
+      e.preventDefault();
+      fadeAndLoad(testimonials);
+    });
+  }
+
+  // Dynamically build path to testimonials JSON
+  const baseEl = document.querySelector('base');
+  const basePath = baseEl
+    ? baseEl.getAttribute('href').replace(/\/$/, '')
+    : window.location.pathname.replace(/\/[^/]*$/, '');
+
+  fetch(`${basePath}/assets/js/testimonials.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      const testimonials = data.testimonials;
+      if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
+    })
+    .catch((err) => {
+      console.warn("Failed to load testimonials:", err);
+    });
+}
+
+// Start testimonial logic when everything is loaded
+window.addEventListener("load", () => {
+  setTimeout(initTestimonials, 50);
 });
