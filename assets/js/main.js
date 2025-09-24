@@ -273,9 +273,19 @@ document.addEventListener("DOMContentLoaded", function () {
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
 
-function runTestimonialScript() {
+
+// ----------------------------------------------
+// TESTIMONIALS FADE-IN LOGIC (Robust & Flexible)
+// ----------------------------------------------
+// ----------------------------------------------
+// TESTIMONIALS FADE-IN LOGIC (Stable across all layouts)
+// ----------------------------------------------
+function initTestimonials() {
   const container = document.getElementById("testimonial-box");
-  if (!container) return;
+  if (!container) {
+    setTimeout(initTestimonials, 100); // Retry until container exists
+    return;
+  }
 
   const count = parseInt(container.dataset.count) || 1;
   const wrapInBox = container.dataset.boxWrap === "true";
@@ -333,35 +343,24 @@ function runTestimonialScript() {
     });
   }
 
-  fetch("/assets/js/testimonials.json")
+  // Dynamically build path to testimonials JSON
+  const baseEl = document.querySelector('base');
+  const basePath = baseEl
+    ? baseEl.getAttribute('href').replace(/\/$/, '')
+    : window.location.pathname.replace(/\/[^/]*$/, '');
+
+  fetch(`${basePath}/assets/js/testimonials.json`)
     .then((res) => res.json())
     .then((data) => {
       const testimonials = data.testimonials;
       if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
     })
-    .catch(() => {});
+    .catch((err) => {
+      console.warn("Failed to load testimonials:", err);
+    });
 }
 
-// Wait for DOM *and* element existence
-function waitForTestimonialBoxAndRun() {
-  const interval = setInterval(() => {
-    if (document.getElementById("testimonial-box")) {
-      clearInterval(interval);
-      runTestimonialScript();
-    }
-  }, 100); // Check every 100ms
-}
-
-// Kick off when DOM ready
-document.addEventListener("DOMContentLoaded", waitForTestimonialBoxAndRun);
-
-// Optional: force run on full load too
-window.addEventListener("load", waitForTestimonialBoxAndRun);
-
-// Bonus: keep hero fade-in logic
-document.addEventListener("DOMContentLoaded", function () {
-  var banner = document.getElementById("banner");
-  if (banner && !banner.classList.contains("is-hero-loaded")) {
-    banner.classList.add("is-hero-loaded");
-  }
+// Start testimonial logic when everything is loaded
+window.addEventListener("load", () => {
+  setTimeout(initTestimonials, 50);
 });
