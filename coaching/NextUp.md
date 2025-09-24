@@ -238,6 +238,9 @@ faqs:
       </div><!-- END .left-col -->
 
       <div class="right-col"><!-- START .right-col -->
+       <!-- Testimonial Block -->
+  <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
+   <!-- Testimonial Block -->
 
 {% include coaching-sidebar.html subnav_class="subnav" %}
 
