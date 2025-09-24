@@ -101,8 +101,8 @@ main_class: alt
   {% include coaching-sidebar.html %}
 
   <!-- Testimonial Block -->
-  <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true">
-  </div>
+  <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
+   <!-- End of Testimonial Block -->
 
 </div>
 
