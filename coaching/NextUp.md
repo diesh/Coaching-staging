@@ -238,10 +238,31 @@ faqs:
       </div><!-- END .left-col -->
 
       <div class="right-col"><!-- START .right-col -->
-       <!-- Testimonial Block -->
-  <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
-   <!-- Testimonial Block -->
+      
 
+{% include coaching-sidebar.html subnav_class="subnav" %}
+
+        {% for box in page.boxes %}
+          <div class="box"><!-- START .box -->
+            <h3>{{ box.title }}</h3>
+            {% if box.content %}
+              <p>{{ box.content }}</p>
+            {% endif %}
+            {% if box.items %}
+              <ul>
+                {% for item in box.items %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div><!-- END .box -->
+        {% endfor %}
+
+       
+
+         <!-- Testimonial Block -->
+        <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
+        <!-- End of Testimonial Block -->
 
       </div><!-- END .right-col -->
 
