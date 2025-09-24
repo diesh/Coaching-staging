@@ -12,8 +12,8 @@ weight: 10
 main_class: alt
 ---
 
-<section id="one">
-  <div class="inner two-col-layout">
+<section id="one" class="no-banner">
+  <div class="inner"><!-- section inner wrapper -->
     <!-- LEFT COLUMN -->
     <div class="left-col">
 

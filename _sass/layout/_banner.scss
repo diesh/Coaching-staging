@@ -57,6 +57,12 @@ $header-h: 72px !default;
   text-align: left;
 }
 
+/* no-banner pages */
+.banner .inner {
+  padding-top: var(--header-h, 72px);
+}
+
+
 #banner .hero-wrap {
   max-width: 40ch;
   @include breakpoint(large)   { max-width: 48ch; }
