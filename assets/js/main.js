@@ -272,21 +272,20 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
-function getTestimonialsPath() {
-  const currentPath = window.location.pathname;
-  const depth = (currentPath.match(/\//g) || []).length - 1;
-  const prefix = "../".repeat(depth);
-  return `${prefix}assets/js/testimonials.json`;
-}
-
 function initTestimonials() {
   const containers = document.querySelectorAll('#testimonial-box');
   if (!containers.length) {
-    setTimeout(initTestimonials, 100);
+    setTimeout(initTestimonials, 100); // Retry if not yet loaded
     return;
   }
 
-  fetch(getTestimonialsPath())
+  // Handle subfolders or root
+  const baseEl = document.querySelector('base');
+  const basePath = baseEl
+    ? baseEl.getAttribute('href').replace(/\/$/, '')
+    : window.location.pathname.replace(/\/[^/]*$/, '');
+
+  fetch(`${basePath}/assets/js/testimonials.json`)
     .then(res => res.json())
     .then(data => {
       const testimonials = data.testimonials;
@@ -342,6 +341,7 @@ function initTestimonials() {
         buttonContainer.querySelector("a").addEventListener("click", (e) => {
           e.preventDefault();
           container.innerHTML = "";
+          // Re-run manually
           fadeAndLoadInto(container, testimonials);
         });
       });
