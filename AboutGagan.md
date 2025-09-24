@@ -71,11 +71,7 @@ main_class: alt
 
       <p>I believe in equity, access, and representation. I’m especially committed to supporting women, BIPOC, and LGBTQ+ leaders in shaping the future of work.</p>
 
-      <!-- <section class="testimonial-section">
-        <div id="testimonial-box" class="testimonials-wrapper" data-count="2">
-          <!-- Testimonials will be injected here by JS -->
-        </div>
-      </section> -->
+     
     </div>
 
     <!-- RIGHT COLUMN -->
