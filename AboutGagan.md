@@ -13,7 +13,7 @@ main_class: alt
 ---
 
 <section id="one" class="no-banner">
-  <div class="inner"><!-- section inner wrapper -->
+   <div class="inner two-col-layout">
     <!-- LEFT COLUMN -->
     <div class="left-col">
 
