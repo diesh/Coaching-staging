@@ -260,7 +260,9 @@ faqs:
        
 
         <!-- START Testimonial Block -->
-        <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div>
+        
+        <div class="testimonials-wrapper single-column" id="testimonial-box-coaching" data-count="1" data-box-wrap="true"></div>
+
         <!-- END Testimonial Block -->
 
       </div><!-- END .right-col -->
