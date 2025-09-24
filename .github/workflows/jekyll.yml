@@ -16,6 +16,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Cache gems
+      - uses: actions/cache@v3
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -31,9 +39,9 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-              personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
-              external_repository: diesh/Coaching-staging
-              publish_branch: gh-pages
-              publish_dir: ./_site
-              User_name: diesh
-              user_email: gagan@designstamp.com
+          personal_token: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+          external_repository: diesh/Coaching-staging
+          publish_branch: gh-pages
+          publish_dir: ./_site
+          user_name: diesh
+          user_email: gagan@designstamp.com
