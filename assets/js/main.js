@@ -332,13 +332,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  fetch("/assets/js/testimonials.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const testimonials = data.testimonials;
-      if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
-    })
-    .catch(() => {});
+ fetch("{{ site.baseurl }}/assets/js/testimonials.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const testimonials = data.testimonials;
+    if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
+  })
+  .catch(() => {});
+
 });
 
 window.addEventListener("DOMContentLoaded", function () {
