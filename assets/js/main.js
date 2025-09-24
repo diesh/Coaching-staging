@@ -272,50 +272,101 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
-document.addEventListener("DOMContentLoaded", function () {
-  const box = document.querySelector("#testimonial-box");
-  if (!box) return;
 
-  const base = document.querySelector("body").dataset.baseurl || "";
-  const url = `${base}/assets/js/testimonials.json`;
 
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      const count = parseInt(box.dataset.count || "1", 10);
-      const wrap = box.dataset.boxWrap === "true";
+// ----------------------------------------------
+// TESTIMONIALS FADE-IN LOGIC (Robust & Flexible)
+// ----------------------------------------------
+window.requestAnimationFrame(() => {
+  const checkAndLoad = () => {
+    const container = document.getElementById("testimonial-box");
+    if (!container) {
+      setTimeout(checkAndLoad, 50); // Retry until container exists
+      return;
+    }
 
-      data.testimonials.slice(0, count).forEach((t) => {
-        const card = document.createElement("div");
-        card.className = "testimonial";
+    const count = parseInt(container.dataset.count) || 1;
+    const wrapInBox = container.dataset.boxWrap === "true";
 
-        const quote = document.createElement("p");
-        quote.className = "testimonial-quote";
-        quote.textContent = t.quote;
+    function fadeAndLoad(testimonials) {
+      const selected = [];
+      while (selected.length < Math.min(count, testimonials.length)) {
+        const t = testimonials[Math.floor(Math.random() * testimonials.length)];
+        if (!selected.includes(t)) selected.push(t);
+      }
 
-        const author = document.createElement("p");
-        author.className = "testimonial-author";
-        author.innerHTML = `<strong>${t.name}</strong><br><span>${t.title}</span>`;
+      const blocks = selected.map((t) => {
+        const avatar = t.avatar_slug
+          ? `<img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=${encodeURIComponent(t.avatar_slug)}" alt="${t.name}" class="testimonial-avatar" />`
+          : "";
 
-        const avatar = document.createElement("div");
-        avatar.className = "testimonial-avatar";
-        avatar.style.backgroundImage = `url(${base}/assets/images/testimonials/${t.avatar_slug}.png)`;
+        const outerClass = wrapInBox
+          ? "callout testimonial box fade-in-box"
+          : "callout testimonial fade-in-box";
 
-        card.appendChild(quote);
-        card.appendChild(author);
-        card.appendChild(avatar);
-
-        if (wrap) {
-          const wrapBox = document.createElement("div");
-          wrapBox.className = "testimonial-box";
-          wrapBox.appendChild(card);
-          box.appendChild(wrapBox);
-        } else {
-          box.appendChild(card);
-        }
+        return `
+          <div class="${outerClass}">
+            <div class="testimonial-header">
+              ${avatar}
+              <div class="testimonial-meta">
+                <p><strong>${t.name}</strong><br><span class="testimonial-title">${t.title}</span></p>
+              </div>
+            </div>
+            <p class="quote">${t.quote}</p>
+          </div>
+        `;
       });
-    })
-    .catch((err) => {
-      console.error("Error loading testimonials:", err);
-    });
+
+      container.innerHTML = blocks.join("");
+
+      setTimeout(() => {
+        const boxes = container.querySelectorAll(".fade-in-box");
+        boxes.forEach((box) => box.classList.remove("fade-in-box"));
+      }, 900);
+
+      let buttonContainer = document.getElementById("testimonial-reload-wrapper");
+      if (!buttonContainer) {
+        buttonContainer = document.createElement("div");
+        buttonContainer.id = "testimonial-reload-wrapper";
+        container.appendChild(buttonContainer);
+      }
+
+      buttonContainer.innerHTML = `
+        <a href="#" class="button next" id="more-testimonials-btn">More testimonials ↻</a>
+      `;
+
+      document.getElementById("more-testimonials-btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        fadeAndLoad(testimonials);
+      });
+    }
+
+    // Subdirectory-safe path handling
+    const baseEl = document.querySelector('base');
+    const basePath = baseEl
+      ? baseEl.getAttribute('href').replace(/\/$/, '')
+      : window.location.pathname.replace(/\/[^/]*$/, '');
+
+    fetch(`${basePath}/assets/js/testimonials.json`)
+      .then((res) => res.json())
+      .then((data) => {
+        const testimonials = data.testimonials;
+        if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
+      })
+      .catch((err) => {
+        console.warn("Failed to load testimonials:", err);
+      });
+  };
+
+  checkAndLoad();
+});
+
+// ----------------------------------------------
+// OPTIONAL: Banner animation logic (unchanged)
+// ----------------------------------------------
+window.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("banner");
+  if (banner && !banner.classList.contains("is-hero-loaded")) {
+    banner.classList.add("is-hero-loaded");
+  }
 });
