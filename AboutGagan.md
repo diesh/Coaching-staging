@@ -80,17 +80,20 @@ main_class: alt
 
     <!-- RIGHT COLUMN -->
 
+
 <div class="right-col">
 
-  <!-- Profile Image -->
-  <div class="profile-image-top">
-    <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
-    <div class="smiley-overlay">
-      <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-        <circle class="eye" cx="20" cy="20" r="4" />
-        <circle class="eye" cx="40" cy="20" r="4" />
-        <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
-      </svg>
+  <!-- Profile Image Box -->
+  <div class="profile-image-box">
+    <div class="profile-image-wrapper">
+      <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
+      <div class="smiley-overlay">
+        <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle class="eye" cx="20" cy="20" r="4" />
+          <circle class="eye" cx="40" cy="20" r="4" />
+          <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
+        </svg>
+      </div>
     </div>
   </div>
 
@@ -102,6 +105,7 @@ main_class: alt
   </div>
 
 </div>
+
 
   </div>
 </section>
