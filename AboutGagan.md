@@ -71,11 +71,11 @@ main_class: alt
 
       <p>I believe in equity, access, and representation. I’m especially committed to supporting women, BIPOC, and LGBTQ+ leaders in shaping the future of work.</p>
 
-      <!-- <section class="testimonial-section">
+      <section class="testimonial-section">
         <div id="testimonial-box" class="testimonials-wrapper" data-count="2">
           <!-- Testimonials will be injected here by JS -->
         </div>
-      </section> -->
+      </section>
     </div>
 
     <!-- RIGHT COLUMN -->
@@ -102,7 +102,7 @@ main_class: alt
 
   <!-- Testimonial Block -->
   <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
-   <!-- End of Testimonial Block -->
+   <!-- Testimonial Block -->
 
 </div>
 
