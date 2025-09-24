@@ -210,33 +210,29 @@ img {
 
 
 /* For the about page */
-/* Profile box in right column */
-.right-col .profile-box {
-  margin-top: 2.5rem;              /* push it down from sticky nav */
-  margin-bottom: 2rem;             /* spacing before programs box */
-  border: 1px solid #c789af;       /* match coaching sidebar box */
-  background: #fff;
-  width: 100%;                     /* full width of right-col */
-  box-sizing: border-box;
-  overflow: hidden;                /* clip any overflow */
-  padding: 0;                      /* image should edge-to-edge */
+
+/* Profile image at top of right column */
+.right-col .profile-image-top {
+  margin-top: 2rem;         /* space below sticky nav */
+  margin-bottom: 2rem;      /* space before boxes */
+  text-align: center;       /* center image horizontally */
 }
 
-/* Profile image fills box properly */
-.right-col .profile-box img {
-  display: block;                  /* remove inline gaps */
-  width: 100%;                     /* stretch to container width */
-  height: auto;                    /* maintain proportions */
-  object-fit: cover;               /* safe scaling */
-  border-radius: 0;                /* match box corners */
+.right-col .profile-image-top img {
+  width: 100%;              /* full width of right column */
+  height: auto;             /* maintain proportions */
+  display: block;
+  border-radius: 0;         /* no rounding */
+  object-fit: cover;
+  max-width: 100%;          /* prevent overflow */
 }
 
-/* Smiley overlay positioning */
-.right-col .profile-box .smiley-overlay {
+/* Smiley overlay (optional, positioned bottom-right of image) */
+.right-col .profile-image-top .smiley-overlay {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  width: 40px;
-  height: 40px;
+  bottom: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
   pointer-events: none;
 }
