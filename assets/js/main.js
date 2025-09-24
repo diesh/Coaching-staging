@@ -272,6 +272,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
+function getTestimonialsPath() {
+  const path = window.location.pathname;
+  const depth = path.endsWith('/') ? path.split('/').length - 2 : path.split('/').length - 1;
+  const prefix = '../'.repeat(depth);
+  return `${prefix}assets/js/testimonials.json`;
+}
+
 function initTestimonials() {
   const containers = document.querySelectorAll('#testimonial-box');
   if (!containers.length) {
@@ -279,13 +286,7 @@ function initTestimonials() {
     return;
   }
 
-  // Handle subfolders or root
-  const baseEl = document.querySelector('base');
-  const basePath = baseEl
-    ? baseEl.getAttribute('href').replace(/\/$/, '')
-    : window.location.pathname.replace(/\/[^/]*$/, '');
-
-  fetch(`${basePath}/assets/js/testimonials.json`)
+  fetch(getTestimonialsPath())
     .then(res => res.json())
     .then(data => {
       const testimonials = data.testimonials;
@@ -341,7 +342,6 @@ function initTestimonials() {
         buttonContainer.querySelector("a").addEventListener("click", (e) => {
           e.preventDefault();
           container.innerHTML = "";
-          // Re-run manually
           fadeAndLoadInto(container, testimonials);
         });
       });
