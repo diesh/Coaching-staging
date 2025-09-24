@@ -210,7 +210,6 @@ img {
 
 
 /* For the about page */
-
 /* Profile image container */
 .profile-image-box {
   margin-top: var(--header-h, 72px); /* avoid sticky nav overlap */
@@ -219,12 +218,12 @@ img {
 
 .profile-image-wrapper {
   position: relative;
-  border: 1px solid #ccc;           /* border around image */
-  padding: 0;                       /* no padding so image fits */
+  border: 1px solid #c789af;        /* use accent color for border */
+  padding: 0;
 }
 
 .profile-image-wrapper img {
-  width: 100%;                      /* full width of right column */
+  width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
@@ -237,7 +236,7 @@ img {
   right: 1rem;
   width: 60px;
   height: 60px;
-  pointer-events: none;
+  cursor: pointer;                  /* allow hover */
 }
 
 .smiley {

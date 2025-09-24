@@ -162,8 +162,9 @@ faqs:
           
 
         <!-- Testimonial Block -->
-        <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true">
-        </div>
+       <section class="testimonial-section">
+  <div id="testimonial-box" class="testimonials-wrapper single-column" data-count="1" data-box-wrap="true"></div>
+</section>
         <!-- End Testimonial Block -->
 
       </div><!-- end right-col -->
