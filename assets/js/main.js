@@ -270,8 +270,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ----------------------------------------------
-// TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
+// TESTIMONIALS FADE-IN LOGIC (Safe Path Support)
 // ----------------------------------------------
+
+function getJsonPath() {
+  const currentPath = window.location.pathname;
+  const depth = currentPath.split("/").filter(Boolean).length;
+  const prefix = "../".repeat(depth);
+  return `${prefix}assets/js/testimonials.json`;
+}
+
 function initTestimonials() {
   const containers = document.querySelectorAll('#testimonial-box');
   if (!containers.length) {
@@ -279,13 +287,7 @@ function initTestimonials() {
     return;
   }
 
-  // Handle subfolders or root
-  const baseEl = document.querySelector('base');
-  const basePath = baseEl
-    ? baseEl.getAttribute('href').replace(/\/$/, '')
-    : window.location.pathname.replace(/\/[^/]*$/, '');
-
-  fetch(`${basePath}/assets/js/testimonials.json`)
+  fetch(getJsonPath())
     .then(res => res.json())
     .then(data => {
       const testimonials = data.testimonials;
@@ -330,9 +332,12 @@ function initTestimonials() {
           boxes.forEach((box) => box.classList.remove("fade-in-box"));
         }, 900);
 
-        let buttonContainer = document.createElement("div");
-        buttonContainer.className = "testimonial-reload-wrapper";
-        container.appendChild(buttonContainer);
+        let buttonContainer = container.querySelector(".testimonial-reload-wrapper");
+        if (!buttonContainer) {
+          buttonContainer = document.createElement("div");
+          buttonContainer.className = "testimonial-reload-wrapper";
+          container.appendChild(buttonContainer);
+        }
 
         buttonContainer.innerHTML = `
           <a href="#" class="button next">More testimonials ↻</a>
@@ -341,7 +346,6 @@ function initTestimonials() {
         buttonContainer.querySelector("a").addEventListener("click", (e) => {
           e.preventDefault();
           container.innerHTML = "";
-          // Re-run manually
           fadeAndLoadInto(container, testimonials);
         });
       });
