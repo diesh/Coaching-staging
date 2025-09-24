@@ -273,10 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
 
-// ----------------------------------------------
-// TESTIMONIALS FADE-IN LOGIC
-// ----------------------------------------------
-window.addEventListener("load", function () {
+function runTestimonialScript() {
   const container = document.getElementById("testimonial-box");
   if (!container) return;
 
@@ -343,10 +340,26 @@ window.addEventListener("load", function () {
       if (testimonials && testimonials.length > 0) fadeAndLoad(testimonials);
     })
     .catch(() => {});
-});
+}
 
-// Keeps hero fade-in logic
-window.addEventListener("DOMContentLoaded", function () {
+// Wait for DOM *and* element existence
+function waitForTestimonialBoxAndRun() {
+  const interval = setInterval(() => {
+    if (document.getElementById("testimonial-box")) {
+      clearInterval(interval);
+      runTestimonialScript();
+    }
+  }, 100); // Check every 100ms
+}
+
+// Kick off when DOM ready
+document.addEventListener("DOMContentLoaded", waitForTestimonialBoxAndRun);
+
+// Optional: force run on full load too
+window.addEventListener("load", waitForTestimonialBoxAndRun);
+
+// Bonus: keep hero fade-in logic
+document.addEventListener("DOMContentLoaded", function () {
   var banner = document.getElementById("banner");
   if (banner && !banner.classList.contains("is-hero-loaded")) {
     banner.classList.add("is-hero-loaded");
