@@ -382,171 +382,75 @@ Curate your <em>career circle</em>. This could be:</p>
       </section>
     </main>
 
-    <!-- Contact -->
-<section id="contact">
-  <div class="inner">
-    <section>
-      <!-- Contact form -->
-      <div class="contact-method">
-        <span class="icon alt fa-envelope"></span>
-        <h3>Message Me</h3>
-        <p>Always happy to provide a free session and discuss your needs!</p>
-
-        <form action="https://formspree.io/f/mwpvbdbr" method="POST" id="contact-form">
-          <div class="field half first">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-          <div class="field half">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="6" required></textarea>
-          </div>
-          <button type="submit">Send</button>
-
-          <div id="error-message" class="speechbubble" style="display:none;"></div>
-          <div id="thank-you-message" class="speechbubble" style="display:none;">
-            Thanks for your message! I look forward to connecting!
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="split">
-      <section>
-        <div class="contact-method">
-          <span class="icon alt fa-linkedin"></span>
-          <h3>Linkedin</h3>
-          <a href="http://linkedin.com/in/diesh" target="_blank">Gagan Diesh on Linkedin</a>
-        </div>
-      </section>
-
-      <section>
-        <div class="contact-method">
-          <span class="icon alt fa-paper-plane"></span>
-          <h3>Newsletter</h3>
-          <p style="margin-bottom: 0.5em;">Once a month, no fluff</p>
-
-          <iframe
-            src="https://diesh.substack.com/embed"
-            width="100%"
-            
-            style="border: none; background: transparent; display: block;"
-            frameborder="0"
-            scrolling="no">
-          </iframe>
-        </div>
-      </section>
-    </section>
-  </div>
-</section>
-
-<!-- Footer -->
+    <!-- Footer -->
 <footer id="footer">
-  <div class="inner">
-    <br />
-  <nav class="breadcrumb"><ul><li><strong><a href="/Coaching-staging/coaching/">Coaching Programs</a></strong></li><li><a href="/Coaching-staging/coaching/NextUp">What's Next for Your Career</a></li><li><a href="/Coaching-staging/coaching/OngoingCoaching">Ongoing Coaching</a></li><li><a href="/Coaching-staging/coaching/CoachingForLeaders">Coaching for Leaders</a></li><li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li></ul></nav>
+  <div class="inner footer-cols">
+    <!-- Column 1: Coaching Nav -->
+    <div class="footer-col">
+      <h4>Coaching Programs</h4>
+      
+      <nav class="breadcrumb">
+        <ul>
+          <li><a href="/Coaching-staging/coaching/"><strong>Overview</strong></a></li>
+          
+            
+          
+            
+              <li><a href="/Coaching-staging/coaching/NextUp">What's Next for Your Career</a></li>
+            
+          
+            
+              <li><a href="/Coaching-staging/coaching/OngoingCoaching">Ongoing Coaching</a></li>
+            
+          
+            
+              <li><a href="/Coaching-staging/coaching/CoachingForLeaders">Coaching for Leaders</a></li>
+            
+          
+            
+              <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
+            
+          
+        </ul>
+      </nav>
+    </div>
 
+    <!-- Column 2: About/Contact/AI -->
+    <div class="footer-col">
+      <h4>About</h4>
+      <ul>
+        <li><a href="#contact" class="next scrolly">Contact me</a></li>
+        <li><a href="https://diesh.ca/about/" target="_blank">About me</a></li>
+        <li>Some parts of this site and coaching materials use AI. Final decisions are always human.</li>
+      </ul>
+    </div>
 
-<!-- has to be in one line for git-->
-
-
-
-
-    <br />
-    <ul class="copyright">
-      <li>
-        &copy;<span id="current-year"></span>
-        <a href="http://designstamp.com/?GaganDieshCoaching" target="_blank">DesignStamp</a>
-        | Coaching by Gagan Diesh
-      </li>
-      <li><a href="https://diesh.substack.com/" target="_blank">Signup for my newsletter</a></li>
-      <li><br /></li>
-      <li><a href="https://designstamp.com/privacy" target="_blank">Privacy policy</a></li>
-      <li>I use a mix of Canadian and American spelling. I realize this is my favourite mistake 🤷🏽‍♂️.</li>
-      <li>
-        Short on $ and out of work? If you need help,
-        <a href="#contact" class="next scrolly">message me</a>. We can figure this out.
-      </li>
-    </ul>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-      });
-    </script>
+    <!-- Column 3: Copyright etc -->
+    <div class="footer-col">
+      <h4>Info</h4>
+      <ul class="copyright">
+        <li>
+          &copy;<span id="current-year"></span>
+          <a href="http://designstamp.com/?GaganDieshCoaching" target="_blank">DesignStamp</a>
+          | Coaching by Gagan Diesh
+        </li>
+        <li><a href="https://diesh.substack.com/" target="_blank">Signup for my newsletter</a></li>
+        <li><a href="https://designstamp.com/privacy" target="_blank">Privacy policy</a></li>
+        <li>I use a mix of Canadian and American spelling. I realize this is my favourite mistake 🤷🏽‍♂️.</li>
+        <li>
+          Short on $ and out of work? If you need help,
+          <a href="#contact" class="next scrolly">message me</a>. We can figure this out.
+        </li>
+      </ul>
+    </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    });
+  </script>
 </footer>
-
-
-
-<!-- Enhanced JS handlers (unchanged) -->
-<script>
-  /* FAQ accordion */
-  document.querySelectorAll('.faq-question').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const answer = item && item.querySelector('.faq-answer');
-      if (!answer) return;
-      item.classList.toggle('is-open');
-      answer.style.maxHeight = item.classList.contains('is-open')
-        ? answer.scrollHeight + 'px'
-        : 0;
-    });
-  });
-
-  /* Mobile nav auto-close */
-  document.addEventListener('DOMContentLoaded', function() {
-    const cb = document.getElementById('menu-btn');
-    const menu = document.getElementById('nav-menu');
-    if (!cb || !menu) return;
-    menu.addEventListener('click', e => {
-      if (e.target.closest('a')) cb.checked = false;
-    });
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape') cb.checked = false;
-    });
-    window.addEventListener('resize', () => {
-      if (innerWidth >= 1101) cb.checked = false;
-    });
-    const killBodyClass = () => document.body.classList.remove('menu-visible');
-    cb.addEventListener('change', killBodyClass);
-  });
-
-  /* Contact form submission (unchanged) */
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const thankYouMessage = document.getElementById('thank-you-message');
-    const errorMessage = document.getElementById('error-message');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      })
-        .then(response => response.json())
-        .then(data => {
-          if (data.ok) {
-            thankYouMessage.style.display = 'block';
-          } else {
-            errorMessage.style.display = 'block';
-            errorMessage.textContent = 'Oops, there was an error. Please try again.';
-          }
-        })
-        .catch(error => {
-          console.error('Network Error:', error);
-          errorMessage.style.display = 'block';
-          errorMessage.textContent = 'Network error. Please try again later.';
-        });
-    });
-  });
-</script>
 
   </body>
 </html>
