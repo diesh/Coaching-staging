@@ -1,12 +1,11 @@
 #footer .footer-cols {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-  gap: 2rem !important;
-  max-width: 1000px !important;   // keeps it narrower
-  margin: 0 auto !important;
-  text-align: left !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #footer .footer-col {
@@ -38,3 +37,5 @@
     flex-direction: column !important;
   }
 }
+
+#footer .footer-col { flex: 1 1 0; min-width: 200px; }
