@@ -210,26 +210,28 @@ img {
 
 
 /* For the about page */
-/* Profile image box styling */
-
-/* Profile box styling */
+/* Profile box in right column */
 .right-col .profile-box {
-  margin-bottom: 2rem;
-  border: 1px solid #c789af; /* match other box borders */
+  margin-top: 2rem;              /* push down from nav */
+  margin-bottom: 2rem;           /* space before next box */
+  border: 1px solid #c789af;     /* match other boxes */
   background: #fff;
-  overflow: hidden;          /* ensures image stays inside */
-  display: block;
-  width: 100%;
+  width: 100%;                   /* align with sidebar width */
+  overflow: hidden;
   box-sizing: border-box;
-  padding: 0;                /* no padding around image */
+  padding: 0;
 }
 
-/* Ensure profile image fills the box */
+/* Profile image should fill the box width */
 .right-col .profile-box img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
+  object-fit: cover;             /* keep proportions */
+}
+
+/* Optional: add consistent border radius if you like */
+.right-col .profile-box,
+.right-col .profile-box img {
+  border-radius: 0; /* keep square edges */
 }
