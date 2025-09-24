@@ -12,7 +12,6 @@ weight: 10
 main_class: alt
 ---
 
-
 <section id="one">
   <div class="inner two-col-layout">
     <!-- LEFT COLUMN -->
@@ -22,8 +21,6 @@ main_class: alt
         <header class="major">
           <h1>Hi! I'm Gagan!</h1>
         </header>
-
-        
 
         <p>I’m a designer, strategist, and coach with two decades of experience leading product and design teams. I use what I’ve learned from design thinking, product strategy, and leadership to help people find clarity, build trust, and lead with confidence.</p>
       </div>
@@ -82,27 +79,27 @@ main_class: alt
     </div>
 
     <!-- RIGHT COLUMN -->
-
-   
     <div class="right-col">
 
-     <div class="profile-image">
-          <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
-          <div class="smiley-overlay">
-            <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-              <circle class="eye" cx="20" cy="20" r="4" />
-              <circle class="eye" cx="40" cy="20" r="4" />
-              <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
-            </svg>
-          </div>
+      <!-- Profile Image + Smiley -->
+      <div class="profile-image">
+        <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
+        <div class="smiley-overlay">
+          <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle class="eye" cx="20" cy="20" r="4" />
+            <circle class="eye" cx="40" cy="20" r="4" />
+            <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
+          </svg>
         </div>
-      <!-- Dynamic Coaching Sidebar -->
+      </div>
+
+      <!-- Coaching Sidebar -->
       {% include coaching-sidebar.html %}
 
       <!-- Testimonial Block -->
       <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true">
       </div>
-      <!-- End Testimonial Block -->
+
     </div>
   </div>
 </section>
