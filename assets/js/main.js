@@ -272,27 +272,26 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC (Robust URL Handling)
 // ----------------------------------------------
-
 function initTestimonials() {
-  const containers = document.querySelectorAll('[id^="testimonial-box"]');
+  const containers = document.querySelectorAll('#testimonial-box');
   if (!containers.length) {
-    setTimeout(initTestimonials, 100); // Retry until at least one container exists
+    setTimeout(initTestimonials, 100); // Retry if not yet loaded
     return;
   }
 
-  // Dynamically build path to testimonials JSON
+  // Handle subfolders or root
   const baseEl = document.querySelector('base');
   const basePath = baseEl
     ? baseEl.getAttribute('href').replace(/\/$/, '')
     : window.location.pathname.replace(/\/[^/]*$/, '');
 
   fetch(`${basePath}/assets/js/testimonials.json`)
-    .then((res) => res.json())
-    .then((data) => {
+    .then(res => res.json())
+    .then(data => {
       const testimonials = data.testimonials;
-      if (!testimonials || testimonials.length === 0) return;
+      if (!testimonials || !testimonials.length) return;
 
-      containers.forEach((container) => {
+      containers.forEach(container => {
         const count = parseInt(container.dataset.count) || 1;
         const wrapInBox = container.dataset.boxWrap === "true";
 
@@ -331,12 +330,9 @@ function initTestimonials() {
           boxes.forEach((box) => box.classList.remove("fade-in-box"));
         }, 900);
 
-        let buttonContainer = container.querySelector(".testimonial-reload-wrapper");
-        if (!buttonContainer) {
-          buttonContainer = document.createElement("div");
-          buttonContainer.className = "testimonial-reload-wrapper";
-          container.appendChild(buttonContainer);
-        }
+        let buttonContainer = document.createElement("div");
+        buttonContainer.className = "testimonial-reload-wrapper";
+        container.appendChild(buttonContainer);
 
         buttonContainer.innerHTML = `
           <a href="#" class="button next">More testimonials ↻</a>
@@ -344,8 +340,8 @@ function initTestimonials() {
 
         buttonContainer.querySelector("a").addEventListener("click", (e) => {
           e.preventDefault();
-          // Reload testimonials into this specific container only
-          container.innerHTML = ""; // Clear old content
+          container.innerHTML = "";
+          // Re-run manually
           fadeAndLoadInto(container, testimonials);
         });
       });
