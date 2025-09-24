@@ -3,10 +3,11 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: 3rem;
+  max-width: none;   // let it span full inner width
+  margin: 0;         // no auto centering
 }
+
 
 #footer .footer-col {
   flex: 1 1 0 !important;   // equal columns
