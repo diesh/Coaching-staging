@@ -59,8 +59,10 @@ $header-h: 72px !default;
 
 /* no-banner pages */
 
-.no-banner .inner {
-  padding-top: var(--header-h, 72px);
+./* Add spacing when there’s no masthead/banner */
+.no-banner {
+  padding-top: var(--header-h, 72px); /* matches sticky nav height */
+  margin-top: 2rem; /* optional extra breathing space */
 }
 
 
