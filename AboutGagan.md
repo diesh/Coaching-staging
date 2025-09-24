@@ -63,12 +63,13 @@ I also offer [ongoing coaching](OngoingCoaching.html) for long-term growth and a
 
 ## Why Coaching
 
+<blockquote class="right">
+  You cannot be what you cannot see.<br />
+  — Marian Wright Edelman
+</blockquote>
 
 
 I’ve witnessed firsthand how even the best ideas stall when teams face unclear direction, misaligned goals, or a lack of trust and accountability.
-
-> You cannot be what you cannot see.  
-> — Marian Wright Edelman
 
 Throughout my career, I’ve been lucky to work with great coaches. Coaching gave me space to think, test, reflect, and act, and it helped me move with intention, even in times of uncertainty. The best coaches helped me recognise my patterns, both helpful and limiting, and taught me how to use my strengths to reach the goals we set together.
 
@@ -81,15 +82,13 @@ Whether you’re stepping into leadership, navigating a pivot, or trying to comm
 
 ## My Coaching Style
 
-
-
 Only humans can lift other humans.  
 If we want to fix how we work, our processes, or our relationships, it all begins with empathy.  
 Chances are I have been where you are. I see you. I use AI to support my process, but the coaching relationship is sacred and always between you and me.  
 [Psst, here’s how I use AI]({{ '/UseofAI.html' | relative_url }}).
 
 <div class="callout callout-left">
-  <span class="fa fa-map"></span> 
+  <span class="fa fa-map"></span>
   <h3>Hope is not a plan!</h3>
   A coach helps you move from where you are to where you want to be, equipping you with a clear plan to get there.
 </div>
