@@ -425,3 +425,27 @@ main .spacer {
   padding-right: 1rem;
 
 }
+
+/* Constrain readable text */
+.page-content,
+.post-content,
+.section-body,
+.left-col {
+  max-width: 70ch; /* keeps text readable */
+}
+
+.right-col {
+  max-width: none; /* sidebar should not be constrained */
+}
+
+/* Modern blockquote */
+blockquote {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #333;
+  border-left: 3px solid map-get($palette, 'subtle_accent3');
+  padding-left: 1.25rem;
+  margin: 1.5rem auto;
+  max-width: 65ch;
+  background: none;
+}
