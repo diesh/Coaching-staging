@@ -180,3 +180,19 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.page-content,
+.post-content,
+.section-body,
+.left-col p,
+.left-col h2,
+.left-col h3,
+.left-col h4,
+.left-col ul,
+.left-col ol,
+blockquote {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}

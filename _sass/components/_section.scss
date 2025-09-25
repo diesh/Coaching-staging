@@ -166,36 +166,32 @@
 /* ==============================
 Section Styling for Coaching Pages
 ============================== */
+/* Two-column layout fix */
 .two-col-layout {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
+  align-items: flex-start; /* ensures sidebar aligns at top */
+  max-width: 1200px; /* keeps page centered and readable */
+  margin: 0 auto;
+}
 
-  .left-col {
-    flex: 2 1 60%;
-    min-width: 300px;
-  }
+.left-col {
+  flex: 1 1 65%;
+  min-width: 0; /* prevents overflow */
+}
 
-  .right-col {
-    flex: 1 1 35%;
-    min-width: 250px;
-  }
-
-  @media screen and (max-width: 980px) {
+.right-col {
+  flex: 0 0 30%;
+  min-width: 250px;
+}
+@include breakpoint(medium) {
+  .two-col-layout {
     flex-direction: column;
-
-    .right-col {
-      order: 1; // Right column stacks below
-    }
-
-    .left-col {
-      order: 0; // Left column stacks above
-    }
-
-    .left-col,
-    .right-col {
-      min-width: 100%;
-    }
+  }
+  .left-col,
+  .right-col {
+    flex: 1 1 100%;
   }
 }
 
