@@ -105,21 +105,24 @@
     }
 
 
-    .left-col,
-.section-body,
+/* Force readable text widths for all main content zones */
+.left-col,
 .inner,
+.section-body,
 .page-content,
 .post-content {
-  > p,
-  > h2,
-  > h3,
-  > h4,
-  > ul,
-  > ol,
-  > blockquote {
+  /* Apply to direct text content blocks */
+  p,
+  h1, h2, h3, h4, h5, h6,
+  ul,
+  ol,
+  blockquote {
     max-width: 70ch;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
+}
+
 }
 
   </style>
