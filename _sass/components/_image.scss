@@ -154,33 +154,37 @@ img {
 
   .smiley-overlay {
     position: absolute;
-    bottom: -50px;       // 10px lower
-    right: -30px;        // 40px more right
-    width: 110px;        // larger
+    bottom: -50px;   // 10px lower
+    right: -30px;    // 40px more right
+    width: 110px;
     height: 110px;
-    transform: rotate(-30deg) scale(1);
-    transform-origin: center;
-    transition: transform 0.35s ease;
+    cursor: pointer;
 
-    svg {
+    svg.smiley {
       width: 100%;
       height: 100%;
+      transform: rotate(-30deg) scale(1);
+      transform-origin: center;
+      transition: transform 0.35s ease;
     }
 
-    // Mobile animation (no hover)
+    // Hover works directly on the SVG
+    &:hover .smiley {
+      transform: rotate(10deg) scale(1.35); // Bigger boop and spin
+    }
+
+    // Mobile-only animation
     @media (hover: none) and (pointer: coarse) {
-      animation: mobileBoop 1s ease-out 1.5s forwards;
-    }
+      .smiley {
+        animation: mobileBoop 1s ease-out 1.5s forwards;
+      }
 
-    @keyframes mobileBoop {
-      0%   { transform: rotate(-30deg) scale(1); }
-      50%  { transform: rotate(10deg) scale(1.35); }
-      100% { transform: rotate(-30deg) scale(1); }
+      @keyframes mobileBoop {
+        0%   { transform: rotate(-30deg) scale(1); }
+        50%  { transform: rotate(10deg) scale(1.35); }
+        100% { transform: rotate(-30deg) scale(1); }
+      }
     }
-  }
-
-  &:hover .smiley-overlay {
-    transform: rotate(10deg) scale(1.35); // Big pop and rotation
   }
 
   @media screen and (min-width: 768px) {
@@ -199,7 +203,7 @@ img {
   }
 }
 
-// Smile styling
+// SVG styling
 .smiley {
   .eye {
     fill: map-get($palette, 'spicy');
@@ -209,48 +213,4 @@ img {
     stroke: map-get($palette, 'spicy');
     fill: none;
   }
-}
-
-
-/* For the about page */
-/* Profile image container */
-.profile-image-box {
-  margin-top: var(--header-h, 72px); /* avoid sticky nav overlap */
-  margin-bottom: 2rem;              /* space before program box */
-}
-
-.profile-image-wrapper {
-  position: relative;
-  border: 1px solid #c789af;        /* use accent color for border */
-  padding: 0;
-}
-
-.profile-image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Smiley overlay */
-.smiley-overlay {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;                  /* allow hover */
-}
-
-.smiley {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: #f36f21;                  /* orange brand color */
-  stroke-width: 3;
-  transition: transform 0.3s ease;
-}
-
-.smiley-overlay:hover .smiley {
-  transform: scale(1.15) rotate(5deg); /* playful hover animation */
 }
