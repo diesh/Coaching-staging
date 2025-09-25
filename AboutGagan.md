@@ -2,7 +2,7 @@
 layout: page
 title: About Gagan
 description: 
-image: assets/images/Gagan_Diesh_.png
+image: assets/images/g-morocco.jpg
 nav-menu: true
 nav-color: "#c789af"
 nav_active: about
@@ -19,7 +19,7 @@ main_class: alt
 
       <div class="profile-image-box mobile-only">
         <div class="profile-image-wrapper">
-          <img src="{{ site.baseurl }}/assets/images/Gagan_Diesh_.png" alt="Gagan Diesh">
+          <img src="{{ site.baseurl }}/assets/images/g-morocco.jpg" alt="Gagan Diesh">
             <div class="smiley-overlay">
             <a href="http://google.com" aria-label="Go to Good Question page">
             <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
