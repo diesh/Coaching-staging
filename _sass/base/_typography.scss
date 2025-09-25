@@ -49,9 +49,9 @@ h6 { font-size: 0.7rem; color: map-get($palette, 'muted'); }
 }
 
 /* Paragraphs and text */
-p {
+p, ul, ol {
   margin: 0 0 1.25rem 0;
-  max-width: 70ch;
+  line-height: 1.65;
 }
 
 small { font-size: 0.875rem; color: map-get($palette, 'muted'); }
@@ -403,4 +403,14 @@ blockquote {
 }
 main .spacer {
   height: var(--header-h, 72px); // a hack for now to create space above the posts so that top nav doesn't fall on header
+}
+
+
+
+
+.page-content,
+.post-content,
+.section-body {
+  max-width: 70ch;
+  margin: 0 auto;
 }
