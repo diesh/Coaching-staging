@@ -96,6 +96,10 @@ main_class: alt
   </div>
 
   <!-- Coaching Sidebar -->
+<!-- Desktop sidebar -->
+{% include coaching-sidebar.html %}
+
+<!-- Mobile inline version -->
 {% include coaching-sidebar.html subnav_class="subnav-mobile" %}
 
   <!-- Testimonial Block -->

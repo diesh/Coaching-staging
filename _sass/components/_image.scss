@@ -190,3 +190,14 @@ img {
   margin-top: var(--header-h, 72px); // ensures space below sticky nav
   margin-bottom: 3rem;              // adds breathing room before next box
 }
+
+
+// for mobile
+
+@media screen and (max-width: 980px) {
+
+  .two-col-layout .right-col .profile-image-box {
+    order: -1;   /* move just the image block to the top */
+    margin-bottom: 2rem; /* optional spacing */
+  }
+}
