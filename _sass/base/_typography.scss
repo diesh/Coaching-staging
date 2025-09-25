@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: map-get($font, 'family');
   font-weight: 700;
   line-height: 1.25;
-  color: map-get($palette, 'fg-bold'));
+  color: map-get($palette, 'fg-bold');
   margin: 0 0 0.75em 0;
   letter-spacing: -0.015em;
 }
