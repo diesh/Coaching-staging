@@ -31,46 +31,46 @@ It may seem overly luxe to demand happiness at work. But it isn’t self-indulge
 
 Happiness is not a moment at work. It starts from the first interview and extends past when you leave the organization. Here’s how to spot it and then build it at every stage. 
 
-## ## 1) Hiring and interviews: curiosity over guardedness
+### 1) Hiring and interviews: curiosity over guardedness
 
 **Look for** interviewers who genuinely listen, ask follow-ups, and reflect back what they heard—early signs of psychological safety.  
 **Ask** “How did you devise the process for hiring for this role? What’s an important criterion you’re looking for?”
 
-## 2) Onboarding smoothly
+### 2) Onboarding smoothly
 
 **Look for** clear goals, a named buddy, and early wins that build competence so your brain can shift from vigilance to nesting.  
 **Ask** “In week one, what decisions can I make without approval?” Be direct about what you need to succeed (for example, time to study the customer journey, shadow a team, or chat with sales).  
 **Do** co-create a 30-60-90 plan with your manager and document explicit autonomy zones and key relationship introductions so you can own your space and connect across the team.
 
-## 3) 1:1s: the engine of well-being
+### 3) 1:1s: the engine of well-being
 
 **Look for** regular cadence, shared ownership, and depth. Strong 1:1s are employee-led and cover workload, growth, and well-being. If meetings are too frequent and shallow, suggest async updates so live sessions can focus on career progress.  
 **Ask** “Here’s what’s energizing me and what’s draining me this week. Here’s where I could use your help or feedback. Does my work align with what you’re seeing as a priority?”
 
-## 4) Day-to-day collaboration: design the micro-events
+### 4) Day-to-day collaboration: design the micro-events
 
 **Look for** meeting hygiene: clear agendas, balanced voices, and space for constructive disagreement.  
 **Ask** “Here’s what I see as success for this meeting—does that fit with what you need?”  
 **Do** rotate facilitators and use AI or simple tracking to monitor speaking time. If the highest-paid person dominates, call it out and rebalance.
 
-## 5) Feedback and performance: facts, care, and agency
+### 5) Feedback and performance: facts, care, and agency
 
 **Look for** specific, timely feedback tied to impact and delivered with respect.  
 **Ask** “How do we handle mistakes and make sure we don’t repeat them?”  
 **Do** offer feedback with consent: “Is now a good time to share thoughts on that presentation?” Candor only works when trust runs deep.
 
-## 6) Recognition and progress: show it, often and authentically
+### 6) Recognition and progress: show it, often and authentically
 
 **Look for** rituals that make progress visible and treat failures as learning moments.  
 **Ask** “How do we share progress between big launches? How do we document failures so we don’t repeat them? Is now a good time to do a retro?”  
 **Do** give weekly shout-outs and share wins with specifics, not fluff.
 
-## 7) Retention and mobility: can I see my path?
+### 7) Retention and mobility: can I see my path?
 
 **Look for** a clear career matrix, visible internal moves, and skill-building opportunities. If exits are creeping up, find out why.  
 **Ask** “What percent of people changed roles internally last year? What did we change after the last engagement survey? What is the career path based on my demonstrated skills and experience?”
 
-## 8) Exit and alumni: honest endings
+### 8) Exit and alumni: honest endings
 
 **Look for** exit interviews that feed real improvements and leaders who stay in touch with alumni.  
 **Ask** “What did you learn from the last three exits, and what changed?”
