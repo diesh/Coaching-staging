@@ -1,72 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Expandable Card Test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Workshops</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    .expandable-card {
-      background: #fff;
-      border: 2px solid #1B9C85;
-      padding: 1.5em;
-      margin: 2em auto;
-      max-width: 420px;
-      font-family: Inter, sans-serif;
-      cursor: pointer;
-      transition: box-shadow 0.2s;
-      box-shadow: 0 0 0 rgba(0,0,0,0);
+    :root {
+      --accent: #1B9C85;
+      --max-width: 70ch;
+      --sidebar-width: 300px;
     }
-    .expandable-card:hover {
-      box-shadow: 0 4px 24px rgba(27, 156, 133, 0.07);
-      border-color: #16a085;
-    }
-    .expandable-card h3 {
-      margin: 0 0 0.5em 0;
-      font-size: 1.1em;
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
       color: #222;
-      font-weight: bold;
-      pointer-events: none; /* Heading does NOT steal click from card */
+      margin: 0;
+      padding: 2rem 1rem;
+      background: #fff;
     }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height 0.4s, opacity 0.3s;
-      color: #333;
-      margin-top: 1em;
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
-    .expandable-card.open .faq-answer {
-      max-height: 400px;
-      opacity: 1;
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    p {
+      margin-bottom: 1.25rem;
     }
-    /* Links & buttons look normal and still work */
-    .expandable-card a, .expandable-card button {
-      color: #1B9C85;
-      text-decoration: underline;
-      pointer-events: auto;
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .two-col-layout {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .left-col {
+      flex: 1 1 var(--max-width);
+      max-width: var(--max-width);
+    }
+
+    .right-col {
+      flex: 1 1 var(--sidebar-width);
+      max-width: var(--sidebar-width);
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+    }
+
+    blockquote {
+      font-style: italic;
+      font-size: 1.1rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      margin: 2rem 0;
+      color: #444;
+    }
+
+    .box {
+      border: 1px solid #eee;
+      padding: 1.5rem;
+      background: #fafafa;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      margin-bottom: 1.25rem;
+      padding-left: 1.25rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .two-col-layout {
+        flex-direction: column;
+      }
+
+      .left-col, .right-col {
+        max-width: 100%;
+      }
+
+      .right-col {
+        position: relative;
+        top: auto;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="expandable-card">
-    <h3>Step 1: Entire Card Clickable</h3>
-    <p>This is a summary. <a href="https://google.com" target="_blank">External link</a> and <button>Button</button> don’t toggle.</p>
-    <div class="faq-answer">
-      <p>This is the hidden/expandable answer section. Should open/close when you click <b>anywhere else on the box</b>, not just heading.</p>
+  <div class="page-wrapper">
+    <h1>Team Workshops</h1>
+    <p>Elevate your team’s creativity, collaboration, and problem-solving skills with tailored workshops designed to unlock innovation and drive results.</p>
+
+    <div class="two-col-layout">
+      <div class="left-col">
+        <h2>Types of Workshops</h2>
+        <p>Every workshop is built around your team’s goals. Expect clarity, alignment, and outcomes you can act on.</p>
+
+        <h3>Design Thinking for Exec Teams</h3>
+        <p>Help your leadership team think creatively, solve the right problems, and stay customer-focused.</p>
+
+        <h3>Building a Design Culture</h3>
+        <p>Shift from a reactive to intentional culture. Build systems and rituals that make innovation central to how your org works.</p>
+
+        <blockquote>
+          Workshops spark momentum. They shift how teams think, work, and move forward together.
+        </blockquote>
+
+        <h2>FAQs</h2>
+        <h3>Do you offer virtual workshops?</h3>
+        <p>Yes! I offer both virtual and in-person workshops. Virtual sessions are fully interactive and designed for remote teams.</p>
+
+        <h3>What’s the ideal team size?</h3>
+        <p>5–15 people works best for hands-on engagement, but I can accommodate larger teams with adjusted formats.</p>
+      </div>
+
+      <div class="right-col">
+        <div class="box">
+          <h3>What to Expect</h3>
+          <ul>
+            <li><strong>Tailored content</strong> to your team’s goals</li>
+            <li><strong>Expert facilitation</strong> with real-world insights</li>
+            <li><strong>Actionable outcomes</strong> and tools</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Other Coaching Programs</h3>
+          <ul>
+            <li><a href="#">What's Next for Your Career</a></li>
+            <li><a href="#">Ongoing Coaching</a></li>
+            <li><a href="#">Coaching for Leaders</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-
-  <script>
-    document.querySelectorAll('.expandable-card').forEach(card => {
-      card.addEventListener('click', function(e) {
-        // Only toggle if click is NOT inside an anchor, button, or answer
-        if (
-          e.target.closest('a') ||
-          e.target.closest('button') ||
-          e.target.closest('.faq-answer')
-        ) return;
-        card.classList.toggle('open');
-      });
-    });
-  </script>
 </body>
 </html>
