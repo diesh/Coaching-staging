@@ -193,11 +193,16 @@ img {
 
 
 // for mobile
-
 @media screen and (max-width: 980px) {
+  /* Make the right column a flex stack so order works on its children */
+  .two-col-layout .right-col {
+    display: flex;
+    flex-direction: column;
+  }
 
+  /* Move only the image box to the top of right-col */
   .two-col-layout .right-col .profile-image-box {
-    order: -1;   /* move just the image block to the top */
-    margin-bottom: 2rem; /* optional spacing */
+    order: -1;
+    margin-bottom: 2rem;
   }
 }
