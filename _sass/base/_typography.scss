@@ -28,11 +28,11 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: map-get($font, 'family');
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: map-get($palette, 'fg-bold');
-  margin: 0 0 0.6em 0;
+  margin: 0 0 0.75em 0;
 }
 
 h1 { font-size: 2rem; }
@@ -49,7 +49,11 @@ h6 { font-size: 0.7rem; color: map-get($palette, 'muted'); }
 }
 
 /* Paragraphs and text */
-p { margin: 0 0 1.1rem 0; }
+p {
+  margin: 0 0 1.25rem 0;
+  max-width: 70ch;
+}
+
 small { font-size: 0.875rem; color: map-get($palette, 'muted'); }
 strong { font-weight: 700; }
 em { font-style: italic; }
@@ -316,16 +320,14 @@ a {
 /* Blockquote */
 blockquote {
   font-style: italic;
-  font-size: 1.2rem;
-  color: #666;
-  padding: 1.5em;
-  border-top: 1px solid map-get($palette, 'subtle_accent3');
-  border-bottom: 1px solid map-get($palette, 'subtle_accent3');
-  background: white;
-  max-width: 100%;
-  margin: 2em 0;
-  text-align: left;
-  clear: both;
+  font-size: 1.1rem;
+  color: #444;
+  border-left: 3px solid map-get($palette, 'subtle_accent3');
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  max-width: 65ch;
+  background: none; /* ✅ remove gray fill */
+
 
   &.left {
     float: left;
