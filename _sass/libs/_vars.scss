@@ -7,43 +7,43 @@ $misc: (
 
 // Duration.
 $duration: (
-  menu: 0.35s,
+  menu: 0.25s,
   transition: 0.2s,
-  banner: 2.5s
+  banner: 2s
 );
 
 // Size.
 $size: (
-  border-radius: 4px,
-  element-height: 2.75em,
-  element-margin: 1em,
-  inner: 65em
+  border-radius: 0,            // No rounded corners anywhere
+  element-height: 3em,         // Comfortable touch targets
+  element-margin: 1.5em,       // More breathing room between blocks
+  inner: 60em                  // ~960px max width for text readability
 );
 
 // Font.
 $font: (
-  family: (-apple-system, 'Inter', BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif), 
-  family-fixed: ('Courier New', monospace),
+  family: ('Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif),
+  family-fixed: ('JetBrains Mono', 'Courier New', monospace),
   weight: 400,
-  weight-bold: 600,
-  letter-spacing: 0.0em,
-  letter-spacing-alt: 0.25em
+  weight-bold: 700,
+  letter-spacing: 0em,
+  letter-spacing-alt: 0.05em
 );
 
 // Grid.
 $grid: (
   columns: 12,
-  gutter: 1rem
+  gutter: 1.5rem                // Wider gutters for air and balance
 );
 
 // Site config for colors and fonts.
 $config: (
   colors: (
     background: #ffffff,
-    text:       #333333,
-    heading:    #111111,
-    link:       #49518a,
-    highlight:  #ffcc00
+    text:       #222222,        // Dark gray body text
+    heading:    #111111,        // Almost black headings
+    link:       #1B9C85,        // Teal accent for links
+    highlight:  #ff7a18         // Orange for emphasis
   ),
   fonts: (
     body:    map-get($font, 'family'),
@@ -61,40 +61,33 @@ $highlight-color:  map-get(map-get($config, 'colors'), 'highlight');
 $font-body:    map-get(map-get($config, 'fonts'), 'body');
 $font-heading: map-get(map-get($config, 'fonts'), 'heading');
 
-// Palette.
+// Palette: flat, modern, no flourish
 $palette: (
-  brand-color:#687eac, // Brand color
-  nav-color:#666, // Fallback for nav color
+  brand-color:#1B9C85, // Teal
+  nav-color:#111,      // Strong dark nav
   bg: #ffffff,
-  bg-alt: #f587d6, // Dusty pink used in landing page for blog
-  fg: #e90c0c,
-  fg-bold: #2f2f2f, // Used for headings etc.
-  fg-light: rgba(244, 244, 255, 0.2),
-  border: rgba(211, 211, 211, 1), // Light Grey with full opacity
-  border-bg: rgba(212, 212, 255, 0.035),
-  highlight: $highlight-color, // Needed by _palette(highlight)
-  muted: #475569,
+  bg-alt: #fafafa,     // Neutral off-white for contrast sections
+  fg: #222,
+  fg-bold: #111,
+  fg-light: rgba(0, 0, 0, 0.5),
+  border: rgba(0, 0, 0, 0.1),   // Thin neutral borders
+  border-bg: rgba(0, 0, 0, 0.02),
+  highlight: $highlight-color,
+  muted: #64748b,               // Slate gray for meta text
 
-  
-  // accent1: #1B9C85, // Teal
-  // accent2: #FF7F50, // Coral 
-  // accent3: #8d82c4, // Lavender Blue 
-  // accent4: #ec8d81, // Soft Coral 
-  // accent5: #FFDDC1, // Warm Cream
-  // accent6: #c8dbfa, // Cool White
-
+  // Accent palette: flat, muted, no gradients
   accent1: #1B9C85,  // Persian Green  
-accent2: #CFDA90,  // Straw 
-accent3: #8F6593,  // Pomp and power
-accent4: #D5896F,  // Sienna 
-accent5: #D4B483,  // Ecru  
+  accent2: #F6C177,  // Warm sand
+  accent3: #8F6593,  // Deep lavender
+  accent4: #E1795D,  // Terracotta
+  accent5: #D4B483,  // Ecru  
 
-  spicy: #ff7a18, // Orange for goodquestion
+  spicy: #ff7a18,    // Bright orange for CTAs
 
-  subtle_accent1: #A8D5BA, // Pale Teal
-  subtle_accent2: #fad1c5, // Lighter Coral
-  subtle_accent3: #e4ddf0, // Lighter Lavender Blue
-  subtle_accent4: #f7d4cd, // Lighter Soft Coral
-  subtle_accent5: #F9E1D6, // Lighter Warm Cream
-  subtle_accent6: #D1E1FA // Lighter Cool White
+  subtle_accent1: #E6F4EF,
+  subtle_accent2: #FFF4E8,
+  subtle_accent3: #F3EDF9,
+  subtle_accent4: #FDEBE7,
+  subtle_accent5: #F9F6F1,
+  subtle_accent6: #EDF4FF
 );
