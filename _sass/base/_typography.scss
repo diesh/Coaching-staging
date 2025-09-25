@@ -411,7 +411,7 @@ main .spacer {
 .two-col-layout {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem; // tighter column spacing
+  gap: 2rem;
   align-items: flex-start;
   margin-top: 2rem;
 
@@ -421,24 +421,25 @@ main .spacer {
 }
 
 .left-col {
-  flex: 1 1 66%;
-  min-width: 300px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: calc(100% - 380px); // prevents overflow and awkward wrap
 
-  // Keep readable line lengths and left alignment
-  p,
-  h1, h2, h3, h4, h5, h6,
-  ul, ol,
-  blockquote {
+  > * {
     max-width: 70ch;
+  }
+
+  p, h1, h2, h3, h4, h5, h6,
+  ul, ol, blockquote {
     margin-left: 0;
     margin-right: auto;
   }
 }
 
 .right-col {
-  flex: 0 1 30%;
+  flex: 0 0 320px;
+  max-width: 320px;
   min-width: 280px;
-  max-width: 360px;
   position: sticky;
   top: 2rem;
   align-self: start;
