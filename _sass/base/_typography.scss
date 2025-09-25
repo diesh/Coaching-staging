@@ -226,3 +226,41 @@ blockquote {
 main .spacer {
   height: var(--header-h, 72px);
 }
+
+
+.alert-warning {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #facc15;   // amber yellow
+  background: #fffbea;
+  color: #92400e;
+  font-size: 1rem;
+  line-height: 1.6;
+
+  .icon {
+    margin-right: 0.75rem;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .content {
+    flex: 1;
+  }
+}
+
+
+.inner, .blog-post, .post-content {
+  max-width: 720px;   // readable width
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.callout,
+.alert-warning {
+  max-width: 720px;   // or whatever your text width is
+  margin: 2rem auto;  // center them with same rhythm
+}
