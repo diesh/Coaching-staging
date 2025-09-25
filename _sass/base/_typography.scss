@@ -89,6 +89,7 @@ a {
   border: 1px solid map-get($palette, 'subtle_accent3');
   background: #fff;
   font-size: 1rem;
+  width:720px;
 }
 
 /* -------------------------------------------------
@@ -261,8 +262,8 @@ main .spacer {
 
 .callout,
 .alert-warning {
-  max-width: 720px;   // or whatever your text width is
-  margin: 2rem auto;  // center them with same rhythm
+  max-width: 720px;  
+  margin: 2rem 0;  
 }
 
 
