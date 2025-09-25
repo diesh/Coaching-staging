@@ -322,11 +322,12 @@ blockquote {
   font-style: italic;
   font-size: 1.1rem;
   color: #444;
-  border-left: 3px solid map-get($palette, 'subtle_accent3');
+  border-top: 3px solid map-get($palette, 'subtle_accent3');
+  border-bottom: 3px solid map-get($palette, 'subtle_accent3');
   padding-left: 1rem;
   margin: 1.5rem 0;
   max-width: 65ch;
-  background: none; /* ✅ remove gray fill */
+  background: #CCC; /* ✅ remove gray fill */
 
 
   &.left {
