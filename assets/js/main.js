@@ -273,13 +273,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // TESTIMONIALS FADE-IN LOGIC (Robust Path Handling)
 // ----------------------------------------------
 
-function getTestimonialsPath() {
-  const pathParts = window.location.pathname.split('/').filter(Boolean);
-  const depth = pathParts.length;
-  const prefix = '../'.repeat(depth);
-  return `${prefix}assets/js/testimonials.json`;
-}
-
 function initTestimonials() {
   const containers = document.querySelectorAll('#testimonial-box');
   if (!containers.length) {
@@ -287,8 +280,15 @@ function initTestimonials() {
     return;
   }
 
-  fetch(getTestimonialsPath())
-    .then(res => res.json())
+  const fallback = '/assets/js/testimonials.json';
+  const pathAttempt = `${location.origin}${location.pathname.replace(/\/[^/]*$/, '')}/assets/js/testimonials.json`;
+
+  fetch(pathAttempt)
+    .then(res => {
+      if (!res.ok) throw new Error('Try fallback');
+      return res.json();
+    })
+    .catch(() => fetch(fallback).then(res => res.json()))
     .then(data => {
       const testimonials = data.testimonials;
       if (!testimonials || !testimonials.length) return;
@@ -296,12 +296,11 @@ function initTestimonials() {
       containers.forEach(container => {
         const count = parseInt(container.dataset.count) || 1;
         const wrapInBox = container.dataset.boxWrap === "true";
-
         injectTestimonials(container, testimonials, count, wrapInBox);
       });
     })
     .catch(err => {
-      console.warn("Failed to load testimonials:", err);
+      console.warn("Testimonials load failed:", err);
     });
 }
 
