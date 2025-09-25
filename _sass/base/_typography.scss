@@ -293,14 +293,24 @@ main .spacer {
 }
 
 /* Blog posts */
+/* Keep readable width only for wrappers */
+.inner, 
+.blog-post {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Reset post flex row */
 .post {
-  display: flex;                /* ✅ put icon + text in a row */
+  display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 1.75rem;
-  text-align: left;             /* override parent centering */
+  text-align: left; /* makes text left aligned */
 }
 
+/* Icon */
 .post .icon-small {
   flex-shrink: 0;
   margin-top: 0.25rem;
@@ -308,9 +318,12 @@ main .spacer {
   color: map-get($palette, 'brand-color');
 }
 
+/* Text block — no auto margin */
 .post-content {
-  flex: 1;                      /* text takes remaining space */
-  text-align: left;             /* keep left aligned */
+  flex: 1;
+  text-align: left;
+  margin: 0;       /* ✅ prevents auto-centering */
+  max-width: none; /* ✅ remove constraint here */
 }
 
 .post-content h3 {
