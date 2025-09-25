@@ -264,3 +264,61 @@ main .spacer {
   max-width: 720px;   // or whatever your text width is
   margin: 2rem auto;  // center them with same rhythm
 }
+
+
+
+.icon-small {
+  font-size: 1.2em;
+  color: map-get($palette, 'spicy');
+  flex-shrink: 0;
+}
+
+/* Post list separators */
+.post-link + hr {
+  border: none;
+  border-top: 1px solid map-get($palette, 'subtle_accent3');
+  width: 80%;
+  margin: 2rem auto;
+  opacity: 0.7;
+}
+.post-description a.post-title {
+  color: map-get($palette, 'fg');
+  text-decoration: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+main .spacer {
+  height: var(--header-h, 72px);
+}
+
+/* Blog posts */
+.post {
+  display: flex;                /* ✅ put icon + text in a row */
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  text-align: left;             /* override parent centering */
+}
+
+.post .icon-small {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  font-size: 1.1rem;
+  color: map-get($palette, 'brand-color');
+}
+
+.post-content {
+  flex: 1;                      /* text takes remaining space */
+  text-align: left;             /* keep left aligned */
+}
+
+.post-content h3 {
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+}
+
+.post-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: map-get($palette, 'muted');
+}
