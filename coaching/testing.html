@@ -7,134 +7,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-  :root {
-    --accent: #1B9C85;
-    --readable-width: 70ch;
-    --sidebar-width: 300px;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.65;
-    color: #222;
-    margin: 0;
-    padding: 2rem 1rem;
-    background: #fff;
-  }
-
-  h1, h2, h3 {
-    line-height: 1.2;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
-
-  p {
-    margin-bottom: 1.25rem;
-  }
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  .page-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .two-col-layout {
-    display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .left-col {
-    flex: 1 1 600px;
-    min-width: 0;
-  }
-
-  .right-col {
-    flex: 0 0 var(--sidebar-width);
-    max-width: var(--sidebar-width);
-    position: sticky;
-    top: 2rem;
-    align-self: start;
-  }
-
-  blockquote {
-    font-style: italic;
-    font-size: 1.1rem;
-    border-left: 4px solid var(--accent);
-    padding-left: 1rem;
-    margin: 2rem 0;
-    color: #444;
-  }
-
-  .box {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    background: #fafafa;
-    margin-bottom: 2rem;
-  }
-
-  ul {
-    margin-bottom: 1.25rem;
-    padding-left: 1.25rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    .two-col-layout {
-      flex-direction: column;
+    :root {
+      --accent: #1B9C85;
+      --readable-width: 70ch;
+      --sidebar-width: 300px;
     }
 
-    .left-col, .right-col {
-      max-width: 100%;
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #222;
+      margin: 0;
+      padding: 2rem 1rem;
+      background: #fff;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .two-col-layout {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .left-col {
+      flex: 1 1 600px;
+      min-width: 0;
+    }
+
+    .left-col > * {
+      max-width: var(--readable-width);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .right-col {
-      position: relative;
-      top: auto;
+      flex: 0 0 var(--sidebar-width);
+      max-width: var(--sidebar-width);
+      position: sticky;
+      top: 2rem;
+      align-self: start;
     }
-  }
 
-  /* ✅ KEY FIX: readable line length within left-col */
-  .left-col > * {
-    max-width: var(--readable-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
+    blockquote {
+      font-style: italic;
+      font-size: 1.1rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      margin: 2rem 0;
+      color: #444;
+    }
 
+    .box {
+      border: 1px solid #eee;
+      padding: 1.5rem;
+      background: #fafafa;
+      margin-bottom: 2rem;
+    }
 
-  .left-col {
-  flex: 1;
-  min-width: 0;
-}
+    ul {
+      margin-bottom: 1.25rem;
+      padding-left: 1.25rem;
+    }
 
-.left-col > *:not(h1) {
-  max-width: 70ch;
-  margin-left: auto;
-  margin-right: auto;
-}
+    @media screen and (max-width: 768px) {
+      .two-col-layout {
+        flex-direction: column;
+      }
 
+      .left-col, .right-col {
+        max-width: 100%;
+      }
 
-
-</style>
-
+      .right-col {
+        position: relative;
+        top: auto;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="page-wrapper">
-    <h1>Team Workshops</h1>
-    <p>Elevate your team’s creativity, collaboration, and problem-solving skills with tailored workshops designed to unlock innovation and drive results.</p>
-
     <div class="two-col-layout">
       <div class="left-col">
+        <h1>Team Workshops</h1>
+        <p>Elevate your team’s creativity, collaboration, and problem-solving skills with tailored workshops designed to unlock innovation and drive results.</p>
+
         <h2>Types of Workshops</h2>
         <p>Every workshop is built around your team’s goals. Expect clarity, alignment, and outcomes you can act on.</p>
 
