@@ -1,0 +1,4244 @@
+
+
+/* ---- Start of: nudesign-og copy/_sass/layout/_wrapper.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+// /* Wrapper */
+
+// 	#wrapper {
+// 		@include vendor('transition', (
+// 			'filter #{_duration(menu)} ease',
+// 			'-webkit-filter #{_duration(menu)} ease',
+// 			'opacity 0.375s ease-out'
+// 		));
+// 		padding-top: 3.25em;
+
+// 		&.is-transitioning {
+// 			opacity: 0;
+// 		}
+
+// 		> * {
+// 			@include inner;
+// 		}
+
+// 		@include breakpoint(small) {
+// 			padding-top: 3.5em;
+// 		}
+// 	}
+
+
+// 	.inner {
+//     padding: 4em 0 3em 0 ;
+//     margin: 0 auto;
+//     max-width: 60rem;
+//     width: calc(100% - 6em) !important;
+// }
+
+
+// layout/_wrapper.scss
+
+
+
+#wrapper,
+#main,
+#footer,
+#contact {
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+
+
+
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/layout/_contact.scss ---- */
+#contact {
+  border-top: solid 1px _palette(border);
+  border-bottom: solid 1px _palette(border);
+  overflow-x: hidden;
+
+  > .inner {
+    display: flex;
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0.75rem 0 0 !important; // Right pad only, left flush
+
+    // LEFT: Contact form col (hug left)
+    > :nth-child(2n-1) {
+      @include padding(4em, 0, (0, 3em, 0, 0));
+      border-right: solid 1px _palette(border);
+      width: 70%;
+      min-width: 340px;
+      max-width: 640px; // <—— LIMIT form stretch on wide screens
+      z-index: 1;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+
+    // RIGHT: Social/newsletter col
+    > :nth-child(2n) {
+      width: 30%;
+      min-width: 250px;
+      max-width: 100%;
+      padding-left: 3em;
+      box-sizing: border-box;
+
+      > * {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    }
+
+    // Special split rows
+    > .split {
+      padding: 0;
+      > * {
+        @include padding(3em, 0, (0, 0, 0, 3em));
+        position: relative;
+        &:before {
+          border-top: solid 1px _palette(border);
+          content: '';
+          display: block;
+          margin-left: -3em;
+          position: absolute;
+          top: 0;
+          width: calc(100vw + 3em);
+        }
+      }
+      > :first-child {
+        &:before { display: none; }
+      }
+    }
+  }
+
+  // Responsive: Stack cols on medium and below
+  @include breakpoint(medium) {
+    > .inner {
+      display: block;
+      padding: 0 !important;
+      > :nth-child(2n-1),
+      > :nth-child(2n) {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+      }
+      > .split {
+        > * { @include padding(3em, 0, (0, 0, 0, 0)); }
+        > :first-child { &:before { display: block; } }
+      }
+    }
+  }
+  @include breakpoint(small) {
+    > .inner {
+      padding: 0 !important;
+      > :nth-child(2n-1) {
+        @include padding(3em, 0, (0, 0, 0, 0));
+      }
+    }
+  }
+
+  /* Form flush left inside left col */
+  form {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+
+#contact .inner,
+#footer .inner {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+
+}
+
+#contact > .inner {
+  position: relative;
+}
+
+
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/layout/_menu.scss ---- */
+/* _menu.scss — desktop unchanged, pure CSS mobile nav, no dropdown arrow */
+
+/* hide checkbox */
+#menu-btn {
+  position: absolute !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* hide hamburger by default */
+.menu-icon {
+  display: none;
+}
+
+/* bars */
+.menu-icon .navicon,
+.menu-icon .navicon::before,
+.menu-icon .navicon::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-icon .navicon::before {
+  position: absolute;
+  top: -7px;
+  left: 0;
+}
+
+.menu-icon .navicon::after {
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+/* mobile */
+@media (max-width: 1100px) {
+  .menu-icon {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 2000;
+    display: block;
+  }
+
+  #menu-btn:checked + .menu-icon .navicon {
+    background: transparent;
+  }
+
+  #menu-btn:checked + .menu-icon .navicon::before {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  #menu-btn:checked + .menu-icon .navicon::after {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  #nav-menu {
+    position: fixed !important;
+    top: 64px;
+    right: 0;
+    left: auto !important;
+    width: 200px;
+    max-width: 92vw;
+    background: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 12px 18px;
+    display: none !important;
+    flex-direction: column;
+    z-index: 1999;
+  }
+
+  #menu-btn:checked ~ nav #nav-menu {
+    display: flex !important;
+  }
+
+  #nav-menu li {
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  #nav-menu a {
+    display: inline-block;
+    position: relative;
+    padding: 0 18px 0 0;
+    text-decoration: none;
+  }
+
+  #nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.85;
+    transition: width 0.18s;
+  }
+
+  #nav-menu a:hover::after,
+  #nav-menu a:focus-visible::after,
+  #nav-menu a.active::after {
+    width: 100%;
+  }
+
+  #nav-menu a.active {
+    color: var(--brand-color);
+    font-weight: 600;
+  }
+}
+
+/* desktop */
+@media (min-width: 1101px) {
+  .menu-icon {
+    display: none !important;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    position: static !important;
+  }
+
+  #nav-menu a {
+    position: relative;
+    text-decoration: none;
+  }
+
+  #nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.85;
+    transition: width 0.18s;
+  }
+
+  #nav-menu a:hover::after,
+  #nav-menu a:focus-visible::after,
+  #nav-menu a.active::after {
+    width: 100%;
+  }
+
+  #nav-menu a.active {
+    color: var(--brand-color);
+    font-weight: 600;
+  }
+}
+
+/* --------------------------------------------------
+   Navigation
+-------------------------------------------------- */
+#main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+#main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+}
+
+#main-nav a.active {
+  border-bottom: none;
+}
+
+#main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0rem;
+  height: 3px;
+  background: var(--nav-color);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#main-nav a:hover::after,
+#main-nav a.active::after {
+  opacity: 1;
+}
+
+#nav-menu .contact-link::after {
+  color: #ccc;
+  height: 1px;
+  opacity: 0.4;
+}
+
+/* --------------------------------------------------
+   Mobile Nav Toggle (<= medium)
+-------------------------------------------------- */
+@include breakpoint(medium) {
+  .menu-icon { display: block; cursor: pointer; }
+  #menu-btn {
+    position: absolute;
+    width: var(--header-h);
+    height: var(--header-h);
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1001;
+    top: 0; right: 0;
+  }
+  #nav-menu {
+    display: none;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  #menu-btn:checked ~ nav #nav-menu {
+    display: flex;
+  }
+  #nav-menu a {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1;
+    text-align: left;
+    color: #111;
+  }
+  #nav-menu a + a {
+    border-top: 1px solid #e5e5e5;
+  }
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/layout/_banner.scss ---- */
+$header-h: 72px !default;
+
+/* ==========================================================================
+   BANNER / HERO – Base
+   ========================================================================== */
+#banner {
+  background-color: #6d6f85;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  height: calc(100vh - var(--header-h, 72px));
+  max-height: 800px;
+  padding: 6rem 1.25rem 2.5rem;
+  z-index: 1;
+}
+
+/* 1. Background image fades first */
+#banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/Gagan_Diesh_.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0;
+}
+#banner.is-hero-loaded::before { opacity: 1; }
+
+/* 2. Shared fade sequence for heading, tagline, and button */
+#banner .hero-display,
+#banner .hero-tagline,
+#banner .masthead_button {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+#banner.is-hero-loaded .hero-display   { opacity: 1; transition-delay: 0.4s; }
+#banner.is-hero-loaded .hero-tagline   { opacity: 1; transition-delay: 1s; }
+#banner.is-hero-loaded .masthead_button{ opacity: 1; transition-delay: 1.5s; }
+
+#banner .inner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  text-align: left;
+}
+
+/* no-banner pages */
+/* Add spacing when there’s no masthead/banner */
+
+.no-banner {
+  padding-top: var(--header-h, 72px); /* matches sticky nav height */
+  
+}
+
+
+#banner .hero-wrap {
+  max-width: 40ch;
+  @include breakpoint(large)   { max-width: 48ch; }
+  @include breakpoint(xlarge)  { max-width: 56ch; }
+  @include breakpoint(xxlarge) { max-width: 66ch; }
+}
+
+.hero-display {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.75rem;
+  white-space: normal;
+  
+
+  @include breakpoint(medium)  { font-size: 2rem; }
+  @include breakpoint(large)   { font-size: 4.3rem; }
+  @include breakpoint(xlarge)  { font-size: 5rem;   }
+  @include breakpoint(xxlarge) { font-size: 5.4rem; }
+}
+.hero-tagline {
+  font: 400 1.5rem/1.4 'Inter', sans-serif;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  white-space: normal;
+  max-width: 44ch;
+  @include breakpoint(large)   { font-size: 1.6rem; }
+  @include breakpoint(xlarge)  { font-size: 1.75rem; }
+}
+
+/* ==========================================================================
+   Good Question landing – smaller type, same fade order
+   ========================================================================== */
+/* ==========================================================================
+   Good Question landing – same fade sequence as home
+   ========================================================================== */
+#banner.goodquestion-landing {
+  min-height: 480px;
+  height: auto;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  &::before {
+    background-image: url("../images/goodquestion-cover.jpg");
+    background-size: cover;
+    background-position: center top;
+  }
+
+  & .hero-display {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  gap: 0.3em;        
+  align-items: center;  
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.75rem;
+  white-space: normal;
+  
+  
+  @include breakpoint(medium)  { font-size: 2rem; }
+  @include breakpoint(large)   { font-size: 3rem; }
+  @include breakpoint(xlarge)  { font-size: 3.5rem;   }
+  @include breakpoint(xxlarge) { font-size: 3rem; }
+}
+ & .hero-icon {
+  flex-shrink: 0;           /* Prevent icon from shrinking */
+}
+
+.hero-tagline {
+  font: 300 1.5rem/1.4 'Inter', sans-serif;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  white-space: normal;
+  max-width: 33ch;
+  @include breakpoint(large)   { font-size: 1.6rem; }
+  @include breakpoint(xlarge)  { font-size: 1.75rem; }
+}
+
+}
+
+/* --- Sequential fade for Good Question --- */
+/* Start hidden just like home page */
+#banner.goodquestion-landing .hero-display,
+#banner.goodquestion-landing .hero-tagline {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Fade in using the same trigger class */
+#banner.goodquestion-landing.is-hero-loaded .hero-display {
+  opacity: 1;
+  transition-delay: 0.4s;   /* heading */
+}
+#banner.goodquestion-landing.is-hero-loaded .hero-tagline {
+  opacity: 1;
+  transition-delay: 1s;     /* tagline */
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/layout/_footer.scss ---- */
+#footer .footer-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: none;   // let it span full inner width
+  margin: 0;         // no auto centering
+}
+
+
+#footer .footer-col {
+  flex: 1 1 0 !important;   // equal columns
+  min-width: 200px;
+}
+
+#footer .footer-col h4 {
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  font-weight: bold;
+}
+
+#footer .footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer .footer-col li {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* Mobile fallback */
+@media screen and (max-width: 600px) {
+  #footer .footer-cols {
+    flex-direction: column !important;
+  }
+}
+
+#footer .footer-col { flex: 1 1 0; min-width: 200px; }
+
+
+/* ---- Start of: nudesign-og copy/_sass/layout/_header.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+#main {
+  background-color: #FFF;
+
+  > * {
+    border-top: solid 0px _palette(border);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    @include inner;
+  }
+
+  &.alt {
+    background-color: transparent;
+    border-bottom: 0px;
+  }
+}
+
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/libs/_functions.scss ---- */
+/// Gets a duration value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _duration($keys...) {
+	@return val($duration, $keys...);
+}
+
+/// Gets a font value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _font($keys...) {
+	@return val($font, $keys...);
+}
+
+/// Gets a misc value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _misc($keys...) {
+	@return val($misc, $keys...);
+}
+
+/// Gets a palette value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _palette($keys...) {
+	@return val($palette, $keys...);
+}
+
+/// Gets a size value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _size($keys...) {
+	@return val($size, $keys...);
+}
+
+
+/* ---- Start of: nudesign-og copy/_sass/libs/_vars.scss ---- */
+// File: _sass/libs/_vars.scss
+
+// Misc.
+$misc: (
+  z-index-base: 10000
+);
+
+// Duration.
+$duration: (
+  menu: 0.25s,
+  transition: 0.2s,
+  banner: 2s
+);
+
+// Size.
+$size: (
+  border-radius: 0,            // No rounded corners anywhere
+  element-height: 3em,         // Comfortable touch targets
+  element-margin: 1.5em,       // More breathing room between blocks
+  inner: 60em                  // ~960px max width for text readability
+);
+
+// Font.
+$font: (
+  family: ('Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif),
+  family-fixed: ('JetBrains Mono', 'Courier New', monospace),
+  weight: 400,
+  weight-bold: 700,
+  letter-spacing: 0em,
+  letter-spacing-alt: 0.05em
+);
+
+// Grid.
+$grid: (
+  columns: 12,
+  gutter: 1.5rem                // Wider gutters for air and balance
+);
+
+// Site config for colors and fonts.
+$config: (
+  colors: (
+    background: #ffffff,
+    text:       #242424,        // Dark gray body text
+    heading:    #222222,        // Almost black headings
+    link:       #8892d6,        // blue links
+    highlight:  #ff7a18         // Orange for emphasis
+  ),
+  fonts: (
+    body:    map-get($font, 'family'),
+    heading: map-get($font, 'family')
+  )
+);
+
+// Derived variables
+$background-color: map-get(map-get($config, 'colors'), 'background');
+$text-color:       map-get(map-get($config, 'colors'), 'text');
+$heading-color:    map-get(map-get($config, 'colors'), 'heading');
+$link-color:       map-get(map-get($config, 'colors'), 'link');
+$highlight-color:  map-get(map-get($config, 'colors'), 'highlight');
+
+$font-body:    map-get(map-get($config, 'fonts'), 'body');
+$font-heading: map-get(map-get($config, 'fonts'), 'heading');
+
+// Palette: flat, modern, no flourish
+$palette: (
+  brand-color:#1B9C85, // Teal
+  nav-color:#111,      // Strong dark nav
+  bg: #ffffff,
+  bg-alt: #fafafa,     // Neutral off-white for contrast sections
+  fg: #222,
+  fg-bold: #111,
+  fg-light: rgba(0, 0, 0, 0.5),
+  border: rgba(0, 0, 0, 0.1),   // Thin neutral borders
+  border-bg: rgba(0, 0, 0, 0.02),
+  highlight: $highlight-color,
+  muted: #64748b,               // Slate gray for meta text
+
+  // Accent palette: flat, muted, no gradients
+  accent1: #1B9C85,  // Persian Green  
+  accent2: #F6C177,  // Warm sand
+  accent3: #8F6593,  // Deep lavender
+  accent4: #E1795D,  // Terracotta
+  accent5: #D4B483,  // Ecru  
+
+  spicy: #ff7a18,    // Bright orange for CTAs
+
+  subtle_accent1: #E6F4EF,
+  subtle_accent2: #FFF4E8,
+  subtle_accent3: #F3EDF9,
+  subtle_accent4: #FDEBE7,
+  subtle_accent5: #F9F6F1,
+  subtle_accent6: #EDF4FF
+);
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/libs/_skel.scss ---- */
+// skel.scss v3.0.1 | (c) skel.io | MIT licensed */
+
+// Vars.
+
+	/// Breakpoints.
+	/// @var {list}
+	$breakpoints: null;
+	$breakpoints: () !global;
+
+	/// Vendor prefixes.
+	/// @var {list}
+	$vendor-prefixes: (
+		'-moz-',
+		'-webkit-',
+		'-ms-',
+		''
+	);
+
+	/// Properties that should be vendorized.
+	/// @var {list}
+	$vendor-properties: (
+		'align-content',
+		'align-items',
+		'align-self',
+		'animation',
+		'animation-delay',
+		'animation-direction',
+		'animation-duration',
+		'animation-fill-mode',
+		'animation-iteration-count',
+		'animation-name',
+		'animation-play-state',
+		'animation-timing-function',
+		'appearance',
+		'backface-visibility',
+		'box-sizing',
+		'filter',
+		'flex',
+		'flex-basis',
+		'flex-direction',
+		'flex-flow',
+		'flex-grow',
+		'flex-shrink',
+		'flex-wrap',
+		'justify-content',
+		'order',
+		'perspective',
+		'pointer-events',
+		'transform',
+		'transform-origin',
+		'transform-style',
+		'transition',
+		'transition-delay',
+		'transition-duration',
+		'transition-property',
+		'transition-timing-function',
+		'user-select'
+	);
+
+	/// Values that should be vendorized.
+	/// @var {list}
+	$vendor-values: (
+		'filter',
+		'flex',
+		'linear-gradient',
+		'radial-gradient',
+		'transform'
+	);
+
+// Functions.
+
+	/// Removes a specific item from a list.
+	/// @author Hugo Giraudel
+	/// @param {list} $list List.
+	/// @param {integer} $index Index.
+	/// @return {list} Updated list.
+	@function remove-nth($list, $index) {
+
+		$result: null;
+
+		@if type-of($index) != number {
+			@warn "$index: #{quote($index)} is not a number for `remove-nth`.";
+		}
+		@else if $index == 0 {
+			@warn "List index 0 must be a non-zero integer for `remove-nth`.";
+		}
+		@else if abs($index) > length($list) {
+			@warn "List index is #{$index} but list is only #{length($list)} item long for `remove-nth`.";
+		}
+		@else {
+
+			$result: ();
+			$index: if($index < 0, length($list) + $index + 1, $index);
+
+			@for $i from 1 through length($list) {
+
+				@if $i != $index {
+					$result: append($result, nth($list, $i));
+				}
+
+			}
+
+		}
+
+		@return $result;
+
+	}
+
+	/// Replaces a substring within another string.
+	/// @author Hugo Giraudel
+	/// @param {string} $string String.
+	/// @param {string} $search Substring.
+	/// @param {string} $replace Replacement.
+	/// @return {string} Updated string.
+	@function str-replace($string, $search, $replace: '') {
+
+		$index: str-index($string, $search);
+
+		@if $index {
+			@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+		}
+
+		@return $string;
+
+	}
+
+	/// Replaces a substring within each string in a list.
+	/// @param {list} $strings List of strings.
+	/// @param {string} $search Substring.
+	/// @param {string} $replace Replacement.
+	/// @return {list} Updated list of strings.
+	@function str-replace-all($strings, $search, $replace: '') {
+
+		@each $string in $strings {
+			$strings: set-nth($strings, index($strings, $string), str-replace($string, $search, $replace));
+		}
+
+		@return $strings;
+
+	}
+
+	/// Gets a value from a map.
+	/// @author Hugo Giraudel
+	/// @param {map} $map Map.
+	/// @param {string} $keys Key(s).
+	/// @return {string} Value.
+	@function val($map, $keys...) {
+
+		@if nth($keys, 1) == null {
+			$keys: remove-nth($keys, 1);
+		}
+
+		@each $key in $keys {
+			$map: map-get($map, $key);
+		}
+
+		@return $map;
+
+	}
+
+// Mixins.
+
+	/// Sets the global box model.
+	/// @param {string} $model Model (default is content).
+	@mixin boxModel($model: 'content') {
+
+		$x: $model + '-box';
+
+		*, *:before, *:after {
+			-moz-box-sizing: #{$x};
+			-webkit-box-sizing: #{$x};
+			box-sizing: #{$x};
+		}
+
+	}
+
+	/// Wraps @content in a @media block using a given breakpoint.
+	/// @param {string} $breakpoint Breakpoint.
+	/// @param {map} $queries Additional queries.
+	@mixin breakpoint($breakpoint: null, $queries: null) {
+
+		$query: 'screen';
+
+		// Breakpoint.
+			@if $breakpoint and map-has-key($breakpoints, $breakpoint) {
+				$query: $query + ' and ' + map-get($breakpoints, $breakpoint);
+			}
+
+		// Queries.
+			@if $queries {
+				@each $k, $v in $queries {
+					$query: $query + ' and (' + $k + ':' + $v + ')';
+				}
+			}
+
+        @media #{$query} {
+            @content;
+        }
+
+	}
+
+	/// Wraps @content in a @media block targeting a specific orientation.
+	/// @param {string} $orientation Orientation.
+	@mixin orientation($orientation) {
+		@media screen and (orientation: #{$orientation}) {
+			@content;
+		}
+	}
+
+	/// Utility mixin for containers.
+	/// @param {mixed} $width Width.
+	@mixin containers($width) {
+
+		// Locked?
+			$lock: false;
+
+			@if length($width) == 2 {
+				$width: nth($width, 1);
+				$lock: true;
+			}
+
+		// Modifiers.
+			.container.\31 25\25		{ width: 100%; max-width: $width * 1.25; min-width: $width; }
+			.container.\37 5\25			{ width: $width * 0.75; }
+			.container.\35 0\25			{ width: $width * 0.5; }
+			.container.\32 5\25			{ width: $width * 0.25; }
+
+		// Main class.
+			.container {
+				@if $lock {
+					width: $width !important;
+				}
+				@else {
+					width: $width;
+				}
+			}
+
+	}
+
+	/// Utility mixin for grid.
+	/// @param {list} $gutters Column and row gutters (default is 40px).
+	/// @param {string} $breakpointName Optional breakpoint name.
+	@mixin grid($gutters: 40px, $breakpointName: null) {
+
+		// Gutters.
+			@include grid-gutters($gutters);
+			@include grid-gutters($gutters, \32 00\25, 2);
+			@include grid-gutters($gutters, \31 50\25, 1.5);
+			@include grid-gutters($gutters, \35 0\25, 0.5);
+			@include grid-gutters($gutters, \32 5\25, 0.25);
+
+		// Cells.
+			$x: '';
+
+			@if $breakpointName {
+				$x: '\\28' + $breakpointName + '\\29';
+			}
+
+			.\31 2u#{$x}, .\31 2u\24#{$x} { width: 100%; clear: none; margin-left: 0; }
+			.\31 1u#{$x}, .\31 1u\24#{$x} { width: 91.6666666667%; clear: none; margin-left: 0; }
+			.\31 0u#{$x}, .\31 0u\24#{$x} { width: 83.3333333333%; clear: none; margin-left: 0; }
+			.\39 u#{$x}, .\39 u\24#{$x} { width: 75%; clear: none; margin-left: 0; }
+			.\38 u#{$x}, .\38 u\24#{$x} { width: 66.6666666667%; clear: none; margin-left: 0; }
+			.\37 u#{$x}, .\37 u\24#{$x} { width: 58.3333333333%; clear: none; margin-left: 0; }
+			.\36 u#{$x}, .\36 u\24#{$x} { width: 50%; clear: none; margin-left: 0; }
+			.\35 u#{$x}, .\35 u\24#{$x} { width: 41.6666666667%; clear: none; margin-left: 0; }
+			.\34 u#{$x}, .\34 u\24#{$x} { width: 33.3333333333%; clear: none; margin-left: 0; }
+			.\33 u#{$x}, .\33 u\24#{$x} { width: 25%; clear: none; margin-left: 0; }
+			.\32 u#{$x}, .\32 u\24#{$x} { width: 16.6666666667%; clear: none; margin-left: 0; }
+			.\31 u#{$x}, .\31 u\24#{$x} { width: 8.3333333333%; clear: none; margin-left: 0; }
+
+			.\31 2u\24#{$x} + *,
+			.\31 1u\24#{$x} + *,
+			.\31 0u\24#{$x} + *,
+			.\39 u\24#{$x} + *,
+			.\38 u\24#{$x} + *,
+			.\37 u\24#{$x} + *,
+			.\36 u\24#{$x} + *,
+			.\35 u\24#{$x} + *,
+			.\34 u\24#{$x} + *,
+			.\33 u\24#{$x} + *,
+			.\32 u\24#{$x} + *,
+			.\31 u\24#{$x} + * {
+				clear: left;
+			}
+
+			.\-11u#{$x} { margin-left: 91.6666666667% }
+			.\-10u#{$x} { margin-left: 83.3333333333% }
+			.\-9u#{$x} { margin-left: 75% }
+			.\-8u#{$x} { margin-left: 66.6666666667% }
+			.\-7u#{$x} { margin-left: 58.3333333333% }
+			.\-6u#{$x} { margin-left: 50% }
+			.\-5u#{$x} { margin-left: 41.6666666667% }
+			.\-4u#{$x} { margin-left: 33.3333333333% }
+			.\-3u#{$x} { margin-left: 25% }
+			.\-2u#{$x} { margin-left: 16.6666666667% }
+			.\-1u#{$x} { margin-left: 8.3333333333% }
+
+	}
+
+	/// Utility mixin for grid.
+	/// @param {list} $gutters Gutters.
+	/// @param {string} $class Optional class name.
+	/// @param {integer} $multiplier Multiplier (default is 1).
+	@mixin grid-gutters($gutters, $class: null, $multiplier: 1) {
+
+		// Expand gutters if it's not a list.
+			@if length($gutters) == 1 {
+				$gutters: ($gutters, 0);
+			}
+
+		// Get column and row gutter values.
+			$c: nth($gutters, 1);
+			$r: nth($gutters, 2);
+
+		// Get class (if provided).
+			$x: '';
+
+			@if $class {
+				$x: '.' + $class;
+			}
+
+		// Default.
+			.row#{$x} > * { padding: ($r * $multiplier) 0 0 ($c * $multiplier); }
+			.row#{$x} { margin: ($r * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
+
+		// Uniform.
+			.row.uniform#{$x} > * { padding: ($c * $multiplier) 0 0 ($c * $multiplier); }
+			.row.uniform#{$x} { margin: ($c * $multiplier * -1) 0 -1px ($c * $multiplier * -1); }
+
+	}
+
+	/// Wraps @content in vendorized keyframe blocks.
+	/// @param {string} $name Name.
+	@mixin keyframes($name) {
+
+		@-moz-keyframes #{$name} { @content; }
+		@-webkit-keyframes #{$name} { @content; }
+		@-ms-keyframes #{$name} { @content; }
+		@keyframes #{$name} { @content; }
+
+	}
+
+	///
+	/// Sets breakpoints.
+	/// @param {map} $x Breakpoints.
+	///
+	@mixin skel-breakpoints($x: ()) {
+		$breakpoints: $x !global;
+	}
+
+	///
+	/// Initializes layout module.
+	/// @param {map} config Config.
+	///
+	@mixin skel-layout($config: ()) {
+
+		// Config.
+			$configPerBreakpoint: ();
+
+			$z: map-get($config, 'breakpoints');
+
+			@if $z {
+				$configPerBreakpoint: $z;
+			}
+
+		// Reset.
+			$x: map-get($config, 'reset');
+
+			@if $x {
+
+				/* Reset */
+
+				@include reset($x);
+
+			}
+
+		// Box model.
+			$x: map-get($config, 'boxModel');
+
+			@if $x {
+
+				/* Box Model */
+
+				@include boxModel($x);
+
+			}
+
+		// Containers.
+			$containers: map-get($config, 'containers');
+
+			@if $containers {
+
+				/* Containers */
+
+				.container {
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				// Use default is $containers is just "true".
+					@if $containers == true {
+						$containers: 960px;
+					}
+
+				// Apply base.
+					@include containers($containers);
+
+				// Apply per-breakpoint.
+					@each $name in map-keys($breakpoints) {
+
+						// Get/use breakpoint setting if it exists.
+							$x: map-get($configPerBreakpoint, $name);
+
+							// Per-breakpoint config exists?
+								@if $x {
+									$y: map-get($x, 'containers');
+
+									// Setting exists? Use it.
+										@if $y {
+											$containers: $y;
+										}
+
+								}
+
+						// Create @media block.
+							@media screen and #{map-get($breakpoints, $name)} {
+								@include containers($containers);
+							}
+
+					}
+
+			}
+
+		// Grid.
+			$grid: map-get($config, 'grid');
+
+			@if $grid {
+
+				/* Grid */
+
+				// Use defaults if $grid is just "true".
+					@if $grid == true {
+						$grid: ();
+					}
+
+				// Sub-setting: Gutters.
+					$grid-gutters: 40px;
+					$x: map-get($grid, 'gutters');
+
+					@if $x {
+						$grid-gutters: $x;
+					}
+
+				// Rows.
+					.row {
+						border-bottom: solid 1px transparent;
+						-moz-box-sizing: border-box;
+						-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+					}
+
+					.row > * {
+						float: left;
+						-moz-box-sizing: border-box;
+						-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+					}
+
+					.row:after, .row:before {
+						content: '';
+						display: block;
+						clear: both;
+						height: 0;
+					}
+
+					.row.uniform > * > :first-child {
+						margin-top: 0;
+					}
+
+					.row.uniform > * > :last-child {
+						margin-bottom: 0;
+					}
+
+				// Gutters (0%).
+					@include grid-gutters($grid-gutters, \30 \25, 0);
+
+				// Apply base.
+					@include grid($grid-gutters);
+
+				// Apply per-breakpoint.
+					@each $name in map-keys($breakpoints) {
+
+						// Get/use breakpoint setting if it exists.
+							$x: map-get($configPerBreakpoint, $name);
+
+							// Per-breakpoint config exists?
+								@if $x {
+									$y: map-get($x, 'grid');
+
+									// Setting exists?
+										@if $y {
+
+											// Sub-setting: Gutters.
+												$x: map-get($y, 'gutters');
+
+												@if $x {
+													$grid-gutters: $x;
+												}
+
+										}
+
+								}
+
+						// Create @media block.
+							@media screen and #{map-get($breakpoints, $name)} {
+								@include grid($grid-gutters, $name);
+							}
+
+					}
+
+			}
+
+	}
+
+	/// Resets browser styles.
+	/// @param {string} $mode Mode (default is 'normalize').
+	@mixin reset($mode: 'normalize') {
+
+		@if $mode == 'normalize' {
+
+			// normalize.css v3.0.2 | MIT License | git.io/normalize
+				html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+		}
+		@else if $mode == 'full' {
+
+			// meyerweb.com/eric/tools/css/reset v2.0 | 20110126 | License: none (public domain)
+				html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}body{-webkit-text-size-adjust:none}
+
+		}
+
+	}
+
+	/// Vendorizes a declaration's property and/or value(s).
+	/// @param {string} $property Property.
+	/// @param {mixed} $value String/list of value(s).
+	@mixin vendor($property, $value) {
+
+		// Determine if property should expand.
+			$expandProperty: index($vendor-properties, $property);
+
+		// Determine if value should expand (and if so, add '-prefix-' placeholder).
+			$expandValue: false;
+
+			@each $x in $value {
+				@each $y in $vendor-values {
+					@if $y == str-slice($x, 1, str-length($y)) {
+
+						$value: set-nth($value, index($value, $x), '-prefix-' + $x);
+						$expandValue: true;
+
+					}
+				}
+			}
+
+		// Expand property?
+			@if $expandProperty {
+			    @each $vendor in $vendor-prefixes {
+			        #{$vendor}#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+			    }
+			}
+
+		// Expand just the value?
+			@elseif $expandValue {
+			    @each $vendor in $vendor-prefixes {
+			        #{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
+			    }
+			}
+
+		// Neither? Treat them as a normal declaration.
+			@else {
+		        #{$property}: #{$value};
+			}
+
+	}
+
+
+/* ---- Start of: nudesign-og copy/_sass/libs/_mixins.scss ---- */
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin icon($content: false, $where: before) {
+
+	text-decoration: none;
+
+	&:#{$where} {
+
+		@if $content {
+			content: $content;
+		}
+
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+
+	}
+
+}
+
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
+
+	@if $important {
+		$important: '!important';
+	}
+
+	padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
+}
+
+/// Encodes a SVG data URL so IE doesn't choke (via codepen.io/jakob-e/pen/YXXBrp).
+/// @param {string} $svg SVG data URL.
+/// @return {string} Encoded SVG data URL.
+@function svg-url($svg) {
+
+	$svg: str-replace($svg, '"', '\'');
+	$svg: str-replace($svg, '<', '%3C');
+	$svg: str-replace($svg, '>', '%3E');
+	$svg: str-replace($svg, '&', '%26');
+	$svg: str-replace($svg, '#', '%23');
+	$svg: str-replace($svg, '{', '%7B');
+	$svg: str-replace($svg, '}', '%7D');
+	$svg: str-replace($svg, ';', '%3B');
+
+	@return url("data:image/svg+xml;charset=utf8,#{$svg}");
+
+}
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_contact-method.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Contact Method */
+
+	.contact-method {
+		margin: 0 0 _size(element-margin) 0;
+		padding-left: 3.25em;
+		position: relative;
+
+		.icon {
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+
+		h3 {
+			margin: 0 0 (_size(element-margin) * 0.25) 0;
+		}
+	}
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_tiles.scss ---- */
+// ✅ FULLY UPDATED _tiles.scss
+// Includes:
+// - Full width on small screens
+// - Respect for top nav height
+// - Proper horizontal padding
+// - Animated borders retained
+// - Left border stripe always visible (20px)
+// - Hover draws a border of the same thickness around
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: var(--header-h, 72px); // space below sticky nav
+  padding-top: 0rem;     // space between nav and grid
+  padding-bottom: 4rem;  // space before footer
+  padding-left: 0;
+  padding-right: 0;
+
+  article {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    padding: 4em 3em 2em;
+    width: calc(50% - 1rem);
+    min-height: 18em;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: map-get($font, primary);
+    font-size: map-get($size, base);
+    line-height: map-get($size, line-height);
+    z-index: 0; // establish stacking context
+
+    header, h3, p,
+    .tile-inner,
+    .tile-image img {
+      position: relative;
+      z-index: 2; // keep content above borders
+      margin: 0 0 1em;
+    }
+
+    .tile-inner {
+      width: 100%;
+    }
+
+    .tile-image img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 1.5;
+      object-fit: cover;
+      margin-bottom: 1.5em;
+      flex-shrink: 0;
+    }
+
+    /* Persistent left border */
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-left: 20px solid inherit; // solid accent border
+      z-index: 1;
+      opacity: 0.3; // subtle, like OG
+    }
+
+    /* Animated full border (hover) */
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 20px solid inherit; // same thickness as left stripe
+      z-index: 1;
+      opacity: 0;
+      pointer-events: none;
+      clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+    }
+
+    &:hover::after {
+      opacity: 1;
+      animation: draw-border 0.5s ease forwards;
+    }
+
+
+  //   accent1: #1B9C85, // Teal
+  // accent2: #FF7F50, // Coral 
+  // accent3: #8d82c4, // Lavender Blue 
+  // accent4: #ec8d81, // Soft Coral 
+  // accent5: #FFDDC1, // Warm Cream
+  // accent6: #c8dbfa, // Cool White
+
+    /* Accent colors */
+    &:nth-child(6n - 5)::before,
+    &:nth-child(6n - 5)::after { border-color: _palette(accent1); }
+    &:nth-child(6n - 4)::before,
+    &:nth-child(6n - 4)::after { border-color: _palette(accent2); }
+    &:nth-child(6n - 3)::before,
+    &:nth-child(6n - 3)::after { border-color: _palette(accent3); }
+    &:nth-child(6n - 2)::before,
+    &:nth-child(6n - 2)::after { border-color: _palette(accent4); }
+    &:nth-child(6n - 1)::before,
+    &:nth-child(6n - 1)::after { border-color: _palette(accent2); }
+    &:nth-child(6n)::before,
+    &:nth-child(6n)::after     { border-color: _palette(accent6); }
+
+    .link.primary {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      display: block;
+      border: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    article {
+      width: 100%;
+      min-height: 0;
+      padding: 4em 3em 2em;
+    }
+  }
+}
+
+/* Border draw animation */
+@keyframes draw-border {
+  0%   { clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }
+  25%  { clip-path: polygon(0% 100%, 0% 0%, 0% 0%, 0% 0%); }
+  50%  { clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 0%); }
+  75%  { clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%); }
+  100% { clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%); }
+}
+
+/* Coaching/Home padding overrides */
+body.coaching .tiles,
+main.coaching .tiles {
+  padding-top: 4rem;
+}
+
+body.home .tiles,
+main.home .tiles {
+  padding-top: 0;
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_image.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Image */
+
+img {
+	max-width: 100%;
+}
+
+.image {
+	border: 0;
+	display: inline-block;
+	position: relative;
+
+	img {
+		display: block;
+	}
+
+	&.left,
+	&.right {
+		max-width: 30%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&.left {
+		float: left;
+		margin: 0 1.5em 1.25em 0;
+		top: 0.25em;
+	}
+
+	&.right {
+		float: right;
+		margin: 0 0 1.25em 1.5em;
+		top: 0.25em;
+	}
+
+	&.fit {
+		display: block;
+		margin: 0 0 _size(element-margin) 0;
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&.main {
+		display: block;
+		margin: (_size(element-margin) * 1.25) 0;
+		width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-height: 625px;
+			object-position: left;
+			object-fit: contain; // ensures image scales proportionally without cropping
+		}
+
+		@include breakpoint(small) {
+			margin: (_size(element-margin) * 0.75) 0;
+		}
+	}
+}
+
+.brandimage_masthead {
+	display: block;
+	width: 100%;
+	position: relative;
+	padding-top: var(--header-h);
+	margin-bottom: 2rem;
+	min-height: 300px; // bump height for better visibility
+	overflow: hidden;
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+
+
+	@include breakpoint(small) {
+		padding-top: calc(var(--header-h) + 1rem);
+	}
+
+	// Color wash overlay
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: var(--nav-color);
+		opacity: 0.3;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	// Solid top bar
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 5rem;
+		width: 100%;
+		background: var(--nav-color);
+		z-index: 3;
+		pointer-events: none;
+	}
+}
+
+.brandimage_masthead {
+  min-height: 300px;
+
+  @include breakpoint(xlarge) {
+    min-height: 450px;
+  }
+
+  @include breakpoint(xxlarge) {
+    min-height: 550px;
+  }
+}
+
+
+// about page image and smiley //
+
+.profile-image-wrapper {
+  position: relative;
+  border: 1px solid #c789af;
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .smiley-overlay {
+    position: absolute;
+    bottom: -40px;  
+    right: -40px;   
+    width: 90px;
+    height: 90px;
+    transform: rotate(-30deg) scale(1);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+    z-index: 2;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      animation: mobileBoop 1s ease-out 1.5s forwards;
+    }
+
+    @keyframes mobileBoop {
+      0%   { transform: rotate(-30deg) scale(1); }
+      50%  { transform: rotate(10deg) scale(1.4); }
+      100% { transform: rotate(-30deg) scale(1); }
+    }
+  }
+
+  &:hover .smiley-overlay {
+    transform: rotate(10deg) scale(1.4); // Bigger boop effect
+  }
+}
+
+.smiley {
+  .eye {
+    fill: map-get($palette, 'spicy');
+  }
+
+  .smile {
+    stroke: map-get($palette, 'spicy');
+    fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+}
+.profile-image-box {
+  margin-top: var(--header-h, 72px); // ensures space below sticky nav
+  margin-bottom: 3rem;              // adds breathing room before next box
+}
+
+
+// for mobile
+.mobile-only { display: none; }
+@media screen and (max-width: 980px) {
+  .mobile-only { display: block; margin-bottom: 2rem; }
+  .right-col .profile-image-box { display: none; }
+}
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_button.scss ---- */
+
+/* Homepage masthead button styling */
+/* ---- Global brand colour variable ---- */
+:root {
+  --brand-color: #2f66ff;           /* adjust to your brand blue */
+  --brand-color-hover: #1d4ed8;     /* slightly darker on hover */
+}
+
+/* ---- Masthead CTA ---- */
+.masthead_button {
+  /* box & layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;                      /* space between text and arrow */
+  padding: 0 2.5em;
+  height: 3.5em;
+  border: 1px solid #fafafa;
+  border-radius: 0px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  width: auto;                      /* flexible width */
+  max-width: 100%;
+
+  /* type & colour */
+  font: 600 14.9333px/1 Arial, sans-serif;
+  letter-spacing: 3.73333px;
+  text-transform: uppercase;
+  color: #fdfdfd;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  /* interaction */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  touch-action: manipulation;       /* faster taps on mobile */
+  position: relative;
+  z-index: 3;                       /* stay above overlays */
+}
+
+.masthead_button .arrow svg {
+  width: 16px;
+  height: 16px;
+}
+
+.masthead_button .arrow svg path {
+  stroke: currentColor;             /* inherits text colour */
+  fill: none;
+}
+
+/* hover & focus */
+/* hover / keyboard focus */
+.masthead_button:hover,
+.masthead_button:focus-visible {
+  background: _palette(brand-color);
+  color: #fff;
+  border-color: #fff;
+  outline: none;
+  text-decoration: none;
+}
+
+.masthead_button:hover .arrow svg path,
+.masthead_button:focus-visible .arrow svg path {
+  stroke: #fff;
+}
+
+/* active (tap-down) */
+.masthead_button:active {
+  background: rgba(255, 255, 255, 0.4);
+  color: #FF6347;
+  border-color: #FF6347;
+}
+.masthead_button:active .arrow svg path {
+  stroke: #FF6347;
+}
+
+/* Adjust button for mobile screens */
+@media (max-width: 768px) {
+  .masthead_button {
+    padding: 0 1.5em; /* Reduce padding on mobile */
+    font-size: 12px;
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+  }
+
+  .masthead_button .arrow svg {
+    width: 14px;  /* Adjust arrow size */
+    height: 14px;
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+
+/* General button styles */
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+  all: unset; /* reset native styles */
+  font: inherit;
+  color: _palette(brand-color);
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  border: none;
+  background: none;
+  transition: color 0.9s ease, background-color 0.3s ease;
+}
+
+button::after,
+input[type="submit"]::after,
+input[type="reset"]::after,
+input[type="button"]::after,
+.button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: _palette(brand-color);
+  transition: background-color 0.3s;
+   background-color: _palette(brand-color);
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover {
+  color: #fff;
+     background-color: _palette(brand-color);
+}
+
+button:hover::after,
+input[type="submit"]:hover::after,
+input[type="reset"]:hover::after,
+input[type="button"]:hover::after,
+.button:hover::after {
+  background-color: darken(_palette(brand-color), 10%);
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_table.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Table */
+
+	.table-wrapper {
+		-webkit-overflow-scrolling: touch;
+		overflow-x: auto;
+	}
+
+	table {
+		margin: 0 0 _size(element-margin) 0;
+		width: 100%;
+
+		tbody {
+			tr {
+				border: solid 1px _palette(border);
+				border-left: 0;
+				border-right: 0;
+
+				&:nth-child(2n + 1) {
+					background-color: _palette(border-bg);
+				}
+			}
+		}
+
+		td {
+			padding: 0.75em 0.75em;
+		}
+
+		th {
+			color: _palette(fg-bold);
+			font-size: 0.9em;
+			font-weight: _font(weight-bold);
+			padding: 0 0.75em 0.75em 0.75em;
+			text-align: left;
+		}
+
+		thead {
+			border-bottom: solid 2px _palette(border);
+		}
+
+		tfoot {
+			border-top: solid 2px _palette(border);
+		}
+
+		&.alt {
+			border-collapse: separate;
+
+			tbody {
+				tr {
+					td {
+						border: solid 1px _palette(border);
+						border-left-width: 0;
+						border-top-width: 0;
+
+						&:first-child {
+							border-left-width: 1px;
+						}
+					}
+
+					&:first-child {
+						td {
+							border-top-width: 1px;
+						}
+					}
+				}
+			}
+
+			thead {
+				border-bottom: 0;
+			}
+
+			tfoot {
+				border-top: 0;
+			}
+		}
+	}
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_box.scss ---- */
+/* Box base */
+.box {
+  border: solid 1px var(--nav-color);
+  margin-bottom: _size(element-margin);
+  padding: 1.5em;
+
+  > :last-child,
+  > :last-child > :last-child,
+  > :last-child > :last-child > :last-child {
+    margin-bottom: 0;
+  }
+
+  &.alt {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+/* Default: show sidebar version */
+.box.subnav {
+  display: block;
+}
+.subnav-mobile {
+  display: none;
+}
+
+/* Mobile: swap versions */
+@media (max-width: 768px) {
+  .box.subnav {
+    display: none;
+  }
+  .subnav-mobile {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+/* Shared subnav styling (applies to both sidebar + mobile inline) */
+.box.subnav,
+.subnav-mobile {
+  border: 2px solid var(--nav-color);
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+}
+
+.box.subnav h3,
+.subnav-mobile h3 {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.box.subnav ul,
+.subnav-mobile ul {
+  list-style: none; /* remove bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.box.subnav li,
+.subnav-mobile li {
+  margin-bottom: 0.75rem;
+}
+.box.subnav li:last-child,
+.subnav-mobile li:last-child {
+  margin-bottom: 0;
+}
+
+.box.subnav a,
+.subnav-mobile a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.box.subnav a:hover,
+.subnav-mobile a:hover {
+  background-color: color-mix(in srgb, var(--nav-color) 20%, white);
+  
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_list.scss ---- */
+/* List
+   ========================================================================== */
+
+ol {
+  list-style: decimal;
+  margin: 0 0 _size(element-margin) 0;
+  padding-left: 1.25em;
+
+  li {
+    padding-left: 0.25em;
+  }
+}
+
+ul {
+  list-style: disc;
+  margin: 0 0 _size(element-margin) 0;
+  padding-left: 1em;
+
+  li {
+    padding-left: 0.5em;
+  }
+
+  &.alt {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      border-top: solid 1px _palette(border);
+      padding: 0.5em 0;
+
+      &:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 1em 0 0;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        color: _palette(bg-alt);
+        transition: color 0.3s ease;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      li {
+        padding: 0 0.75em 0 0;
+      }
+    }
+  }
+
+  &.actions {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 (_size(element-margin) * 0.5) 0 0;
+      vertical-align: middle;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &.small li {
+      padding: 0 (_size(element-margin) * 0.5) 0 0;
+    }
+
+    &.vertical {
+      li {
+        display: block;
+        padding: (_size(element-margin) * 0.5) 0 0 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        > * {
+          margin-bottom: 0;
+        }
+      }
+
+      &.small li:first-child {
+        padding-top: 0;
+      }
+    }
+
+    &.fit {
+      display: table;
+      margin-left: (_size(element-margin) * -0.5);
+      padding: 0;
+      table-layout: fixed;
+      width: calc(100% + #{(_size(element-margin) * 0.5)});
+
+      li {
+        display: table-cell;
+        padding: 0 0 0 (_size(element-margin) * 0.5);
+
+        > * {
+          margin-bottom: 0;
+        }
+      }
+
+      &.small {
+        margin-left: (_size(element-margin) * -0.5);
+        width: calc(100% + #{(_size(element-margin) * 0.5)});
+        li {
+          padding: 0 0 0 (_size(element-margin) * 0.5);
+        }
+      }
+    }
+  }
+}
+
+/* dt/dd styles */
+dt,
+dd {
+  transition: background-color 1s ease;
+  background-color: transparent;
+}
+.dt-dd-pair:hover dt,
+.dt-dd-pair:hover dd {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+dt {
+  display: block;
+  font-weight: _font(weight-bold);
+  margin: 0 0 1px 0;
+  font-size: 1.1rem;
+  padding: 0.2em 0;
+}
+dd {
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 0.2em 0;
+  padding-left: 20px;
+}
+dd b {
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  &::after {
+    content: "›";
+    font-size: 1em;
+    margin-left: 0.4em;
+    color: var(--nav-color);
+  }
+}
+
+/* FAQ / Expandable Cards
+   ========================================================================== */
+
+.faq-container {
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+.faq-container .faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.faq-item .faq-answer {
+  cursor: default;
+}
+
+.faq-question,
+h3.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.faq-icon {
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+  display: inline-block;
+}
+.timeline-card .faq-icon {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.8rem;
+  pointer-events: none;
+  color: var(--nav-color, #1B9C85);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: #555;
+  font-size: 1rem;
+  padding-top: 0;
+}
+.faq-item.open .faq-answer,
+.timeline-card.open .faq-answer {
+  max-height: 2000px;
+  padding-top: 0.5rem;
+}
+.faq-item.open .faq-icon,
+.timeline-card.open .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-answer p,
+.faq-answer ol {
+  margin: 0 0 1rem;
+}
+
+/* Breadcrumb/footer nav */
+.breadcrumb {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+  }
+
+  li {
+    display: block;
+
+    a {
+      text-decoration: none;
+      
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.secondary-pages {
+  margin-top: 1em;
+  padding-top: 1em;
+  font-size: 0.9em;
+  color: #555;
+}
+.secondary-pages h4 {
+  font-weight: 600;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+.secondary-pages ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.secondary-pages li {
+  margin-bottom: 0.3em;
+}
+
+/* Workshop Cards Container */
+.content-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 2rem 0;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  .content-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Base Card Style */
+.content-card,
+.timeline-card,
+.timeline-card.victory {
+  background: #fff;
+  border: solid 1px var(--nav-color);
+  border-radius: 0;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none;
+  transition: transform 0.2s cubic-bezier(.51, .19, .26, .98),
+    border-width 0.2s cubic-bezier(.51, .19, .26, .98);
+  cursor: hand;
+}
+
+.timeline-card {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+}
+
+/* Hover / Open Effects */
+.content-card:hover,
+.timeline-card:hover {
+  transform: translateX(0px);
+  border-width: 3px;
+  box-shadow: none;
+}
+.content-card.open,
+.timeline-card.open,
+.faq-item.open,
+.expandable-card.open,
+.timeline-card.expanded {
+  transform: translateX(0px);
+  border-width: 3px !important;
+  box-shadow: none;
+}
+
+/* Victory Card */
+.timeline-card.victory,
+.timeline-card.victory:hover,
+.timeline-card.victory.open {
+  border-width: 2px !important;
+  transform: translateX(4px);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Title and Description inside card */
+.content-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  color: #222;
+}
+.content-card p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #444;
+  margin: 0;
+}
+
+/* Timeline line */
+.timeline {
+  position: relative;
+  margin: 3rem 0;
+  padding-left: 2rem;
+}
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.timeline-line path {
+  stroke: #1B9C85;
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: var(--path-length, 2000);
+  stroke-dashoffset: var(--path-length, 2000);
+  transition: none;
+}
+.timeline-line.reveal path {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+/* Extra timeline content */
+.timeline-card .more {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+.timeline-card.expanded .more {
+  max-height: 8500px;
+  opacity: 1;
+}
+
+/* Victory trophy */
+.timeline-card.victory {
+  padding: 2rem 2rem 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.timeline-card.victory::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-right: 0;
+  width: 0rem;
+  height: 0;
+}
+.timeline-card.victory .fa {
+  position: absolute;
+  top: 20%;               // middle of the victory box
+  left: -1.2em;           // just outside the left edge
+  transform: translateY(-20%) scale(0); // vertically center + hidden by default
+  width: 2.5em;
+  height: 2.5em;
+  background-color: gold;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: none;
+}
+
+.timeline-card.victory.show-trophy .fa {
+  opacity: 1;
+  animation: popIn 0.4s cubic-bezier(.34, 1.56, .64, 1) forwards;
+}
+
+.timeline-card.victory.show-trophy .fa {
+  opacity: 1;
+  animation: popIn 0.4s cubic-bezier(.34, 1.56, .64, 1) forwards;
+}
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Responsive adjustments for timeline for mobile not using skel for now 
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1rem;  
+  }
+
+  .timeline-line {
+    left: 0rem;          
+  }
+
+  .timeline-card,
+  .timeline-card.victory {
+    margin-left: 0;      
+  }
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_icon.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Icon */
+
+	.icon {
+		@include icon;
+		border-bottom: none;
+		position: relative;
+
+		> .label {
+			display: none;
+		}
+
+		&.alt {
+			&:before {
+				background-color: _palette(fg-bold);
+				border-radius: 100%;
+				color: _palette(bg);
+				display: inline-block;
+				height: 2em;
+				line-height: 2em;
+				text-align: center;
+				width: 2em;
+			}
+		}
+	}
+
+	a.icon {
+		&.alt {
+			&:before {
+				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
+			}
+
+			&:hover {
+				&:before {
+					background-color: _palette(highlight);
+				}
+			}
+
+			&:active {
+				&:before {
+					background-color: desaturate(darken(_palette(highlight), 15), 5);
+				}
+			}
+		}
+	}
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_section.scss ---- */
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+
+  &:hover article:not(:hover) {
+    &::before,
+    &::after {
+      width: 0 !important;
+      height: 0 !important;
+      border-width: 0 !important;
+      opacity: 0.1;
+    }
+  }
+}
+
+.tiles article {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  padding: 4em 3em 2em;
+  padding-left: calc(3em + 20px); // account for the left border
+  width: calc(50% - 1rem);
+  height: auto;
+  min-height: 18em;
+  max-height: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: map-get($font, primary);
+  font-size: map-get($size, base);
+  line-height: map-get($size, line-height);
+
+  header,
+  h3,
+  p {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 1em;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1.5;
+    object-fit: cover;
+    margin-bottom: 1.5em;
+    flex-shrink: 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    border-left: 20px solid transparent;
+    opacity: 0.3;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: none;
+  }
+
+  &:hover::before {
+    width: 100%;
+    height: 100%;
+    border-left: 20px solid;
+    border-top: 20px solid;
+    opacity: 1;
+  }
+
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+    border-bottom: 20px solid;
+    border-right: 20px solid;
+    opacity: 1;
+  }
+
+  
+
+  .link.primary {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: block;
+    border: none;
+  }
+}
+
+@include breakpoint(xxlarge) {
+  .tiles article {
+    width: calc(33.333% - 1rem);
+  }
+}
+
+@include breakpoint(xlarge) {
+  .tiles article {
+    width: calc(50% - 1rem);
+    padding: 3em 2em 2em;
+    padding-left: calc(2em + 20px);
+  }
+}
+
+@include breakpoint(large) {
+  .tiles article {
+    width: calc(50% - 1rem);
+    padding: 3em 2em 2em;
+    padding-left: calc(2em + 20px);
+  }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1025px) {
+  .tiles article {
+    width: calc(50% - 1rem);
+  }
+}
+
+@include breakpoint(medium) {
+  .tiles article {
+    width: 100% !important;
+    padding: 2.25em 1.5em 1.75em;
+    padding-left: calc(1.5em + 20px);
+    font-size: map-get($size, small);
+    max-height: none;
+  }
+}
+
+@include breakpoint(small) {
+  .tiles article {
+    width: 100% !important;
+    padding: 2em 1.25em 1.5em;
+    padding-left: calc(1.25em + 20px);
+    font-size: map-get($size, xsmall);
+
+    h3 {
+      font-size: map-get($size, h3-small);
+    }
+  }
+}
+
+.tiles article header.major::after,
+.tiles article header.major h3::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* ==============================
+Section Styling for Coaching Pages
+============================== */
+.two-col-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  .left-col {
+    flex: 2 1 60%;
+    min-width: 300px;
+  }
+
+  .right-col {
+    flex: 1 1 35%;
+    min-width: 250px;
+  }
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+
+    .right-col {
+      order: 1; // Right column stacks below
+    }
+
+    .left-col {
+      order: 0; // Left column stacks above
+    }
+
+    .left-col,
+    .right-col {
+      min-width: 100%;
+    }
+  }
+}
+
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_form.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Form */
+
+form {
+	margin: 20px 0 0 0; /* Adds 20px margin above the form */
+	    padding-top: 20px;  /* Adds 20px padding inside the form at the top */
+
+    .field {
+        margin: 0 0 (_size(element-margin) * 1) 0;
+
+        &.half {
+            width: 50%;
+            float: left;
+            padding: 0 0 0 (_size(element-margin) * 1 * 0.5);
+
+            &.first {
+                padding: 0 (_size(element-margin) * 1 * 0.5) 0 0;
+            }
+        }
+    }
+
+    > .actions {
+        margin: (_size(element-margin) * 1.25) 0 0 0 !important;
+    }
+
+    @include breakpoint(small) {
+        .field {
+            margin: 0 0 (_size(element-margin) * 0.75) 0;
+
+            &.half {
+                padding: 0 0 0 (_size(element-margin) * 0.75 * 0.5);
+
+                &.first {
+                    padding: 0 (_size(element-margin) * 0.75 * 0.5) 0 0;
+                }
+            }
+        }
+
+        > .actions {
+            margin: (_size(element-margin) * 1) 0 0 0 !important;
+        }
+    }
+
+    @include breakpoint(xsmall) {
+        .field {
+            &.half {
+                width: 100%;
+                float: none;
+                padding: 0;
+
+                &.first {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+label {
+    color: _palette(fg-bold);
+    display: block;
+    font-size: 0.8em;
+    font-weight: _font(weight-bold);
+    letter-spacing: _font(letter-spacing-alt);
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    text-transform: uppercase;
+}
+
+/* Inputs with bottom border only */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select {
+    @include vendor('appearance', 'none');
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Bottom border only */
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.5em 0;
+    text-decoration: none;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus,
+    &:hover {
+        border-bottom-color: #333;
+    }
+}
+
+/* Full border for textarea */
+textarea {
+    @include vendor('appearance', 'none');
+    background: _palette(border-bg);
+    border: 1px solid #ccc;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    width: 100%;
+    transition: border-color 0.3s ease-in-out;
+
+    &:focus,
+    &:hover {
+        border-color: #333;
+    }
+}
+
+.select-wrapper {
+    @include icon;
+    display: block;
+    position: relative;
+
+    &:before {
+        color: _palette(border);
+        content: '\f078';
+        display: block;
+        height: _size(element-height);
+        line-height: _size(element-height);
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: _size(element-height);
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    height: _size(element-height);
+}
+
+/* Placeholder Styles */
+::-webkit-input-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+:-moz-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+::-moz-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+:-ms-input-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+.formerize-placeholder {
+    color: _palette(fg-light) !important;
+    opacity: 1.0;
+}
+
+/* Substack embed form: force full width and remove left margin */
+/* Make the Substack block expand in the right column */
+
+
+.contact-method {
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.contact-method iframe {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  display: block;
+  box-sizing: border-box;
+}
+
+
+/* ---- Start of: nudesign-og copy/_sass/components/_spotlights.scss ---- */
+/* Spotlights */
+.spotlights {
+  border-top: 0 !important;
+
+  & + * {
+    border-top: 0 !important;
+  }
+
+  > section {
+    position: relative;
+    @include vendor('display', 'flex');
+    @include vendor('flex-direction', 'row');
+    background-color: #ffffff;
+    padding: 1em 0;
+    gap: 2em;
+
+    > .image {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex: 0 0 15%; // ↓ Halved from original
+      min-height: 80px; // ↓ Reduced from 160px
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 0;
+      }
+    }
+
+    > .content {
+      flex: 1;
+      @include vendor('display', 'flex');
+      @include vendor('flex-direction', 'column');
+      @include vendor('justify-content', 'center');
+      @include vendor('align-items', 'flex-start');
+      @include padding(1em, 1.5em);
+
+      > .inner {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: left;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+  > section {
+    > .image {
+      flex: 0 0 35%;
+      min-height: 180px;
+    }
+  }
+}
+
+@include breakpoint(xlarge) {
+  > section {
+    > .image {
+      flex: 0 0 35%;
+      min-height: 180px;
+    }
+  }
+}
+
+@include breakpoint(xxlarge) {
+  > section {
+    > .image {
+      flex: 0 0 40%;
+      min-height: 200px;
+    }
+  }
+}
+
+
+  @include breakpoint(medium) {
+  > section {
+    display: block;
+
+    > .image {
+      width: 50%; // Or 60%, whatever feels right
+      margin-bottom: 1rem;
+      min-height: 120px;
+      margin-left: auto;
+      margin-right: auto; // Optional: centers the image
+    }
+
+    > .content {
+      width: 100%;
+      @include padding(2em, 1.5em);
+    }
+  }
+}
+
+@include breakpoint(small) {
+  > section {
+    > .image {
+      width: 70%; // even smaller on phones
+      min-height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    > .content {
+      @include padding(2em, 1em);
+    }
+  }
+}
+}
+
+
+// Divider between posts
+hr.post-divider {
+  width: 80%;
+  margin: 2.5em auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  opacity: 0.5;
+}
+
+
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/base/_typography.scss ---- */
+/* ==========================================================================
+   _typography.scss — Mobile-first
+   Fonts: Inter (body), Playfair Display (hero headline)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap');
+@import "../libs/vars";
+
+/* Base setup */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: map-get($font, 'family');
+  color: map-get($palette, 'fg');
+  font-size: 1.05rem;
+  font-weight: map-get($font, 'weight');
+  line-height: 1.65;
+}
+
+/* Responsive font scaling */
+@include breakpoint(xlarge) { body { font-size: 1.08rem; } }
+@include breakpoint(xxsmall) { body { font-size: 1.15rem; } }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: map-get($font, 'family');
+  font-weight: 700;
+  line-height: 1.2;
+  color: map-get($palette, 'fg-bold');
+  margin: 0 0 0.6em 0;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 0.9rem; }
+h6 { font-size: 0.7rem; color: map-get($palette, 'muted'); }
+
+@include breakpoint(small) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+/* Paragraphs and text */
+p { margin: 0 0 1.1rem 0; }
+small { font-size: 0.875rem; color: map-get($palette, 'muted'); }
+strong { font-weight: 700; }
+em { font-style: italic; }
+b { font-weight: 700; }
+
+/* Links */
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover { color: map-get($palette, 'nav-color'); }
+}
+
+/* -------------------------------------------------
+   CALLOUTS
+   ------------------------------------------------- */
+.callout {
+  position: relative;
+  padding: 2em 2em 1.5em;
+  margin: 2em 0;
+  border: 2px map-get($palette, 'subtle_accent3') solid;
+  border-radius: 0;
+  background: white;
+  font-size: 1rem;
+
+  .fa {
+    position: absolute;
+    top: -1.4em;
+    left: -1.4em;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: map-get($palette, 'subtle_accent3');
+    color: white;
+    font-size: 1.2em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+}
+
+/* Callout layout modifiers */
+.callout-left { float: left; width: 45%; margin-right: 20px; }
+.callout-right { float: right; width: 45%; margin-left: 20px; }
+
+/* Responsive reset for callouts */
+@include breakpoint(small) {
+  .callout {
+    padding: 1.5em 1.25em 1.25em;
+    margin: 1em 0;
+
+    .fa {
+      font-size: 1.1em;
+      width: 2em;
+      height: 2em;
+      top: -1em;
+      left: -1em;
+    }
+  }
+  .callout-left,
+  .callout-right {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* -------------------------------------------------
+   TESTIMONIALS
+   ------------------------------------------------- */
+.testimonials-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  position: relative;
+
+  &.single-column .callout.testimonial {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  @include breakpoint(medium) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+#testimonial-reload-wrapper {
+  margin: 0 0 2rem 0;
+  flex: none;
+  @include breakpoint(medium) { margin: 2rem 0 3rem 0; }
+}
+
+/* Testimonial box */
+.callout.testimonial {
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
+  border: 0;
+  padding: 1.5rem 1.75rem;
+  font-family: 'Karla', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: map-get($palette, 'fg-regular');
+  position: relative;
+  text-align: left;
+
+  @include breakpoint(medium) {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* Decorative borders */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    width: 60%;
+    height: 1px;
+    background: map-get($palette, 'subtle_accent3');
+  }
+  &::before { top: 0; }
+  &::after  { bottom: 0; }
+
+  p.quote {
+    position: relative;
+    margin: 0;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInText 1s ease-out forwards;
+  }
+}
+
+/* Curly quote */
+.testimonial::before {
+  content: "“";
+  font-size: 10rem;
+  line-height: 1;
+  position: absolute;
+  top: -0.5rem;
+  left: -1.5rem;
+  color: rgba(0, 0, 0, 0.15);
+  font-family: Georgia, serif;
+  z-index: 1;
+}
+
+/* Testimonial header and avatar */
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 20;
+  color: #000;
+}
+.testimonial-meta {
+  font-size: 0.95rem;
+  .testimonial-title { color: #666; font-weight: normal; }
+}
+
+/* Testimonial footer */
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  gap: 0.75rem;
+
+  .person {
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    color: map-get($palette, 'brand-color');
+    flex: 1;
+    text-align: right;
+  }
+  .reload-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(map-get($palette, 'subtle_accent3'), 0.15);
+    border: none;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: map-get($palette, 'brand-color');
+    transition: background 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+
+    &:hover {
+      background: rgba(map-get($palette, 'subtle_accent3'), 0.3);
+      color: darken(map-get($palette, 'brand-color'), 10%);
+    }
+    i { pointer-events: none; }
+  }
+}
+
+.testimonials-wrapper .callout.testimonial { margin-bottom: 0; }
+
+/* Animations */
+.fade-in-box { animation: fadeBox 0.3s ease-out forwards; }
+@keyframes fadeBox {
+  0%   { background-color: map-get($palette, 'brand-color'); opacity: 0; }
+  50%  { background-color: map-get($palette, 'brand-color'); opacity: 0.2; }
+  100% { background-color: white; opacity: 1; }
+}
+@keyframes fadeInText { to { opacity: 1; } }
+
+/* -------------------------------------------------
+   OTHER COMPONENTS
+   ------------------------------------------------- */
+.speechbubble {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid map-get($palette, 'brand-color');
+  border-radius: 8px;
+  position: relative;
+  font-style: normal;
+  color: map-get($palette, 'fg-bold');
+  background: transparent;
+  margin: 20px;
+  max-width: 700px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 15px;
+    border-top: 10px solid map-get($palette, 'brand-color');
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  &.no-border { border-left: none !important; }
+}
+
+.page-intro {
+  margin-top: 100px;
+  p {
+    font-style: italic;
+    color: #666;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    border-left: 4px solid #ddd;
+    padding-left: 1.25rem;
+
+    @media screen and (min-width: 768px) { font-size: 1.25rem; }
+    @media screen and (min-width: 1280px) { font-size: 1.35rem; line-height: 1.7; }
+  }
+}
+
+/* Blockquote */
+blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 1.5em;
+  border-top: 1px solid map-get($palette, 'subtle_accent3');
+  border-bottom: 1px solid map-get($palette, 'subtle_accent3');
+  background: white;
+  max-width: 100%;
+  margin: 2em 0;
+  text-align: left;
+  clear: both;
+
+  &.left {
+    float: left;
+    width: 45%;
+    margin-right: 2rem;
+  }
+  &.right {
+    float: right;
+    width: 45%;
+    margin-left: 2rem;
+  }
+
+  @include breakpoint(small) {
+    &,
+    &.left,
+    &.right {
+      float: none;
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+/* Blog logo */
+.bloglogo {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.highlight-g {
+  font-weight: 900;
+  background: map-get($palette, 'spicy');
+  color: #FFF !important;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.restofbloglogo {
+  font-weight: 600;
+  margin-left: -0.02em;
+  letter-spacing: -0.03em;
+}
+.icon-small {
+  font-size: 1.2em;
+  color: map-get($palette, 'spicy');
+  flex-shrink: 0;
+}
+
+/* Post list separators */
+.post-link + hr {
+  border: none;
+  border-top: 1px solid map-get($palette, 'subtle_accent3');
+  width: 80%;
+  margin: 2rem auto;
+  opacity: 0.7;
+}
+.post-description a.post-title {
+  color: map-get($palette, 'fg');
+  text-decoration: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+main .spacer {
+  height: var(--header-h, 72px); // a hack for now to create space above the posts so that top nav doesn't fall on header
+}
+
+
+
+/* ---- Start of: nudesign-og copy/_sass/base/_page.scss ---- */
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Basic */
+
+// MSIE: Required for IEMobile.
+// @-ms-viewport {
+//   width: device-width;
+// }
+
+// MSIE: Prevents scrollbar from overlapping content.
+// body {
+//   -ms-overflow-style: scrollbar;
+// }
+
+// Ensures page width is always >=320px.
+// @include breakpoint(xsmall) {
+//   html, body {
+//     min-width: 320px;
+//   }
+// }
+
+// Sets the background color and handles loading state to prevent animation/transition flicker.
+// body {
+//   background: _palette(bg);
+
+//   // Prevents animation/transition "flicker" on page load.
+//   // Automatically added/removed by js/main.js.
+//   &.is-loading {
+//     *, *:before, *:after {
+//       @include vendor('animation', 'none !important');
+//       @include vendor('transition', 'none !important');
+//     }
+//   }
+//
+
+// base/_page.scss
+
+.inner {
+  width: 100%;
+  max-width: _size(inner);
+  margin: 0 auto;
+  padding: 2em 3em;
+
+  @include breakpoint(medium) {
+    padding: 2em 2em;
+  }
+
+  @include breakpoint(small) {
+    padding: 1.5em 1em;
+  }
+}
+
+
+
+/* ---- Start of: nudesign-og copy/assets/css/ie9.scss ---- */
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Spotlights */
+
+	.spotlights {
+		> section {
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			> .image {
+				float: left;
+			}
+
+			> .content {
+				float: left;
+			}
+		}
+	}
+
+/* Tiles */
+
+	.tiles {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		article {
+			@include padding(8em, 4em);
+			float: left;
+			height: auto;
+			max-height: none;
+			min-height: 0;
+		}
+	}
+
+/* Header */
+
+	#header {
+		.logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		@include padding(6em, 0, (1em, 0, 0, 0));
+		background-attachment: scroll;
+		height: auto;
+		max-height: none;
+		min-height: 0;
+
+		> .inner {
+			.content {
+				display: block;
+
+				> * {
+					margin-left: 0;
+					margin: 0 0 _size(element-margin) 0;
+				}
+			}
+		}
+
+		&.major {
+			height: auto;
+			max-height: none;
+			min-height: 0;
+		}
+	}
+
+/* Contact */
+
+	#contact {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		> .inner {
+			> * {
+				float: left;
+			}
+		}
+	}
+
+/* Menu */
+
+	#menu {
+		.inner {
+			margin: 0 auto;
+		}
+	}
+
+
+/* ---- Start of: nudesign-og copy/assets/css/ie8.scss ---- */
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Button */
+
+	.button {
+		border: solid 2px !important;
+
+		&.next {
+			padding-right: 1.75em;
+
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
+
+/* Tiles */
+
+	.tiles {
+		article {
+			width: 50%;
+			-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+			background-size: cover;
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+
+		&:after {
+			display: none;
+		}
+	}
+
+/* Menu */
+
+	#menu {
+		background: _palette(bg);
+	}
+
+
+/* ---- Start of: nudesign-og copy/assets/css/main.scss ---- */
+---
+---
+
+/* PATCH: header height CSS variable and sticky-anchor offset */
+:root {
+  --header-h: 72px;
+}
+html {
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+// 1. Imports: All variable, mixin, and function definitions must load first
+@import "libs/vars";
+@import "libs/functions";
+@import "libs/mixins";
+@import "libs/skel";
+
+// 2. External resources
+@import "font-awesome.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+// 3. Set breakpoints once, now that skel-breakpoints() is available
+@include skel-breakpoints((
+  small:   '(max-width: 736px)',
+  medium:  '(max-width: 980px)',
+  large:   '(max-width: 1280px)',
+  xlarge:  '(min-width: 1281px) and (max-width: 1999px)',
+  xxlarge: '(min-width: 2000px)'
+));
+
+// 4. Layout engine settings
+@include skel-layout((
+  reset: 'full',
+  boxModel: 'border',
+  grid: (gutters: 2em),
+  breakpoints: (
+    large: (grid: (gutters: 1.5em)),
+    small: (grid: (gutters: 1.25em))
+  )
+));
+
+// 5. Global inner wrapper mixin
+@mixin inner {
+  > .inner {
+    @include padding(4em, 0);
+    margin: 0 auto;
+    max-width: _size(inner);
+    width: calc(100% - 6em);
+
+    @include breakpoint(small) {
+      @include padding(3em, 0);
+      width: calc(100% - 3em);
+    }
+  }
+}
+
+// 6. Base styles
+@import "base/page";
+@import "base/typography";
+
+// 7. Component styles
+@import "components/section";
+@import "components/form";
+@import "components/box";
+@import "components/icon";
+@import "components/image";
+@import "components/list";
+@import "components/table";
+@import "components/button";
+@import "components/contact-method";
+@import "components/spotlights";
+@import "components/tiles";
+
+// 8. Layout styles
+@import "layout/header";
+@import "layout/banner";  // banner styles live in banner.scss
+@import "layout/contact";
+@import "layout/footer";
+@import "layout/wrapper";
+@import "layout/menu";
+
+
+/* --------------------------------------------------
+   CSS Variables
+-------------------------------------------------- */
+:root {
+  --header-h:   72px;
+  --content-w:  1100px;
+}
+
+/* --------------------------------------------------
+   Header & Global Offsets
+-------------------------------------------------- */
+#wrapper,
+#main,
+.brandimage_masthead {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+#header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: var(--header-h);
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+#header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+// logo styles
+#header .logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111;
+  text-decoration: none;
+}
+#header .logo span {
+  margin-left: .5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+#header .logo:hover {
+  color: var(--brand-color);
+}
+
+.brandimage_masthead img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  max-height: 40vh;
+
+  @include breakpoint('xlarge') { max-height: 32vh; }
+  @include breakpoint('large')  { max-height: 30vh; }
+}
+
+
+.inner,
+section {
+  margin-bottom: 3rem; // or 2.5rem, whatever fits your vertical rhythm
+}
+
+
+/* --------------------------------------------------
+   Force consistent header height at xlarge breakpoint
+-------------------------------------------------- */
+@include breakpoint(xlarge) {
+  #header,
+  #header .inner {
+    height: var(--header-h) !important;
+  }
+}
+
+/* --------------------------------------------------
+   Content Widths & Padding
+-------------------------------------------------- */
+@include breakpoint(large) {
+  #wrapper,
+  #main,
+  #contact,
+  #footer {
+    max-width: var(--content-w);
+    margin: 0 auto;
+    padding: 0 0.75rem;
+  }
+}
+@include breakpoint(xxlarge) {
+  #wrapper,
+  #main,
+  #contact,
+  #footer {
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
+@include breakpoint(xlarge) {
+  #wrapper,
+  #main,
+  #contact,
+  #footer {
+    max-width: 90%; 
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
+
+#main .inner {
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: none;
+
+  @include breakpoint(medium) { padding: 0; }
+  @include breakpoint(small)  { padding: 0; }
+  @include breakpoint(xsmall) { padding: 0; }
+}
+
+
+
+
+
+/* ---- Start of: nudesign-og copy/_site/assets/css/ie9.scss ---- */
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Spotlights */
+
+	.spotlights {
+		> section {
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			> .image {
+				float: left;
+			}
+
+			> .content {
+				float: left;
+			}
+		}
+	}
+
+/* Tiles */
+
+	.tiles {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		article {
+			@include padding(8em, 4em);
+			float: left;
+			height: auto;
+			max-height: none;
+			min-height: 0;
+		}
+	}
+
+/* Header */
+
+	#header {
+		.logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		nav {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		@include padding(6em, 0, (1em, 0, 0, 0));
+		background-attachment: scroll;
+		height: auto;
+		max-height: none;
+		min-height: 0;
+
+		> .inner {
+			.content {
+				display: block;
+
+				> * {
+					margin-left: 0;
+					margin: 0 0 _size(element-margin) 0;
+				}
+			}
+		}
+
+		&.major {
+			height: auto;
+			max-height: none;
+			min-height: 0;
+		}
+	}
+
+/* Contact */
+
+	#contact {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		> .inner {
+			> * {
+				float: left;
+			}
+		}
+	}
+
+/* Menu */
+
+	#menu {
+		.inner {
+			margin: 0 auto;
+		}
+	}
+
+
+/* ---- Start of: nudesign-og copy/_site/assets/css/ie8.scss ---- */
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+/*
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Button */
+
+	.button {
+		border: solid 2px !important;
+
+		&.next {
+			padding-right: 1.75em;
+
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
+
+/* Tiles */
+
+	.tiles {
+		article {
+			width: 50%;
+			-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+			background-size: cover;
+		}
+	}
+
+/* Banner */
+
+	#banner {
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+
+		&:after {
+			display: none;
+		}
+	}
+
+/* Menu */
+
+	#menu {
+		background: _palette(bg);
+	}

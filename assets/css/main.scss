@@ -15,6 +15,8 @@ html {
 @import "libs/mixins";
 @import "libs/skel";
 
+
+
 // 2. External resources
 @import "font-awesome.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
@@ -210,3 +212,4 @@ section {
 }
 
 
+@import "merged_styles";
