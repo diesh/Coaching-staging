@@ -1,9 +1,5 @@
-/* ==========================================================================
-   _typography.scss — Mobile-first
-   Fonts: Inter (body), Playfair Display (hero headline)
-   ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+==========================================================================_typography.scss — Mobile-first Fonts: Inter (body),
+Playfair Display (hero headline)==========================================================================*/ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap');
 @import "../libs/vars";
 
@@ -17,77 +13,120 @@ html {
 body {
   font-family: map-get($font, 'family');
   color: map-get($palette, 'fg');
-  font-size: 1.0625rem;  /* ~17px for readability */
+  font-size: 1.05rem;
   font-weight: map-get($font, 'weight');
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
 }
 
-/* Responsive font scaling (modest) */
-@include breakpoint(medium) { body { font-size: 1.1rem; } }
-@include breakpoint(xlarge) { body { font-size: 1.15rem; } }
+/* Responsive font scaling */
+@include breakpoint(xlarge) {
+  body {
+    font-size: 1.08rem;
+  }
+}
+
+@include breakpoint(xxsmall) {
+  body {
+    font-size: 1.15rem;
+  }
+}
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: map-get($font, 'family');
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.2;
   color: map-get($palette, 'fg-bold');
-  margin: 0 0 0.75em 0;
-  letter-spacing: -0.015em;
+  margin: 0 0 0.6em 0;
 }
 
-h1 { font-size: 2.5rem; font-weight: 800; margin-top: 1.5rem; }
-h2 { font-size: 1.75rem; margin-top: 2rem; }
-h3 { font-size: 1.375rem; margin-top: 1.75rem; }
-h4 { font-size: 1.125rem; margin-top: 1.5rem; }
-h5 { font-size: 1rem;   margin-top: 1.25rem; }
-h6 { font-size: 0.875rem; color: map-get($palette, 'muted'); }
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+}
+
+h6 {
+  font-size: 0.7rem;
+  color: map-get($palette, 'muted');
+}
 
 @include breakpoint(small) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.25rem; }
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
 }
 
-/* Paragraphs and text (constrained measure) */
+/* Paragraphs and text */
 p {
-  margin: 0 0 1.25rem 0;
-  max-width: 70ch;          /* readable line length */
+  margin: 0 0 1.1rem 0;
 }
-small { font-size: 0.875rem; color: map-get($palette, 'muted'); }
-strong, b { font-weight: 600; }
-em { font-style: italic; }
 
-/* Lists (align with paragraph measure) */
-ul, ol {
-  margin: 1.25rem 0 1.25rem 1.5rem;
-  padding: 0;
-  line-height: 1.7;
-  max-width: 70ch;
+small {
+  font-size: 0.875rem;
+  color: map-get($palette, 'muted');
 }
-li { margin-bottom: 0.5rem; }
 
-/* Links (keep brand variable; readable underline) */
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+b {
+  font-weight: 700;
+}
+
+;
+
+/* Links */
 a {
   color: $link-color;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
-  &:hover { color: map-get($palette, 'nav-color'); }
+  text-decoration: none;
+
+  &:hover {
+    color: map-get($palette, 'nav-color');
+  }
 }
 
-/* -------------------------------------------------
-   CALLOUTS (kept; measure-constrained, left aligned)
-   ------------------------------------------------- */
+/* ------------------------------------------------- CALLOUTS ------------------------------------------------- */
 .callout {
   position: relative;
   padding: 2em 2em 1.5em;
   margin: 2em 0;
   border: 2px map-get($palette, 'subtle_accent3') solid;
-  background: #fff;
+  border-radius: 0;
+  background: white;
   font-size: 1rem;
-  max-width: 70ch;
 
   .fa {
     position: absolute;
@@ -96,8 +135,9 @@ a {
     width: 2.5em;
     height: 2.5em;
     background-color: map-get($palette, 'subtle_accent3');
-    color: #fff;
+    color: white;
     font-size: 1.2em;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,42 +146,42 @@ a {
 }
 
 /* Callout layout modifiers */
-.callout-left  { float: left;  width: 45%; margin-right: 20px; }
-.callout-right { float: right; width: 45%; margin-left: 20px; }
+.callout-left {
+  float: left;
+  width: 45%;
+  margin-right: 20px;
+}
 
+.callout-right {
+  float: right;
+  width: 45%;
+  margin-left: 20px;
+}
+
+/* Responsive reset for callouts */
 @include breakpoint(small) {
   .callout {
     padding: 1.5em 1.25em 1.25em;
     margin: 1em 0;
-    .fa { font-size: 1.1em; width: 2em; height: 2em; top: -1em; left: -1em; }
+
+    .fa {
+      font-size: 1.1em;
+      width: 2em;
+      height: 2em;
+      top: -1em;
+      left: -1em;
+    }
   }
-  .callout-left, .callout-right { float: none; width: 100%; margin: 0; }
+
+  .callout-left,
+  .callout-right {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
 }
 
-/* -------------------------------------------------
-   ALERT BOXES (OG structure, measure-constrained)
-   ------------------------------------------------- */
-.alert-warning {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;             /* left aligned (not centered) */
-  border: 2px solid #facc15;
-  background: #fffdf5;
-  color: #92400e;
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 70ch;
-
-  .icon   { flex-shrink: 0; font-size: 1.5rem; line-height: 1; }
-  .title  { font-weight: 600; margin-bottom: 0.25rem; }
-  .content { flex: 1; }
-}
-
-/* -------------------------------------------------
-   TESTIMONIALS (kept as-is)
-   ------------------------------------------------- */
+/* ------------------------------------------------- TESTIMONIALS ------------------------------------------------- */
 .testimonials-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -164,7 +204,9 @@ a {
   margin: 0 0 2rem 0;
   flex: none;
 
-  @include breakpoint(medium) { margin: 2rem 0 3rem 0; }
+  @include breakpoint(medium) {
+    margin: 2rem 0 3rem 0;
+  }
 }
 
 /* Testimonial box */
@@ -196,8 +238,14 @@ a {
     height: 1px;
     background: map-get($palette, 'subtle_accent3');
   }
-  &::before { top: 0; }
-  &::after  { bottom: 0; }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 
   p.quote {
     position: relative;
@@ -222,9 +270,32 @@ a {
 }
 
 /* Testimonial header and avatar */
-.testimonial-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-.testimonial-avatar  { width: 48px; height: 48px; object-fit: cover; flex-shrink: 0; }
-.testimonial-meta    { font-size: 0.95rem; color: map-get($palette, 'muted'); }
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 20;
+  color: #000;
+}
+
+.testimonial-meta {
+  font-size: 0.95rem;
+
+  .testimonial-title {
+    color: #666;
+    font-weight: normal;
+  }
+}
 
 /* Testimonial footer */
 .testimonial-footer {
@@ -234,10 +305,21 @@ a {
   margin-top: 1.25rem;
   gap: 0.75rem;
 
-  .person { font-style: normal; font-weight: 500; margin: 0; color: map-get($palette, 'brand-color'); flex: 1; text-align: right; }
+  .person {
+    font-style: normal;
+    font-weight: 500;
+    margin: 0;
+    color: map-get($palette, 'brand-color');
+    flex: 1;
+    text-align: right;
+  }
+
   .reload-button {
-    display: flex; align-items: center; justify-content: center;
-    width: 2rem; height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
     background: rgba(map-get($palette, 'subtle_accent3'), 0.15);
     border: none;
     border-radius: 50%;
@@ -251,24 +333,46 @@ a {
       background: rgba(map-get($palette, 'subtle_accent3'), 0.3);
       color: darken(map-get($palette, 'brand-color'), 10%);
     }
-    i { pointer-events: none; }
+
+    i {
+      pointer-events: none;
+    }
   }
 }
 
-.testimonials-wrapper .callout.testimonial { margin-bottom: 0; }
+.testimonials-wrapper .callout.testimonial {
+  margin-bottom: 0;
+}
 
 /* Animations */
-.fade-in-box { animation: fadeBox 0.3s ease-out forwards; }
-@keyframes fadeBox {
-  0%   { background-color: map-get($palette, 'brand-color'); opacity: 0; }
-  50%  { background-color: map-get($palette, 'brand-color'); opacity: 0.2; }
-  100% { background-color: #fff; opacity: 1; }
+.fade-in-box {
+  animation: fadeBox 0.3s ease-out forwards;
 }
-@keyframes fadeInText { to { opacity: 1; } }
 
-/* -------------------------------------------------
-   OTHER COMPONENTS (kept; minor readability tweak)
-   ------------------------------------------------- */
+@keyframes fadeBox {
+  0% {
+    background-color: map-get($palette, 'brand-color');
+    opacity: 0;
+  }
+
+  50% {
+    background-color: map-get($palette, 'brand-color');
+    opacity: 0.2;
+  }
+
+  100% {
+    background-color: white;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------------------- OTHER COMPONENTS ------------------------------------------------- */
 .speechbubble {
   display: inline-block;
   padding: 10px 15px;
@@ -279,7 +383,7 @@ a {
   color: map-get($palette, 'fg-bold');
   background: transparent;
   margin: 20px;
-  max-width: 70ch;
+  max-width: 700px;
 
   &::before {
     content: "";
@@ -290,40 +394,71 @@ a {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
   }
-  &.no-border { border-left: none !important; }
+
+  &.no-border {
+    border-left: none !important;
+  }
 }
 
 .page-intro {
   margin-top: 100px;
+
   p {
     font-style: italic;
     color: #666;
     font-size: 1.15rem;
-    line-height: 1.65;
+    line-height: 1.6;
     margin-bottom: 2rem;
-    border-left: 3px solid #ddd;
-    padding-left: 1rem;
-    max-width: 70ch;
+    border-left: 4px solid #ddd;
+    padding-left: 1.25rem;
 
-    @media screen and (min-width: 768px)  { font-size: 1.25rem; }
-    @media screen and (min-width: 1280px) { font-size: 1.35rem; line-height: 1.7; }
+    @media screen and (min-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 1.35rem;
+      line-height: 1.7;
+    }
   }
 }
 
-/* Blockquote (constrained, left-aligned) */
+/* Blockquote */
 blockquote {
   font-style: italic;
-  font-size: 1.125rem;
-  color: #555;
-  padding: 1.25em 1.5em;
-  border-left: 3px solid map-get($palette, 'subtle_accent3');
-  background: #fafafa;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 1.5em;
+  border-top: 1px solid map-get($palette, 'subtle_accent3');
+  border-bottom: 1px solid map-get($palette, 'subtle_accent3');
+  background: white;
+  max-width: 100%;
   margin: 2em 0;
-  max-width: 65ch;
   text-align: left;
   clear: both;
 
-  @include breakpoint(small) { margin: 1.5rem 0; }
+  &.left {
+    float: left;
+    width: 45%;
+    margin-right: 2rem;
+  }
+
+  &.right {
+    float: right;
+    width: 45%;
+    margin-left: 2rem;
+  }
+
+  @include breakpoint(small) {
+
+    &,
+    &.left,
+    &.right {
+      float: none;
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+  }
 }
 
 /* Blog logo */
@@ -338,57 +473,48 @@ blockquote {
   box-sizing: border-box;
   overflow: hidden;
 }
+
 .highlight-g {
   font-weight: 900;
   background: map-get($palette, 'spicy');
   color: #FFF !important;
+  border-radius: 50%;
   width: 1.2em;
   height: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   line-height: 1;
 }
-.restofbloglogo { font-weight: 600; margin-left: -0.02em; letter-spacing: -0.03em; }
-.icon-small     { font-size: 1.2em; color: map-get($palette, 'spicy'); flex-shrink: 0; }
+
+.restofbloglogo {
+  font-weight: 600;
+  margin-left: -0.02em;
+  letter-spacing: -0.03em;
+}
+
+.icon-small {
+  font-size: 1.2em;
+  color: map-get($palette, 'spicy');
+  flex-shrink: 0;
+}
 
 /* Post list separators */
-.post-link + hr {
+.post-link+hr {
   border: none;
   border-top: 1px solid map-get($palette, 'subtle_accent3');
   width: 80%;
   margin: 2rem auto;
   opacity: 0.7;
 }
+
 .post-description a.post-title {
   color: map-get($palette, 'fg');
   text-decoration: none;
   font-weight: normal;
   cursor: pointer;
 }
-main .spacer { height: var(--header-h, 72px); }  /* preserves space under fixed nav */
 
-/* -------------------------------------------------
-   Blog posts list (icon + text alignment; readable)
-   ------------------------------------------------- */
-.post {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 1.75rem;
-  text-align: left;   /* ensure left alignment */
-}
-.post .icon-small {
-  flex-shrink: 0;
-  margin-top: 0.25rem;
-  font-size: 1.1rem;
-  color: map-get($palette, 'brand-color');
-}
-.post-content {
-  flex: 1;
-  text-align: left;
-  margin: 0;
-  max-width: none;    /* don't center the text block */
-}
-.post-content h3 { margin: 0 0 0.25rem; font-weight: 600; }
-.post-content p  { margin: 0; font-size: 0.95rem; color: map-get($palette, 'muted'); }
+main .spacer {
+  height: var(--header-h, 72px); // a hack for now to create space above the posts so that top nav doesn't fall on header }
