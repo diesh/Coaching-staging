@@ -126,6 +126,8 @@ img {
   }
 }
 
+
+// about page image and smiley //
 .profile-image {
   position: relative;
   float: right;
@@ -137,11 +139,9 @@ img {
     width: 100%;
     height: auto;
     display: block;
+  }
 
-	
-}
-
- &::before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
@@ -151,34 +151,36 @@ img {
     background-color: map-get($palette, 'spicy');
     z-index: 1;
   }
+
   .smiley-overlay {
     position: absolute;
-    bottom: -40px;    
-    right: 10px;     
-    width: 90px;
-    height: 90px;
+    bottom: -50px;       // 10px lower
+    right: -30px;        // 40px more right
+    width: 110px;        // larger
+    height: 110px;
     transform: rotate(-30deg) scale(1);
     transform-origin: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
 
     svg {
       width: 100%;
       height: 100%;
     }
 
-	@media (hover: none) and (pointer: coarse) {
-  animation: mobileBoop 1s ease-out 1.5s forwards;
-}
+    // Mobile animation (no hover)
+    @media (hover: none) and (pointer: coarse) {
+      animation: mobileBoop 1s ease-out 1.5s forwards;
+    }
 
-@keyframes mobileBoop {
-  0%   { transform: rotate(-30deg) scale(1); }
-  50%  { transform: rotate(0deg) scale(1.2); }
-  100% { transform: rotate(-30deg) scale(1); }
-}
+    @keyframes mobileBoop {
+      0%   { transform: rotate(-30deg) scale(1); }
+      50%  { transform: rotate(10deg) scale(1.35); }
+      100% { transform: rotate(-30deg) scale(1); }
+    }
   }
 
   &:hover .smiley-overlay {
-    transform: rotate(0deg) scale(1.2);
+    transform: rotate(10deg) scale(1.35); // Big pop and rotation
   }
 
   @media screen and (min-width: 768px) {
@@ -197,6 +199,7 @@ img {
   }
 }
 
+// Smile styling
 .smiley {
   .eye {
     fill: map-get($palette, 'spicy');
@@ -204,7 +207,7 @@ img {
 
   .smile {
     stroke: map-get($palette, 'spicy');
-    fill: none; 
+    fill: none;
   }
 }
 
