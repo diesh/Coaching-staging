@@ -193,7 +193,8 @@ img {
 
 
 // for mobile
+.mobile-only { display: none; }
 @media screen and (max-width: 980px) {
-  .profile-image-box {display: none; }        
- 
+  .mobile-only { display: block; margin-bottom: 2rem; }
+  .right-col .profile-image-box { display: none; }
 }
