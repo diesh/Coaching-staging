@@ -168,28 +168,34 @@ Section Styling for Coaching Pages
 ============================== */
 .two-col-layout {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 3rem;
-  align-items: flex-start;
-  max-width: 1200px; /* full content width */
-  margin: 0 auto;
-}
 
-.left-col {
-  flex: 1 1 65%;
-  min-width: 0; /* prevents overflow */
-}
-
-.right-col {
-  flex: 0 0 280px; /* fixed sidebar width */
-}
-
-@include breakpoint(medium) {
-  .two-col-layout {
-    flex-direction: column;
+  .left-col {
+    flex: 2 1 60%;
+    min-width: 300px;
   }
-  .left-col,
+
   .right-col {
-    flex: 1 1 100%;
+    flex: 1 1 35%;
+    min-width: 250px;
+  }
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+
+    .right-col {
+      order: 1; // Right column stacks below
+    }
+
+    .left-col {
+      order: 0; // Left column stacks above
+    }
+
+    .left-col,
+    .right-col {
+      min-width: 100%;
+    }
   }
 }
+
