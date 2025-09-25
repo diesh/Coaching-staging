@@ -415,23 +415,10 @@ function fadeAndLoadInto(container, testimonials) {
 window.addEventListener("load", () => {
   setTimeout(initTestimonials, 50);
 });
----
-
-### ✅ Key Benefits
-
-- Works **on GitHub Pages**, even inside subfolders like `/coaching/`.
-- Doesn’t rely on `<base>` tag.
-- Doesn’t break if you move to a different repo name (e.g. `/Coaching-live/`).
-
----
-
-If this fails, I’ll help you **inline the testimonials** or **fetch from JSON embedded in the page** — but this version should now work across the board.
-
-Ready to test?
 
 
 
-// testiung the json file path logic
+// testing the json file path logic
 
 function getTestimonialsPath() {
   const pathParts = window.location.pathname.split("/").filter(Boolean);
