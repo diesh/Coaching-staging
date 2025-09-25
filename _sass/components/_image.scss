@@ -186,3 +186,7 @@ img {
     stroke-linecap: round;
   }
 }
+.profile-image-box {
+  margin-top: var(--header-h, 72px); // ensures space below sticky nav
+  margin-bottom: 3rem;              // adds breathing room before next box
+}
