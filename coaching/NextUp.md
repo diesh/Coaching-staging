@@ -77,16 +77,18 @@ faqs:
 <section id="one">
   <div class="inner"><!-- START .inner -->
 
-    <header class="major">
-      <h1>{{ page.title }}</h1>
-    </header>
-
-    <h2 id="content">Your Partner in Growth</h2>
-    <p>{{ page.description }}</p>
+    
+    
 
     <div class="two-col-layout"><!-- START .two-col-layout -->
 
       <div class="left-col"><!-- START .left-col -->
+      <header class="major">
+      <h1>{{ page.title }}</h1>
+    </header>
+
+    <h2 id="content">Your Partner in Growth</h2>
+      <p>{{ page.description }}</p>
         <h2 id="elements">Weekly Program</h2>
         <p>This 8-week journey blends reflection, action, and feedback. We'll meet 1:1 online each week, and you'll have exercises to move you forward between sessions.</p>
 
