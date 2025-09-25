@@ -402,3 +402,46 @@ blockquote {
 main .spacer {
   height: var(--header-h, 72px); // a hack for now to create space above the posts so that top nav doesn't fall on header
 }
+
+
+
+
+
+// Fix layout for two-column pages with readable text
+
+.two-col-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
+}
+
+.left-col {
+  flex: 1 1 600px;
+  min-width: 0;
+
+  > * {
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.right-col {
+  flex: 0 0 300px;
+  max-width: 300px;
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+
+  @include breakpoint(small) {
+    position: relative;
+    top: auto;
+    max-width: 100%;
+  }
+}
