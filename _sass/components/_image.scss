@@ -128,82 +128,51 @@ img {
 
 
 // about page image and smiley //
-.profile-image {
+.profile-image-wrapper {
   position: relative;
-  float: right;
-  margin: 0 0 2rem 2rem;
-  width: 100%;
-  max-width: 1000px;
+  border: 1px solid #c789af;
+  padding: 0;
 
   img {
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 10px;
-    width: 100%;
-    background-color: map-get($palette, 'spicy');
-    z-index: 1;
+    object-fit: cover;
   }
 
   .smiley-overlay {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    transform: translate(40px, 10px); // visually shifts it
+    bottom: -30px;         // was -40px → 10px lower
+    right: -30px;          // was 10px → 40px more to the right
+    width: 90px;
+    height: 90px;
+    transform: rotate(-30deg) scale(1);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
     z-index: 2;
-    cursor: pointer;
 
-    .smiley {
+    svg {
       width: 100%;
       height: 100%;
-      transform: rotate(-30deg) scale(1);
-      transform-origin: center;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    &:hover .smiley {
-      transform: rotate(15deg) scale(1.4); // bigger and bolder
+      display: block;
     }
 
     @media (hover: none) and (pointer: coarse) {
-      .smiley {
-        animation: mobileBoop 1s ease-out 1.5s forwards;
-      }
+      animation: mobileBoop 1s ease-out 1.5s forwards;
+    }
 
-      @keyframes mobileBoop {
-        0%   { transform: rotate(-30deg) scale(1); }
-        50%  { transform: rotate(15deg) scale(1.4); }
-        100% { transform: rotate(-30deg) scale(1); }
-      }
+    @keyframes mobileBoop {
+      0%   { transform: rotate(-30deg) scale(1); }
+      50%  { transform: rotate(10deg) scale(1.4); }
+      100% { transform: rotate(-30deg) scale(1); }
     }
   }
 
-  @media screen and (min-width: 768px) {
-    width: 50%;
-    max-width: 450px;
-  }
-
-  @media screen and (min-width: 980px) {
-    width: 40%;
-    max-width: 500px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 35%;
-    max-width: 600px;
+  &:hover .smiley-overlay {
+    transform: rotate(10deg) scale(1.4); // ⬅️ Bolder hover
   }
 }
 
-// Smiley styles
 .smiley {
   .eye {
     fill: map-get($palette, 'spicy');
@@ -212,5 +181,7 @@ img {
   .smile {
     stroke: map-get($palette, 'spicy');
     fill: none;
+    stroke-width: 4;
+    stroke-linecap: round;
   }
 }
