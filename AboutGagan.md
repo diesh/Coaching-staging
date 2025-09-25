@@ -96,7 +96,7 @@ main_class: alt
   </div>
 
   <!-- Coaching Sidebar -->
-  {% include coaching-sidebar.html %}
+{% include coaching-sidebar.html subnav_class="subnav-mobile" %}
 
   <!-- Testimonial Block -->
   <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
