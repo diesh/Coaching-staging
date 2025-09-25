@@ -154,26 +154,26 @@ img {
 
   .smiley-overlay {
     position: absolute;
-    bottom: -50px;   // 10px lower
-    right: -30px;    // 40px more right
-    width: 110px;
-    height: 110px;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    transform: translate(40px, 10px); // visually shifts it
+    z-index: 2;
     cursor: pointer;
 
-    svg.smiley {
+    .smiley {
       width: 100%;
       height: 100%;
       transform: rotate(-30deg) scale(1);
       transform-origin: center;
-      transition: transform 0.35s ease;
+      transition: transform 0.3s ease-in-out;
     }
 
-    // Hover works directly on the SVG
     &:hover .smiley {
-      transform: rotate(10deg) scale(1.35); // Bigger boop and spin
+      transform: rotate(15deg) scale(1.4); // bigger and bolder
     }
 
-    // Mobile-only animation
     @media (hover: none) and (pointer: coarse) {
       .smiley {
         animation: mobileBoop 1s ease-out 1.5s forwards;
@@ -181,7 +181,7 @@ img {
 
       @keyframes mobileBoop {
         0%   { transform: rotate(-30deg) scale(1); }
-        50%  { transform: rotate(10deg) scale(1.35); }
+        50%  { transform: rotate(15deg) scale(1.4); }
         100% { transform: rotate(-30deg) scale(1); }
       }
     }
@@ -203,7 +203,7 @@ img {
   }
 }
 
-// SVG styling
+// Smiley styles
 .smiley {
   .eye {
     fill: map-get($palette, 'spicy');
