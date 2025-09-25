@@ -194,15 +194,15 @@ img {
 
 // for mobile
 @media screen and (max-width: 980px) {
-  /* Make the right column a flex stack so order works on its children */
-  .two-col-layout .right-col {
-    display: flex;
-    flex-direction: column;
-  }
+  /* Stack the main columns */
+  .two-col-layout { display: flex; flex-direction: column; }
 
-  /* Move only the image box to the top of right-col */
-  .two-col-layout .right-col .profile-image-box {
-    order: -1;
-    margin-bottom: 2rem;
-  }
+  /* Promote right-col children to be siblings of left-col */
+  .two-col-layout .right-col { display: contents; }
+
+  /* Order across the whole stack now works */
+  .two-col-layout .profile-image-box { order: -1; }         /* image first */
+  .two-col-layout .left-col         { order: 0; }           /* text next */
+  .two-col-layout .box.subnav,
+  .two-col-layout .testimonials-wrapper { order: 2; }        /* programs/testimonials after */
 }
