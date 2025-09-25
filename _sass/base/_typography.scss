@@ -408,7 +408,6 @@ main .spacer {
 
 
 // Fix layout for two-column pages with readable text
-
 .two-col-layout {
   display: flex;
   flex-wrap: wrap;
@@ -425,7 +424,11 @@ main .spacer {
   flex: 1 1 600px;
   min-width: 0;
 
-  > * {
+  // Only constrain readable content, not containers
+  p,
+  h1, h2, h3, h4, h5, h6,
+  ul, ol,
+  blockquote {
     max-width: 70ch;
     margin-left: auto;
     margin-right: auto;
@@ -433,8 +436,8 @@ main .spacer {
 }
 
 .right-col {
-  flex: 0 0 300px;
-  max-width: 300px;
+  flex: 0 0 320px;
+  max-width: 320px;
   position: sticky;
   top: 2rem;
   align-self: start;
