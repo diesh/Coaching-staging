@@ -410,9 +410,9 @@ main .spacer {
 // Fix layout for two-column pages with readable text
 .two-col-layout {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 2rem;
-  align-items: flex-start;
   margin-top: 2rem;
 
   @include breakpoint(small) {
@@ -421,10 +421,12 @@ main .spacer {
 }
 
 .left-col {
-  flex: 1 1 0;
-  min-width: 0;
-  max-width: calc(100% - 380px); // prevents overflow and awkward wrap
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  max-width: 800px;
 
+  // Optional: center content within .left-col if there's extra room
   > * {
     max-width: 70ch;
   }
@@ -442,7 +444,7 @@ main .spacer {
   min-width: 280px;
   position: sticky;
   top: 2rem;
-  align-self: start;
+  align-self: flex-start;
 
   @include breakpoint(small) {
     position: relative;
