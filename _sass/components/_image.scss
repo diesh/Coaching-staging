@@ -128,6 +128,7 @@ img {
 
 
 // about page image and smiley //
+
 .profile-image-wrapper {
   position: relative;
   border: 1px solid #c789af;
@@ -142,8 +143,8 @@ img {
 
   .smiley-overlay {
     position: absolute;
-    bottom: -30px;         // was -40px → 10px lower
-    right: -30px;          // was 10px → 40px more to the right
+    bottom: -30px;  // moved 10px lower than before
+    right: -30px;   // moved 40px more to the right
     width: 90px;
     height: 90px;
     transform: rotate(-30deg) scale(1);
@@ -169,7 +170,7 @@ img {
   }
 
   &:hover .smiley-overlay {
-    transform: rotate(10deg) scale(1.4); // ⬅️ Bolder hover
+    transform: rotate(10deg) scale(1.4); // Bigger boop effect
   }
 }
 
