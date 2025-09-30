@@ -1,7 +1,4 @@
-/*
-  Forty by HTML5 UP
-  html5up.net | @ajlkn
-*/
+
 
 (function ($) {
   $.fn._parallax = (skel.vars.browser === 'ie' || skel.vars.browser === 'edge' || skel.vars.mobile)
@@ -148,9 +145,9 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
+///////////////////////////////////////
 //FAQ and timeline expandable cards unified js
-
+////////////////////////////////////////
 
 // FAQ Expand/Collapse
 document.addEventListener("DOMContentLoaded", () => {
@@ -181,90 +178,61 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ----------------------------------------------
+// TIMELINE LINE DRAW + BOX REVEAL (direct Y compare)
+// ----------------------------------------------
 
-// ----------------------------------------------
-// grow that timeline line
-// ----------------------------------------------
-// ----------------------------------------------
-// TIMELINE LINE DRAW + RECALC
-// ----------------------------------------------
+
 document.addEventListener("DOMContentLoaded", function () {
-  const timeline = document.querySelector(".timeline");
+  const cards = document.querySelectorAll(".timeline-card");
   const victory = document.querySelector(".timeline-card.victory");
-  const path = document.querySelector(".timeline-line path");
 
-  if (!timeline || !victory || !path) return;
+  if (!cards.length) return;
 
-  function setPath() {
-    const timelineRect = timeline.getBoundingClientRect();
-    const victoryRect = victory.getBoundingClientRect();
-    const svgRect = document.querySelector(".timeline-line").getBoundingClientRect();
+  let observer;
 
-    const startX = 10;
-    const startY = 0;
+  function initObserver() {
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio >= 0.3) {
+            entry.target.classList.add("visible");
+          } else if (entry.intersectionRatio < 0.5) {
+            entry.target.classList.remove("visible");
+          }
 
-    const lineY = (victoryRect.top + victoryRect.height / 2) - svgRect.top;
+          if (entry.target === victory) {
+            if (entry.intersectionRatio > 0.95) {
+              victory.classList.add("show-trophy");
+            } else {
+              victory.classList.remove("show-trophy");
+            }
+          }
+        });
+      },
+      {
+        threshold: [0, 0.3, 0.5, 0.95],
+        rootMargin: "0px 0px -5% 0px"
+      }
+    );
 
-    const curveX = 40;
-    const curveY = lineY;
-
-    const d = `M${startX} ${startY} V${lineY} Q${startX} ${lineY} ${curveX} ${curveY}`;
-    path.setAttribute("d", d);
-
-    const length = path.getTotalLength();
-    path.style.setProperty("--path-length", length);
-    path.style.strokeDasharray = length;
-    path.style.strokeDashoffset = length;
+    cards.forEach(card => observer.observe(card));
   }
 
-  function animatePath() {
-    const timelineRect = timeline.getBoundingClientRect();
-    const victoryRect = victory.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
+  // Initialize normally
+  initObserver();
 
-    const timelineTop = timelineRect.top + window.scrollY;
-    const victoryMid = victoryRect.top + window.scrollY + (victoryRect.height / 2);
-
-    const start = timelineTop - viewportHeight;
-    const end = victoryMid - viewportHeight / 2;
-
-    const scrollY = window.scrollY;
-    let progress = (scrollY - start) / (end - start);
-    progress = Math.min(Math.max(progress, 0), 1);
-
-    const length = path.getTotalLength();
-    const drawn = length * progress;
-    path.style.strokeDashoffset = length - drawn;
-
-    victory.classList.toggle("show-trophy", progress === 1);
-  }
-
-  function update() {
-    setPath();
-    animatePath();
-  }
-
-  requestAnimationFrame(() => {
-    requestAnimationFrame(update);
+  // Force all visible on print
+  window.addEventListener("beforeprint", () => {
+    if (observer) observer.disconnect(); // stop JS animations
+    cards.forEach(c => c.classList.add("visible"));
+    if (victory) victory.classList.add("show-trophy");
   });
 
-  window.addEventListener("scroll", animatePath);
-  window.addEventListener("resize", update);
-
-  document.querySelectorAll(".faq-question").forEach(q => {
-    q.addEventListener("click", () => {
-      setTimeout(update, 300);
-    });
+  // Optional: re-init after printing
+  window.addEventListener("afterprint", () => {
+    initObserver();
   });
-
-  const toggleBtn = document.getElementById("toggle-all");
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      setTimeout(update, 300);
-    });
-  }
-
-  new ResizeObserver(update).observe(timeline);
 });
 
 
@@ -272,6 +240,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------
 // TESTIMONIALS FADE-IN LOGIC 
 // ----------------------------------------------
+
+
 function getTestimonialsPath() {
   const parts = window.location.pathname.split("/").filter(Boolean);
   return `/${parts[0]}/assets/js/testimonials.json`;
@@ -313,15 +283,25 @@ function fadeAndLoad(container, testimonials) {
     container.querySelectorAll(".fade-in-box").forEach((b) => b.classList.remove("fade-in-box"));
   }, 900);
 
-  const btnWrap = document.createElement("div");
-  btnWrap.className = "testimonial-reload-wrapper";
-  btnWrap.innerHTML = `<a href="#" class="button next">More testimonials ↻</a>`;
-  btnWrap.querySelector("a").addEventListener("click", (e) => {
-    e.preventDefault();
-    container.innerHTML = "";
-    fadeAndLoad(container, testimonials);
-  });
-  container.appendChild(btnWrap);
+  // ===== Inject reload button BELOW the wrapper =====
+  const parent = container.parentElement;
+  if (parent) {
+    // Remove any previous button
+    const existing = parent.querySelector(".testimonial-reload-wrapper");
+    if (existing) existing.remove();
+
+    // Create and inject new reload button
+    const btnWrap = document.createElement("div");
+    btnWrap.className = "testimonial-reload-wrapper";
+    btnWrap.innerHTML = `<a href="#" class="button next">More testimonials ↻</a>`;
+    btnWrap.querySelector("a").addEventListener("click", (e) => {
+      e.preventDefault();
+      container.innerHTML = "";
+      fadeAndLoad(container, testimonials);
+    });
+
+    parent.appendChild(btnWrap);
+  }
 }
 
 function initTestimonials() {
@@ -340,4 +320,7 @@ function initTestimonials() {
 window.addEventListener("load", () => {
   setTimeout(initTestimonials, 50);
 });
+
+
+
 

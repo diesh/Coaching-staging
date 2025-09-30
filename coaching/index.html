@@ -58,7 +58,9 @@
   <script src="/Coaching-staging/assets/js/main.js"></script>
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="/assets/images/Gagan_Diesh_.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/Coaching-staging/assets/images/Gagan_Diesh_.jpg" fetchpriority="high">
+
+
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Coaching Programs | Gagan Diesh</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -106,10 +108,10 @@
       </a>
     </li>
     <li>
-      <a href="/Coaching-staging/AboutGagan.html"
-         class="">
-        About
-      </a>
+     <a href="/Coaching-staging/AboutGagan.html" 
+     class="">
+      About
+    </a>
     </li>
     <li>
       <a href="/Coaching-staging/landing.html"
@@ -119,11 +121,8 @@
     </li>
     <li>
       
-        <a href="#contact"
-           class="">
-          Contact
-        </a>
-      
+  <a href="#contact" class="contact-link" id="nav-contact">Contact</a>
+
     </li>
   </ul>
 </nav>
@@ -229,8 +228,6 @@
 
     
   
-    
-  
 </section>
 
   </section>
@@ -327,10 +324,6 @@
           
             
               <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
-            
-          
-            
-              <li><a href="/Coaching-staging/coaching/testt">About Gagan</a></li>
             
           
         </ul>
@@ -450,6 +443,31 @@
         });
     });
   });
+
+  /* contact link active state in top nav */
+document.addEventListener('DOMContentLoaded', () => {
+  const contactLink = document.getElementById('nav-contact');
+  const contactSection = document.getElementById('contact');
+
+  if (!contactLink || !contactSection) return;
+
+  const setContactActive = () => {
+    const sectionTop = contactSection.getBoundingClientRect().top;
+    const sectionBottom = contactSection.getBoundingClientRect().bottom;
+    const inView = sectionTop < window.innerHeight / 2 && sectionBottom > 50;
+
+    if (inView) {
+      contactLink.classList.add('active');
+    } else {
+      contactLink.classList.remove('active');
+    }
+  };
+
+  // Run on load + scroll
+  setContactActive();
+  window.addEventListener('scroll', setContactActive);
+});
+
 </script>
 
 

@@ -1,4 +1,6 @@
-/* Print Reset */
+/* ========================================================================
+   PRINT RESET
+   ======================================================================== */
 * {
   background: none !important;
   color: #000 !important;
@@ -7,17 +9,18 @@
 }
 
 @page {
-  margin-top: 0.5in;
+  margin: 1in; /* keep clean margins */
 }
 
 body::before {
-  content: " ";
+  content: "";
   display: block;
   height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
+/* Footer message */
 @media print {
   body::after {
     content: "Message me: gagan [at] designstamp [dot] com";
@@ -35,58 +38,33 @@ body::before {
   }
 }
 
-
-
-/* Hide nav, footer, masthead, buttons, decorative blocks */
-header,
-footer,
-nav,
-.brandimage_masthead,
-.testimonials-wrapper,
-button,
-button.expand-toggle,
-.right-col,
-.scroll-indicator,
-#contact
- {
-  display: none !important;
-}
-
+/* ========================================================================
+   HIDE UNNECESSARY UI
+   ======================================================================== */
 @media print {
-  #header {
+  header,
+  footer,
+  nav,
+  #header,
+  .brandimage_masthead,
+  .testimonials-wrapper,
+  button,
+  button.expand-toggle,
+  .right-col,
+  .scroll-indicator,
+  #contact {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
-    position: absolute !important;
-    top: 0;
-    left: -9999px;
   }
 }
 
-
-@media print {
-  .brandimage_masthead {
-    display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    clear: both !important;
-    float: none !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: -9999px !important;
-    visibility: hidden !important;
-  }
-}
-
-
-
-
-/* Show only main content */
+/* ========================================================================
+   LAYOUT RESET
+   ======================================================================== */
 main,
 section#one,
 .inner,
@@ -97,7 +75,9 @@ section#one,
   padding: 0 !important;
 }
 
-/* Expand all accordions */
+/* ========================================================================
+   EXPAND ALL ACCORDIONS
+   ======================================================================== */
 .faq-answer,
 .faq-item .faq-answer,
 .timeline-card .faq-answer,
@@ -109,23 +89,26 @@ section#one,
   opacity: 1 !important;
 }
 
-/* Hide the + icon */
+/* Hide + icons */
 .faq-icon,
 .faq-question::after {
   display: none !important;
 }
 
-/* Ensure expanded state for timeline/workshop cards */
+/* Cards + timeline boxes */
 .timeline-card,
 .content-card,
-.faq-item {
+.faq-item,
+.box {
   page-break-inside: avoid;
+  break-inside: avoid;
   border: 1px solid #ccc !important;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  overflow: visible !important;
 }
 
-/* Clear print-friendly text styling */
+/* Headings */
 h1, h2, h3 {
   page-break-after: avoid;
   orphans: 3;
@@ -133,154 +116,134 @@ h1, h2, h3 {
   color: #000 !important;
 }
 
+/* Paragraphs + lists */
 p, li {
   font-size: 12pt;
   line-height: 1.5;
   color: #000 !important;
 }
 
-/* Remove link styles */
+/* Links */
 a {
   color: #000 !important;
   text-decoration: none;
 }
 
-.faq-item {
-  page-break-inside: auto;
-}
-
-
-/* Tiles Section – Print Styles */
-/* Tiles Section – Clean, Full-Width Print Styles */
+/* ========================================================================
+   TILES SECTION
+   ======================================================================== */
 @media print {
-  .tiles--grid,
-  .tiles {
+  .tiles,
+  .tiles--grid {
     display: block !important;
     width: 100% !important;
     margin: 0 auto !important;
     padding: 0 !important;
+    gap: 0 !important;
   }
 
   .tiles article {
     display: block !important;
     page-break-inside: avoid;
-    border: none !important;
-    margin: 0 0 2rem 0 !important;
+    break-inside: avoid;
+    margin: 0 0 1.5rem 0 !important;
     padding: 0 0 1rem 0 !important;
+    width: 100% !important;
     background: none !important;
+    border: none !important;
     box-shadow: none !important;
-    width: 100% !important;
+    transform: none !important;
   }
 
-  .tiles article .tile-image {
-    display: none !important; /* Hide tile images */
+  .tiles .tile-image,
+  .tiles .tile-image img,
+  .tiles article a.link.primary {
+    display: none !important;
   }
 
-  .tiles article .tile-inner {
+  .tiles .tile-inner,
+  .tiles header.major {
     display: block !important;
-    width: 100% !important;
-  }
-
-  .tiles article header.major {
-    display: block !important;
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .tiles article header.major h3 {
+  .tiles header.major h3 {
     font-size: 18pt !important;
     margin-bottom: 0.25rem !important;
     color: #000 !important;
   }
 
-  @media print {
-  .tiles article:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
-}
-
-
-@media print {
-  .tiles article::after,
-  .tiles article:hover::after {
-    opacity: 0 !important;
-    animation: none !important;
-    clip-path: none !important;
-    border: none !important;
-  }
-
-  .tiles article::before,
-  .tiles article:hover::before {
-    opacity: 0 !important;
-    border: none !important;
-  }
-
-  .tiles article {
-    transform: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: none !important;
-  }
-}
-
-
-.tiles article {
-  margin: 0 0 2rem;
-  padding: 0 0 1rem;
-}
-
-
-  .tiles article header.major p {
+  .tiles header.major p {
     font-size: 12pt !important;
     line-height: 1.5 !important;
     margin-bottom: 1rem !important;
     color: #000 !important;
   }
-
-  .tiles article a.link.primary {
-    display: none !important;
-  }
 }
 
 
 @media print {
-  .tiles {
-    gap: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  .faq-item,
+  .content-card,
+  .timeline-card,
+  .faq-item,
+  .expandable-card 
+  {
+    border:none;
+  }
+
+  /* If card is too tall, push it entirely to next page */
+  .faq-item,
+  .content-card,
+  .timeline-card {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media print {
+  .tiles,
+  .tiles--grid {
     display: block !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 0 !important;
   }
 
   .tiles article {
-    page-break-inside: avoid !important;
+    display: block !important;
     break-inside: avoid !important;
-    padding: 0 !important;
-    margin: 0 0 1rem 0 !important;
-    width: 100% !important;
+    page-break-inside: avoid !important;
+    border: 1px solid #ccc !important;
+    padding: 1rem !important;
+    margin: 0 0 1.5rem 0 !important;
     background: none !important;
-    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #000 !important;
   }
 
-  .tiles article + article {
-    margin-top: 0 !important;
+  .tiles article *,
+  .tiles article header,
+  .tiles article h3,
+  .tiles article p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    color: #000 !important;
   }
 
-  .tiles .tile-inner {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .tiles .tile-image,
-  .tiles .tile-image img {
+  .tile-image,
+  .tile-image img,
+  .tiles article .link.primary,
+  .tiles article::before,
+  .tiles article::after {
     display: none !important;
-  }
-
-  .tiles header.major {
-    margin-bottom: 0.5rem !important;
-  }
-
-  .tiles p {
-    margin-top: 0 !important;
   }
 }

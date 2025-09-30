@@ -58,7 +58,9 @@
   <script src="/Coaching-staging/assets/js/main.js"></script>
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="/assets/images/Gagan_Diesh_.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/Coaching-staging/assets/images/Gagan_Diesh_.jpg" fetchpriority="high">
+
+
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Ongoing Coaching | Gagan Diesh</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -109,10 +111,10 @@
       </a>
     </li>
     <li>
-      <a href="/Coaching-staging/AboutGagan.html"
-         class="">
-        About
-      </a>
+     <a href="/Coaching-staging/AboutGagan.html" 
+     class="">
+      About
+    </a>
     </li>
     <li>
       <a href="/Coaching-staging/landing.html"
@@ -122,11 +124,8 @@
     </li>
     <li>
       
-        <a href="#contact"
-           class="">
-          Contact
-        </a>
-      
+  <a href="#contact" class="contact-link" id="nav-contact">Contact</a>
+
     </li>
   </ul>
 </nav>
@@ -166,7 +165,7 @@
           <li><strong>Track Progress and Improve Performance</strong><br />Like a gym coach for your career, we’ll create a system to track your progress, celebrate wins, and identify areas for improvement, so you can keep growing and performing at your best.</li>
         </ul>
 
-        <p>Personal growth and learning to work well with others is a continuous process of growth, adaptation, and refinement. Successful people don't react to challenges, they proactively shape their path, deepen their self-awareness, and refine their impact. Coaching can provide you the structure, insight, and accountability to help you navigate complex decisions, lead with confidence, and stay ahead in an ever-changing landscape. If you’re curious about my approach or want to explore more ways to grow, learn more <a href="AboutGagan.html">about me</a> and <a href="#contact" class="next scrolly">let's connect!</a></p>
+        <p>Personal growth and learning to work well with others is a continuous process of growth, adaptation, and refinement. Successful people don't react to challenges, they proactively shape their path, deepen their self-awareness, and refine their impact. Coaching can provide you the structure, insight, and accountability to help you navigate complex decisions, lead with confidence, and stay ahead in an ever-changing landscape. If you’re curious about my approach or want to explore more ways to grow, learn more <a href="/Coaching-staging/aboutGagan">about me</a> and <a href="#contact" class="next scrolly">let's connect!</a></p>
 
         <!-- Inline placement for mobile -->
 
@@ -197,10 +196,6 @@
     
       
         <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
-      
-    
-      
-        <li><a href="/Coaching-staging/coaching/testt">About Gagan</a></li>
       
     
   </ul>
@@ -360,10 +355,6 @@
         <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
       
     
-      
-        <li><a href="/Coaching-staging/coaching/testt">About Gagan</a></li>
-      
-    
   </ul>
 </div>
 
@@ -515,10 +506,6 @@
               <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
             
           
-            
-              <li><a href="/Coaching-staging/coaching/testt">About Gagan</a></li>
-            
-          
         </ul>
       </nav>
     </div>
@@ -636,6 +623,31 @@
         });
     });
   });
+
+  /* contact link active state in top nav */
+document.addEventListener('DOMContentLoaded', () => {
+  const contactLink = document.getElementById('nav-contact');
+  const contactSection = document.getElementById('contact');
+
+  if (!contactLink || !contactSection) return;
+
+  const setContactActive = () => {
+    const sectionTop = contactSection.getBoundingClientRect().top;
+    const sectionBottom = contactSection.getBoundingClientRect().bottom;
+    const inView = sectionTop < window.innerHeight / 2 && sectionBottom > 50;
+
+    if (inView) {
+      contactLink.classList.add('active');
+    } else {
+      contactLink.classList.remove('active');
+    }
+  };
+
+  // Run on load + scroll
+  setContactActive();
+  window.addEventListener('scroll', setContactActive);
+});
+
 </script>
 
 

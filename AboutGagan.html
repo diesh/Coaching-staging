@@ -58,7 +58,9 @@
   <script src="/Coaching-staging/assets/js/main.js"></script>
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="/assets/images/Gagan_Diesh_.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/Coaching-staging/assets/images/Gagan_Diesh_.jpg" fetchpriority="high">
+
+
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>About Gagan | Gagan Diesh</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -81,7 +83,7 @@
 </head>
 
 
-  <body style="--brand-color: ; --nav-color: #c789af;">
+  <body style="--brand-color: ; --nav-color: #ff7a18;">
     <header id="header">
   <div class="inner">
    <a href="/Coaching-staging/" class="logo">
@@ -108,10 +110,10 @@
       </a>
     </li>
     <li>
-      <a href="/Coaching-staging/AboutGagan.html"
-         class="active">
-        About
-      </a>
+     <a href="/Coaching-staging/AboutGagan.html" 
+     class="active">
+      About
+    </a>
     </li>
     <li>
       <a href="/Coaching-staging/landing.html"
@@ -121,11 +123,8 @@
     </li>
     <li>
       
-        <a href="#contact"
-           class="">
-          Contact
-        </a>
-      
+  <a href="#contact" class="contact-link" id="nav-contact">Contact</a>
+
     </li>
   </ul>
 </nav>
@@ -156,8 +155,6 @@
         </div>
       </div>
 
-
-
       <div class="page-intro">
         <header class="major">
           <h1>Hi! I'm Gagan!</h1>
@@ -179,10 +176,10 @@
       <div class="cta-links">
         <p>
           Explore my coaching programs for 
-          <a href="/coaching/coachingForLeaders.html">leaders</a>, 
-          <a href="/coaching/TeamWorkshops.html">teams</a>, and 
-          <a href="/coaching/NextUp.html">career transitions</a>. 
-          I also offer <a href="OngoingCoaching.html">ongoing coaching</a> for long-term growth and accountability.
+         <a href="/Coaching-staging/coaching/CoachingForLeaders">leaders</a>,
+          <a href="/Coaching-staging/coaching/TeamWorkshops.html">teams</a>, and  
+          <a href="/Coaching-staging/coaching/NextUp.html">career transitions</a>. 
+          I also offer <a href="/Coaching-staging/coaching/OngoingCoaching.html">ongoing coaching</a> for long-term growth and accountability.
         </p>
       </div>
 
@@ -216,29 +213,27 @@
     </div>
 
     <!-- RIGHT COLUMN -->
+    <div class="right-col">
 
-
-<div class="right-col">
-
-  <!-- Profile Image Box -->
-  <div class="profile-image-box">
-    <div class="profile-image-wrapper">
-      <img src="/Coaching-staging/assets/images/g-morocco.jpg" alt="Gagan Diesh" />
-      <div class="smiley-overlay">
-      <a href="http://google.com" aria-label="Go to Good Question page">
-        <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-          <circle class="eye" cx="20" cy="20" r="4" />
-          <circle class="eye" cx="40" cy="20" r="4" />
-          <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
-        </svg>
-        </a>
+      <!-- Profile Image Box -->
+      <div class="profile-image-box">
+        <div class="profile-image-wrapper">
+          <img src="/Coaching-staging/assets/images/g-morocco.jpg" alt="Gagan Diesh" />
+          <div class="smiley-overlay">
+          <a href="http://google.com" aria-label="Go to Good Question page">
+            <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle class="eye" cx="20" cy="20" r="4" />
+              <circle class="eye" cx="40" cy="20" r="4" />
+              <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
+            </svg>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Coaching Sidebar -->
-<!-- Desktop sidebar -->
-
+      <!-- Coaching Sidebar -->
+      <!-- Desktop sidebar -->
+      
 
 
 <div class="box subnav">
@@ -267,14 +262,12 @@
         <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
       
     
-      
-    
   </ul>
 </div>
 
 
-<!-- Mobile inline version -->
-
+      <!-- Mobile inline version -->
+      
 
 
 <div class="box subnav-mobile">
@@ -303,18 +296,15 @@
         <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
       
     
-      
-    
   </ul>
 </div>
 
 
-  <!-- Testimonial Block -->
-  <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
-   <!-- Testimonial Block -->
+      <!-- Testimonial Block -->
+      <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
+      <!-- Testimonial Block -->
 
-</div>
-
+    </div>
 
   </div>
 </section>
@@ -409,10 +399,6 @@
           
             
               <li><a href="/Coaching-staging/coaching/TeamWorkshops">Team Workshops</a></li>
-            
-          
-            
-              <li><a href="/Coaching-staging/coaching/testt">About Gagan</a></li>
             
           
         </ul>
@@ -532,6 +518,31 @@
         });
     });
   });
+
+  /* contact link active state in top nav */
+document.addEventListener('DOMContentLoaded', () => {
+  const contactLink = document.getElementById('nav-contact');
+  const contactSection = document.getElementById('contact');
+
+  if (!contactLink || !contactSection) return;
+
+  const setContactActive = () => {
+    const sectionTop = contactSection.getBoundingClientRect().top;
+    const sectionBottom = contactSection.getBoundingClientRect().bottom;
+    const inView = sectionTop < window.innerHeight / 2 && sectionBottom > 50;
+
+    if (inView) {
+      contactLink.classList.add('active');
+    } else {
+      contactLink.classList.remove('active');
+    }
+  };
+
+  // Run on load + scroll
+  setContactActive();
+  window.addEventListener('scroll', setContactActive);
+});
+
 </script>
 
 
