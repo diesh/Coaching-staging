@@ -37,6 +37,11 @@ testimonials:
   quote: Thank you Gagan! Your session has had so many great takeaways that have got me excited about my career again and where I would like it to go in the future!
   avatar_slug: Lily
 
+- name: Marjolein V
+  title: User Experience manager at BCLC
+  quote: Gagan sees people for who they truly are. Early in our coaching relationship, he made an observation that has stayed with me. I needed to learn how to view myself from an outside perspective. What he was telling me was that I struggled to see myself objectively. While many people may have this challenge, I know it was especially true for me at that time. When I first met Gagan, I was navigating a difficult period following several major life losses. Through our work together, he helped me gain the crucial perspective I needed for my job search.
+  avatar_slug: Jameson
+
 - name: Anna F
   title: Director of Design
   quote: I loved our session so much. I needed to hear everything you shared. It allowed me to connect a bunch of things rumbling around in my mind. So thank you. Very much.
@@ -47,12 +52,12 @@ testimonials:
   quote: It's been a workout each week that's tough af, but I feel like I am getting so much stronger! Leading design is never easy and having you in my corner has helped me validate my approach and truly explore my blind spots. Looking forward to our next session!
   avatar_slug: Avery
 
-- name: --
+- name: "--"
   title: Newly promoted Director of Design
   quote: Gagan helped me clarify my role and leadership style. I used to feel like a player-coach who only played. Now I'm leading with intention and building the muscle to make sure that my team has a clear voice at the table. 
   avatar_slug: Mary
 
-- name: --
+- name: "--"
   title: Engineer 
   quote: Having a coach who knows design helps me a lot to understand better how to work with designers. Thanks to my secret design translator!
   avatar_slug: John

@@ -4,8 +4,8 @@ title: About Gagan
 description: 
 image: assets/images/g-morocco.jpg
 nav-menu: true
-nav-color: "#c789af"
-nav_active: about
+nav-color: "#ff7a18" 
+# spicy from the vars 
 hide_from_tiles: true
 is_special: true
 weight: 10
@@ -19,7 +19,7 @@ main_class: alt
 
       <div class="profile-image-box mobile-only">
         <div class="profile-image-wrapper">
-          <img src="{{ site.baseurl }}/assets/images/g-morocco.jpg" alt="Gagan Diesh">
+          <img src="{{ '/assets/images/g-morocco.jpg' | relative_url }}" alt="Gagan Diesh">
             <div class="smiley-overlay">
             <a href="http://google.com" aria-label="Go to Good Question page">
             <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
@@ -31,8 +31,6 @@ main_class: alt
             </div>
         </div>
       </div>
-
-
 
       <div class="page-intro">
         <header class="major">
@@ -55,10 +53,10 @@ main_class: alt
       <div class="cta-links">
         <p>
           Explore my coaching programs for 
-          <a href="/coaching/coachingForLeaders.html">leaders</a>, 
-          <a href="/coaching/TeamWorkshops.html">teams</a>, and 
-          <a href="/coaching/NextUp.html">career transitions</a>. 
-          I also offer <a href="OngoingCoaching.html">ongoing coaching</a> for long-term growth and accountability.
+         <a href="{{ '/coaching/CoachingForLeaders' | relative_url }}">leaders</a>,
+          <a href="{{ '/coaching/TeamWorkshops.html' | relative_url }}">teams</a>, and  
+          <a href="{{ '/coaching/NextUp.html' | relative_url }}">career transitions</a>. 
+          I also offer <a href="{{ '/coaching/OngoingCoaching.html' | relative_url }}">ongoing coaching</a> for long-term growth and accountability.
         </p>
       </div>
 
@@ -92,39 +90,36 @@ main_class: alt
     </div>
 
     <!-- RIGHT COLUMN -->
+    <div class="right-col">
 
-
-<div class="right-col">
-
-  <!-- Profile Image Box -->
-  <div class="profile-image-box">
-    <div class="profile-image-wrapper">
-      <img src="{{ site.baseurl }}/assets/images/g-morocco.jpg" alt="Gagan Diesh">
-      <div class="smiley-overlay">
-      <a href="http://google.com" aria-label="Go to Good Question page">
-        <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-          <circle class="eye" cx="20" cy="20" r="4" />
-          <circle class="eye" cx="40" cy="20" r="4" />
-          <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
-        </svg>
-        </a>
+      <!-- Profile Image Box -->
+      <div class="profile-image-box">
+        <div class="profile-image-wrapper">
+          <img src="{{ '/assets/images/g-morocco.jpg' | relative_url }}" alt="Gagan Diesh">
+          <div class="smiley-overlay">
+          <a href="http://google.com" aria-label="Go to Good Question page">
+            <svg class="smiley" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle class="eye" cx="20" cy="20" r="4" />
+              <circle class="eye" cx="40" cy="20" r="4" />
+              <path class="smile" d="M20 38 Q30 50 40 38" stroke-width="4" fill="none" stroke-linecap="round" />
+            </svg>
+            </a>
+          </div>
+        </div>
       </div>
+
+      <!-- Coaching Sidebar -->
+      <!-- Desktop sidebar -->
+      {% include coaching-sidebar.html %}
+
+      <!-- Mobile inline version -->
+      {% include coaching-sidebar.html subnav_class="subnav-mobile" %}
+
+      <!-- Testimonial Block -->
+      <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
+      <!-- Testimonial Block -->
+
     </div>
-  </div>
-
-  <!-- Coaching Sidebar -->
-<!-- Desktop sidebar -->
-{% include coaching-sidebar.html %}
-
-<!-- Mobile inline version -->
-{% include coaching-sidebar.html subnav_class="subnav-mobile" %}
-
-  <!-- Testimonial Block -->
-  <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true"></div> 
-   <!-- Testimonial Block -->
-
-</div>
-
 
   </div>
 </section>

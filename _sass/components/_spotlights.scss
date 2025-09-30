@@ -125,3 +125,229 @@ hr.post-divider {
 }
 
 
+.blog-card.with-image {
+  .card-image {
+    margin-bottom: 1rem;
+
+    a {
+      display: block;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .post-description {
+    margin-top: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: #222;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/* ---------------------------------------------
+   Blog Cards on Landing Page ("Good Question")
+   --------------------------------------------- */
+#goodquestion-posts {
+  margin-top: 2rem;
+
+  /* Each blog post row */
+  .post-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid map-get($palette, 'border');
+    background: none;
+    box-shadow: none;
+    position: relative;
+
+    /* Post image */
+    > .image {
+      flex: 0 0 180px; // image column
+      margin: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    /* Post text content */
+    > .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1rem;
+
+        a.post-title {
+          font-weight: 600;
+          text-decoration: none;
+          color: map-get($palette, 'nav-color');
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      p {
+        margin: 0 0 0.75rem 0;
+        color: #222;
+        line-height: 1.5;
+      }
+    }
+
+    /* Hover underline on whole row */
+    &:hover {
+      border-bottom: 3px solid map-get($palette, 'spicy');
+    }
+
+    /* Hidden overlay link to make the whole row clickable */
+    .post-link-overlay {
+      position: absolute;
+      inset: 0;              // cover the entire card
+      z-index: 3;            // above everything
+      text-indent: -9999px;  // hide text
+      overflow: hidden;
+    }
+
+    /* Keep text + image above overlay so they remain visible */
+    .image,
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Title styling to mimic link appearance */
+    .post-title {
+      font-weight: 600;
+      color: map-get($palette, 'nav-color');
+      text-decoration: underline;
+    }
+
+    &:hover .post-title {
+      text-decoration: none;
+    }
+
+    /* Remove divider line from last post but keep hover effect */
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:last-child:hover {
+      border-bottom: 3px solid map-get($palette, 'spicy');
+    }
+  }
+}
+
+/* ---------------------------------------------
+   Responsive adjustments
+   --------------------------------------------- */
+@include breakpoint(medium) {
+  #goodquestion-posts .post-row {
+    flex-direction: column;
+
+    > .image {
+      flex: none;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* ---------------------------------------------
+   Latest Post Highlight
+   --------------------------------------------- */
+#goodquestion-posts .post-row.latest-post h3 a.post-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: map-get($palette, 'nav-color');
+}
+
+.featured-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: map-get($palette, 'spicy');
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+/* Random Post Sidebar Box */
+.right-col .random-post {
+  text-align: left;
+
+  h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: map-get($palette, 'nav-color');
+  }
+
+  .image {
+    display: block;
+    margin-bottom: 0.75rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 0;
+    }
+  }
+
+  h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+
+    a {
+      font-weight: 600;
+      color: map-get($palette, 'nav-color');
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #222;
+    margin-bottom: 0.75rem;
+  }
+
+  .button.small {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+}

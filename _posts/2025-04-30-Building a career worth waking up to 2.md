@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Building a Career Worth Waking Up To! Part 2: Debunking Career Myths & Embracing Realities"
-description: In this three-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to.
+description: "In this two-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to! In this post: What are some of the myths holding us back? And what can we do to take back control of our careers?"
 image: assets/images/your_careerpath_is_not_singular.png
 masthead_caption: people aren't happy at their job. Global stats prove this too.
 date: 2025-04-30
 comments: true
 ---
-_In this 3-part series, I’m using the keynote I created for[ the BLEND conference](https://www.blendconf.co/) as a foundation to discuss what's wrong with tech careers and what we can do to fix them. In **Part 1**, I dove into the problems we’re facing and shared some good news. In this **Part 2**, let's debunk some career myths and embrace our new reality. And in **Part 3**, I’ll look at how you can leverage your superpowers, while also coming to terms with a few limitations!_
+_In this 2-part series, I’m using the keynote I created for[ the BLEND conference](https://www.blendconf.co/) as a foundation to discuss what's wrong with tech careers and what we can do to fix them. In **Part 1**, I dove into the problems we’re facing and shared some good news. In this **Part 2**, let's debunk some career myths and embrace our new reality. And in **Part 3**, I’ll look at how you can leverage your superpowers, while also coming to terms with a few limitations!_
 
 # Part 2: Debunking Career Myths & Embracing Realities
 
@@ -21,10 +21,9 @@ _In this 3-part series, I’m using the keynote I created for[ the BLEND confere
 ##  🪜 Myth: I'm on a career ladder
 We are still living in what's left of the industrial age. And one of the continuing myths is that of the ONE company and ONE career ladder. Work was structured around factories, assembly lines, hierarchy, and predictability. We haven’t shed the mindset that you ‘stay in your lane,’ put in the years, and eventually earn promotions, pensions, and maybe even a retirement watch. But that world is gone, never to come back. We live in an age of competition, limited resources, massive change, and unpredictability. Career ladders don't exist. Yet education and our inner narrative lie to us and make us think we are still on a rung, making our way upward. 
 
-<div class="alert-warning">
-  <div class="icon">⚠️</div>
-  <div class="content">
-    <div class="title">Reality</div>
+<div class="callout callout-left">
+  <span class="fa fa-trophy"></span> 
+ <h3>Reality</h3>
     <p> Promotions are often based on politics, visibility, or a ‘vibe fit’ with leadership rather than merit or performance. Merit (hopefully) still matters, , but it's not always the deciding factor. </p>
     </div>
     </div>
@@ -52,14 +51,13 @@ This isn’t about bragging—it’s about turning effort into visible impact. I
 - Who benefited?
 - What problems did I solve?
 
-<div class="alert-warning">
-  <div class="icon">⚠️</div>
-  <div class="content">
-    <div class="title">Reality</div>
+<div class="callout callout-left">
+  <span class="fa fa-heart"></span> 
+ <h3>Reality</h3>
     <p> If you don’t advocate for your work, it’s often invisible. Don’t wait for recognition—actively highlight your contributions through regular updates, meetings, and collaboration.
     </p>
     </div>
-    </div>
+  
 
 **Instead:**  
 Build a storytelling muscle. _Translate effort into impact._ That doesn’t mean talking about yourself—it means helping others see the value of your work.
@@ -82,14 +80,12 @@ Sound familiar?
 
 Many of us collect credentials as a way to feel in control. It’s a deeply ingrained reflex—school rewarded us for checking boxes, so we assume our careers will too. But today’s workplace is more disorganized and political. Your credentials don't always equate to better jobs.
 
-<div class="alert-warning">
-  <div class="icon">⚠️</div>
-  <div class="content">
-    <div class="title">Reality</div>
+<div class="callout callout-left">
+  <span class="fa fa-book"></span> 
+ <h3>Reality</h3>
     <p>
       Credentials don’t guarantee better jobs—or greater fulfillment. They can open some doors, yes. But they won’t tell you which ones to walk through. They often become expensive detours if we’re using them to avoid hard questions.
     </p>
-  </div>
 </div>
 
 <strong> ✅ Instead: Be intentional before committing to more education. What is your intention:</strong>
@@ -116,14 +112,13 @@ You might be able to learn what you need **at your job** - just expand your job 
 
 Hyper-individualism is baked into our careers. We are taught to be 'strong' and rise to the challenge. To fake it till we know it. To brave it alone. But the truth is, we are stronger with others, when we have the courage to lead and be vulnerable. When we lead with curiosity and learn with others. To not know and learn is better than to not know and make it up. So involve others. Research shows that teams who collaborate effectively are five times more likely to be high-performing.
 
-<div class="alert-warning">
-  <div class="icon">⚠️</div>
-  <div class="content">
-    <div class="title">Reality</div>
+<div class="callout callout-left">
+  <span class="fa fa-puzzle-piece"></span> 
+ <h3>Reality</h3>
     <p>
 Careers aren’t built in isolation—they’re built through connection. Going it alone often leads to burnout, missed opportunities, and a sense that no one sees your struggles—or your wins.</p>
 </div>
-</div>
+
 
 
 **Instead:**  
@@ -132,10 +127,9 @@ Curate your *career circle*. This could be:
 - A coach
 - A “personal board of directors”
 
-You don’t need a huge network—just a few people who get you. In my first post in this series, I talked about building a [Personal Board of Directors](https://diesh.ca/2025/03/03/Building-a-career-worth-waking-up-to.html#%EF%B8%8F-use-your-career-gps)—a small, trusted group who can offer perspective, challenge your assumptions, and support your growth.
+You don’t need a huge network—just a few people who get you. In my first post in this series, I talked about building a <a href="{{ '/2025/03/03/Building-a-career-worth-waking-up-to.html#%EF%B8%8F-use-your-career-gps' | relative_url }}">Personal Board of Directors</a> — a small, trusted group who can offer perspective, challenge your assumptions, and support your growth.
 
 
-I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out [what's next for your career](https://www.diesh.ca/NextUp.html), or need help understanding and [working on your leadership](https://www.diesh.ca/CoachingForLeaders.html) skills, <a href="#contact" class="next scrolly">hit me up</a>!
+I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out <a href="{{ '/coaching/NextUp' | relative_url }}">what's next for your career</a>, or need help understanding and <a href="{{ '/coaching/CoachingForLeaders' | relative_url }}">working on your leadership</a> skills, <a href="#contact" class="next scrolly">hit me up</a>!
 
-**Stay tuned for Part 3, where we will put it all together to figure out how you can leverage your superpowers, while also coming to terms with a few limitations**
 

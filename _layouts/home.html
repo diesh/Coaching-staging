@@ -35,60 +35,77 @@ layout: page
   {% include tiles.html %}
 </section>
 
-  <section id="about">
-    <div class="inner">
+<section id="about">
+  <div class="inner two-col-layout">
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
       <header class="major">
         <h1>{{ page.about_heading | default: "About me" }}</h1>
-        {% if page.about_paragraphs %}
-          {% for p in page.about_paragraphs %}
-            <p>{{ p }}</p>
-          {% endfor %}
-        {% endif %}
       </header>
 
+      {% if page.about_paragraphs %}
+        {% for p in page.about_paragraphs %}
+          <p>{{ p }}</p>
+        {% endfor %}
+      {% endif %}
+
       <a href="{{ page.about_link_href }}" class="button next">{{ page.about_link_text }}</a>
+    </div> <!-- ✅ CLOSE LEFT COL -->
 
-  
-
-  
-
-    </div>
-  </section>
-
-      <section class="testimonial-section">    
-        <div id="testimonial-box" class="testimonials-wrapper" data-count="2">
-        <!-- Testimonials will be injected here by JS -->
-      </div>
-      </section>
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+          <!-- Testimonial Block -->
+        <div class="testimonials-wrapper single-column" id="testimonial-box" data-count="1" data-box-wrap="true">
+        </div>
+        <!-- End Testimonial Block -->
+    </div> <!-- ✅ CLOSE RIGHT COL -->
+  </div> <!-- ✅ CLOSE INNER -->
+</section>
 
 
-  <!-- Two: Other Posts -->
-  <section id="two">
-    <div class="inner">
+
+<!-- removing section for now as one appears next to about text
+
+<section class="testimonials-section">
+  <div class="testimonials-wrapper" id="testimonial-box" data-count="2" data-box-wrap="true">
+    Testimonials injected here by JS 
+  </div>
+</section>
+-->
+
+
+
+
+
+<!-- Two: Other Posts -->
+<section id="two">
+  <div class="inner">
+    <div class="page-intro">
       <header class="major">
-        
         <h1 class="bloglogo">
           <span class="highlight-g">?</span>&nbsp;<span class="restofbloglogo">Good Question!</span>
         </h1>
         <p class="subheading">{{ site.blog_tagline }}</p>
-
       </header>
-
-      {% for post in site.posts %}
-       <article class="post">
-  <h3>
-    <a href="{{ post.url | relative_url }}" class="post-title">
-      <span class="icon-small alt fa fa-question-circle"></span>&nbsp;{{ post.title }}
-    </a>
-  </h3>
-  <p class="post-description"><a href="{{ post.url | relative_url }}" class="post-title">{{ post.description | default: post.excerpt }}</a></p>
-</article>
-
-        
-        <hr class="post-divider" /> <!-- Add a horizontal line between posts -->
-
-      {% endfor %}
-
-      <a href="landing.html" class="button next">All the Good Questions</a>
     </div>
-  </section>
+
+ <div class="content-cards">
+  {% for post in site.posts %}
+    <div class="blog-card">
+      <h3>
+        <a href="{{ post.url | relative_url }}" class="post-title">
+          <span class="icon-small alt fa fa-question-circle"></span>&nbsp;{{ post.title }}
+        </a>
+      </h3>
+      <p class="post-description">
+        <a href="{{ post.url | relative_url }}">{{ post.description | default: post.excerpt }}</a>
+      </p>
+    </div>
+  {% endfor %}
+</div>
+
+
+
+    <a href="landing.html" class="button next">All the Good Questions</a>
+  </div>
+</section>

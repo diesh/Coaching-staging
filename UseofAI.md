@@ -4,7 +4,7 @@ title: Use of AI
 description: How I use AI in coaching and in building this site
 image: assets/images/Gagan_Diesh_.png
 nav-menu: true
-nav-color: "#c789af"
+nav-color: "#ff7a18" 
 nav_active: about
 hide_from_tiles: true
 is_special: true
@@ -32,7 +32,7 @@ main_class: alt
 ---
 
 ## On This Website
-- I am not a coder (sorry, Kim #ifykyk)! I worked with AI to write this code, co-create and refine layouts, and test design changes.  
+- I am not a coder (sorry, Kim #iykyk)! I worked with AI to write this code, co-create and refine layouts, and test design changes. The code is very crap.  
 - I used it to proof my content. It works, though I had scream at it to banish em dashes.  
 - AI helps me check clarity and consistency, but I review and edit every page to communicate my intent and style.
 

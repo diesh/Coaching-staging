@@ -8,9 +8,11 @@
     {% include header.html %}
 
     <main id="main" class="{{ page.main_class | default: '' }}">
-		<div class="spacer" aria-hidden="true"></div>
+      <div class="spacer" aria-hidden="true"></div>
       <section id="one">
         <div class="inner">
+
+          <!-- Full-width header (breadcrumb + title + date) -->
           <header class="major">
             <br />
             <nav class="breadcrumb">
@@ -21,77 +23,131 @@
             <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
           </header>
 
-          {% if page.image %}
-            <figure class="image main">
-              <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
-              {% if page.masthead_caption and page.masthead_url %}
-                <figcaption class="masthead-caption">
-                  <a href="{{ page.masthead_url }}" target="_blank" rel="noopener noreferrer">
-                    Photo credit: {{ page.masthead_caption }}
-                  </a>
-                </figcaption>
+          <!-- Two-column layout: post content + sidebar -->
+          <div class="two-col-layout">
+            <!-- Left column: post body -->
+            <div class="left-col">
+              {% if page.image %}
+                <figure class="image main">
+                  <img src="{{ site.baseurl }}/{{ page.image }}" alt="" />
+                  {% if page.masthead_caption and page.masthead_url %}
+                    <figcaption class="masthead-caption">
+                      <a href="{{ page.masthead_url }}" target="_blank" rel="noopener noreferrer">
+                        Photo credit: {{ page.masthead_caption }}
+                      </a>
+                    </figcaption>
+                  {% endif %}
+                </figure>
               {% endif %}
-            </figure>
-          {% endif %}
 
-          {{ content }}
+              {{ content }}
 
-          {% if page.comments %}
-            <div id="disqus_thread" style="text-align: left; max-width: 800px; margin: 0 auto;"></div>
-            <script>
-              (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://gagan-diesh-executive-coaching.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-              })();
-            </script>
-            <noscript>
-              Please enable JavaScript to view the 
-              <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-            </noscript>
+              {% if page.comments %}
+                <div id="disqus_thread"></div>
+                <script>
+                  (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://gagan-diesh-executive-coaching.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                  })();
+                </script>
+                <noscript>
+                  Please enable JavaScript to view the 
+                  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+              {% endif %}
+            </div><!-- end left-col -->
 
-            <style>
-              #disqus_thread {
-                text-align: left;
-                max-width: 900px;
-                margin: 0 auto;
-              }
+            <!-- Right column: coaching sidebar + dynamic boxes -->
+            <!-- Right column: coaching sidebar + dynamic boxes -->
+<div class="right-col">
+  <!-- Dynamic Coaching Sidebar -->
+  {% include coaching-sidebar.html %}
 
-              .reaction-icons,
-              .post-message { text-align: left !important; }
+  {% for box in page.boxes %}
+    <div class="box">
+      <h3>{{ box.title }}</h3>
+      {% if box.content %}
+        <p>{{ box.content }}</p>
+      {% endif %}
+      {% if box.items %}
+        <ul>
+          {% for item in box.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  {% endfor %}
 
-              .comment {
-                display: flex;
-                align-items: flex-start;
-              }
-            </style>
-          {% endif %}
+<!-- Random Post Box -->
+{% assign other_posts = site.posts | where_exp: "p", "p.url != page.url" | shuffle %}
+
+{% if other_posts.size > 0 %}
+  {% assign random_post = other_posts[0] %}
+  <div class="box random-post">
+    <h3>Discover Another Post</h3>
+
+    <!-- Main random post with image -->
+    <a href="{{ random_post.url | relative_url }}" class="image">
+      <img src="{{ random_post.image | relative_url }}" alt="{{ random_post.title }}">
+    </a>
+    <h4>
+      <a href="{{ random_post.url | relative_url }}">{{ random_post.title }}</a>
+    </h4>
+    <p>{{ random_post.excerpt | strip_html | truncate: 120 }}</p>
+    <a href="{{ random_post.url | relative_url }}" class="button small">Read More</a>
+
+    <br /><br />
+
+    <!-- Guaranteed "I'm Feeling Lucky" link -->
+    {% if other_posts.size > 1 %}
+      <div class="extra-random-link">
+        <p>
+          <a href="{{ other_posts[1].url | relative_url }}">Random Good question</a>
+        </p>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
+
+
+
+</div><!-- end right-col -->
+
+          </div><!-- end two-col-layout -->
+
         </div>
       </section>
 
+      <!-- Section: Other Good Questions -->
       <section id="two">
-        <hr class="post-divider">
         <div class="inner">
-          <header class="major">
-            <h2 class="bloglogo">
-              <span class="highlight-g">?</span>&nbsp;
-              <span class="restofbloglogo">Good Question!</span>
-            </h2>
-            <p class="subheading">Spicy musings about UX, design, tech, and the world we live in</p>
-          </header>
+          <div class="page-intro">
+            <header class="major">
+              <h2 class="bloglogo">
+                <span class="highlight-g">?</span>&nbsp;<span class="restofbloglogo">Other Good Questions</span>
+              </h2>
+            </header>
+          </div>
 
-          {% for post in site.posts limit:4 %}
-            <article class="post">
-              <span class="icon-small alt fa fa-question-circle" style="color: var(--nav-color);"></span>
-              <div class="post-content">
-                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                <p>{{ post.description | default: post.excerpt }}</p>
+          <div class="content-cards">
+            {% for post in site.posts %}
+              <div class="blog-card">
+                <h3>
+                  <a href="{{ post.url | relative_url }}" class="post-title">
+                    <span class="icon-small alt fa fa-question-circle"></span>&nbsp;{{ post.title }}
+                  </a>
+                </h3>
+                <p class="post-description">
+                  <a href="{{ post.url | relative_url }}">{{ post.description | default: post.excerpt }}</a>
+                </p>
               </div>
-            </article> 
-          {% endfor %}
+            {% endfor %}
+          </div>
 
-          <a href="{{ "/landing.html" | relative_url }}" class="button next">More good questions</a>
+          <a href="/landing.html" class="button next">All the Good Questions</a>
         </div>
       </section>
     </main>

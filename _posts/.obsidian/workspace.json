@@ -34,9 +34,21 @@
               "icon": "lucide-file",
               "title": "2025-09-25-happiness-lifecycle"
             }
+          },
+          {
+            "id": "f4c5b62886fd1bba",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.12"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.12"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -184,7 +196,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "e10e5fcd158f787f",
+  "active": "f4c5b62886fd1bba",
   "lastOpenFiles": [
     "2025-09-25-happiness-lifecycle.md"
   ]

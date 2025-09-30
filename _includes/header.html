@@ -27,10 +27,10 @@
       </a>
     </li>
     <li>
-      <a href="{{ site.baseurl }}/AboutGagan.html"
-         class="{% if active == 'about' or page.url == '/AboutGagan.html' %}active{% endif %}">
-        About
-      </a>
+     <a href="{{ site.baseurl }}/AboutGagan.html" 
+     class="{% if active == 'about' or page.url contains '/AboutGagan' %}active{% endif %}">
+      About
+    </a>
     </li>
     <li>
       <a href="{{ site.baseurl }}/landing.html"
@@ -40,13 +40,10 @@
     </li>
     <li>
       {% if page.url == '/' %}
-        <a href="#contact" class="next scrolly contact-link" data-offset="100">Contact</a>
-      {% else %}
-        <a href="#contact"
-           class="{% if active == 'contact' or page.url == '/#contact' %}active{% endif %}">
-          Contact
-        </a>
-      {% endif %}
+  <a href="#contact" class="next scrolly contact-link" data-offset="100" id="nav-contact">Contact</a>
+{% else %}
+  <a href="#contact" class="contact-link" id="nav-contact">Contact</a>
+{% endif %}
     </li>
   </ul>
 </nav>

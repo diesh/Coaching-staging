@@ -1,12 +1,12 @@
 ---
 layout: post
 title: The Happiness Lifecyle
-description: Is AI going to kill your job? 🤷‍♂️ AI can’t replace the magic that happens between two people.
-image: assets/images/jeffrey-brandjes-12YsDGgdr28-unsplash.jpg
-masthead_caption: Jeffrey Brandjes on Unsplash
-date: 2025-06-26
+description: "Why do so few people say, “I love my job!”?  Is it really too much to expect happiness at work? What questions should you ask at every stage — from interviews to exit — to make sure your next job is truly worth waking up to?"
+image: assets/images/happiness.jpg
+masthead_caption: Photo by Windows on Unsplash
+date: 2025-09-30
 comments: true
-masthead_url: https://unsplash.com/photos/man-in-white-shirt-and-black-shorts-jumping-on-skateboard-12YsDGgdr28
+masthead_url: https://unsplash.com/photos/woman-in-brown-sweater-sitting-on-white-couch-GGdnntBsHMw
 ---
 I love my job! Not something you hear much. And the last few years have proven that  companies aren’t looking out for _you_. Jobs are unstable, layoffs hit overnight, and loyalty is mostly a slogan. The one thing you can count on? You.  
 
@@ -19,7 +19,7 @@ It may seem overly luxe to demand happiness at work. But it isn’t self-indulge
     
 - **Happy = productive.**  [Experiments show](https://www.researchgate.net/publication/46442857_Happiness_and_Productivity) people given “happiness shocks” (snacks, comedy clips, the dream) were 12% more productive. No shocker there...when you hate your boss, that's your focus and nothing else.
     
-- **Politics get weird when we’re miserable.** The [World Happiness Report](https://www.worldhappiness.report/ed/2025/trusting-others-how-unhappiness-and-social-distrust-explain-populism/t links low life satisfaction and low trust to a hard-right shift. Higher trust? People drift left.
+- **Politics get weird when we’re miserable.** The [World Happiness Report](https://www.worldhappiness.report/ed/2025/trusting-others-how-unhappiness-and-social-distrust-explain-populism/) links low life satisfaction and low trust to a hard-right shift. Higher trust? People drift left.
     
 - **Engagement is big money**. [Gallup estimates](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx) the cost of low engagement at $8.9 _trillion_ globally. Managers’ engagement is sliding fastest.
     
@@ -74,3 +74,5 @@ Happiness is not a moment at work. It starts from the first interview and extend
 
 **Look for** exit interviews that feed real improvements and leaders who stay in touch with alumni.  
 **Ask** “What did you learn from the last three exits, and what changed?”
+
+I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out <a href="{{ '/coaching/NextUp' | relative_url }}">what's next for your career</a>, or need help understanding and <a href="{{ '/coaching/CoachingForLeaders' | relative_url }}">working on your leadership</a> skills, <a href="#contact" class="next scrolly">hit me up</a>!

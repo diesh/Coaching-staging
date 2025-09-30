@@ -74,7 +74,7 @@ Traditional leadership training focuses on refining existing skills. Design thin
 
 ### Ready to Transform How Your Leadership Team Thinks?
 
-If you’re ready to equip your executives with the mindset and tools to drive meaningful innovation, let’s talk. **Our tailored design thinking workshops help leaders unlock fresh perspectives, inspire their teams, and create smarter solutions—fast.**
+If you’re ready to equip your executives with the mindset and tools to drive meaningful innovation, let’s talk. I work with select professionals and together we host <a href="{{ '/coaching/TeamWorkshops.html' | relative_url }}">tailored design thinking workshops</a> to help leaders unlock fresh perspectives, inspire their teams, and create smarter solutions...fast!
 
-Curious? Let’s start the conversation.
+Curious? Let’s start the conversation. <a href="#contact" class="next scrolly">Message me</a>
 

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Building a Career Worth Waking Up To! Part 1: Everyone's tired"
-description: In this three-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to.
+description: "In this two-part series, I break down how the career landscape is shifting and what you can do to build a career worth waking up to. In this first part, I will explore some of the problems we are currently facing."
 image: assets/images/f-ckyoupayme.png
 masthead_caption: people are not happy at their job. Global stats prove this too.
 date: 2025-03-03
 nav-color: "#8d82c4"
 comments: true
 ---
-_In this 3-part series, I’m using the keynote I created for[ the BLEND conference](https://www.blendconf.co/) as a foundation to discuss what's wrong with tech careers and what we can do to fix them. In **Part 1**, I dive into the problems we’re facing and share some good news. In **Part 2**, I’ll explore your superpowers and the hidden job market. And in **Part 3**, I’ll look at how you can leverage those superpowers, while also coming to terms with a few limitations!_
+_In this 2-part series, I’m using the keynote I created for[ the BLEND conference](https://www.blendconf.co/) as a foundation to discuss what's wrong with tech careers and what we can do to fix them. In **Part 1**, I dive into the problems we’re facing and share some good news. In **Part 2**, I’ll explore your superpowers and the hidden job market._
 
 # Part 1: Everyone's tired.
 
@@ -96,7 +96,8 @@ Let's do 3 quick tests to figure out how supported and clear you are on where yo
 
 I’ve always tried to have a personal board of directors—a group of 3-4 people who meet with me 4 times a year for an organized session to discuss my career as if it were a company they were advising. By assigning them as my board, I don’t feel guilty hijacking an entire session to talk about _just my career_. It’s mega helpful to have the continuity and clarity of someone else’s eyes on your career.
 
-I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out [what's next for your career](https://www.diesh.ca/NextUp.html), or need help understanding and [working on your leadership](https://www.diesh.ca/CoachingForLeaders.html) skills, <a href="#contact" class="next scrolly">hit me up</a>!
+I'd love to continue this conversation with you. <a href="#contact" class="next scrolly">Add me on Substack</a>, and let's navigate this chaotic career landscape together. If you are trying to figure out <a href="{{ '/coaching/NextUp' | relative_url }}">what's next for your career</a>, or need help understanding and <a href="{{ '/coaching/CoachingForLeaders' | relative_url }}">working on your leadership</a> skills, <a href="#contact" class="next scrolly">hit me up</a>!
+
 
 **Stay tuned for Part 2, where we will dive deeper into the myths about career progression, and how you can future-proof your career.**
 

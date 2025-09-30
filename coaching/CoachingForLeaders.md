@@ -78,12 +78,10 @@ main_class: alt
 <div class="expandable-section timeline">
 
   <div class="timeline">
-    <svg class="timeline-line" xmlns="http://www.w3.org/2000/svg">
-      <path d="" stroke="#1B9C85" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
-    </svg>
 
     <!-- WEEK 1 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="1">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 1: Your Leadership Operating System</h3>
       <p class="short">Surface the principles and defaults that shape how you lead.</p>
       <div class="faq-answer">
@@ -92,7 +90,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 2 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="2">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 2: Strategic Strengths & Growth Edges</h3>
       <p class="short">Clarify what sets you apart and where you want to grow next.</p>
       <div class="faq-answer">
@@ -101,7 +100,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 3 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="3">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 3: Stability in Uncertainty</h3>
       <p class="short">Lead with clarity when others are spiraling.</p>
       <div class="faq-answer">
@@ -110,7 +110,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 4 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="4">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 4: Executive EQ and Relational Authority</h3>
       <p class="short">Influence through trust, not control.</p>
       <div class="faq-answer">
@@ -119,7 +120,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 5 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="5">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 5: Decision-Making and Delegation at Scale</h3>
       <p class="short">Free yourself to lead without being a martyr.</p>
       <div class="faq-answer">
@@ -128,7 +130,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 6 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="6">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 6: Feedback, Conflict, and Psychological Safety</h3>
       <p class="short">Build a team that is honest and respectful.</p>
       <div class="faq-answer">
@@ -137,7 +140,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 7 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="7">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 7: Leading Systems, Not Just People</h3>
       <p class="short">Design the conditions for great work AND get out of the way.</p>
       <div class="faq-answer">
@@ -146,7 +150,8 @@ main_class: alt
     </div>
 
     <!-- WEEK 8 -->
-    <div class="content-card timeline-card faq-item">
+    <div class="content-card timeline-card faq-item expandable-card" data-step="8">
+      <i class="fa fa-plus faq-icon"></i>
       <h3 class="faq-question">Week 8: Your Leadership Thesis</h3>
       <p class="short">Articulate what you believe, how you lead, and what comes next.</p>
       <div class="faq-answer">
@@ -156,7 +161,9 @@ main_class: alt
 
     <!-- VICTORY -->
     <div class="timeline-card victory">
-      <i class="fa fa-trophy"></i>
+      <div class="trophy-wrap">
+        <i class="fa fa-trophy"></i>
+      </div>
       <h3>Lead What’s Next</h3>
       <p>You know yourself and now you can build a team that’s dynamic, well-rounded, and self-aware.</p>
       <p>You’ve sharpened your thinking, refined your practices, and strengthened your presence. You’re in the driver’s seat, managing relationships up, down, and across your org. You’re equipped to lead with clarity, generosity, and momentum. Make your next chapter your best one yet!</p>
@@ -165,6 +172,7 @@ main_class: alt
   </div>
 </div>
 <!-- END Expandable Timeline Section -->
+
 
 
 

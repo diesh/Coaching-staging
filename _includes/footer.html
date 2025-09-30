@@ -191,5 +191,30 @@
         });
     });
   });
+
+  /* contact link active state in top nav */
+document.addEventListener('DOMContentLoaded', () => {
+  const contactLink = document.getElementById('nav-contact');
+  const contactSection = document.getElementById('contact');
+
+  if (!contactLink || !contactSection) return;
+
+  const setContactActive = () => {
+    const sectionTop = contactSection.getBoundingClientRect().top;
+    const sectionBottom = contactSection.getBoundingClientRect().bottom;
+    const inView = sectionTop < window.innerHeight / 2 && sectionBottom > 50;
+
+    if (inView) {
+      contactLink.classList.add('active');
+    } else {
+      contactLink.classList.remove('active');
+    }
+  };
+
+  // Run on load + scroll
+  setContactActive();
+  window.addEventListener('scroll', setContactActive);
+});
+
 </script>
 

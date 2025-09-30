@@ -166,46 +166,36 @@
 /* ==============================
 Section Styling for Coaching Pages
 ============================== */
-// Fix layout for two-column pages with readable text
 .two-col-layout {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  align-items: flex-start;
-  margin-top: 2rem;
 
-  @include breakpoint(small) {
+  .left-col {
+    flex: 2 1 60%;
+    min-width: 300px;
+  }
+
+  .right-col {
+    flex: 1 1 35%;
+    min-width: 250px;
+  }
+
+  @media screen and (max-width: 980px) {
     flex-direction: column;
+
+    .right-col {
+      order: 1; // Right column stacks below
+    }
+
+    .left-col {
+      order: 0; // Left column stacks above
+    }
+
+    .left-col,
+    .right-col {
+      min-width: 100%;
+    }
   }
 }
 
-.left-col {
-  flex: 2 1 60%;
-  min-width: 300px;
-
-  // Constrain readable width AND align text left
-  p,
-  h1, h2, h3, h4, h5, h6,
-  ul, ol,
-  blockquote {
-    max-width: 70ch;
-    margin-left: 0;
-    margin-right: auto;
-  }
-}
-
-.right-col {
-  flex: 1 1 35%;
-  min-width: 250px;
-  max-width: 320px;
-  position: sticky;
-  top: 2rem;
-  align-self: start;
-
-  @include breakpoint(small) {
-    position: relative;
-    top: auto;
-    max-width: 100%;
-    min-width: 100%;
-  }
-}

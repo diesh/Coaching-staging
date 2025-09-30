@@ -104,7 +104,7 @@ faqs:
           <li><strong>Track Progress and Improve Performance</strong><br>Like a gym coach for your career, we’ll create a system to track your progress, celebrate wins, and identify areas for improvement, so you can keep growing and performing at your best.</li>
         </ul>
 
-        <p>Personal growth and learning to work well with others is a continuous process of growth, adaptation, and refinement. Successful people don't react to challenges, they proactively shape their path, deepen their self-awareness, and refine their impact. Coaching can provide you the structure, insight, and accountability to help you navigate complex decisions, lead with confidence, and stay ahead in an ever-changing landscape. If you’re curious about my approach or want to explore more ways to grow, learn more <a href="AboutGagan.html">about me</a> and <a href="#contact" class="next scrolly">let's connect!</a></p>
+        <p>Personal growth and learning to work well with others is a continuous process of growth, adaptation, and refinement. Successful people don't react to challenges, they proactively shape their path, deepen their self-awareness, and refine their impact. Coaching can provide you the structure, insight, and accountability to help you navigate complex decisions, lead with confidence, and stay ahead in an ever-changing landscape. If you’re curious about my approach or want to explore more ways to grow, learn more <a href="{{ 'aboutGagan' | relative_url }}">about me</a> and <a href="#contact" class="next scrolly">let's connect!</a></p>
 
         <!-- Inline placement for mobile -->
 

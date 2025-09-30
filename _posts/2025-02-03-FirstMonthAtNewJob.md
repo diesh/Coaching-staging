@@ -35,11 +35,11 @@ A simple structure—**Seeing, Hearing, Puzzles**—can help you organize observ
 
 This document fosters **transparency** and **alignment**, making it easier to surface questions, validate assumptions, and spark discussions with your manager and team. Over time, you'll move items from "Puzzles" into knowledge and actionable insights.
 
----
+
 
 ## 👀 Seeing: What Stands Out?
 
-<div class="speechbubble">"What patterns am I noticing in how customers interact with our product? Who else is noticing these patterns? Where are the patterns being recorded"</div>
+<div class="speechbubble">"What patterns am I noticing in how customers interact with our product? Who else is noticing these patterns? Where are the patterns being recorded" <cite>— You</cite></div>
 
 - Are there common pain points customers mention?
 - Does the product deliver what it promises?
@@ -51,11 +51,11 @@ This document fosters **transparency** and **alignment**, making it easier to su
     <p>Take screenshots, record demos, and capture key moments. Visuals help make insights more concrete.</p>
 </div>
 
----
+
 
 ## 🎧 Hearing: What’s the Buzz?
 
-<div class="speechbubble">"What words and phrases keep coming up in meetings and Slack?"</div>
+<div class="speechbubble">"What words and phrases keep coming up in meetings and Slack?" <cite>— You</cite></div>
 
 - Are certain topics discussed frequently? (e.g., "_customer trust_" "_scaling challenges_")
 - What's the general mood—enthusiastic, cautious, overwhelmed?
@@ -67,11 +67,11 @@ This document fosters **transparency** and **alignment**, making it easier to su
     <p>Pay attention to _how_ people say things—not just what they say. Enthusiasm, hesitation, or repeated concerns often signal deeper insights.</p>
 </div>
 
----
+
 
 ## 🧩 Puzzles: What Doesn’t Make Sense (Yet)?
 
-<div class="speechbubble">"What do I not know yet? What gaps in knowledge are holding the team back?"</div>
+<div class="speechbubble">"What do I not know yet? What gaps in knowledge are holding the team back?" <cite>— You</cite></div>
 
 - Why do certain processes exist? Legacy reasons or real constraints?
 - What trade-offs were made in past product decisions?
@@ -83,7 +83,7 @@ This document fosters **transparency** and **alignment**, making it easier to su
     <p>Instead of waiting for clarity, actively seek it. Share your puzzles with your manager and peers to accelerate learning.</p>
 </div>
 
----
+
 
 ## 🔗 Why Sharing This Matters
 
@@ -95,7 +95,22 @@ By keeping this document updated and **sharing it with your manager and team**, 
 Your first month isn’t just about learning—it’s about **building trust and shaping how you contribute.** This simple framework makes that process easier.
 
 ### 🚀 Ready to Try It?
-<a href="https://docs.google.com/document/d/1BhrPwFSVVQz4_R-qjUEjMx5j29mS7Nqa81IvrzbRSdU/edit?usp=sharing">Copy this template</a> and create a new doc — and start filling it in. You'll be amazed at how much clarity it brings! And if you're up for it, maintain the doc for as long as you can, beyond your first 30 days!
+
+<div class="download-box">
+  <span class="download-icon">📎</span>
+  <div class="download-content">
+    <a class="download-title" href="https://docs.google.com/document/d/1BhrPwFSVVQz4_R-qjUEjMx5j29mS7Nqa81IvrzbRSdU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+      Grab the First Month Journal template (Google Doc)
+    </a>
+    <p>
+      
+      <a href="https://docs.google.com/document/d/1BhrPwFSVVQz4_R-qjUEjMx5j29mS7Nqa81IvrzbRSdU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+        Copy this template</a> and create a new doc — and start filling it in. You'll be amazed at how much clarity it brings! And if you're up for it, maintain the doc for as long as you can, beyond your first 30 days!
+    </p>
+  </div>
+</div>
+
+
 
 ---
 

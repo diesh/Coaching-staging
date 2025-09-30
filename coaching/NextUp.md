@@ -101,112 +101,105 @@ faqs:
 
        
         
-        <!-- START Expandable Timeline Section -->
-        <div class="expandable-section timeline">
-          
-          
+      <!-- START Expandable Timeline Section -->
+<div class="expandable-section timeline">
 
-          <div class="timeline">
-  <svg class="timeline-line" xmlns="http://www.w3.org/2000/svg">
-    <path d="" stroke="#1B9C85" stroke-width="2" stroke-dasharray="4,4" fill="none"/>
-  </svg>
+  <div class="timeline">
 
-
-
-
-  <!-- Week 1 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 1: Personality & Preferences</h3>
-    <p class="short">Discover your core traits with a scientifically grounded assessment.</p>
-    <div class="faq-answer">
-      <p>We begin with a personality assessment that maps your traits and work style to uncover what energizes you, what drains you, and where you naturally excel. This becomes the foundation for your career direction. Most people find this eye-opening because it highlights patterns, what draws you in and, just as importantly, what you are not interested in.</p>
+    <!-- Week 1 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="1">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 1: Personality & Preferences</h3>
+      <p class="short">Discover your core traits with a scientifically grounded assessment.</p>
+      <div class="faq-answer">
+        <p>We begin with a personality assessment that maps your traits and work style to uncover what energizes you, what drains you, and where you naturally excel. This becomes the foundation for your career direction. Most people find this eye-opening because it highlights patterns, what draws you in and, just as importantly, what you are not interested in.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 2 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 2: Strengths & Gaps</h3>
-    <p class="short">Unpack strengths and identify blockers.</p>
-    <div class="faq-answer">
-      <p>We’ll surface the skills you bring to the table and the gaps holding you back, then align them with career opportunities that fit your goals. Our work this week will help you define growth edges, things you want to learn, versus boundaries, things you don’t want to learn and that aren’t part of your career path. I will provide you with a framework to review your work experience through the lens of your skills and preferences, helping you sort through what fit with who you are versus what you had to do to keep your job.</p>
+    <!-- Week 2 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="2">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 2: Strengths & Gaps</h3>
+      <p class="short">Unpack strengths and identify blockers.</p>
+      <div class="faq-answer">
+        <p>We’ll surface the skills you bring to the table and the gaps holding you back, then align them with career opportunities that fit your goals. Our work this week will help you define growth edges, things you want to learn, versus boundaries, things you don’t want to learn and that aren’t part of your career path. I will provide you with a framework to review your work experience through the lens of your skills and preferences, helping you sort through what fit with who you are versus what you had to do to keep your job.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 3 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 3: Rewrite Your Story</h3>
-    <p class="short">Reframe your story around impact.</p>
-    <div class="faq-answer">
-      <p>Your career story shifts from tasks to outcomes. Instead of generic bullets, our work focuses on where you bring real value. That will help us craft a story worth telling. Your resume then becomes a true reflection of the work you enjoy and where you’ve proven impact. We’ll start the process together and I will provide you with the framework to continue refining on your own.</p>
+    <!-- Week 3 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="3">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 3: Rewrite Your Story</h3>
+      <p class="short">Reframe your story around impact.</p>
+      <div class="faq-answer">
+        <p>Your career story shifts from tasks to outcomes. Instead of generic bullets, our work focuses on where you bring real value. That will help us craft a story worth telling. Your resume then becomes a true reflection of the work you enjoy and where you’ve proven impact. We’ll start the process together and I will provide you with the framework to continue refining on your own.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 4 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 4: Present You vs. Future You</h3>
-    <p class="short">Define your brand and the causes you stand for.</p>
-    <div class="faq-answer">
-      <p>We’ll create your target role statement and ensure every word reflects what you want to do. By leveraging your personality, strengths, boundaries, and growth edges, we’ll help you break old patterns and connect with what lights you up. We will banish jargon to make sure your target role statement is a reflection of you. This work also refines your online presence and sharpens your elevator pitch so it is easy to communicate who you are and what you do.</p>
+    <!-- Week 4 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="4">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 4: Present You vs. Future You</h3>
+      <p class="short">Define your brand and the causes you stand for.</p>
+      <div class="faq-answer">
+        <p>We’ll create your target role statement and ensure every word reflects what you want to do. By leveraging your personality, strengths, boundaries, and growth edges, we’ll help you break old patterns and connect with what lights you up. We will banish jargon to make sure your target role statement is a reflection of you. This work also refines your online presence and sharpens your elevator pitch so it is easy to communicate who you are and what you do.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 5 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 5: Interview Foundations</h3>
-    <p class="short">Learn formats, practice real questions.</p>
-    <div class="faq-answer">
-      <p>You’ll get hands-on coaching with interview formats, sample questions, and immediate feedback to build confidence. We’ll use proven methods, including STAR case studies, to help you unpack your work history with clarity. You’ll practice showing ownership, collaboration, and impact, not just listing tasks.</p>
+    <!-- Week 5 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="5">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 5: Interview Foundations</h3>
+      <p class="short">Learn formats, practice real questions.</p>
+      <div class="faq-answer">
+        <p>You’ll get hands-on coaching with interview formats, sample questions, and immediate feedback to build confidence. We’ll use proven methods, including STAR case studies, to help you unpack your work history with clarity. You’ll practice showing ownership, collaboration, and impact, not just listing tasks.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 6 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 6: Outreach Strategy</h3>
-    <p class="short">Design a natural networking approach.</p>
-    <div class="faq-answer">
-      <p>We’ll build a values-aligned system for outreach that feels authentic, helping you open doors without cold-selling. You’ll start reaching out so people know what you do and what you’re looking for. Your network is larger than you think, and now it’s time to use it. I will provide you with a tracker that will help you not only connect with people, but follow up with intention.</p>
+    <!-- Week 6 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="6">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 6: Outreach Strategy</h3>
+      <p class="short">Design a natural networking approach.</p>
+      <div class="faq-answer">
+        <p>We’ll build a values-aligned system for outreach that feels authentic, helping you open doors without cold-selling. You’ll start reaching out so people know what you do and what you’re looking for. Your network is larger than you think, and now it’s time to use it. I will provide you with a tracker that will help you not only connect with people, but follow up with intention.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 7 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 7: Advanced Interviewing</h3>
-    <p class="short">Sharpen answers to tough scenarios, negotiate with confidence.</p>
-    <div class="faq-answer">
-      <p>From gaps in your story to negotiations, we’ll rehearse the toughest interview challenges until your responses feel natural and strong. Depending on your situation, we might be prepping for crucial conversations at your current job or in a high-stakes interview.</p>
+    <!-- Week 7 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="7">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 7: Advanced Interviewing</h3>
+      <p class="short">Sharpen answers to tough scenarios, negotiate with confidence.</p>
+      <div class="faq-answer">
+        <p>From gaps in your story to negotiations, we’ll rehearse the toughest interview challenges until your responses feel natural and strong. Depending on your situation, we might be prepping for crucial conversations at your current job or in a high-stakes interview.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Week 8 -->
-  <div class="content-card timeline-card faq-item expandable-card">
-    <i class="fa fa-plus faq-icon"></i>
-    <h3 class="faq-question">Week 8: Roadmap & Wrap-up</h3>
-    <p class="short">Leave with a clear plan forward.</p>
-    <div class="faq-answer">
-      <p>You’ll finish with a roadmap, renewed clarity, and confidence in your next career chapter. Most clients use this stage to turn our work into meaningful conversations. I’ll likely help you prepare for important discussions and plan for the long term while also sharpening your approach for upcoming interviews.</p>
+    <!-- Week 8 -->
+    <div class="content-card timeline-card faq-item expandable-card" data-step="8">
+      <i class="fa fa-plus faq-icon"></i>
+      <h3 class="faq-question">Week 8: Roadmap & Wrap-up</h3>
+      <p class="short">Leave with a clear plan forward.</p>
+      <div class="faq-answer">
+        <p>You’ll finish with a roadmap, renewed clarity, and confidence in your next career chapter. Most clients use this stage to turn our work into meaningful conversations. I’ll likely help you prepare for important discussions and plan for the long term while also sharpening your approach for upcoming interviews.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Victory (no plus icon) -->
-  <div class="timeline-card victory">
-    <i class="fa fa-trophy"></i>
-    <h3>Transformation!</h3>
-    <p>You’ve done the work. You’ve reflected, rewritten, and stepped fully into your next chapter.</p>
-    <p>Transformation happens when you see yourself, see patterns, own your strengths, and your path forward. It's hard work and with it comes the reward of greater clarity, confidence, and conviction. It’s the start of a career that works <em>for you</em>!</p>
+    <!-- Victory -->
+    <div class="timeline-card victory">
+      <div class="trophy-wrap">
+        <i class="fa fa-trophy"></i>
+      </div>
+      <h3>Transformation!</h3>
+      <p>You’ve done the work. You’ve reflected, rewritten, and stepped fully into your next chapter.</p>
+      <p>Transformation happens when you see yourself, see patterns, own your strengths, and your path forward. It's hard work and with it comes the reward of greater clarity, confidence, and conviction. It’s the start of a career that works <em>for you</em>!</p>
+    </div>
+
   </div>
 </div>
+<!-- END Expandable Timeline Section -->
 
-
-
-        </div>
-        <!-- END Expandable Timeline Section -->
 
 <!-- dynamic sidebar that only appears on mobile -->
 

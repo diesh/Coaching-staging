@@ -187,3 +187,36 @@ select {
   display: block;
   box-sizing: border-box;
 }
+
+
+
+.substack-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 2rem 0;
+
+  input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid map-get($palette, 'border');
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    border-radius: 0; // keep crisp
+  }
+
+  button {
+    background: map-get($palette, 'brand-color');
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover {
+      background: map-get($palette, 'spicy');
+    }
+  }
+}

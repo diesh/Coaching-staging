@@ -1,4 +1,5 @@
-/* List
+/* ==========================================================================
+   LIST STYLES (ordered, unordered, and variants)
    ========================================================================== */
 
 ol {
@@ -20,6 +21,7 @@ ul {
     padding-left: 0.5em;
   }
 
+  /* "alt" version: no bullets, divider lines between items */
   &.alt {
     list-style: none;
     padding-left: 0;
@@ -35,6 +37,7 @@ ul {
     }
   }
 
+  /* "icons" version: horizontal inline icons with hover color */
   &.icons {
     cursor: default;
     list-style: none;
@@ -64,6 +67,10 @@ ul {
     }
   }
 
+  /* "actions" version: button/action lists with modifiers
+     - .small    → compact spacing
+     - .vertical → stacked buttons
+     - .fit      → evenly distributed buttons in a table layout */
   &.actions {
     cursor: default;
     list-style: none;
@@ -129,7 +136,12 @@ ul {
   }
 }
 
-/* dt/dd styles */
+
+/* ==========================================================================
+   DEFINITION LISTS (dt/dd)
+   Highlight pairs on hover and style terms/definitions
+   ========================================================================== */
+
 dt,
 dd {
   transition: background-color 1s ease;
@@ -166,7 +178,10 @@ dd b {
   }
 }
 
-/* FAQ / Expandable Cards
+
+/* ==========================================================================
+   FAQ / EXPANDABLE CARDS
+   Accordion-style Q&A blocks and timeline-card toggles
    ========================================================================== */
 
 .faq-container {
@@ -238,7 +253,12 @@ h3.faq-question {
   margin: 0 0 1rem;
 }
 
-/* Breadcrumb/footer nav */
+
+/* ==========================================================================
+   BREADCRUMB & SECONDARY NAV
+   Footer navigation and secondary pages list
+   ========================================================================== */
+
 .breadcrumb {
   padding: 0;
   margin: 0;
@@ -257,7 +277,6 @@ h3.faq-question {
 
     a {
       text-decoration: none;
-      
 
       &:hover {
         text-decoration: underline;
@@ -286,7 +305,12 @@ h3.faq-question {
   margin-bottom: 0.3em;
 }
 
-/* Workshop Cards Container */
+
+/* ==========================================================================
+   CONTENT / WORKSHOP CARDS
+   Card grid container + base card styles
+   ========================================================================== */
+
 .content-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -300,7 +324,7 @@ h3.faq-question {
   }
 }
 
-/* Base Card Style */
+/* Base card style shared by content and timeline cards */
 .content-card,
 .timeline-card,
 .timeline-card.victory {
@@ -320,7 +344,12 @@ h3.faq-question {
   padding: 1rem 1.25rem;
 }
 
-/* Hover / Open Effects */
+
+/* ==========================================================================
+   HOVER + OPEN STATES
+   Effects for cards, FAQ, and expandable elements
+   ========================================================================== */
+
 .content-card:hover,
 .timeline-card:hover {
   transform: translateX(0px);
@@ -337,17 +366,73 @@ h3.faq-question {
   box-shadow: none;
 }
 
-/* Victory Card */
-.timeline-card.victory,
-.timeline-card.victory:hover,
-.timeline-card.victory.open {
-  border-width: 2px !important;
-  transform: translateX(4px);
-  box-shadow: none;
-  border-radius: 0;
+/* ==========================================================================
+   TIMELINE
+   Expandable timeline cards with numbered badges and trophy finale
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  margin: 3rem 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Title and Description inside card */
+/* Base timeline card */
+.timeline-card {
+  position: relative;
+  opacity: 0;
+  transform: scale(0.95);
+  border: 1px solid rgba(27, 156, 133, 0.3);
+  background: #fff;
+  padding: 2rem 1.5rem 1.5rem 1.5rem; /* extra top padding for number badge */
+  margin-bottom: 2.5rem;
+  transition: opacity 0.4s ease-in, transform 0.4s ease-in; /* faster exit */
+}
+
+/* Visible state */
+.timeline-card.visible {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* slower entry */
+}
+
+/* Hover + open */
+.timeline-card.open,
+.timeline-card:hover {
+  border-color: var(--nav-color);
+}
+
+/* Number badges */
+.timeline-card::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Gradual saturation build for badges */
+.timeline-card[data-step="1"]::before { background: hsl(230, 40%, 90%); color: #111; }
+.timeline-card[data-step="2"]::before { background: hsl(230, 45%, 82%); color: #111; }
+.timeline-card[data-step="3"]::before { background: hsl(235, 55%, 75%); }
+.timeline-card[data-step="4"]::before { background: hsl(235, 60%, 68%); }
+.timeline-card[data-step="5"]::before { background: hsl(238, 65%, 62%); }
+.timeline-card[data-step="6"]::before { background: hsl(238, 70%, 56%); }
+.timeline-card[data-step="7"]::before { background: hsl(240, 75%, 50%); }
+.timeline-card[data-step="8"]::before { background: hsl(240, 80%, 45%); }
+
+/* Content inside cards */
 .content-card h3 {
   font-size: 1.1rem;
   margin: 0 0 0.5rem 0;
@@ -361,113 +446,107 @@ h3.faq-question {
   margin: 0;
 }
 
-/* Timeline line */
-.timeline {
-  position: relative;
-  margin: 3rem 0;
-  padding-left: 2rem;
-}
-.timeline-line {
-  position: absolute;
-  top: 0;
-  left: 0.5rem;
-  width: 80px;
-  height: 100%;
-  pointer-events: none;
-  overflow: visible;
-}
-.timeline-line path {
-  stroke: #1B9C85;
-  stroke-width: 2;
-  fill: none;
-  stroke-dasharray: var(--path-length, 2000);
-  stroke-dashoffset: var(--path-length, 2000);
-  transition: none;
-}
-.timeline-line.reveal path {
-  transform: scaleY(1);
-  opacity: 1;
-}
+/* ==========================================================================
+   VICTORY CARD
+   Special styling + trophy animation for finale
+   ========================================================================== */
 
-/* Extra timeline content */
-.timeline-card .more {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease, opacity 0.4s ease;
-}
-.timeline-card.expanded .more {
-  max-height: 8500px;
-  opacity: 1;
-}
-
-/* Victory trophy */
 .timeline-card.victory {
-  padding: 2rem 2rem 1.5rem;
-  margin-top: 3rem;
   position: relative;
+  border-width: 2px !important;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 3rem; /* space for crown */
+  padding: 2rem 2rem 1.5rem;
+  transform: translateX(4px); /* subtle nudge */
 }
-.timeline-card.victory::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  margin-right: 0;
-  width: 0rem;
-  height: 0;
-}
+
+/* Trophy crown */
 .timeline-card.victory .fa {
   position: absolute;
-  top: 20%;               // middle of the victory box
-  left: -1.2em;           // just outside the left edge
-  transform: translateY(-20%) scale(0); // vertically center + hidden by default
-  width: 2.5em;
-  height: 2.5em;
+  top: -1.5em;
+  left: 50%;
+  transform: translateX(-50%) scale(0); /* hidden at start */
+  width: 3em;
+  height: 3em;
   background-color: gold;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.4em;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 999;
   opacity: 0;
-  transition: none;
 }
 
+/* Trophy pop animation */
 .timeline-card.victory.show-trophy .fa {
   opacity: 1;
-  animation: popIn 0.4s cubic-bezier(.34, 1.56, .64, 1) forwards;
+  animation: trophyPop 0.7s ease-out 0.3s forwards;
 }
 
-.timeline-card.victory.show-trophy .fa {
-  opacity: 1;
-  animation: popIn 0.4s cubic-bezier(.34, 1.56, .64, 1) forwards;
-}
-@keyframes popIn {
-  0% {
-    transform: scale(0);
-  }
-  70% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
+@keyframes trophyPop {
+  0%   { transform: translateX(-50%) scale(0); }
+  40%  { transform: translateX(-50%) scale(2.5); } /* overshoot */
+  70%  { transform: translateX(-50%) scale(0.8); } /* undershoot */
+  100% { transform: translateX(-50%) scale(1); }   /* settle */
 }
 
-// Responsive adjustments for timeline for mobile not using skel for now 
-@media (max-width: 768px) {
-  .timeline {
-    padding-left: 1rem;  
+
+
+/* ==========================================================================
+   BLOG CARDS ("Good Question" on homepage)
+   ========================================================================== */
+
+#two .content-cards {
+  column-count: 2;
+  column-gap: 2rem;
+  padding-top: 2rem;
+
+  @include breakpoint(small) {
+    column-count: 1;
+  }
+}
+
+#two .blog-card {
+  display: inline-block;
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid map-get($palette, 'border');
+  background: none;
+  box-shadow: none;
+
+  h3 {
+    margin: 0;
+
+    a.post-title {
+      text-decoration: none;
+      color: map-get($palette, 'nav-color');
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
-  .timeline-line {
-    left: 0rem;          
+  .post-description {
+    margin-top: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: #222;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
-  .timeline-card,
-  .timeline-card.victory {
-    margin-left: 0;      
+  &:hover {
+    border-bottom: 3px solid map-get($palette, 'spicy');
   }
 }

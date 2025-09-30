@@ -52,32 +52,37 @@ a.post-title:focus { color:var(--nav-color) !important; text-decoration:none; }
         playful…
       </p>
 
-      <!-- Spotlight Posts -->
-      <section id="goodquestion-posts" class="spotlights">
-        {% for post in site.posts %}
-        <section class="post-row">
-          <a href="{{ post.url | relative_url }}" class="image">
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-          </a>
-          <div class="content">
-            <header>
-              <h3>
-                <span class="icon-small alt fa fa-question-circle"></span>&nbsp;
-                <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-              </h3>
-            </header>
-            <p>{{ post.excerpt | strip_html }}</p>
-            <ul class="actions">
-              <li>
-                <a href="{{ post.url | relative_url }}" class="button">Read More</a>
-              </li>
-            </ul>
-          </div>
-        </section>
-        {% unless forloop.last %}<hr class="post-divider">{% endunless %}
-        {% endfor %}
-      </section>
-    </div><!-- end left-col -->
+<section id="goodquestion-posts" class="spotlights">
+  {% for post in site.posts %}
+  <section class="post-row {% if forloop.first %}latest-post{% endif %}">
+    
+    <!-- Hidden overlay link -->
+    <a href="{{ post.url | relative_url }}" class="post-link-overlay">Go to post</a>
+    
+    <div class="image"> 
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
+    </div>
+    <div class="content">
+      {% if forloop.first %}
+        <span class="featured-label">Latest Post</span>
+      {% endif %}
+      <header>
+        <h3>
+          <span class="icon-small alt fa fa-question-circle"></span>&nbsp;
+          <span class="post-title">{{ post.title }}</span>
+        </h3>
+      </header>
+      <p>{{ post.excerpt | strip_html }}</p>
+    </div>
+  </section>
+  {% endfor %}
+</section>
+
+
+
+
+    </div>
+    <!-- end left-col -->
 
     <!-- Right Column -->
     <div class="right-col">

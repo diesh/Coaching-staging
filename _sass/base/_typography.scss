@@ -63,239 +63,313 @@ a {
 }
 
 /* -------------------------------------------------
-   CALLOUTS
+   CALLOUTS (Modernized)
    ------------------------------------------------- */
+
 .callout {
   position: relative;
-  padding: 2em 2em 1.5em;
-  margin: 2em 0;
-  border: 2px map-get($palette, 'subtle_accent3') solid;
-  border-radius: 0;
-  background: white;
+  max-width: 48rem; /* keeps content from feeling too wide */
+  padding: 1.25em 1.5em 1.25em 3.25em;
+  margin: 2em;
+  border-left: 4px solid (map-get($palette, 'spicy'));
+  background: color-mix(in srgb, var(--nav-color, #{map-get($palette, 'spicy')}) 6%, white);
   font-size: 1rem;
+  line-height: 1.6;
+  border-radius: 0;
+  box-shadow: none;
 
   .fa {
     position: absolute;
-    top: -1.4em;
-    left: -1.4em;
-    width: 2.5em;
-    height: 2.5em;
-    background-color: map-get($palette, 'subtle_accent3');
-    color: white;
-    font-size: 1.2em;
+    top: 1.25em;
+    left: -.8em;
+    width: 1.5em;
+    height: 1.5em;
+    background: (map-get($palette, 'spicy'));
+    color: #fff;
+    font-size: 2em;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+  }
+
+  h4, h5, strong {
+    margin-top: 0;
+    font-weight: 600;
   }
 }
 
-/* Callout layout modifiers */
-.callout-left { float: left; width: 45%; margin-right: 20px; }
-.callout-right { float: right; width: 45%; margin-left: 20px; }
-
-/* Responsive reset for callouts */
+/* Responsive reset */
 @include breakpoint(small) {
   .callout {
-    padding: 1.5em 1.25em 1.25em;
-    margin: 1em 0;
+    max-width: 100%;
+    padding: 1em 1em 1em 3em;
 
     .fa {
-      font-size: 1.1em;
-      width: 2em;
-      height: 2em;
-      top: -1em;
-      left: -1em;
+      top: 1em;
+      left: 0.75em;
+      width: 1.25em;
+      height: 1.25em;
+      font-size: 0.75em;
     }
-  }
-  .callout-left,
-  .callout-right {
-    float: none;
-    width: 100%;
-    margin: 0;
   }
 }
 
+
 /* -------------------------------------------------
-   TESTIMONIALS
+   TESTIMONIALS (fixed layout and polish)
    ------------------------------------------------- */
+ 
+/* -------------------------------------------------
+   TESTIMONIALS (fixed layout + spicy fade-in)
+   ------------------------------------------------- */
+.testimonials-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .testimonials-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
   gap: 2rem;
-  justify-content: space-between;
-  position: relative;
+  padding-bottom: 2rem;
 
-  &.single-column .callout.testimonial {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  @include breakpoint(medium) {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-#testimonial-reload-wrapper {
-  margin: 0 0 2rem 0;
-  flex: none;
-  @include breakpoint(medium) { margin: 2rem 0 3rem 0; }
-}
-
-/* Testimonial box */
-.callout.testimonial {
-  flex: 1 1 calc(50% - 1rem);
-  max-width: calc(50% - 1rem);
-  border: 0;
-  padding: 1.5rem 1.75rem;
-  font-family: 'Karla', serif;
-  font-size: 1.5rem;
-  font-style: italic;
-  line-height: 1.7;
-  color: map-get($palette, 'fg-regular');
-  position: relative;
-  text-align: left;
-
-  @include breakpoint(medium) {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  /* Decorative borders */
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    width: 60%;
-    height: 1px;
-    background: map-get($palette, 'subtle_accent3');
-  }
-  &::before { top: 0; }
-  &::after  { bottom: 0; }
-
-  p.quote {
+  .callout.testimonial {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    margin: 0 auto;
+    padding: 3rem 0 2rem 0;
+    background: none;
+    box-sizing: border-box;
+    font-family: 'Karla', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: map-get($palette, 'fg-regular');
     position: relative;
-    margin: 0;
-    z-index: 1;
-    opacity: 0;
-    animation: fadeInText 1s ease-out forwards;
-  }
-}
+    border: 0;
 
-/* Curly quote */
-.testimonial::before {
-  content: "“";
-  font-size: 10rem;
-  line-height: 1;
-  position: absolute;
-  top: -0.5rem;
-  left: -1.5rem;
-  color: rgba(0, 0, 0, 0.15);
-  font-family: Georgia, serif;
-  z-index: 1;
-}
-
-/* Testimonial header and avatar */
-.testimonial-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-.testimonial-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 6px;
-  margin-right: 0.75rem;
-  flex-shrink: 0;
-  object-fit: cover;
-  z-index: 20;
-  color: #000;
-}
-.testimonial-meta {
-  font-size: 0.95rem;
-  .testimonial-title { color: #666; font-weight: normal; }
-}
-
-/* Testimonial footer */
-.testimonial-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1.25rem;
-  gap: 0.75rem;
-
-  .person {
-    font-style: normal;
-    font-weight: 500;
-    margin: 0;
-    color: map-get($palette, 'brand-color');
-    flex: 1;
-    text-align: right;
-  }
-  .reload-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    background: rgba(map-get($palette, 'subtle_accent3'), 0.15);
-    border: none;
-    border-radius: 50%;
-    font-size: 0.9rem;
-    cursor: pointer;
-    color: map-get($palette, 'brand-color');
-    transition: background 0.2s ease, color 0.2s ease;
-    flex-shrink: 0;
-
-    &:hover {
-      background: rgba(map-get($palette, 'subtle_accent3'), 0.3);
-      color: darken(map-get($palette, 'brand-color'), 10%);
+    // Animate in from brand color
+    &.fade-in-box {
+      opacity: 0;
+      animation: fadeInBox 0.9s ease-out forwards;
     }
-    i { pointer-events: none; }
+
+    // Notched corners
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      z-index: 1;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        to right,
+        map-get($palette, 'spicy') 0 10px,
+        transparent 0
+      ),
+      linear-gradient(
+        to bottom,
+        map-get($palette, 'spicy') 0 10px,
+        transparent 0
+      );
+      background-repeat: no-repeat;
+      background-size: 10px 100%, 100% 10px;
+      background-position: top left, top left;
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(
+        to left,
+        map-get($palette, 'spicy') 0 10px,
+        transparent 0
+      ),
+      linear-gradient(
+        to top,
+        map-get($palette, 'spicy') 0 10px,
+        transparent 0
+      );
+      background-repeat: no-repeat;
+      background-size: 10px 100%, 100% 10px;
+      background-position: bottom right, bottom right;
+    }
+
+    @include breakpoint(small) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 2rem 0.5rem 2rem;
+    }
+
+    .testimonial-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .testimonial-meta {
+      font-size: 0.95rem;
+
+      .testimonial-title {
+        color: #666;
+        font-weight: normal;
+      }
+    }
+
+    .quote {
+      margin: 0;
+      padding: 1rem 2rem 2rem 4rem;
+      position: relative;
+
+      &::before {
+        content: "“";
+        font-size: 10rem;
+        position: absolute;
+        top: 1rem;
+        left: -1rem;
+        color: rgba(0, 0, 0, 0.1);
+        font-family: Georgia, serif;
+        line-height: 1;
+      }
+    }
   }
 }
 
-.testimonials-wrapper .callout.testimonial { margin-bottom: 0; }
+// Remove notches in single-column mode
+.testimonials-wrapper.single-column {
+  .callout.testimonial {
+    flex: 1 1 100%;
+    max-width: 100%;
 
-/* Animations */
-.fade-in-box { animation: fadeBox 0.3s ease-out forwards; }
-@keyframes fadeBox {
-  0%   { background-color: map-get($palette, 'brand-color'); opacity: 0; }
-  50%  { background-color: map-get($palette, 'brand-color'); opacity: 0.2; }
-  100% { background-color: white; opacity: 1; }
+    &::before,
+    &::after {
+      display: none !important;
+    }
+  }
 }
-@keyframes fadeInText { to { opacity: 1; } }
+
+.testimonial-reload-wrapper {
+  width: 100%;
+  text-align: left;
+  margin-top: -3rem; // pulls closer to testimonial box
+  padding-left: 4rem; // aligns with .quote left padding
+  padding-bottom: 2rem;
+}
+
+
+// Spicy fade-in
+@keyframes fadeInBox {
+  0% {
+    opacity: 0;
+    background-color: map-get($palette, 'spicy');
+  }
+  100% {
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+
 
 /* -------------------------------------------------
    OTHER COMPONENTS
    ------------------------------------------------- */
 .speechbubble {
-  display: inline-block;
-  padding: 10px 15px;
-  border: 1px solid map-get($palette, 'brand-color');
-  border-radius: 8px;
   position: relative;
-  font-style: normal;
-  color: map-get($palette, 'fg-bold');
-  background: transparent;
-  margin: 20px;
+  display: block;
+  padding: 1rem 2.5rem;
+  margin: 2.5rem auto;
+  
+  color: map-get($palette, 'fg');
+  font-family: 'Karla', sans-serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.7;
   max-width: 700px;
 
   &::before {
-    content: "";
+    content: "“";
+    font-family: 'Karla', sans-serif;
+    font-size: 10rem;
+    line-height: 1;
+    color: map-get($palette, 'spicy');
     position: absolute;
-    bottom: -10px;
-    left: 15px;
-    border-top: 10px solid map-get($palette, 'brand-color');
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    top: -1rem;
+    left: -3rem;
+    opacity: 1; // subtle, so it doesn’t overpower text
   }
-  &.no-border { border-left: none !important; }
+
+ 
+
+  cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: map-get($palette, 'fg-bold');
+    text-align: right;
+  }
 }
+
+
+
+.download-box {
+  display: flex;
+  align-items: flex-start;
+  background: var(--subtle-accent2, #FFF4E8); /* warm accent background */
+  border: 1px solid var(--accent2, #F6C177);
+  border-radius: 0px;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.download-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  line-height: 1;
+}
+
+.download-content {
+  flex: 1;
+}
+
+.download-title {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--nav-color, #111);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.download-title:hover {
+  text-decoration: underline;
+}
+
+.download-content p {
+  margin: 0.25rem 0 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
 
 .page-intro {
   margin-top: 100px;
@@ -319,8 +393,8 @@ blockquote {
   font-size: 1.2rem;
   color: #666;
   padding: 1.5em;
-  border-top: 1px solid map-get($palette, 'subtle_accent3');
-  border-bottom: 1px solid map-get($palette, 'subtle_accent3');
+  border-top: 2px solid var(--nav-color, #{map-get($palette, 'spicy')});
+  border-bottom: 2px solid var(--nav-color, #{map-get($palette, 'spicy')});
   background: white;
   max-width: 100%;
   margin: 2em 0;
@@ -405,51 +479,88 @@ main .spacer {
 
 
 
+/* ---------------------------------------
+   BLOG POST LAYOUT — Scoped to .post-page
+   --------------------------------------- */
 
+body.post-page {
+  background: white;
 
-// Fix layout for two-column pages with readable text
-.two-col-layout {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-top: 2rem;
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
 
-  @include breakpoint(small) {
-    flex-direction: column;
+    @include breakpoint(medium) {
+      padding: 2.5rem 2rem 5rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      max-width: 40ch;
+    }
+
+    p,
+    ul,
+    ol,
+    blockquote {
+      max-width: 65ch;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 4px;
+    }
+
+    figure.image.main {
+      margin: 2rem auto;
+      text-align: center;
+
+      figcaption {
+        font-size: 0.9rem;
+        color: map-get($palette, muted);
+        margin-top: 0.5rem;
+      }
+    }
+
+    .post-date {
+      font-size: 0.95rem;
+      color: map-get($palette, muted);
+      margin-bottom: 2rem;
+    }
+
+   
+
+    ul, ol {
+      padding-left: 1.25rem;
+      margin-bottom: 1.5rem;
+      li {
+        margin-bottom: 0.75rem;
+      }
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      a {
+        color: map-get($palette, brand-color);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .highlight-g {
+      background-color: map-get($palette, spicy);
+    }
+  }
+
+  footer {
+    margin-top: 4rem;
   }
 }
 
-.left-col {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  max-width: 800px;
-
-  // Optional: center content within .left-col if there's extra room
-  > * {
-    max-width: 70ch;
-  }
-
-  p, h1, h2, h3, h4, h5, h6,
-  ul, ol, blockquote {
-    margin-left: 0;
-    margin-right: auto;
-  }
-}
-
-.right-col {
-  flex: 0 0 320px;
-  max-width: 320px;
-  min-width: 280px;
-  position: sticky;
-  top: 2rem;
-  align-self: flex-start;
-
-  @include breakpoint(small) {
-    position: relative;
-    top: auto;
-    max-width: 100%;
-    min-width: 100%;
-  }
-}

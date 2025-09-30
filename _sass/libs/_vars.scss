@@ -57,7 +57,6 @@ $text-color:       map-get(map-get($config, 'colors'), 'text');
 $heading-color:    map-get(map-get($config, 'colors'), 'heading');
 $link-color:       map-get(map-get($config, 'colors'), 'link');
 $highlight-color:  map-get(map-get($config, 'colors'), 'highlight');
-
 $font-body:    map-get(map-get($config, 'fonts'), 'body');
 $font-heading: map-get(map-get($config, 'fonts'), 'heading');
 
@@ -81,7 +80,6 @@ $palette: (
   accent3: #8F6593,  // Deep lavender
   accent4: #E1795D,  // Terracotta
   accent5: #D4B483,  // Ecru  
-
   spicy: #ff7a18,    // Bright orange for CTAs
 
   subtle_accent1: #E6F4EF,
